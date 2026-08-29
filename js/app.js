@@ -293,6 +293,8 @@ function initProvidersPage() {
       if (q.startsWith('handy')) synonyms.push('handyman', 'repair');
       if (q.startsWith('paint')) synonyms.push('painter', 'painting');
       if (q.startsWith('roof')) synonyms.push('roofing', 'roof');
+      if (q.startsWith('garden') || q.startsWith('landscap') || q.startsWith('lawn') || q.startsWith('paver') || q.startsWith('hardscap')) synonyms.push('gardener', 'gardening', 'landscaper', 'landscaping', 'lawn', 'paver', 'pavers', 'hardscape', 'hardscaping');
+      if (q.startsWith('blind') || q.startsWith('curtain') || q.startsWith('shade') || q.startsWith('shutter')) synonyms.push('blinds', 'curtains', 'shades', 'shutters', 'window');
 
       const matchesQuery = synonyms.some((term) =>
         provider.businessName.toLowerCase().includes(term) ||
