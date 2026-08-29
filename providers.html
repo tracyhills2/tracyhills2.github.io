@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Service Providers — Tracy Hills II</title>
+  
+  <!-- Meta Descriptions & SEO -->
+  <meta name="description" content="Community service providers directory for Tracy Hills II residents. Search local handymen, electricians, plumbers, water softener installers, painters, and pest control specialists.">
+  <meta name="keywords" content="Tracy Hills contractors, Tracy handyman, Tracy plumber, Tracy water softener, Tracy electrician, resident directory">
+  <meta name="author" content="Tracy Hills II Community">
+
+  <!-- Google Fonts Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">TH</div>
+        <div>
+          <div class="brand-text-title">Tracy Hills II</div>
+          <div class="brand-text-sub">Community Resource</div>
+        </div>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="contacts.html" class="nav-link">Quick Contacts</a>
+        <a href="providers.html" class="nav-link active">Service Directory</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <a href="https://chat.whatsapp.com/JbKtulmPtaKJ3CA4htB0uS?mode=gi_t" target="_blank" rel="noopener noreferrer" class="desktop-cta">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366" stroke="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.99c-.002 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span>Join WhatsApp Community</span>
+        </a>
+
+        <button id="mobile-menu-toggle" class="mobile-toggle" aria-label="Open navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div id="mobile-nav-overlay" class="mobile-nav-overlay">
+    <div class="mobile-nav-drawer">
+      <div class="mobile-drawer-header">
+        <div class="brand-logo">
+          <div class="brand-icon">TH</div>
+          <span style="font-weight: 700; color: var(--text-primary);">Tracy Hills II</span>
+        </div>
+        <button id="mobile-drawer-close" style="color: var(--text-muted); padding: 0.25rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <nav class="mobile-drawer-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="contacts.html" class="nav-link">Quick Contacts</a>
+        <a href="providers.html" class="nav-link active">Service Directory</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="section-padding">
+    <div class="container">
+      
+      <!-- Header Title -->
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 2rem auto;">
+        <span class="badge" style="margin-bottom: 0.75rem;">Resident Directory</span>
+        <h1 class="page-title" style="margin-bottom: 0.65rem;">Community Service Providers</h1>
+        <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6;">
+          Browse contractors, handymen, and home service specialists recommended by Tracy Hills II neighbors.
+        </p>
+      </div>
+
+      <!-- Action & Search Bar Container -->
+      <div style="margin-bottom: 1.75rem;">
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-bottom: 1.25rem;">
+          <div class="search-bar-container" style="flex: 1; min-width: 280px;">
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="provider-search-input" class="search-input" placeholder="Search vendor name, category, or service...">
+          </div>
+          
+          <button id="suggest-vendor-btn" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+            <span>Suggest a Vendor</span>
+          </button>
+        </div>
+
+        <!-- Category Pill Filters Container -->
+        <div id="provider-categories-container" class="category-pills"></div>
+      </div>
+
+      <!-- Disclaimer Alert Banner -->
+      <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1.15rem; background: #1E293B; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); color: var(--text-muted); font-size: 0.825rem; margin-bottom: 1.75rem;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+        <div>
+          <strong>Notice:</strong> Directory entries are submitted by community residents for informational reference. Please verify licensing and insurance directly with each contractor.
+        </div>
+      </div>
+
+      <!-- Results Grid Container -->
+      <div id="providers-grid-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.25rem;"></div>
+
+      <!-- No Results State -->
+      <div id="provider-no-results" class="card" style="display: none; text-align: center; padding: 3rem 2rem;">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 0.75rem auto;"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+        <h3 style="font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.35rem;">No Vendors Found</h3>
+        <p style="color: var(--text-muted); max-width: 400px; margin: 0 auto 1rem auto; font-size: 0.85rem;">
+          No service providers found matching your search. Try selecting "All" or suggest a contractor.
+        </p>
+        <button id="provider-reset-filters" class="btn btn-outline btn-sm">Reset Filters</button>
+      </div>
+
+      <!-- Suggest Vendor Modal -->
+      <div id="suggest-vendor-modal" class="modal-overlay">
+        <div class="modal-container">
+          <div class="modal-header">
+            <h2 class="modal-title">Suggest a Vendor</h2>
+            <button id="modal-close-btn" class="modal-close-btn" aria-label="Close modal">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p style="color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 1rem; line-height: 1.5;">
+              Share details of a contractor, handyman, or vendor you recommend so we can include them in the community directory.
+            </p>
+
+            <div style="padding: 0.85rem 1rem; background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.5;">
+              📩 <strong>Note:</strong> Online form submission is currently disabled. Please send your vendor recommendation directly to 
+              <a href="mailto:tracyhillsphase2@gmail.com" style="color: var(--accent-link); font-weight: 600;">tracyhillsphase2@gmail.com</a>.
+            </div>
+
+            <form onsubmit="event.preventDefault();" style="display: flex; flex-direction: column; gap: 0.85rem;">
+              <div>
+                <label style="display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.25rem;">Business or Individual Name *</label>
+                <input type="text" disabled placeholder="e.g. Morse Visnys or Delta Electric" style="width: 100%; padding: 0.55rem 0.75rem; background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: var(--text-muted); opacity: 0.6; cursor: not-allowed;">
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.25rem;">Your Name / Who is Recommending *</label>
+                <input type="text" disabled placeholder="e.g. Recommended by neighbor John" style="width: 100%; padding: 0.55rem 0.75rem; background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: var(--text-muted); opacity: 0.6; cursor: not-allowed;">
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.25rem;">Service Category *</label>
+                <select disabled style="width: 100%; padding: 0.55rem 0.75rem; background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: var(--text-muted); opacity: 0.6; cursor: not-allowed;">
+                  <option>Handyman</option>
+                  <option>Electrician</option>
+                  <option>Plumber</option>
+                  <option>Water Softener</option>
+                </select>
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.25rem;">Phone Number or Email *</label>
+                <input type="text" disabled placeholder="(209) 000-0000" style="width: 100%; padding: 0.55rem 0.75rem; background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: var(--text-muted); opacity: 0.6; cursor: not-allowed;">
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.25rem;">Recommendation / Notes</label>
+                <textarea rows="3" disabled placeholder="e.g. Great experience with door installation." style="width: 100%; padding: 0.55rem 0.75rem; background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: var(--text-muted); opacity: 0.6; cursor: not-allowed;"></textarea>
+              </div>
+              <div style="display: flex; gap: 0.5rem; justify-content: flex-end; margin-top: 0.5rem;">
+                <button type="button" id="modal-close-secondary" class="btn btn-ghost btn-sm">Close</button>
+                <button type="button" disabled class="btn btn-primary btn-sm" style="opacity: 0.5; cursor: not-allowed;">Submit Recommendation (Disabled)</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.85rem;">
+            <div class="brand-icon" style="width: 30px; height: 30px; font-size: 0.9rem;">TH</div>
+            <span style="font-weight: 700; font-size: 1rem; color: var(--text-primary);">Tracy Hills II</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.6; margin-bottom: 1rem;">
+            Community information portal providing neighborhood notices, Seabreeze HOA details, City of Tracy contacts, Lennar developer care, and service directory.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home / Overview</a></li>
+            <li><a href="contacts.html">Quick Contacts</a></li>
+            <li><a href="providers.html">Service Directory</a></li>
+            <li><a href="faq.html">Community FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Official Portals</h4>
+          <ul class="footer-links">
+            <li><a href="https://commarea.cincwebaxis.com" target="_blank" rel="noopener noreferrer">Seabreeze Resident Portal ↗</a></li>
+            <li><a href="https://www.cityoftracy.org" target="_blank" rel="noopener noreferrer">City of Tracy Website ↗</a></li>
+            <li><a href="https://user.govoutreach.com/tracy/support.php" target="_blank" rel="noopener noreferrer">Report an Issue (City of Tracy) ↗</a></li>
+            <li><a href="https://www.lennar.com/my-lennar" target="_blank" rel="noopener noreferrer">MyLennar Care Portal ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Tracy Hills II Community Resource Portal.</div>
+        <button class="scroll-to-top-btn" style="display: inline-flex; align-items: center; gap: 0.35rem; color: var(--text-secondary); background: #1E293B; padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); font-size: 0.8rem; cursor: pointer;">
+          <span>Top</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

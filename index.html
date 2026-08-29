@@ -3,41 +3,383 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tracy Hills II Community</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #0f172a;
-      color: #f8fafc;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-    }
-    .container {
-      padding: 2rem;
-      border: 1px solid #334155;
-      border-radius: 12px;
-      background: #1e293b;
-      max-width: 500px;
-    }
-    h1 {
-      color: #38bdf8;
-      margin-bottom: 0.5rem;
-    }
-    p {
-      color: #94a3b8;
-      line-height: 1.5;
-    }
-  </style>
+  <title>Tracy Hills II — Community Portal & Information Hub</title>
+  
+  <!-- Meta Descriptions & SEO -->
+  <meta name="description" content="Official community portal for Tracy Hills II residents. Access HOA Seabreeze contacts, City of Tracy emergency numbers, Lennar developer warranty, vendor recommendations, and FAQs.">
+  <meta name="keywords" content="Tracy Hills II, Tracy Hills HOA, Seabreeze Management, City of Tracy, Lennar Homes, Community Directory, Handyman Tracy, Water Softener Tracy">
+  <meta name="author" content="Tracy Hills II Community">
+
+  <!-- Open Graph Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tracy Hills II Community Portal">
+  <meta property="og:description" content="Central community resource hub for Tracy Hills II. Find HOA contact details, City of Tracy services, developer info, and resident vendor recommendations.">
+
+  <!-- Google Fonts Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Tracy Hills II</h1>
-    <p>Community Hub setup is live and running.</p>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">TH</div>
+        <div>
+          <div class="brand-text-title">Tracy Hills II</div>
+          <div class="brand-text-sub">Community Resource</div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="contacts.html" class="nav-link">Quick Contacts</a>
+        <a href="providers.html" class="nav-link">Service Directory</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+      </nav>
+
+      <!-- Desktop CTA & Mobile Toggle -->
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <a href="https://chat.whatsapp.com/JbKtulmPtaKJ3CA4htB0uS?mode=gi_t" target="_blank" rel="noopener noreferrer" class="desktop-cta">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366" stroke="#25D366" stroke-width="0.5"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.99c-.002 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span>Join WhatsApp Community</span>
+        </a>
+
+        <button id="mobile-menu-toggle" class="mobile-toggle" aria-label="Open navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer Overlay -->
+  <div id="mobile-nav-overlay" class="mobile-nav-overlay">
+    <div class="mobile-nav-drawer">
+      <div class="mobile-drawer-header">
+        <div class="brand-logo">
+          <div class="brand-icon">TH</div>
+          <span style="font-weight: 700; color: var(--text-primary);">Tracy Hills II</span>
+        </div>
+        <button id="mobile-drawer-close" style="color: var(--text-muted); padding: 0.25rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <nav class="mobile-drawer-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="contacts.html" class="nav-link">Quick Contacts</a>
+        <a href="providers.html" class="nav-link">Service Directory</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+      </nav>
+
+      <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+        <a href="https://chat.whatsapp.com/JbKtulmPtaKJ3CA4htB0uS?mode=gi_t" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; background: #1E293B; border: 1px solid rgba(37, 211, 102, 0.5);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366" stroke="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.99c-.002 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span style="color: #FFFFFF;">Join WhatsApp Community</span>
+        </a>
+      </div>
+    </div>
   </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section style="padding: 4.5rem 0 3.5rem 0; background: #0F172A; border-bottom: 1px solid var(--border-subtle);">
+      <div class="container" style="text-align: center; max-width: 780px;">
+        <span class="badge" style="margin-bottom: 1rem;">Community Information Center</span>
+        <h1 class="page-title" style="margin-bottom: 1rem;">Tracy Hills II Resident Portal</h1>
+        <p style="font-size: clamp(0.95rem, 1.5vw, 1.05rem); color: var(--text-muted); max-width: 640px; margin: 0 auto; line-height: 1.6;">
+          Access community notices, Seabreeze HOA details, City of Tracy contacts, Lennar builder warranty, and resident vendor recommendations.
+        </p>
+      </div>
+    </section>
+
+    <!-- Announcements & Upcoming Events Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+          
+          <!-- Announcements Column -->
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.65rem; margin-bottom: 1.25rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+              <h2 class="section-title">Announcements & Notices</h2>
+            </div>
+
+            <div id="announcements-list-container" style="display: flex; flex-direction: column; gap: 0.85rem;">
+              <div class="card">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+                  <span class="badge badge-accent">Announcement</span>
+                  <span style="font-size: 0.775rem; color: var(--text-muted);">2026-08-22</span>
+                </div>
+                <h3 style="font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.35rem;">
+                  Welcome to the New Tracy Hills II Resident Portal!
+                </h3>
+                <p style="color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 0.4rem; line-height: 1.5;">
+                  We are excited to launch the new Tracy Hills II Community Portal! Please note that updates to several parts of the website are currently in progress.
+                </p>
+                <p style="color: var(--text-muted); font-size: 0.8rem; line-height: 1.5;">
+                  In the meantime, if you notice any issues or have any feedback, please email us directly at <a href="mailto:tracyhillsphase2@gmail.com" style="color: var(--accent-link); font-weight: 600;">tracyhillsphase2@gmail.com</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upcoming Events Column -->
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.65rem; margin-bottom: 1.25rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <h2 class="section-title">Upcoming Events</h2>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+              <div class="card">
+                <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                  <div style="background: #0F172A; border: 1px solid #334155; border-radius: var(--radius-sm); padding: 0.4rem 0.65rem; text-align: center; min-width: 60px;">
+                    <div style="font-size: 0.675rem; text-transform: uppercase; color: #94A3B8; font-weight: 700;">OCT</div>
+                    <div style="font-size: 1.15rem; font-weight: 700; color: #F8FAFC;">22</div>
+                  </div>
+                  <div style="flex: 1;">
+                    <span class="badge" style="margin-bottom: 0.35rem;">HOA Meeting</span>
+                    <h3 style="font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.2rem;">
+                      HOA Board Meeting
+                    </h3>
+                    <div style="display: flex; gap: 0.85rem; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.35rem; flex-wrap: wrap;">
+                      <span>⏰ Time To Be Announced</span>
+                      <span>📍 Zoom</span>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem;">
+                      Upcoming quarterly HOA Board Meeting for Tracy Hills II. Meeting agenda and Zoom stream link will be shared by Seabreeze Management prior to the meeting.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HOA Management & Contacts Overview Section -->
+    <section class="section-padding" style="background: #0F172A;">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1.75rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="badge" style="margin-bottom: 0.5rem;">Management & Services</span>
+            <h2 class="section-title">Important Contacts Summary</h2>
+          </div>
+          <a href="contacts.html" class="btn btn-outline btn-sm">
+            <span>Full Phone Directory</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+          
+          <!-- 1. Seabreeze / HOA Box -->
+          <div class="card">
+            <div style="display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.85rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg>
+              <h3 style="font-size: 1.05rem; font-weight: 600; color: var(--text-primary);">Seabreeze / HOA</h3>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.55rem; font-size: 0.85rem; color: var(--text-secondary);">
+              <div style="display: flex; justify-content: space-between; padding-bottom: 0.25rem; border-bottom: 1px solid var(--border-subtle);">
+                <span style="color: var(--text-muted);">Business Hours:</span>
+                <span style="font-weight: 600; color: var(--text-primary);">(800) 232-7517</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; padding-bottom: 0.25rem; border-bottom: 1px solid var(--border-subtle);">
+                <span style="color: var(--text-muted);">After Hours:</span>
+                <span style="font-weight: 600; color: var(--text-primary);">(800) 232-7517</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.15rem; padding-bottom: 0.25rem;">
+                <span style="color: var(--text-muted); font-size: 0.775rem;">Email Support:</span>
+                <a href="mailto:customercare@seabreezemgmt.com" style="color: var(--accent-link); word-break: break-all; font-weight: 500;">
+                  customercare@seabreezemgmt.com
+                </a>
+              </div>
+            </div>
+            <div style="margin-top: 1rem;">
+              <a href="https://commarea.cincwebaxis.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%;">
+                <span>Seabreeze Resident Portal</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. City of Tracy Services Box -->
+          <div class="card">
+            <div style="display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.85rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path></svg>
+              <h3 style="font-size: 1.05rem; font-weight: 600; color: var(--text-primary);">City of Tracy Services</h3>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.55rem; font-size: 0.85rem;">
+              <div style="display: flex; justify-content: space-between; padding-bottom: 0.25rem; border-bottom: 1px solid var(--border-subtle);">
+                <span style="color: var(--text-muted);">Emergency:</span>
+                <span style="font-weight: 700; color: #FCA5A5;">911</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; padding-bottom: 0.25rem; border-bottom: 1px solid var(--border-subtle);">
+                <span style="color: var(--text-muted);">Police Non-Emergency:</span>
+                <span style="font-weight: 600; color: var(--text-primary);">(209) 831-6550</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; padding-bottom: 0.25rem; border-bottom: 1px solid var(--border-subtle);">
+                <span style="color: var(--text-muted);">Animal Services:</span>
+                <span style="font-weight: 600; color: var(--text-primary);">(209) 831-6364</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; padding-bottom: 0.25rem;">
+                <span style="color: var(--text-muted);">Water / Utilities:</span>
+                <span style="font-weight: 600; color: var(--text-primary);">(209) 831-6800</span>
+              </div>
+            </div>
+            <div style="margin-top: 1rem;">
+              <a href="https://user.govoutreach.com/tracy/support.php" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="width: 100%;">
+                <span>Report an Issue / Service Request</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. Lennar Builder Care Box -->
+          <div class="card">
+            <div style="display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.85rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              <h3 style="font-size: 1.05rem; font-weight: 600; color: var(--text-primary);">Lennar Warranty Care</h3>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.55rem; font-size: 0.85rem;">
+              <div style="display: flex; justify-content: space-between; padding-bottom: 0.25rem; border-bottom: 1px solid var(--border-subtle);">
+                <span style="color: var(--text-muted);">Customer Care:</span>
+                <span style="font-weight: 600; color: var(--text-primary);">(888) 214-2494</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; padding-bottom: 0.25rem; border-bottom: 1px solid var(--border-subtle);">
+                <span style="color: var(--text-muted);">Business Hours:</span>
+                <span style="font-weight: 500; color: var(--text-secondary);">Mon–Fri: 8 AM – 5 PM</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; padding-bottom: 0.25rem;">
+                <span style="color: var(--text-muted);">After Hours:</span>
+                <span style="font-weight: 500; color: var(--text-muted); font-style: italic;">Coming Soon</span>
+              </div>
+            </div>
+            <div style="margin-top: 1rem;">
+              <a href="https://www.lennar.com/my-lennar" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width: 100%;">
+                <span>MyLennar Portal</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Resident Social Groups Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+          
+          <!-- Primary Highlighted: WhatsApp Community -->
+          <div class="card" style="background: #1E293B; padding: 1.75rem; border: 1px solid rgba(37, 211, 102, 0.4);">
+            <div style="display: flex; flex-direction: column; gap: 1rem; height: 100%; justify-content: space-between;">
+              <div>
+                <div style="display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.35rem;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366" stroke="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.99c-.002 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">Resident WhatsApp Community</h3>
+                </div>
+                <span class="badge badge-accent" style="margin-bottom: 0.65rem;">Primary Communication Hub</span>
+                <p style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.5;">
+                  Real-time neighborhood updates, lost pet alerts, contractor inquiries, and urgent resident notices.
+                </p>
+              </div>
+
+              <a href="https://chat.whatsapp.com/JbKtulmPtaKJ3CA4htB0uS?mode=gi_t" target="_blank" rel="noopener noreferrer" class="btn" style="background: #1E293B; border: 1px solid rgba(37, 211, 102, 0.5); color: #FFFFFF; font-weight: 600; width: 100%; margin-top: 0.5rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366" stroke="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.99c-.002 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                <span style="color: #FFFFFF;">Join WhatsApp Community</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Low-Profile Secondary: Facebook Group -->
+          <div class="card" style="background: #0F172A; padding: 1.75rem; border: 1px solid var(--border-subtle);">
+            <div style="display: flex; flex-direction: column; gap: 1rem; height: 100%; justify-content: space-between;">
+              <div>
+                <div style="display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.35rem;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  <h3 style="font-size: 1.15rem; font-weight: 600; color: var(--text-primary);">Tracy Hills 2 Facebook Group</h3>
+                </div>
+                <span class="badge" style="margin-bottom: 0.65rem;">Secondary Resident Group</span>
+                <p style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.5;">
+                  Connect with neighbors, buy & sell local household items, and participate in community discussions on Facebook.
+                </p>
+              </div>
+
+              <a href="https://www.facebook.com/groups/1039884364940491" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%; margin-top: 0.5rem;">
+                <span>Join Facebook Group</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Col -->
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.85rem;">
+            <div class="brand-icon" style="width: 30px; height: 30px; font-size: 0.9rem;">TH</div>
+            <span style="font-weight: 700; font-size: 1rem; color: var(--text-primary);">Tracy Hills II</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.6; margin-bottom: 1rem;">
+            Community information portal providing neighborhood notices, Seabreeze HOA details, City of Tracy contacts, Lennar developer care, and service directory.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home / Overview</a></li>
+            <li><a href="contacts.html">Quick Contacts</a></li>
+            <li><a href="providers.html">Service Directory</a></li>
+            <li><a href="faq.html">Community FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Official Portals -->
+        <div>
+          <h4 class="footer-heading">Official Portals</h4>
+          <ul class="footer-links">
+            <li><a href="https://commarea.cincwebaxis.com" target="_blank" rel="noopener noreferrer">Seabreeze Resident Portal ↗</a></li>
+            <li><a href="https://www.cityoftracy.org" target="_blank" rel="noopener noreferrer">City of Tracy Website ↗</a></li>
+            <li><a href="https://user.govoutreach.com/tracy/support.php" target="_blank" rel="noopener noreferrer">Report an Issue (City of Tracy) ↗</a></li>
+            <li><a href="https://www.lennar.com/my-lennar" target="_blank" rel="noopener noreferrer">MyLennar Care Portal ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div>© 2026 Tracy Hills II Community Resource Portal.</div>
+        <button class="scroll-to-top-btn" style="display: inline-flex; align-items: center; gap: 0.35rem; color: var(--text-secondary); background: #1E293B; padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); font-size: 0.8rem; cursor: pointer;">
+          <span>Top</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
