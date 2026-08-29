@@ -405,32 +405,6 @@ const PROVIDERS_DATA = [
   },
   {
     "id": "sp-301",
-    "businessName": "NorthCal Waters",
-    "category": "Water Softener",
-    "contactPerson": null,
-    "phone": "(510) 305-2600",
-    "email": null,
-    "website": null,
-    "description": "RO & Softener Installation",
-    "communityNotes": "Great experience overall. He installs a Clack WS1 water softener (without the fancy outer cover), and for the RO system, he asks you to purchase it from Amazon and then handles the installation. Total installation cost for both the RO and the water softener was around $2,500–$2,600.",
-    "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
-  },
-  {
-    "id": "sp-302",
-    "businessName": "Puronics",
-    "category": "Water Softener",
-    "contactPerson": null,
-    "phone": null,
-    "email": null,
-    "website": null,
-    "description": "RO & Softener Installation",
-    "communityNotes": "It was great. The guy who came for installation was knowledgeable and did all necessary plumbing work neat and clean. Installed Filtermax IGEN C Water Softener and Micromax 8500 under-counter RO system. Total cost came $4,990. For referral, they give $100 Amazon gift card for the person referred.",
-    "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
-  },
-  {
-    "id": "sp-303",
     "businessName": "Miguel",
     "category": "Water Softener",
     "contactPerson": "Miguel",
@@ -443,7 +417,7 @@ const PROVIDERS_DATA = [
     "lastUpdated": "2026-08-28"
   },
   {
-    "id": "sp-304",
+    "id": "sp-302",
     "businessName": "Kenny",
     "category": "Water Softener",
     "contactPerson": "Kenny",
@@ -452,6 +426,32 @@ const PROVIDERS_DATA = [
     "website": null,
     "description": "Water Softener Installation",
     "communityNotes": "Unlicensed but does a quality job. Has done many installs in TH2.",
+    "isPlaceholder": false,
+    "lastUpdated": "2026-08-28"
+  },
+  {
+    "id": "sp-303",
+    "businessName": "NorthCal Waters",
+    "category": "Water Softener",
+    "contactPerson": null,
+    "phone": "(510) 305-2600",
+    "email": null,
+    "website": null,
+    "description": "RO & Softener Installation",
+    "communityNotes": "Great experience overall. He installs a Clack WS1 water softener (without the fancy outer cover), and for the RO system, he asks you to purchase it from Amazon and then handles the installation. Total installation cost for both the RO and the water softener was around $2,500–$2,600.",
+    "isPlaceholder": false,
+    "lastUpdated": "2026-08-28"
+  },
+  {
+    "id": "sp-304",
+    "businessName": "Puronics",
+    "category": "Water Softener",
+    "contactPerson": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "description": "RO & Softener Installation",
+    "communityNotes": "It was great. The guy who came for installation was knowledgeable and did all necessary plumbing work neat and clean. Installed Filtermax IGEN C Water Softener and Micromax 8500 under-counter RO system. Total cost came $4,990. For referral, they give $100 Amazon gift card for the person referred.",
     "isPlaceholder": false,
     "lastUpdated": "2026-08-28"
   },
