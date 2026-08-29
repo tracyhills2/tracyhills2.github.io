@@ -672,6 +672,14 @@ img, svg {
   display: block;
 }
 
+.accordion-content p {
+  margin-bottom: 0.85rem;
+}
+
+.accordion-content p:last-child {
+  margin-bottom: 0;
+}
+
 /* --------------------------------------------------------------------------
    Modal Dialog
    -------------------------------------------------------------------------- */
