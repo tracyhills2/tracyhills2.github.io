@@ -1,4 +1,4 @@
-# Tracy Hills II — Community Portal Website
+# Tracy Hills II — Community Resource Hub
 
 Static, high-performance community resource website for Tracy Hills II built using **Plain HTML5, Vanilla CSS3, and JavaScript**.
 
