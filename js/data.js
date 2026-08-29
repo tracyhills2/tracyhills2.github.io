@@ -180,7 +180,7 @@ const PROVIDERS_DATA = [
     "description": "Plumbing, backyard projects, washer/dryer installation, and all kinds of home repair work.",
     "communityNotes": "Plumbing, backyard, washer/dryer installation, all kinds of work.",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-102",
@@ -193,7 +193,7 @@ const PROVIDERS_DATA = [
     "description": "General contracting, home improvements, and remodeling projects.",
     "communityNotes": "Contractor recommended from Sunny’s Manteca neighbor.",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-103",
@@ -206,7 +206,7 @@ const PROVIDERS_DATA = [
     "description": "General handyman and home repair services.",
     "communityNotes": "General handyman.",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-104",
@@ -219,7 +219,7 @@ const PROVIDERS_DATA = [
     "description": "General handyman repairs, wall mounting, and home maintenance.",
     "communityNotes": "Recommended by 5M Lane homeowners.",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-105",
@@ -232,7 +232,7 @@ const PROVIDERS_DATA = [
     "description": "General handyman services, maintenance, and home repairs.",
     "communityNotes": "General handyman.",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-106",
@@ -245,7 +245,7 @@ const PROVIDERS_DATA = [
     "description": "All kinds of home repair work and interior/exterior door installations.",
     "communityNotes": "All kinds of work, installs doors.",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-107",
@@ -258,7 +258,7 @@ const PROVIDERS_DATA = [
     "description": "Multi-skilled handyman providing high quality home repair and renovation work.",
     "communityNotes": "Multi-skilled, high quality work.",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-108",
@@ -271,7 +271,7 @@ const PROVIDERS_DATA = [
     "description": "General handyman services and routine household repairs.",
     "communityNotes": "Handyman.",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-109",
@@ -284,7 +284,7 @@ const PROVIDERS_DATA = [
     "description": "General handyman services and maintenance work.",
     "communityNotes": "Handyman (provided by Amar).",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-110",
@@ -297,7 +297,7 @@ const PROVIDERS_DATA = [
     "description": "Handyman and electrical installation/repair services.",
     "communityNotes": "Handyman / Electrician (provided by KSR).",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-111",
@@ -310,7 +310,7 @@ const PROVIDERS_DATA = [
     "description": "Electrical repairs, lighting fixtures, and electrical panel work.",
     "communityNotes": "Electrician from South San Ramon Group.",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-201",
@@ -323,7 +323,7 @@ const PROVIDERS_DATA = [
     "description": "Home insurance services.",
     "communityNotes": "Tracy Hills Phase 2 Resident, and highly recommended",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-202",
@@ -336,7 +336,7 @@ const PROVIDERS_DATA = [
     "description": "Home insurance services (Westwood).",
     "communityNotes": "Westwood",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-203",
@@ -349,7 +349,7 @@ const PROVIDERS_DATA = [
     "description": "Home insurance services.",
     "communityNotes": null,
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-204",
@@ -362,7 +362,7 @@ const PROVIDERS_DATA = [
     "description": "Home insurance services (AAA).",
     "communityNotes": "AAA",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-205",
@@ -375,7 +375,7 @@ const PROVIDERS_DATA = [
     "description": "Home insurance services (AAA).",
     "communityNotes": "AAA",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-206",
@@ -388,7 +388,7 @@ const PROVIDERS_DATA = [
     "description": "Home insurance services (Farmers).",
     "communityNotes": "Farmers",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-207",
@@ -401,7 +401,7 @@ const PROVIDERS_DATA = [
     "description": "Home insurance services (Hippo).",
     "communityNotes": "Hippo",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-301",
@@ -414,7 +414,7 @@ const PROVIDERS_DATA = [
     "description": "Water Softener Unit & Installation Services",
     "communityNotes": "Installed hundreds of units between Tracy Hills Phase 1 and 2. He can provide unit + installation or only installation service.",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-302",
@@ -427,7 +427,7 @@ const PROVIDERS_DATA = [
     "description": "Water Softener Installation",
     "communityNotes": "Unlicensed but does a quality job. Has done many installs in TH2.",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-303",
@@ -440,7 +440,7 @@ const PROVIDERS_DATA = [
     "description": "RO & Softener Installation",
     "communityNotes": "Great experience overall. He installs a Clack WS1 water softener (without the fancy outer cover), and for the RO system, he asks you to purchase it from Amazon and then handles the installation. Total installation cost for both the RO and the water softener was around $2,500–$2,600.",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-304",
@@ -453,7 +453,7 @@ const PROVIDERS_DATA = [
     "description": "RO & Softener Installation",
     "communityNotes": "It was great. The guy who came for installation was knowledgeable and did all necessary plumbing work neat and clean. Installed Filtermax IGEN C Water Softener and Micromax 8500 under-counter RO system. Total cost came $4,990. For referral, they give $100 Amazon gift card for the person referred.",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-401",
@@ -466,7 +466,7 @@ const PROVIDERS_DATA = [
     "description": "Plumbing Services & Maintenance",
     "communityNotes": "Good experience, from next door neighbor",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-402",
@@ -479,7 +479,7 @@ const PROVIDERS_DATA = [
     "description": "Plumbing Repairs & Services",
     "communityNotes": "Plumber from San Ramon Desi Group",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-403",
@@ -492,7 +492,7 @@ const PROVIDERS_DATA = [
     "description": "Plumbing Services",
     "communityNotes": "Plumber from South San Ramon group",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-404",
@@ -505,7 +505,7 @@ const PROVIDERS_DATA = [
     "description": "Plumbing & Bathroom/Kitchen Remodeling",
     "communityNotes": "Plumbing + bathroom/kitchen remodeling specialist. Great and reasonable work.",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-405",
@@ -518,7 +518,7 @@ const PROVIDERS_DATA = [
     "description": "Plumbing Services",
     "communityNotes": "Plumber from Milford Group",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-406",
@@ -531,7 +531,7 @@ const PROVIDERS_DATA = [
     "description": "Plumbing Repairs",
     "communityNotes": "Plumber",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-407",
@@ -544,7 +544,7 @@ const PROVIDERS_DATA = [
     "description": "Plumbing & Drain Services",
     "communityNotes": null,
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-501",
@@ -557,7 +557,7 @@ const PROVIDERS_DATA = [
     "description": "Electrical Installation & Services",
     "communityNotes": null,
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-502",
@@ -570,7 +570,7 @@ const PROVIDERS_DATA = [
     "description": "Electrical Services & Repairs",
     "communityNotes": null,
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-503",
@@ -583,7 +583,7 @@ const PROVIDERS_DATA = [
     "description": "Electrical Services & Repairs",
     "communityNotes": null,
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-504",
@@ -596,7 +596,7 @@ const PROVIDERS_DATA = [
     "description": "Electrical Services & Maintenance",
     "communityNotes": null,
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-505",
@@ -609,7 +609,7 @@ const PROVIDERS_DATA = [
     "description": "Electrical Installation & Services",
     "communityNotes": null,
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-506",
@@ -622,7 +622,7 @@ const PROVIDERS_DATA = [
     "description": "Electrical Services & Repairs",
     "communityNotes": null,
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-507",
@@ -635,7 +635,7 @@ const PROVIDERS_DATA = [
     "description": "Electrical Services & Maintenance",
     "communityNotes": null,
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-601",
@@ -648,7 +648,7 @@ const PROVIDERS_DATA = [
     "description": "Interior & Exterior Painting Services",
     "communityNotes": null,
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-701",
@@ -661,7 +661,7 @@ const PROVIDERS_DATA = [
     "description": "Snake Catching, Removal, and Wildlife Control Services.",
     "communityNotes": "Snake Catcher",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   },
   {
     "id": "sp-702",
@@ -674,7 +674,7 @@ const PROVIDERS_DATA = [
     "description": "Snake Catching, Removal, and Wildlife Control Services.",
     "communityNotes": "Snake Catcher",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-28"
+    "lastUpdated": "2026-08-22"
   }
 ];
 
