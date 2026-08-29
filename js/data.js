@@ -93,77 +93,929 @@ const FAQ_DATA = [
     "id": "faq-001",
     "category": "HOA",
     "question": "How do I access the Seabreeze HOA portal and pay dues?",
-    "answer": "You can log in to the Seabreeze CINC WebAxis portal at commarea.cincwebaxis.com to pay HOA dues, view balance statements, or submit architectural requests. You can also reach Seabreeze Customer Care by calling (800) 232-7517 or emailing customercare@seabreezemgmt.com.",
+    "answer": `<div class="faq-details">
+  <p>
+    Seabreeze Management Company handles HOA dues billing, account balance statements, and architectural submittals for Tracy Hills II.
+  </p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1rem 0;">
+    <!-- Portal Access Card -->
+    <div style="background: #0F172A; border: 1px solid rgba(96, 165, 250, 0.35); border-radius: var(--radius-md); padding: 1.1rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--accent-link); margin: 0;">Seabreeze CINC Portal</h4>
+          <span style="background: rgba(37, 99, 235, 0.15); color: #60A5FA; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px;">Online Portal</span>
+        </div>
+        <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.75rem; line-height: 1.5;">
+          Access your resident account to pay monthly dues, set up auto-pay, download account statements, or track submittals.
+        </p>
+      </div>
+      <a href="https://commarea.cincwebaxis.com" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; background: var(--accent-primary); color: #FFFFFF; font-weight: 600; font-size: 0.825rem; padding: 0.5rem 1rem; border-radius: var(--radius-sm); text-decoration: none;">
+        <span>Log In to CINC Portal ↗</span>
+      </a>
+    </div>
+
+    <!-- Seabreeze Customer Care Card -->
+    <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.1rem;">
+      <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.6rem;">Customer Care Contacts</h4>
+      <div style="display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.825rem; color: var(--text-secondary);">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>Phone: <a href="tel:8002327517" style="color: var(--text-primary); font-weight: 600;">(800) 232-7517</a></span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>Email: <a href="mailto:customercare@seabreezemgmt.com" style="color: var(--accent-link);">customercare@seabreezemgmt.com</a></span>
+        </div>
+        <div style="font-size: 0.775rem; color: var(--text-muted); margin-top: 0.25rem;">
+          Mon – Fri: 8:00 AM – 5:00 PM (After-hours emergency call center active 24/7).
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Summer 2026 Note -->
+  <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
+    ℹ️ <em>Note: The details provided above are as of Summer 2026.</em>
+  </div>
+</div>`,
     "keywords": ["dues", "payment", "seabreeze", "portal", "hoa fee", "cinc", "billing", "account", "management"]
+  },
+  {
+    "id": "faq-012",
+    "category": "HOA",
+    "question": "What are the Architectural Review Committee (ARC) approval rules, fees, deadlines, and submittal process?",
+    "answer": `<div class="faq-arc-details">
+  <p>
+    Prior to commencing any exterior addition, modification, construction, hardscape, or landscaping work on your lot, you must obtain written approval from the Architectural Review Committee (ARC).
+  </p>
+
+  <!-- Review Requirement Levels -->
+  <div style="margin: 1.25rem 0;">
+    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+      <span>When Is ARC Approval Required?</span>
+    </h4>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.85rem;">
+      
+      <!-- Full Review Card -->
+      <div style="background: #0F172A; border: 1px solid rgba(239, 68, 68, 0.3); border-radius: var(--radius-md); padding: 1rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+          <span style="font-weight: 700; font-size: 0.875rem; color: #FCA5A5;">Full Review Required</span>
+          <span style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px;">$200 Fee</span>
+        </div>
+        <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+          All new backyard/side yard landscaping, concrete patios, pavers, retaining walls, aluminum pergolas/patio covers, outdoor kitchens, water features, swimming pools, and solar panels.
+        </p>
+      </div>
+
+      <!-- Minor Review Card -->
+      <div style="background: #0F172A; border: 1px solid rgba(234, 179, 8, 0.3); border-radius: var(--radius-md); padding: 1rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+          <span style="font-weight: 700; font-size: 0.875rem; color: #FEF08A;">Minor Review Required</span>
+          <span style="background: rgba(234, 179, 8, 0.15); color: #FEF08A; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px;">$175 Fee</span>
+        </div>
+        <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+          Exterior house repainting (different color), storage sheds extending above fence line, and post-mounted exterior lighting.
+        </p>
+      </div>
+
+      <!-- Exempt Card -->
+      <div style="background: #0F172A; border: 1px solid rgba(34, 197, 94, 0.3); border-radius: var(--radius-md); padding: 1rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+          <span style="font-weight: 700; font-size: 0.875rem; color: #86EFAC;">Exempt / No Review</span>
+          <span style="background: rgba(34, 197, 94, 0.15); color: #86EFAC; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px;">$0 Fee</span>
+        </div>
+        <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+          Minor seasonal flower plantings, matching original exterior paint, potted plants (up to 2 visible from common areas), and matching replacement side gates.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Timelines & Costs -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 1.25rem;">
+    
+    <!-- Timelines Card -->
+    <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.1rem;">
+      <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--accent-link); margin-bottom: 0.65rem; display: flex; align-items: center; gap: 0.4rem;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        <span>Timelines & Review Deadlines</span>
+      </h4>
+      <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.825rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.5rem;">
+        <li style="display: flex; align-items: flex-start; gap: 0.4rem;">
+          <span style="color: var(--accent-link); font-weight: 700;">•</span>
+          <span><strong>New Homeowner Submittal:</strong> Initial landscape plans must be submitted within <strong>6 months</strong> (recommended within 90 days) of close of escrow.</span>
+        </li>
+        <li style="display: flex; align-items: flex-start; gap: 0.4rem;">
+          <span style="color: var(--accent-link); font-weight: 700;">•</span>
+          <span><strong>New Homeowner Completion:</strong> Landscape work must be completed within <strong>9 months (180 days)</strong> of close of escrow.</span>
+        </li>
+        <li style="display: flex; align-items: flex-start; gap: 0.4rem;">
+          <span style="color: var(--accent-link); font-weight: 700;">•</span>
+          <span><strong>ARC Review Turnaround:</strong> ARC has up to <strong>45 calendar days</strong> from receipt of a <em>complete</em> application to approve or deny.</span>
+        </li>
+        <li style="display: flex; align-items: flex-start; gap: 0.4rem;">
+          <span style="color: var(--accent-link); font-weight: 700;">•</span>
+          <span><strong>Construction Window:</strong> Work must commence within <strong>12 months</strong> of approval and be completed within <strong>6 months</strong> of commencement.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Costs & Fees Card -->
+    <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.1rem;">
+      <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--accent-link); margin-bottom: 0.65rem; display: flex; align-items: center; gap: 0.4rem;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        <span>Costs & Security Deposit</span>
+      </h4>
+      <div style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.825rem;">
+        <div style="background: #0F172A; border-radius: var(--radius-sm); padding: 0.65rem 0.85rem;">
+          <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
+            <span>Submittal Fee (Non-Refundable):</span>
+            <span style="color: #FCA5A5;">$200 / $175</span>
+          </div>
+          <span style="color: var(--text-muted); font-size: 0.775rem;">$200 for Full Review or $175 for Minor Review, payable to <em>Tracy Hills II Community Association</em>.</span>
+        </div>
+        <div style="background: #0F172A; border-radius: var(--radius-sm); padding: 0.65rem 0.85rem;">
+          <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
+            <span>Security Deposit (100% Refundable):</span>
+            <span style="color: #86EFAC;">$250</span>
+          </div>
+          <span style="color: var(--text-muted); font-size: 0.775rem;">Payable to <em>Tracy Hills II Community Association</em>. Refunded in full after Form E (Notice of Completion) & photos verify zero common area damage.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Step-by-Step Submittal Process -->
+  <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.15rem; margin-bottom: 1.25rem;">
+    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.85rem; display: flex; align-items: center; gap: 0.4rem;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+      <span>Step-by-Step: How to Submit Your Application</span>
+    </h4>
+
+    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+      
+      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
+        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">1</span>
+        <div>
+          <strong style="color: var(--text-primary);">Prepare Your 2D Plan Drawing (Sheet L-1):</strong> Create a dimensioned layout showing property lines, house foundation, proposed patio/pergola/walls, tree locations with setbacks, and surface drainage arrows. Include your <strong>Name, Address, Lot #, Tract #, and a North Arrow</strong>.
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
+        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">2</span>
+        <div>
+          <strong style="color: var(--text-primary);">Collect Neighbor Signatures (Form D):</strong> Show your plan drawing to left/right adjacent neighbors, rear neighbors, and 3 facing neighbors across the street to sign Form D (or note "Vacant/Builder" if unoccupied).
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
+        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">3</span>
+        <div>
+          <strong style="color: var(--text-primary);">Complete Association Forms:</strong> Fill out and sign <strong>Form B</strong> (Checklist), <strong>Form C</strong> (Review Request), and <strong>Form G</strong> (Water Quality BMP Agreement).
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
+        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">4</span>
+        <div>
+          <strong style="color: var(--text-primary);">Attach Product Cut Sheets & Site Photos:</strong> Include photos of existing yard (front, back, left, right) plus manufacturer specification sheets for items like your pergola, artificial turf, and stone veneers.
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
+        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">5</span>
+        <div>
+          <strong style="color: var(--text-primary);">Send Package to Seabreeze:</strong> Email your consolidated PDF to <a href="mailto:csteam@seabreezemgmt.com" style="color: var(--accent-link); font-weight: 600;">csteam@seabreezemgmt.com</a> (or mail to Seabreeze Management Company, 4305 Hacienda Dr., Suite 350, Pleasanton, CA 94588) with the two checks.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Top 6 Rules Grid -->
+  <div style="margin-bottom: 1.25rem;">
+    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FDE047" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+      <span>Top 6 Rules to Ensure First-Time Approval</span>
+    </h4>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.85rem;">
+      
+      <!-- Rule 1 -->
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem 1rem; font-size: 0.825rem;">
+        <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">1. Pergolas / Patio Covers</strong>
+        Must be constructed of <strong>non-combustible heavy-gauge aluminum</strong> (e.g., powder-coated extruded aluminum). Traditional wood pergolas are strictly prohibited under the Phase 2 Fire Protection Plan. Minimum setbacks: <strong>5′-0″ from rear fence</strong> and <strong>3′-0″ from side fence</strong>.
+      </div>
+
+      <!-- Rule 2 -->
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem 1rem; font-size: 0.825rem;">
+        <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">2. Retaining Walls</strong>
+        Must <strong>never exceed 24 inches in height</strong> from finished grade, must be sealed with Thoroseal waterproofing, and must include an integrated sub-drain pipe.
+      </div>
+
+      <!-- Rule 3 -->
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem 1rem; font-size: 0.825rem;">
+        <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">3. Tree Setbacks & Root Barriers</strong>
+        All trees must maintain a minimum <strong>5′-0″ setback from all property lines and fences</strong> and must use root barrier collars.
+      </div>
+
+      <!-- Rule 4 -->
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem 1rem; font-size: 0.825rem;">
+        <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">4. Prohibited Flammable Plants</strong>
+        Never submit pyrophytic species prohibited by the Fire Protection Plan (zero cypress, pines, junipers, bamboo, eucalyptus, or palm trees).
+      </div>
+
+      <!-- Rule 5 -->
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem 1rem; font-size: 0.825rem;">
+        <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">5. Drainage & Runoff Slopes</strong>
+        Hardscape must have a minimum <strong>1.0% slope away from house</strong>; landscape beds must have <strong>2.0% slope to drains</strong> connecting to builder storm PVC pipe. Zero sheet-flow runoff permitted onto neighboring lots.
+      </div>
+
+      <!-- Rule 6 -->
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem 1rem; font-size: 0.825rem;">
+        <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">6. Synthetic Turf Standards</strong>
+        Must specify a <strong>Class A fire-resistance rating</strong> (ASTM E84 / SFM standard) and a minimum <strong>10-year manufacturer warranty</strong> installed over aggregate base.
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Summer 2026 Note -->
+  <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle);">
+    ℹ️ <em>Note: The facts and guidelines provided above are as of Summer 2026.</em>
+  </div>
+
+</div>`,
+    "keywords": ["arc", "architectural", "approval", "landscaping", "patio", "pergola", "retaining wall", "turf", "drainage", "fees", "deposit", "deadlines", "seabreeze", "rules", "form d", "form b", "fire protection", "trees", "submittal"]
   },
   {
     "id": "faq-002",
     "category": "Lennar / Developer",
     "question": "Who is responsible for maintaining the streets in Tracy Hills II?",
-    "answer": "Currently, streets in the Tracy Hills II community are maintained by Lennar (the builder), not the City of Tracy. For any street maintenance issues, potholes, or curb repairs, please contact Lennar Customer Care at (888) 214-2494.",
+    "answer": `<div class="faq-details">
+  <p>
+    Currently, all streets in Tracy Hills II remain under builder jurisdiction and are maintained by <strong>Lennar Homes</strong> until official public dedication to the City of Tracy is completed.
+  </p>
+
+  <div style="background: rgba(234, 179, 8, 0.1); border: 1px solid rgba(234, 179, 8, 0.3); border-radius: var(--radius-md); padding: 0.85rem 1rem; margin: 1rem 0; font-size: 0.85rem; color: #FDE047;">
+    <strong>Notice:</strong> Please report street hazards, unpaved curbs, potholes, or construction debris directly to Lennar Customer Care rather than the City of Tracy.
+  </div>
+
+  <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.1rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;">
+    <div>
+      <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.3rem;">Lennar Customer Care</h4>
+      <div style="font-size: 0.825rem; color: var(--text-secondary);">
+        Phone: <a href="tel:8882142494" style="color: var(--accent-link); font-weight: 600;">(888) 214-2494</a> | Mon – Fri: 8:00 AM – 5:00 PM
+      </div>
+    </div>
+    <a href="https://www.lennar.com/my-lennar" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.35rem; background: var(--bg-surface); border: 1px solid var(--border-subtle); color: var(--text-primary); font-size: 0.8rem; font-weight: 600; padding: 0.4rem 0.85rem; border-radius: var(--radius-sm); text-decoration: none;">
+      <span>MyLennar Portal ↗</span>
+    </a>
+  </div>
+
+  <!-- Summer 2026 Note -->
+  <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
+    ℹ️ <em>Note: Street maintenance responsibility and builder contact details are as of Summer 2026.</em>
+  </div>
+</div>`,
     "keywords": ["street", "road", "pothole", "curb", "maintenance", "lennar", "city of tracy", "paving"]
   },
   {
     "id": "faq-003",
     "category": "City Services",
     "question": "Who maintains the community parks and green spaces?",
-    "answer": "Parks in Tracy Hills II are maintained by the City of Tracy Parks & Recreation department ((209) 831-6200). For any park maintenance, playground equipment, or safety concerns, contact the City directly or report an issue online at user.govoutreach.com/tracy/support.php.",
+    "answer": `<div class="faq-details">
+  <p>
+    Public parks, playgrounds, and landscaped green belts in Tracy Hills II are maintained by the <strong>City of Tracy Parks & Recreation Department</strong>.
+  </p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1rem 0;">
+    <!-- Phone Card -->
+    <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem;">
+      <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">Parks & Rec Phone Line</h4>
+      <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.5rem;">
+        For general inquiries, facility rentals, or urgent maintenance issues:
+      </p>
+      <a href="tel:2098316200" style="color: var(--accent-link); font-weight: 700; font-size: 0.9rem;">(209) 831-6200</a>
+    </div>
+
+    <!-- Online Service Request Card -->
+    <div style="background: #0F172A; border: 1px solid rgba(96, 165, 250, 0.3); border-radius: var(--radius-md); padding: 1rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--accent-link); margin-bottom: 0.35rem;">Report a Park Issue Online</h4>
+        <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.5rem;">
+          Report broken playground equipment, irrigation leaks, or trash bin issues directly to the City portal.
+        </p>
+      </div>
+      <a href="https://user.govoutreach.com/tracy/support.php" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; background: var(--accent-primary); color: #FFF; font-size: 0.8rem; font-weight: 600; padding: 0.4rem 0.85rem; border-radius: var(--radius-sm); text-decoration: none;">
+        <span>Submit City Service Request ↗</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Summer 2026 Note -->
+  <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
+    ℹ️ <em>Note: The details provided above are as of Summer 2026.</em>
+  </div>
+</div>`,
     "keywords": ["park", "green space", "playground", "parks and rec", "city of tracy", "maintenance", "report issue"]
   },
   {
     "id": "faq-004",
     "category": "City Services",
     "question": "Where can I recycle large cardboard boxes, electronics, or bulky items?",
-    "answer": "Large cardboard boxes, household electronics, and bulky waste can be recycled through Tracy Material Recovery (TDSWM). Visit tracymaterialrecovery.com/recycling/ for drop-off location details, hours, and accepted recyclable materials.",
+    "answer": `<div class="faq-details">
+  <p>
+    Large cardboard moving boxes, e-waste, appliances, and bulky household items can be recycled at the official <strong>Tracy Material Recovery Facility</strong> operated by Tracy Delta Solid Waste Management (TDSWM).
+  </p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin: 1rem 0;">
+    <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem; font-size: 0.825rem;">
+      <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">📦 Cardboard & Boxes</strong>
+      Flattened oversized boxes, packaging materials, and clean paperboard.
+    </div>
+    <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem; font-size: 0.825rem;">
+      <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">🖥️ E-Waste & Electronics</strong>
+      Monitors, TVs, computers, printers, small appliances, and cables.
+    </div>
+    <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem; font-size: 0.825rem;">
+      <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">🛋️ Bulky Household Items</strong>
+      Furniture, mattresses, water heaters, and large metal scrap.
+    </div>
+  </div>
+
+  <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.85rem 1rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem;">
+    <span style="font-size: 0.85rem; color: var(--text-secondary);">Visit the recovery center website for operating hours, location directions, and fee details:</span>
+    <a href="https://tracymaterialrecovery.com/recycling/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.35rem; background: var(--accent-primary); color: #FFF; font-size: 0.8rem; font-weight: 600; padding: 0.4rem 0.85rem; border-radius: var(--radius-sm); text-decoration: none;">
+      <span>Tracy Material Recovery Info ↗</span>
+    </a>
+  </div>
+
+  <!-- Summer 2026 Note -->
+  <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
+    ℹ️ <em>Note: Recycling guidelines and facility hours are as of Summer 2026.</em>
+  </div>
+</div>`,
     "keywords": ["boxes", "cardboard", "recycling", "bulky item", "tracy material recovery", "waste", "trash", "drop off"]
   },
   {
     "id": "faq-005",
     "category": "City Services",
     "question": "How do I find my trash collection schedule and download the collection app?",
-    "answer": "Garbage, green waste, and recycling collection is operated by Tracy Delta Solid Waste Management (TDSWM). You can view your collection schedule and set reminders using the Tracy Delta Collection Schedule App on iOS or Android, or by calling (209) 835-0601.",
+    "answer": `<div class="faq-details">
+  <p>
+    Curbside waste, green waste, and recycling service in Tracy Hills II is operated by <strong>Tracy Delta Solid Waste Management (TDSWM)</strong>.
+  </p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1rem 0;">
+    <!-- Collection Schedule App Card -->
+    <div style="background: #0F172A; border: 1px solid rgba(96, 165, 250, 0.3); border-radius: var(--radius-md); padding: 1.1rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--accent-link); margin-bottom: 0.35rem;">Collection Schedule App</h4>
+        <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+          Download the official TDSWM app on your smartphone to view collection calendars, receive holiday push reminders, and search item sorting guides.
+        </p>
+      </div>
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <a href="https://apps.apple.com/us/app/tdswm-wvd-collection-services/id6459505232" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.3rem; background: var(--bg-surface); border: 1px solid var(--border-subtle); color: var(--text-primary); font-size: 0.775rem; font-weight: 600; padding: 0.35rem 0.65rem; border-radius: var(--radius-sm); text-decoration: none;">
+          <span> iOS App Store ↗</span>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.tdswm.recollect.waste" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.3rem; background: var(--bg-surface); border: 1px solid var(--border-subtle); color: var(--text-primary); font-size: 0.775rem; font-weight: 600; padding: 0.35rem 0.65rem; border-radius: var(--radius-sm); text-decoration: none;">
+          <span>🤖 Google Play ↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Phone Support Card -->
+    <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.1rem;">
+      <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">Customer Service Line</h4>
+      <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.65rem;">
+        For missed pickups, extra bin requests, or billing questions:
+      </p>
+      <a href="tel:2098350601" style="color: var(--accent-link); font-weight: 700; font-size: 0.95rem;">(209) 835-0601</a>
+    </div>
+  </div>
+
+  <!-- Summer 2026 Note -->
+  <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
+    ℹ️ <em>Note: Waste collection schedule details are as of Summer 2026.</em>
+  </div>
+</div>`,
     "keywords": ["trash", "garbage", "recycling", "tracy delta", "app", "collection", "schedule", "tdswm"]
   },
   {
     "id": "faq-006",
     "category": "Utilities",
     "question": "How do I pay my City of Tracy water and municipal utility bill online?",
-    "answer": "City of Tracy water and municipal utility bills can be paid online through the official City Paymentus portal at ipn.paymentus.com/cp/trcy?lang=en or by calling City Utility Billing at (209) 831-6800.",
+    "answer": `<div class="faq-details">
+  <p>
+    City of Tracy municipal utility services (water, sewer, and stormwater fees) are billed directly by the City of Tracy Finance Department.
+  </p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1rem 0;">
+    <!-- Online Payment Card -->
+    <div style="background: #0F172A; border: 1px solid rgba(34, 197, 94, 0.35); border-radius: var(--radius-md); padding: 1.1rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: #86EFAC; margin: 0;">City Paymentus Portal</h4>
+          <span style="background: rgba(34, 197, 94, 0.15); color: #86EFAC; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px;">Official Portal</span>
+        </div>
+        <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+          Pay water bills securely online via credit card or e-check, set up recurring monthly auto-pay, or view past billing statements.
+        </p>
+      </div>
+      <a href="https://ipn.paymentus.com/cp/trcy?lang=en" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; background: #166534; color: #FFFFFF; font-weight: 600; font-size: 0.825rem; padding: 0.5rem 1rem; border-radius: var(--radius-sm); text-decoration: none;">
+        <span>Pay City Utility Bill Online ↗</span>
+      </a>
+    </div>
+
+    <!-- Phone Support Card -->
+    <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.1rem;">
+      <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">City Utility Customer Service</h4>
+      <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.65rem;">
+        For account setup, billing inquiries, or service transfers:
+      </p>
+      <a href="tel:2098316800" style="color: var(--accent-link); font-weight: 700; font-size: 0.95rem;">(209) 831-6800</a>
+    </div>
+  </div>
+
+  <!-- Summer 2026 Note -->
+  <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
+    ℹ️ <em>Note: Utility payment links and billing contacts are as of Summer 2026.</em>
+  </div>
+</div>`,
     "keywords": ["water", "utilities", "bill", "payment", "city of tracy", "paymentus", "sewer", "billing"]
   },
   {
     "id": "faq-007",
     "category": "Lennar / Developer",
     "question": "How do I submit a new home warranty service request to Lennar?",
-    "answer": "Warranty service requests should be submitted directly through the MyLennar portal (lennar.com/my-lennar) or by calling Lennar Customer Care at (888) 214-2494 (Mon - Fri: 8:00 AM - 5:00 PM).",
+    "answer": `<div class="faq-details">
+  <p>
+    New home warranty claims and customer care service requests should be submitted directly through the official <strong>MyLennar Portal</strong>.
+  </p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1rem 0;">
+    <!-- MyLennar Portal Card -->
+    <div style="background: #0F172A; border: 1px solid rgba(96, 165, 250, 0.3); border-radius: var(--radius-md); padding: 1.1rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--accent-link); margin-bottom: 0.35rem;">MyLennar Care Portal</h4>
+        <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+          Submit detailed service tickets, upload photos of warrantable defects, and track technician appointment status.
+        </p>
+      </div>
+      <a href="https://www.lennar.com/my-lennar" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; background: var(--accent-primary); color: #FFF; font-weight: 600; font-size: 0.825rem; padding: 0.5rem 1rem; border-radius: var(--radius-sm); text-decoration: none;">
+        <span>Open MyLennar Portal ↗</span>
+      </a>
+    </div>
+
+    <!-- Phone Line Card -->
+    <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.1rem;">
+      <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">Lennar Customer Care Phone</h4>
+      <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.5rem;">
+        Speak directly with a customer care representative:
+      </p>
+      <a href="tel:8882142494" style="color: var(--accent-link); font-weight: 700; font-size: 0.95rem;">(888) 214-2494</a>
+      <div style="font-size: 0.775rem; color: var(--text-muted); margin-top: 0.35rem;">
+        Mon – Fri: 8:00 AM – 5:00 PM
+      </div>
+    </div>
+  </div>
+
+  <!-- Summer 2026 Note -->
+  <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
+    ℹ️ <em>Note: Builder warranty procedures and contacts are as of Summer 2026.</em>
+  </div>
+</div>`,
     "keywords": ["lennar", "warranty", "customer care", "repair", "new home", "builder", "mylennar", "service request"]
   },
   {
     "id": "faq-008",
     "category": "WhatsApp / Communication",
     "question": "How do I join the resident WhatsApp and Facebook groups?",
-    "answer": "You can join the verified resident WhatsApp Community using the link in the site top bar or home page banner (chat.whatsapp.com/JbKtulmPtaKJ3CA4htB0uS?mode=gi_t). You can also join the Tracy Hills 2 Facebook Group at facebook.com/groups/1039884364940491.",
+    "answer": `<div class="faq-details">
+  <p>
+    Connect with fellow Tracy Hills Phase II homeowners across our active community communication channels:
+  </p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1rem 0;">
+    <!-- WhatsApp Card -->
+    <div style="background: #0F172A; border: 1px solid rgba(37, 211, 102, 0.35); border-radius: var(--radius-md); padding: 1.1rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: #4ADE80; margin: 0;">WhatsApp Community</h4>
+          <span style="background: rgba(37, 211, 102, 0.15); color: #4ADE80; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px;">Verified Residents</span>
+        </div>
+        <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+          Real-time neighborhood alerts, security updates, vendor recommendations, and topic-specific sub-groups.
+        </p>
+      </div>
+      <a href="https://chat.whatsapp.com/JbKtulmPtaKJ3CA4htB0uS?mode=gi_t" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; background: #15803D; color: #FFFFFF; font-weight: 600; font-size: 0.825rem; padding: 0.5rem 1rem; border-radius: var(--radius-sm); text-decoration: none;">
+        <span>Join WhatsApp Community ↗</span>
+      </a>
+    </div>
+
+    <!-- Facebook Group Card -->
+    <div style="background: #0F172A; border: 1px solid rgba(24, 119, 242, 0.35); border-radius: var(--radius-md); padding: 1.1rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: #60A5FA; margin: 0;">Facebook Resident Group</h4>
+          <span style="background: rgba(24, 119, 242, 0.15); color: #60A5FA; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px;">Social Group</span>
+        </div>
+        <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+          Community discussions, neighbor Q&A, lost & found, and social event planning.
+        </p>
+      </div>
+      <a href="https://www.facebook.com/groups/1039884364940491" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; background: #1D4ED8; color: #FFFFFF; font-weight: 600; font-size: 0.825rem; padding: 0.5rem 1rem; border-radius: var(--radius-sm); text-decoration: none;">
+        <span>Join Facebook Group ↗</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Summer 2026 Note -->
+  <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
+    ℹ️ <em>Note: Community group links and structure are as of Summer 2026.</em>
+  </div>
+</div>`,
     "keywords": ["whatsapp", "facebook", "group", "chat", "neighbors", "community", "social", "communication"]
   },
   {
     "id": "faq-009",
     "category": "Utilities",
-    "question": "Why is a water softener recommended in Tracy Hills?",
-    "answer": "Municipal water in Tracy and San Joaquin County generally has moderate-to-high water hardness. Many residents install a whole-home water softener system (such as Clack WS1 or Puronics) to protect appliances, fixtures, and plumbing.",
-    "keywords": ["water", "softener", "hardness", "minerals", "plumbing", "puronics", "clack", "reverse osmosis"]
+    "question": "Why is a water softener recommended in Tracy Hills, and what are the system options?",
+    "answer": `<div class="faq-water-softener-details">
+  <p>
+    The water in Tracy Hills and surrounding San Joaquin County is quite hard. If you check tap water in this area, you will typically see a <strong>Total Dissolved Solids (TDS) reading of around 250 ppm</strong>, although exact numbers vary by specific home location and season.
+  </p>
+
+  <div style="background: rgba(30, 58, 138, 0.25); border: 1px solid rgba(59, 130, 246, 0.3); border-left: 4px solid var(--accent-link); border-radius: var(--radius-sm); padding: 0.85rem 1rem; margin: 1rem 0; font-size: 0.875rem;">
+    <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--accent-link); font-weight: 700; margin-bottom: 0.35rem;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+      <span>Water Treatment Overview</span>
+    </div>
+    <div style="color: var(--text-secondary);">
+      Installing a whole-home system helps prevent mineral scale buildup in pipes, fixtures, and water heaters, while a reverse osmosis (RO) drinking system provides high-purity drinking water.
+    </div>
+  </div>
+
+  <p style="font-weight: 600; color: var(--text-primary); margin-top: 1.25rem; margin-bottom: 0.75rem;">
+    There are generally two approaches when it comes to setting up a whole-home water treatment system:
+  </p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 1.25rem;">
+    
+    <!-- Approach 1 Card -->
+    <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.15rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.65rem; gap: 0.5rem; flex-wrap: wrap;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin: 0;">1. One-Vendor Solution</h4>
+          <span style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; font-size: 0.775rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid rgba(239, 68, 68, 0.3);">$3,000 – $10,000+</span>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.85rem; line-height: 1.5;">
+          Some water-treatment companies sell, install, and maintain a combination of a whole-home filtration/conditioning system along with a reverse osmosis (RO) drinking-water system. Complete vendor-installed packages often feature systems like <strong>Clack WS1</strong> or <strong>Puronics</strong>.
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.825rem; margin-bottom: 0.85rem;">
+          <div style="display: flex; align-items: flex-start; gap: 0.4rem;">
+            <span style="color: #4ADE80; font-weight: 700; flex-shrink: 0;">✓</span>
+            <span style="color: var(--text-secondary);"><strong>Advantage:</strong> Convenience of dealing with one company as a single point of contact if issues arise.</span>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 0.4rem;">
+            <span style="color: #F87171; font-weight: 700; flex-shrink: 0;">✕</span>
+            <span style="color: var(--text-secondary);"><strong>Downside:</strong> Fewer component customization options & higher overall investment cost.</span>
+          </div>
+        </div>
+      </div>
+      <div style="font-size: 0.775rem; color: var(--text-muted); border-top: 1px solid var(--border-subtle); padding-top: 0.6rem; margin-top: 0.5rem;">
+        💡 <em>Note: Clearly verify what exact improvements the proposed system will provide before signing a contract.</em>
+      </div>
+    </div>
+
+    <!-- Approach 2 Card -->
+    <div style="background: #0F172A; border: 1px solid rgba(96, 165, 250, 0.35); border-radius: var(--radius-md); padding: 1.15rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.65rem; gap: 0.5rem; flex-wrap: wrap;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--accent-link); margin: 0;">2. Select Equipment & Hire Installer</h4>
+          <span style="background: rgba(34, 197, 94, 0.15); color: #86EFAC; font-size: 0.775rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid rgba(34, 197, 94, 0.3);">~$1,350 – $3,200 Total</span>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem; line-height: 1.5;">
+          Purchase your own whole-home water softener/filtration system and RO system, then hire a qualified installer to connect them. Popular options like <strong>Aquasure</strong> and <strong>Waterdrop</strong> are available through Amazon and Home Depot.
+        </p>
+        
+        <!-- Cost Breakdown List -->
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.65rem 0.85rem; margin-bottom: 0.75rem; font-size: 0.8rem;">
+          <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">Typical Equipment & Install Costs:</div>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.3rem; color: var(--text-secondary);">
+            <li style="display: flex; justify-content: space-between; gap: 0.5rem;">
+              <span>• Whole-home water softener:</span>
+              <strong style="color: var(--text-primary); flex-shrink: 0;">$450 – $1,000</strong>
+            </li>
+            <li style="display: flex; justify-content: space-between; gap: 0.5rem;">
+              <span>• RO drinking system:</span>
+              <strong style="color: var(--text-primary); flex-shrink: 0;">$200 – $1,200</strong>
+            </li>
+            <li style="display: flex; justify-content: space-between; gap: 0.5rem;">
+              <span>• Installation labor:</span>
+              <strong style="color: var(--text-primary); flex-shrink: 0;">$700 – $1,000</strong>
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.825rem; margin-bottom: 0.65rem;">
+          <div style="display: flex; align-items: flex-start; gap: 0.4rem;">
+            <span style="color: #4ADE80; font-weight: 700; flex-shrink: 0;">✓</span>
+            <span style="color: var(--text-secondary);"><strong>Advantage:</strong> Freedom to choose component specs & achieve high quality at lower overall cost.</span>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 0.4rem;">
+            <span style="color: #F87171; font-weight: 700; flex-shrink: 0;">✕</span>
+            <span style="color: var(--text-secondary);"><strong>Downside:</strong> Requires extra upfront research and coordination.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Popular Brands Breakdown -->
+  <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.85rem 1rem; margin-bottom: 1rem;">
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 0.75rem;">
+      <div style="flex: 1; min-width: 250px;">
+        <strong style="color: var(--text-primary); font-size: 0.85rem; display: block; margin-bottom: 0.4rem;">Popular Community Brands & Options:</strong>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.825rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.4rem;">
+          <li style="display: flex; align-items: flex-start; gap: 0.4rem;">
+            <span style="color: var(--accent-link); font-weight: 700;">•</span>
+            <span><strong>Approach 1 (Full Vendor Package):</strong> <strong>Clack WS1</strong> and <strong>Puronics</strong> are typical all-in-one systems provided directly through vendor installation contracts.</span>
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 0.4rem;">
+            <span style="color: var(--accent-link); font-weight: 700;">•</span>
+            <span><strong>Approach 2 (Self-Selected Equipment):</strong> Brands such as <strong>Aquasure</strong> and <strong>Waterdrop</strong> are popular self-purchase options available through Amazon and Home Depot.</span>
+          </li>
+        </ul>
+      </div>
+      <a href="providers.html?q=water" style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.8rem; font-weight: 600; color: var(--accent-link); background: rgba(96, 165, 250, 0.1); border: 1px solid rgba(96, 165, 250, 0.3); padding: 0.4rem 0.75rem; border-radius: var(--radius-sm); text-decoration: none; transition: background 0.15s ease; align-self: flex-start; margin-top: 0.25rem;">
+        <span>Find Local Installers ↗</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Water Testing Recommendation Box -->
+  <div style="background: rgba(234, 179, 8, 0.1); border: 1px solid rgba(234, 179, 8, 0.3); border-radius: var(--radius-sm); padding: 0.85rem 1rem; font-size: 0.825rem; color: #FDE047; display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.85rem;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink: 0; margin-top: 0.1rem;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+    <div style="line-height: 1.5;">
+      <strong style="color: #FEF08A;">Important Advice Before Purchasing:</strong> Always test your water first and clarify what specific issues you are trying to address—hardness, chlorine, sediment, TDS, or drinking-water quality—as different filtration systems solve different problems.
+    </div>
+  </div>
+
+  <!-- Summer 2026 Note -->
+  <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle);">
+    ℹ️ <em>Note: The details provided are based on Summer 2026 community data.</em>
+  </div>
+
+</div>`,
+    "keywords": ["water", "softener", "hardness", "tds", "250 ppm", "filtration", "reverse osmosis", "ro", "aquasure", "waterdrop", "puronics", "clack", "vendor", "installer", "cost", "plumbing"]
+  },
+  {
+    "id": "faq-013",
+    "category": "Utilities",
+    "question": "What is the process to activate the pre-installed solar and Tesla Powerwall in my new home, and how can I speed it up?",
+    "answer": `<div class="faq-solar-details">
+  <p>
+    Your solar panels (<strong>GAF Energy</strong>) and battery storage (<strong>Tesla Powerwall</strong>) are fully installed at close of escrow. However, <strong>they cannot be turned on until PG&E grants official Permission to Operate (PTO)</strong>.
+  </p>
+
+  <!-- PTO Critical Warning Callout -->
+  <div style="background: rgba(234, 179, 8, 0.12); border: 1px solid rgba(234, 179, 8, 0.35); border-left: 4px solid #EAB308; border-radius: var(--radius-sm); padding: 0.85rem 1rem; margin: 1rem 0; font-size: 0.875rem;">
+    <div style="display: flex; align-items: center; gap: 0.5rem; color: #FEF08A; font-weight: 700; margin-bottom: 0.35rem;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+      <span>Keep System OFF Until Official PTO Is Granted</span>
+    </div>
+    <div style="color: var(--text-secondary); font-size: 0.825rem; line-height: 1.5;">
+      Running your solar system before PG&E issues PTO can result in severe billing penalties, uncredited power export, or smart meter errors.
+    </div>
+  </div>
+
+  <!-- 1. The 4-Step Activation Timeline -->
+  <div style="margin: 1.25rem 0;">
+    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      <span>1. The 4-Step Activation Timeline</span>
+    </h4>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.85rem;">
+      
+      <!-- Step 1 -->
+      <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.95rem; font-size: 0.825rem;">
+        <div style="font-weight: 700; color: var(--accent-link); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.35rem;">
+          <span style="background: rgba(96, 165, 250, 0.15); color: var(--accent-link); width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800;">1</span>
+          <span>City Inspection Final</span>
+        </div>
+        <p style="color: var(--text-secondary); margin: 0; line-height: 1.45;">
+          Lennar & GAF Energy obtain final building permit sign-offs from the City of Tracy.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.95rem; font-size: 0.825rem;">
+        <div style="font-weight: 700; color: var(--accent-link); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.35rem;">
+          <span style="background: rgba(96, 165, 250, 0.15); color: var(--accent-link); width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800;">2</span>
+          <span>PG&E Submission</span>
+        </div>
+        <p style="color: var(--text-secondary); margin: 0; line-height: 1.45;">
+          GAF Energy submits interconnection package (permit finals, single-line diagrams, authorization).
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div style="background: #0F172A; border: 1px solid rgba(34, 197, 94, 0.35); border-radius: var(--radius-md); padding: 0.95rem; font-size: 0.825rem;">
+        <div style="font-weight: 700; color: #86EFAC; margin-bottom: 0.35rem; display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center; gap: 0.35rem;">
+            <span style="background: rgba(34, 197, 94, 0.15); color: #86EFAC; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800;">3</span>
+            <span>PTO Approval</span>
+          </div>
+          <span style="font-size: 0.7rem; color: #86EFAC; background: rgba(34, 197, 94, 0.15); padding: 0.1rem 0.4rem; border-radius: 4px;">10–30 Days</span>
+        </div>
+        <p style="color: var(--text-secondary); margin: 0; line-height: 1.45;">
+          PG&E reviews file and issues official PTO confirmation letter via email.
+        </p>
+      </div>
+
+      <!-- Step 4 -->
+      <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.95rem; font-size: 0.825rem;">
+        <div style="font-weight: 700; color: var(--accent-link); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.35rem;">
+          <span style="background: rgba(96, 165, 250, 0.15); color: var(--accent-link); width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800;">4</span>
+          <span>Turn-On & App Setup</span>
+        </div>
+        <p style="color: var(--text-secondary); margin: 0; line-height: 1.45;">
+          Turn on breakers/disconnects and pair your system with the Tesla app.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 2. Resident Action Checklist -->
+  <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.1rem; margin-bottom: 1.25rem;">
+    <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.65rem; display: flex; align-items: center; gap: 0.4rem;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+      <span>2. Resident Action Checklist (To Avoid Delays)</span>
+    </h4>
+    <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.825rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.5rem;">
+      <li style="display: flex; align-items: flex-start; gap: 0.45rem;">
+        <span style="color: #4ADE80; font-weight: 700;">✓</span>
+        <span><strong>Activate your PG&E account on Day 1:</strong> Ensure electric service is active immediately upon closing. Account mismatches pause interconnection review.</span>
+      </li>
+      <li style="display: flex; align-items: flex-start; gap: 0.45rem;">
+        <span style="color: #4ADE80; font-weight: 700;">✓</span>
+        <span><strong>Sign authorization emails:</strong> Check inbox & spam folders for DocuSign requests from <strong>GAF Energy</strong>, <strong>Lennar</strong>, or <strong>PG&E</strong> (Agreement & Authorization) and sign promptly.</span>
+      </li>
+      <li style="display: flex; align-items: flex-start; gap: 0.45rem;">
+        <span style="color: #F87171; font-weight: 700;">✕</span>
+        <span><strong>Keep system OFF until PTO:</strong> Do not flip breakers early to avoid billing penalties or meter sync issues.</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 3. What to Do Once PTO Arrives -->
+  <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.15rem; margin-bottom: 1.25rem;">
+    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--accent-link); margin-bottom: 0.85rem;">
+      3. What to Do Once PTO Arrives
+    </h4>
+
+    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+      
+      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
+        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">1</span>
+        <div>
+          <strong style="color: var(--text-primary);">Flip the Breakers:</strong> Switch dedicated <strong>Solar PV</strong>, <strong>Energy Storage</strong>, and <strong>Powerwall</strong> breakers in your main electrical panel to <strong>ON</strong>, along with exterior AC/DC disconnect levers.
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
+        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">2</span>
+        <div>
+          <strong style="color: var(--text-primary);">Download Tesla App:</strong> Sign in, tap <strong>Add Product</strong>, and scan the QR code on your Tesla Gateway / Powerwall unit.
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
+        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">3</span>
+        <div>
+          <strong style="color: var(--text-primary);">Connect to Wi-Fi:</strong> Pair the Gateway to your home <strong>2.4 GHz Wi-Fi network</strong>.
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
+        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">4</span>
+        <div>
+          <strong style="color: var(--text-primary);">Choose Operational Mode:</strong> Select <strong>Time-Based Control</strong> (discharges battery during expensive PG&E 4:00 PM – 9:00 PM peak rates) or <strong>Self-Powered</strong> (prioritizes running home 100% on stored solar energy).
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 4. Support Contacts Box -->
+  <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.85rem 1rem; margin-bottom: 0.85rem; font-size: 0.825rem;">
+    <strong style="color: var(--text-primary); display: block; margin-bottom: 0.4rem;">Support Contacts:</strong>
+    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.35rem; color: var(--text-secondary);">
+      <li>• <strong>GAF Energy Customer Support:</strong> For interconnection status or DocuSign updates.</li>
+      <li>• <strong>Lennar Customer Care:</strong> If City of Tracy final building permit sign-off is pending (<a href="tel:8882142494" style="color: var(--accent-link);">(888) 214-2494</a>).</li>
+      <li>• <strong>PG&E Solar Interconnection:</strong> Call <a href="tel:18777434112" style="color: var(--accent-link); font-weight: 600;">1-877-743-4112</a> or check your PG&E online portal.</li>
+    </ul>
+  </div>
+
+  <!-- Summer 2026 Note -->
+  <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
+    ℹ️ <em>Note: Solar activation procedures and PG&E timelines are as of Summer 2026.</em>
+  </div>
+</div>`,
+    "keywords": ["solar", "tesla", "powerwall", "pto", "permission to operate", "pg&e", "gaf energy", "activation", "battery", "lennar", "app", "breakers", "interconnection"]
   },
   {
     "id": "faq-010",
     "category": "Safety",
     "question": "What is the non-emergency contact number for Tracy Police?",
-    "answer": "For non-emergency police reporting, noise complaints, or suspicious activity in Tracy, call the Tracy Police Department non-emergency line at (209) 831-6550. Always dial 911 for active life-threatening emergencies.",
+    "answer": `<div class="faq-details">
+  <p>
+    For life-threatening emergencies, active crimes in progress, or fires, always dial <strong>911</strong> immediately.
+  </p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1rem 0;">
+    <!-- Emergency Callout -->
+    <div style="background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.35); border-radius: var(--radius-md); padding: 1rem;">
+      <h4 style="font-size: 0.95rem; font-weight: 700; color: #FCA5A5; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.4rem;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+        <span>Life Emergencies: Dial 911</span>
+      </h4>
+      <p style="font-size: 0.825rem; color: var(--text-secondary); margin: 0;">
+        For immediate life safety, medical emergencies, active fires, or crimes requiring urgent police response.
+      </p>
+    </div>
+
+    <!-- Non-Emergency Police -->
+    <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem;">
+      <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">Tracy Police Non-Emergency</h4>
+      <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.5rem;">
+        For noise complaints, non-urgent incident reports, or suspicious activity:
+      </p>
+      <a href="tel:2098316550" style="color: var(--accent-link); font-weight: 700; font-size: 0.95rem;">(209) 831-6550</a>
+    </div>
+  </div>
+
+  <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.75rem 1rem; font-size: 0.8rem; color: var(--text-muted); display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between;">
+    <span>🐾 Animal Control: <a href="tel:2098316364" style="color: var(--text-primary); font-weight: 600;">(209) 831-6364</a></span>
+    <span>📋 Code Enforcement: <a href="tel:2098316410" style="color: var(--text-primary); font-weight: 600;">(209) 831-6410</a></span>
+  </div>
+
+  <!-- Summer 2026 Note -->
+  <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
+    ℹ️ <em>Note: Emergency and non-emergency phone numbers are as of Summer 2026.</em>
+  </div>
+</div>`,
     "keywords": ["police", "safety", "emergency", "non-emergency", "fire", "911", "security", "tracy police"]
   },
   {
     "id": "faq-011",
     "category": "Community Resources",
     "question": "How can I recommend a service provider or contractor to the community directory?",
-    "answer": "Click the 'Suggest a Vendor' button on the Service Directory page of this resource hub, or email your recommendation directly to tracyhillsphase2@gmail.com.",
+    "answer": `<div class="faq-details">
+  <p>
+    We welcome resident recommendations for quality handymen, plumbers, electricians, landscapers, and contractors!
+  </p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1rem 0;">
+    <!-- Suggest Vendor Button Card -->
+    <div style="background: #0F172A; border: 1px solid rgba(96, 165, 250, 0.3); border-radius: var(--radius-md); padding: 1.1rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--accent-link); margin-bottom: 0.35rem;">Service Directory Form</h4>
+        <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+          Submit your recommended vendor using the interactive suggestion modal in our Service Directory.
+        </p>
+      </div>
+      <a href="providers.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; background: var(--accent-primary); color: #FFF; font-weight: 600; font-size: 0.825rem; padding: 0.5rem 1rem; border-radius: var(--radius-sm); text-decoration: none;">
+        <span>Open Service Directory ↗</span>
+      </a>
+    </div>
+
+    <!-- Email Card -->
+    <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.1rem;">
+      <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">Email Recommendation</h4>
+      <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.65rem;">
+        Or send contractor details directly to the resident volunteer team:
+      </p>
+      <a href="mailto:tracyhillsphase2@gmail.com" style="color: var(--accent-link); font-weight: 600; font-size: 0.875rem;">tracyhillsphase2@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- Summer 2026 Note -->
+  <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
+    ℹ️ <em>Note: The details provided above are as of Summer 2026.</em>
+  </div>
+</div>`,
     "keywords": ["recommend", "provider", "contractor", "handyman", "directory", "suggest", "vendor", "email"]
   }
 ];

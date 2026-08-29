@@ -163,7 +163,7 @@ function initFaqPage() {
             </svg>
           </button>
           <div class="accordion-content">
-            <p>${item.answer}</p>
+            ${item.answer.trim().startsWith('<') ? item.answer : `<p>${item.answer}</p>`}
           </div>
         `;
 
