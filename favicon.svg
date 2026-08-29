@@ -1,10 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
     </linearGradient>
   </defs>
-  <rect width="100" height="100" rx="24" fill="url(#grad)" />
-  <text x="50%" y="62%" font-family="Inter, sans-serif" font-weight="900" font-size="44" fill="#0B0F17" text-anchor="middle">TH</text>
+  
+  <!-- Outer Badge Background -->
+  <rect width="128" height="128" rx="32" fill="url(#bgGrad)" stroke="#334155" stroke-width="3" />
+  
+  <!-- Inner Ring Accent -->
+  <rect x="6" y="6" width="116" height="116" rx="26" fill="none" stroke="#38BDF8" stroke-width="2" stroke-opacity="0.3" />
+
+  <!-- Official Tracy Hills Mountain Emblem -->
+  <g transform="translate(64, 50) scale(0.9) translate(-72.5, -6)">
+    <path d="M120.426 10.5342C118.289 9.75217 108.429 4.23458 106.808 3.33681C103.204 1.33819 100.682 1.8032 98.5426 2.85851C95.4851 4.36745 87.6616 7.66053 87.5149 7.72696C85.6671 6.70772 76.9368 1.59252 74.8432 0.82192C72.0601 -0.20112 69.2694 -0.259959 66.9987 0.594156C64.3204 1.60201 54.7842 5.33355 54.7842 5.33355C54.7842 5.33355 49.2466 3.43551 48.1684 3.1603C45.1643 2.39349 41.8764 2.961 39.7638 3.99164C30.6144 8.45961 24.5815 10.3235 24.5815 10.3235L24.5205 10.407C24.5205 10.407 28.9114 10.1659 33.7442 7.9832C44.3719 3.72022 45.8215 4.29722 48.2313 4.81159C49.2542 5.02986 53.1898 6.28636 53.1898 6.28636C52.144 6.74568 44.7852 9.6212 42.7241 10.1109C42.5641 10.1489 42.065 10.2836 42.065 10.2836L42.0326 10.4829C42.0326 10.4829 42.2726 10.4753 42.3279 10.4753C48.0065 10.3652 64.2118 4.4149 68.4655 2.83763C72.7764 1.23949 76.0262 3.2514 76.3996 3.4488C78.5064 4.56864 88.3931 10.2324 92.3668 11.3124C92.3668 11.3124 93.5535 11.5667 93.9631 11.5325C93.9479 11.4908 93.9288 11.4433 93.9117 11.3997C93.4545 11.1282 88.9569 8.87338 88.4102 8.21856C95.8166 5.39998 95.6394 6.45339 99.9598 4.13589C102.131 2.97049 103.067 3.07109 106.309 4.73567C109.54 6.39455 113.527 8.49757 117.236 9.89642C118.478 10.3652 120.108 10.6367 120.474 10.6234L120.425 10.5361L120.426 10.5342Z" fill="#FFFFFF" />
+  </g>
+  
+  <!-- Refined Small PHASE II Text -->
+  <text x="64" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="15" fill="#38BDF8" text-anchor="middle" letter-spacing="2.5">PHASE II</text>
 </svg>
