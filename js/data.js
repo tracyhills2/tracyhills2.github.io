@@ -708,3 +708,56 @@ const PROVIDER_CATEGORIES = [
   'Garage Door Repair',
   'Pressure Washing'
 ];
+
+const CATEGORY_COLORS = {
+  'Handyman': { color: '#F59E0B', bg: 'rgba(245, 158, 11, 0.14)', border: 'rgba(245, 158, 11, 0.35)', solid: '#F59E0B' },
+  'Electrician': { color: '#FACC15', bg: 'rgba(250, 204, 21, 0.14)', border: 'rgba(250, 204, 21, 0.35)', solid: '#EAB308' },
+  'Plumber': { color: '#38BDF8', bg: 'rgba(56, 189, 248, 0.14)', border: 'rgba(56, 189, 248, 0.35)', solid: '#0284C7' },
+  'Water Softener': { color: '#2DD4BF', bg: 'rgba(45, 212, 191, 0.14)', border: 'rgba(45, 212, 191, 0.35)', solid: '#0D9488' },
+  'Painter': { color: '#C084FC', bg: 'rgba(192, 132, 252, 0.14)', border: 'rgba(192, 132, 252, 0.35)', solid: '#9333EA' },
+  'Home Insurance': { color: '#34D399', bg: 'rgba(52, 211, 153, 0.14)', border: 'rgba(52, 211, 153, 0.35)', solid: '#059669' },
+  'Snake Removal / Pest Control': { color: '#FB7185', bg: 'rgba(251, 113, 133, 0.14)', border: 'rgba(251, 113, 133, 0.35)', solid: '#E11D48' },
+  'General Contractor': { color: '#818CF8', bg: 'rgba(129, 140, 248, 0.14)', border: 'rgba(129, 140, 248, 0.35)', solid: '#4F46E5' },
+  'Mortgage Lenders': { color: '#A3E635', bg: 'rgba(163, 230, 53, 0.14)', border: 'rgba(163, 230, 53, 0.35)', solid: '#65A30D' },
+  'Landscaper / Gardener': { color: '#4ADE80', bg: 'rgba(74, 222, 128, 0.14)', border: 'rgba(74, 222, 128, 0.35)', solid: '#16A34A' },
+  'Curtains / Blinds': { color: '#F472B6', bg: 'rgba(244, 114, 182, 0.14)', border: 'rgba(244, 114, 182, 0.35)', solid: '#DB2777' },
+  'HVAC': { color: '#FB923C', bg: 'rgba(251, 146, 60, 0.14)', border: 'rgba(251, 146, 60, 0.35)', solid: '#EA580C' },
+  'Roofing': { color: '#F97316', bg: 'rgba(249, 115, 22, 0.14)', border: 'rgba(249, 115, 22, 0.35)', solid: '#C2410C' },
+  'Pest Control': { color: '#F43F5E', bg: 'rgba(244, 63, 94, 0.14)', border: 'rgba(244, 63, 94, 0.35)', solid: '#E11D48' },
+  'Cleaning Services': { color: '#22D3EE', bg: 'rgba(34, 211, 238, 0.14)', border: 'rgba(34, 211, 238, 0.35)', solid: '#0891B2' },
+  'Pool Services': { color: '#60A5FA', bg: 'rgba(96, 165, 250, 0.14)', border: 'rgba(96, 165, 250, 0.35)', solid: '#2563EB' },
+  'Solar Services': { color: '#FCD34D', bg: 'rgba(252, 211, 77, 0.14)', border: 'rgba(252, 211, 77, 0.35)', solid: '#D97706' },
+  'Home Security': { color: '#E11D48', bg: 'rgba(225, 29, 72, 0.14)', border: 'rgba(225, 29, 72, 0.35)', solid: '#BE123C' },
+  'Locksmith': { color: '#E879F9', bg: 'rgba(232, 121, 249, 0.14)', border: 'rgba(232, 121, 249, 0.35)', solid: '#C026D3' },
+  'Appliance Repair': { color: '#6366F1', bg: 'rgba(99, 102, 241, 0.14)', border: 'rgba(99, 102, 241, 0.35)', solid: '#4338CA' },
+  'Flooring': { color: '#D97706', bg: 'rgba(217, 119, 6, 0.14)', border: 'rgba(217, 119, 6, 0.35)', solid: '#B45309' },
+  'Window Cleaning': { color: '#0EA5E9', bg: 'rgba(14, 165, 233, 0.14)', border: 'rgba(14, 165, 233, 0.35)', solid: '#0284C7' },
+  'Moving Services': { color: '#8B5CF6', bg: 'rgba(139, 92, 246, 0.14)', border: 'rgba(139, 92, 246, 0.35)', solid: '#6D28D9' },
+  'Internet / Technology Services': { color: '#06B6D4', bg: 'rgba(6, 182, 212, 0.14)', border: 'rgba(6, 182, 212, 0.35)', solid: '#0E7490' },
+  'Tree Services': { color: '#10B981', bg: 'rgba(16, 185, 129, 0.14)', border: 'rgba(16, 185, 129, 0.35)', solid: '#047857' },
+  'Fence Repair': { color: '#A1A1AA', bg: 'rgba(161, 161, 170, 0.14)', border: 'rgba(161, 161, 170, 0.35)', solid: '#52525B' },
+  'Garage Door Repair': { color: '#EC4899', bg: 'rgba(236, 72, 153, 0.14)', border: 'rgba(236, 72, 153, 0.35)', solid: '#BE185D' },
+  'Pressure Washing': { color: '#38BDF8', bg: 'rgba(56, 189, 248, 0.14)', border: 'rgba(56, 189, 248, 0.35)', solid: '#0284C7' }
+};
+
+const FALLBACK_CATEGORY_PALETTE = [
+  { color: '#F59E0B', bg: 'rgba(245, 158, 11, 0.14)', border: 'rgba(245, 158, 11, 0.35)', solid: '#F59E0B' },
+  { color: '#FACC15', bg: 'rgba(250, 204, 21, 0.14)', border: 'rgba(250, 204, 21, 0.35)', solid: '#EAB308' },
+  { color: '#38BDF8', bg: 'rgba(56, 189, 248, 0.14)', border: 'rgba(56, 189, 248, 0.35)', solid: '#0284C7' },
+  { color: '#2DD4BF', bg: 'rgba(45, 212, 191, 0.14)', border: 'rgba(45, 212, 191, 0.35)', solid: '#0D9488' },
+  { color: '#C084FC', bg: 'rgba(192, 132, 252, 0.14)', border: 'rgba(192, 132, 252, 0.35)', solid: '#9333EA' },
+  { color: '#34D399', bg: 'rgba(52, 211, 153, 0.14)', border: 'rgba(52, 211, 153, 0.35)', solid: '#059669' },
+  { color: '#FB7185', bg: 'rgba(251, 113, 133, 0.14)', border: 'rgba(251, 113, 133, 0.35)', solid: '#E11D48' },
+  { color: '#818CF8', bg: 'rgba(129, 140, 248, 0.14)', border: 'rgba(129, 140, 248, 0.35)', solid: '#4F46E5' }
+];
+
+function getCategoryColor(category) {
+  if (CATEGORY_COLORS[category]) return CATEGORY_COLORS[category];
+  let hash = 0;
+  for (let i = 0; i < category.length; i++) {
+    hash = category.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  const index = Math.abs(hash) % FALLBACK_CATEGORY_PALETTE.length;
+  return FALLBACK_CATEGORY_PALETTE[index];
+}
+

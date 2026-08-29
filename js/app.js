@@ -222,10 +222,28 @@ function initProvidersPage() {
 
     PROVIDER_CATEGORIES.forEach((cat) => {
       const count = PROVIDERS_DATA.filter((p) => p.category === cat).length;
+      const catStyle = getCategoryColor(cat);
+      const isSelected = cat === currentCategory;
       const btn = document.createElement('button');
-      btn.className = `pill-btn ${cat === currentCategory ? 'active' : ''}`;
-      btn.style.opacity = count === 0 ? '0.6' : '1';
-      btn.textContent = `${cat} ${count > 0 ? `(${count})` : ''}`;
+      btn.className = `pill-btn ${isSelected ? 'active' : ''}`;
+      btn.style.opacity = count === 0 ? '0.45' : '1';
+
+      if (isSelected) {
+        btn.style.color = catStyle.color;
+        btn.style.backgroundColor = catStyle.bg;
+        btn.style.borderColor = catStyle.color;
+        btn.style.boxShadow = `0 0 10px ${catStyle.border}`;
+      } else {
+        btn.style.color = 'var(--text-secondary)';
+        btn.style.backgroundColor = 'var(--bg-surface)';
+        btn.style.borderColor = 'var(--border-subtle)';
+      }
+
+      btn.innerHTML = `<span class="category-dot" style="background-color: ${catStyle.color};"></span><span>${cat} ${count > 0 ? `(${count})` : ''}</span>`;
+      btn.style.display = 'inline-flex';
+      btn.style.alignItems = 'center';
+      btn.style.gap = '0.4rem';
+
       btn.addEventListener('click', () => {
         currentCategory = cat;
         renderCategories();
@@ -263,13 +281,14 @@ function initProvidersPage() {
       filtered.forEach((p) => {
         const card = document.createElement('div');
         card.className = 'card card-hoverable';
+        const catStyle = getCategoryColor(p.category);
         
         let contactPersonHtml = p.contactPerson 
           ? `<div style="font-size: 0.825rem; color: var(--text-muted); font-weight: 500; margin-bottom: 0.65rem;">Contact: ${p.contactPerson}</div>` 
           : '';
         
         let communityNotesHtml = p.communityNotes 
-          ? `<div style="padding: 0.5rem 0.75rem; background: #0F172A; border-radius: var(--radius-sm); border-left: 3px solid #64748B; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">💬 ${p.communityNotes}</div>` 
+          ? `<div style="padding: 0.5rem 0.75rem; background: #0F172A; border-radius: var(--radius-sm); border-left: 3px solid ${catStyle.color}; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">💬 ${p.communityNotes}</div>` 
           : '';
 
         let phoneHtml = p.phone 
@@ -295,7 +314,10 @@ function initProvidersPage() {
 
         card.innerHTML = `
           <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.65rem;">
-            <span class="badge">${p.category}</span>
+            <span class="category-badge" style="color: ${catStyle.color}; background: ${catStyle.bg}; border: 1px solid ${catStyle.border};">
+              <span class="category-dot" style="background-color: ${catStyle.color};"></span>
+              ${p.category}
+            </span>
           </div>
           <h3 style="font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem;">
             ${p.businessName}
