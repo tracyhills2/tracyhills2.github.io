@@ -59,6 +59,28 @@ function initScrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
+
+  // Create & mount Floating Scroll-to-Top Action Button
+  let floatingBtn = document.querySelector('.floating-top-btn');
+  if (!floatingBtn) {
+    floatingBtn = document.createElement('button');
+    floatingBtn.className = 'floating-top-btn';
+    floatingBtn.setAttribute('aria-label', 'Scroll to top');
+    floatingBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>`;
+    document.body.appendChild(floatingBtn);
+  }
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 250) {
+      floatingBtn.classList.add('visible');
+    } else {
+      floatingBtn.classList.remove('visible');
+    }
+  });
+
+  floatingBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 }
 
 /* --------------------------------------------------------------------------
@@ -263,12 +285,23 @@ function initProvidersPage() {
       const q = currentSearchQuery.toLowerCase().trim();
       if (!q) return matchesCategory;
 
-      const matchesQuery =
-        provider.businessName.toLowerCase().includes(q) ||
-        provider.category.toLowerCase().includes(q) ||
-        provider.description.toLowerCase().includes(q) ||
-        (provider.contactPerson && provider.contactPerson.toLowerCase().includes(q)) ||
-        (provider.communityNotes && provider.communityNotes.toLowerCase().includes(q));
+      // Smart Keyword & Synonym Expansion
+      const synonyms = [q];
+      if (q.startsWith('electric')) synonyms.push('electrician', 'electrical', 'electric');
+      if (q.startsWith('plumb')) synonyms.push('plumber', 'plumbing');
+      if (q.startsWith('contract')) synonyms.push('contractor', 'contracting');
+      if (q.startsWith('handy')) synonyms.push('handyman', 'repair');
+      if (q.startsWith('paint')) synonyms.push('painter', 'painting');
+      if (q.startsWith('roof')) synonyms.push('roofing', 'roof');
+
+      const matchesQuery = synonyms.some((term) =>
+        provider.businessName.toLowerCase().includes(term) ||
+        provider.category.toLowerCase().includes(term) ||
+        provider.description.toLowerCase().includes(term) ||
+        (provider.contactPerson && provider.contactPerson.toLowerCase().includes(term)) ||
+        (provider.communityNotes && provider.communityNotes.toLowerCase().includes(term)) ||
+        (provider.keywords && provider.keywords.some((k) => k.toLowerCase().includes(term)))
+      );
 
       return matchesCategory && matchesQuery;
     });
@@ -281,6 +314,11 @@ function initProvidersPage() {
       filtered.forEach((p) => {
         const card = document.createElement('div');
         card.className = 'card card-hoverable';
+        card.style.display = 'flex';
+        card.style.flexDirection = 'column';
+        card.style.justifyContent = 'space-between';
+        card.style.height = '100%';
+
         const catStyle = getCategoryColor(p.category);
         
         let contactPersonHtml = p.contactPerson 
@@ -307,32 +345,34 @@ function initProvidersPage() {
 
         let websiteHtml = p.website 
           ? `<div style="display: flex; align-items: center; gap: 0.5rem; color: var(--accent-link);">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path></svg>
               <a href="${p.website}" target="_blank" rel="noopener noreferrer">Visit Website</a>
             </div>` 
           : '';
 
         card.innerHTML = `
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.65rem;">
-            <span class="category-badge" style="color: ${catStyle.color}; background: ${catStyle.bg}; border: 1px solid ${catStyle.border};">
-              <span class="category-dot" style="background-color: ${catStyle.color};"></span>
-              ${p.category}
-            </span>
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.65rem;">
+              <span class="category-badge" style="color: ${catStyle.color}; background: ${catStyle.bg}; border: 1px solid ${catStyle.border};">
+                <span class="category-dot" style="background-color: ${catStyle.color};"></span>
+                ${p.category}
+              </span>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem;">
+              ${p.businessName}
+            </h3>
+            ${contactPersonHtml}
+            <p style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.5; margin-bottom: 0.85rem;">
+              ${p.description}
+            </p>
+            ${communityNotesHtml}
+            <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.825rem; margin-bottom: 1rem; border-top: 1px solid var(--border-subtle); padding-top: 0.75rem;">
+              ${phoneHtml}
+              ${emailHtml}
+              ${websiteHtml}
+            </div>
           </div>
-          <h3 style="font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem;">
-            ${p.businessName}
-          </h3>
-          ${contactPersonHtml}
-          <p style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.5; margin-bottom: 0.85rem;">
-            ${p.description}
-          </p>
-          ${communityNotesHtml}
-          <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.825rem; margin-bottom: 1rem; border-top: 1px solid var(--border-subtle); padding-top: 0.75rem;">
-            ${phoneHtml}
-            ${emailHtml}
-            ${websiteHtml}
-          </div>
-          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: var(--text-muted);">
+          <div style="margin-top: auto; padding-top: 0.75rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: var(--text-muted);">
             <span>Updated: ${p.lastUpdated || 'Coming Soon'}</span>
             <div style="display: flex; align-items: center; gap: 0.2rem;">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
@@ -350,6 +390,10 @@ function initProvidersPage() {
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       currentSearchQuery = e.target.value;
+      if (currentSearchQuery.trim() && currentCategory !== 'All') {
+        currentCategory = 'All';
+        renderCategories();
+      }
       renderProviders();
     });
   }

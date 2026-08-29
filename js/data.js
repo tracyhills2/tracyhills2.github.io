@@ -8,11 +8,11 @@ const FACEBOOK_URL = 'https://www.facebook.com/groups/1039884364940491';
 const ANNOUNCEMENTS_DATA = [
   {
     "id": "ann-002",
-    "title": "Welcome to the New Tracy Hills II Resident Portal!",
+    "title": "Welcome to the New Tracy Hills II Community Resource Hub!",
     "category": "Announcement",
     "priority": "high",
     "date": "2026-08-22",
-    "summary": "We are excited to launch the new Tracy Hills II Community Portal! Please note that updates to several parts of the website are currently in progress.",
+    "summary": "We are excited to launch the new Tracy Hills II Community Resource Hub! Please note that updates to several parts of the website are currently in progress.",
     "details": "In the meantime, if you notice any issues or have any feedback, please email us directly at tracyhillsphase2@gmail.com.",
     "link": "mailto:tracyhillsphase2@gmail.com"
   }
@@ -163,7 +163,7 @@ const FAQ_DATA = [
     "id": "faq-011",
     "category": "Community Resources",
     "question": "How can I recommend a service provider or contractor to the community directory?",
-    "answer": "Click the 'Suggest a Vendor' button on the Service Directory page of this portal, or email your recommendation directly to tracyhillsphase2@gmail.com.",
+    "answer": "Click the 'Suggest a Vendor' button on the Service Directory page of this resource hub, or email your recommendation directly to tracyhillsphase2@gmail.com.",
     "keywords": ["recommend", "provider", "contractor", "handyman", "directory", "suggest", "vendor", "email"]
   }
 ];
