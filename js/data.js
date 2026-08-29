@@ -84,7 +84,7 @@ const CONTACTS_DATA = {
     "customerCarePhone": "(888) 214-2494",
     "afterHoursPhone": "Coming Soon",
     "warrantyPortal": "https://www.lennar.com/my-lennar",
-    "hours": "Mon – Fri: 8:00 AM – 5:00 PM (After-hours details coming soon)"
+    "hours": "Mon - Fri: 8:00 AM - 5:00 PM (After-hours details coming soon)"
   }
 };
 
@@ -135,7 +135,7 @@ const FAQ_DATA = [
     "id": "faq-007",
     "category": "Lennar / Developer",
     "question": "How do I submit a new home warranty service request to Lennar?",
-    "answer": "Warranty service requests should be submitted directly through the MyLennar portal (lennar.com/my-lennar) or by calling Lennar Customer Care at (888) 214-2494 (Mon–Fri: 8:00 AM – 5:00 PM).",
+    "answer": "Warranty service requests should be submitted directly through the MyLennar portal (lennar.com/my-lennar) or by calling Lennar Customer Care at (888) 214-2494 (Mon - Fri: 8:00 AM - 5:00 PM).",
     "keywords": ["lennar", "warranty", "customer care", "repair", "new home", "builder", "mylennar", "service request"]
   },
   {
@@ -438,7 +438,7 @@ const PROVIDERS_DATA = [
     "email": null,
     "website": null,
     "description": "RO & Softener Installation",
-    "communityNotes": "Great experience overall. He installs a Clack WS1 water softener (without the fancy outer cover), and for the RO system, he asks you to purchase it from Amazon and then handles the installation. Total installation cost for both the RO and the water softener was around $2,500–$2,600.",
+    "communityNotes": "Great experience overall. He installs a Clack WS1 water softener (without the fancy outer cover), and for the RO system, he asks you to purchase it from Amazon and then handles the installation. Total installation cost for both the RO and the water softener was around $2,500 - $2,600.",
     "isPlaceholder": false,
     "lastUpdated": "2026-08-22"
   },
