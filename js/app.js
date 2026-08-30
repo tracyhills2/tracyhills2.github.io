@@ -5,6 +5,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initScrollToTop();
+  initDynamicYear();
   
   if (document.getElementById('announcements-list-container')) {
     initAnnouncements();
@@ -18,6 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
     initProvidersPage();
   }
 });
+
+/* --------------------------------------------------------------------------
+   Dynamic Copyright Year Generator
+   -------------------------------------------------------------------------- */
+function initDynamicYear() {
+  const currentYear = new Date().getFullYear();
+  const yearElements = document.querySelectorAll('.dynamic-year, #current-year');
+  yearElements.forEach(el => {
+    el.textContent = currentYear;
+  });
+}
 
 /* --------------------------------------------------------------------------
    Mobile Navigation Drawer Toggle
