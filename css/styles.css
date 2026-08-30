@@ -1044,6 +1044,21 @@ img, svg {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
   }
 
+  /* Table and card overflow rules for mobile screens */
+  .accordion-content table {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .accordion-content th,
+  .accordion-content td {
+    min-width: 110px;
+    word-break: normal !important;
+  }
+}
+
 /* --------------------------------------------------------------------------
    Content Trust Badges & Source Box Styling
    -------------------------------------------------------------------------- */
