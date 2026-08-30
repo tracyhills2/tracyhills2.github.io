@@ -102,9 +102,9 @@ const FAQ_DATA = [
     <!-- Portal Access Card -->
     <div style="background: #0F172A; border: 1px solid rgba(96, 165, 250, 0.35); border-radius: var(--radius-md); padding: 1.1rem; display: flex; flex-direction: column; justify-content: space-between;">
       <div>
-        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem;">
+        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.6rem;">
           <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--accent-link); margin: 0;">Seabreeze CINC Portal</h4>
-          <span style="background: rgba(37, 99, 235, 0.15); color: #60A5FA; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px;">Online Portal</span>
+          <span style="background: rgba(37, 99, 235, 0.15); color: #60A5FA; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px; white-space: nowrap;">Online Portal</span>
         </div>
         <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.75rem; line-height: 1.5;">
           Access your resident account to pay monthly dues, set up auto-pay, download account statements, or track submittals.
@@ -232,16 +232,16 @@ const FAQ_DATA = [
       </h4>
       <div style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.825rem;">
         <div style="background: #0F172A; border-radius: var(--radius-sm); padding: 0.65rem 0.85rem;">
-          <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.35rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
             <span>Submittal Fee (Non-Refundable):</span>
-            <span style="color: #FCA5A5;">$200 / $175</span>
+            <span style="color: #FCA5A5; white-space: nowrap;">$200 / $175</span>
           </div>
           <span style="color: var(--text-muted); font-size: 0.775rem;">$200 for Full Review or $175 for Minor Review, payable to <em>Tracy Hills II Community Association</em>.</span>
         </div>
         <div style="background: #0F172A; border-radius: var(--radius-sm); padding: 0.65rem 0.85rem;">
-          <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.35rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
             <span>Security Deposit (100% Refundable):</span>
-            <span style="color: #86EFAC;">$250</span>
+            <span style="color: #86EFAC; white-space: nowrap;">$250</span>
           </div>
           <span style="color: var(--text-muted); font-size: 0.775rem;">Payable to <em>Tracy Hills II Community Association</em>. Refunded in full after Form E (Notice of Completion) & photos verify zero common area damage.</span>
         </div>
