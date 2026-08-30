@@ -255,7 +255,7 @@ function initProvidersPage() {
     categoryPillsContainer.appendChild(allBtn);
 
     PROVIDER_CATEGORIES.forEach((cat) => {
-      const count = PROVIDERS_DATA.filter((p) => p.category === cat).length;
+      const count = PROVIDERS_DATA.filter((p) => p.category === cat || (p.categories && p.categories.includes(cat))).length;
       const catStyle = getCategoryColor(cat);
       const isSelected = cat === currentCategory;
       const btn = document.createElement('button');
@@ -293,7 +293,7 @@ function initProvidersPage() {
     container.innerHTML = '';
 
     const filtered = PROVIDERS_DATA.filter((provider) => {
-      const matchesCategory = currentCategory === 'All' || provider.category === currentCategory;
+      const matchesCategory = currentCategory === 'All' || provider.category === currentCategory || (provider.categories && provider.categories.includes(currentCategory));
       const q = currentSearchQuery.toLowerCase().trim();
       if (!q) return matchesCategory;
 
@@ -320,6 +320,15 @@ function initProvidersPage() {
       return matchesCategory && matchesQuery;
     });
 
+    // Group & sort vendors cleanly by category order
+    filtered.sort((a, b) => {
+      const idxA = PROVIDER_CATEGORIES.indexOf(a.category);
+      const idxB = PROVIDER_CATEGORIES.indexOf(b.category);
+      const orderA = idxA === -1 ? 999 : idxA;
+      const orderB = idxB === -1 ? 999 : idxB;
+      return orderA - orderB;
+    });
+
     if (filtered.length === 0) {
       if (noResultsContainer) noResultsContainer.style.display = 'block';
     } else {
@@ -333,14 +342,21 @@ function initProvidersPage() {
         card.style.justifyContent = 'space-between';
         card.style.height = '100%';
 
-        const catStyle = getCategoryColor(p.category);
-        
+        const catList = (p.categories && p.categories.length > 0) ? p.categories : [p.category];
+        const categoryBadgesHtml = catList.map(cat => {
+          const catStyle = getCategoryColor(cat);
+          return `<span class="category-badge" style="color: ${catStyle.color}; background: ${catStyle.bg}; border: 1px solid ${catStyle.border};">
+            <span class="category-dot" style="background-color: ${catStyle.color};"></span>
+            ${cat}
+          </span>`;
+        }).join('');
+
         let contactPersonHtml = p.contactPerson 
           ? `<div style="font-size: 0.825rem; color: var(--text-muted); font-weight: 500; margin-bottom: 0.65rem;">Contact: ${p.contactPerson}</div>` 
           : '';
         
         let communityNotesHtml = p.communityNotes 
-          ? `<div style="padding: 0.5rem 0.75rem; background: #0F172A; border-radius: var(--radius-sm); border-left: 3px solid ${catStyle.color}; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">💬 ${p.communityNotes}</div>` 
+          ? `<div style="padding: 0.5rem 0.75rem; background: #0F172A; border-radius: var(--radius-sm); border-left: 3px solid ${getCategoryColor(p.category).color}; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">💬 ${p.communityNotes}</div>` 
           : '';
 
         let phoneHtml = p.phone 
@@ -366,11 +382,8 @@ function initProvidersPage() {
 
         card.innerHTML = `
           <div>
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.65rem;">
-              <span class="category-badge" style="color: ${catStyle.color}; background: ${catStyle.bg}; border: 1px solid ${catStyle.border};">
-                <span class="category-dot" style="background-color: ${catStyle.color};"></span>
-                ${p.category}
-              </span>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; margin-bottom: 0.65rem;">
+              ${categoryBadgesHtml}
             </div>
             <h3 style="font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem;">
               ${p.businessName}
