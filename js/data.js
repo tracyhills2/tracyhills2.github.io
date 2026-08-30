@@ -929,38 +929,61 @@ const FAQ_DATA = [
       2. Tesla App vs. Enphase App: Role & Differences
     </h4>
 
-    <div style="overflow-x: auto; margin-bottom: 0.85rem;">
-      <table style="width: 100%; border-collapse: collapse; font-size: 0.825rem; text-align: left; background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
-        <thead>
-          <tr style="border-bottom: 1px solid var(--border-subtle); background: rgba(30, 41, 59, 0.7);">
-            <th style="padding: 0.65rem 0.85rem; color: var(--text-primary);">Feature / Purpose</th>
-            <th style="padding: 0.65rem 0.85rem; color: var(--accent-link);">Tesla App</th>
-            <th style="padding: 0.65rem 0.85rem; color: #F59E0B;">Enphase Enlighten App</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom: 1px solid var(--border-subtle);">
-            <td style="padding: 0.65rem 0.85rem; font-weight: 600; color: var(--text-primary);">Main Function</td>
-            <td style="padding: 0.65rem 0.85rem; color: var(--text-secondary);"><strong>Whole-Home Energy & Battery Management</strong></td>
-            <td style="padding: 0.65rem 0.85rem; color: var(--text-secondary);"><strong>Roof Array Health & Microinverter Diagnostics</strong></td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--border-subtle);">
-            <td style="padding: 0.65rem 0.85rem; font-weight: 600; color: var(--text-primary);">Data Shown</td>
-            <td style="padding: 0.65rem 0.85rem; color: var(--text-secondary);">Total solar produced, Powerwall battery charge %, real-time home power usage, grid import/export.</td>
-            <td style="padding: 0.65rem 0.85rem; color: var(--text-secondary);">Detailed, panel-by-panel wattage produced by each individual solar shingle/panel.</td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--border-subtle);">
-            <td style="padding: 0.65rem 0.85rem; font-weight: 600; color: var(--text-primary);">Problem Solving</td>
-            <td style="padding: 0.65rem 0.85rem; color: var(--text-secondary);">Alerts you to overall generation drops, household usage spikes, or grid outages.</td>
-            <td style="padding: 0.65rem 0.85rem; color: var(--text-secondary);">Pinpoints exact underperforming, shaded, dirty, or faulty roof panels.</td>
-          </tr>
-          <tr>
-            <td style="padding: 0.65rem 0.85rem; font-weight: 600; color: var(--text-primary);">Controls & Modes</td>
-            <td style="padding: 0.65rem 0.85rem; color: var(--text-secondary);">Configures <strong>Time-Based Control</strong> (discharges battery during PG&E 4–9 PM peak rates) & <strong>Self-Powered</strong> mode.</td>
-            <td style="padding: 0.65rem 0.85rem; color: var(--text-secondary);">View-only production monitoring and diagnostic performance reporting.</td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- Responsive App Comparison Cards -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.85rem; margin-bottom: 0.85rem;">
+      
+      <!-- Tesla App Card -->
+      <div style="background: #0F172A; border: 1px solid rgba(96, 165, 250, 0.35); border-radius: var(--radius-md); padding: 1rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.65rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem;">
+          <h5 style="font-size: 0.9rem; font-weight: 700; color: var(--accent-link); margin: 0;">⚡ Tesla App</h5>
+          <span style="font-size: 0.7rem; color: #93C5FD; background: rgba(59, 130, 246, 0.15); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 600;">Whole-Home & Battery</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.55rem; font-size: 0.825rem; color: var(--text-secondary);">
+          <div>
+            <strong style="color: var(--text-primary); display: block; font-size: 0.775rem;">Main Function:</strong>
+            Whole-Home Energy & Powerwall Battery Management
+          </div>
+          <div>
+            <strong style="color: var(--text-primary); display: block; font-size: 0.775rem;">Data Shown:</strong>
+            Total solar produced, Powerwall battery charge %, real-time home power usage, grid import/export.
+          </div>
+          <div>
+            <strong style="color: var(--text-primary); display: block; font-size: 0.775rem;">Problem Solving:</strong>
+            Alerts to overall generation drops, household usage spikes, or grid outages.
+          </div>
+          <div>
+            <strong style="color: var(--text-primary); display: block; font-size: 0.775rem;">Controls & Modes:</strong>
+            Configures Time-Based Control (discharges battery during PG&E 4–9 PM peak rates) & Self-Powered mode.
+          </div>
+        </div>
+      </div>
+
+      <!-- Enphase Enlighten App Card -->
+      <div style="background: #0F172A; border: 1px solid rgba(245, 158, 11, 0.35); border-radius: var(--radius-md); padding: 1rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.65rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem;">
+          <h5 style="font-size: 0.9rem; font-weight: 700; color: #F59E0B; margin: 0;">☀️ Enphase Enlighten App</h5>
+          <span style="font-size: 0.7rem; color: #FDE047; background: rgba(245, 158, 11, 0.15); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 600;">Roof Array & Diagnostics</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.55rem; font-size: 0.825rem; color: var(--text-secondary);">
+          <div>
+            <strong style="color: var(--text-primary); display: block; font-size: 0.775rem;">Main Function:</strong>
+            Roof Array Health & Microinverter Diagnostics
+          </div>
+          <div>
+            <strong style="color: var(--text-primary); display: block; font-size: 0.775rem;">Data Shown:</strong>
+            Detailed, panel-by-panel wattage produced by each individual solar shingle/panel.
+          </div>
+          <div>
+            <strong style="color: var(--text-primary); display: block; font-size: 0.775rem;">Problem Solving:</strong>
+            Pinpoints exact underperforming, shaded, dirty, or faulty roof panels.
+          </div>
+          <div>
+            <strong style="color: var(--text-primary); display: block; font-size: 0.775rem;">Controls & Modes:</strong>
+            View-only production monitoring and diagnostic performance reporting.
+          </div>
+        </div>
+      </div>
+
     </div>
     
     <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
