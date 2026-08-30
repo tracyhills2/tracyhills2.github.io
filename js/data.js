@@ -781,159 +781,232 @@ const FAQ_DATA = [
   {
     "id": "faq-013",
     "category": "Utilities",
-    "question": "What is the process to activate the pre-installed solar and Tesla Powerwall in my new home, and how can I speed it up?",
+    "question": "How does our home's Solar (GAF), Microinverter (Enphase), and Battery (Tesla Powerwall) system work, how do I activate it, and how do I get free app access?",
     "answer": `<div class="faq-solar-details">
   <p>
-    Your solar panels (<strong>GAF Energy</strong>) and battery storage (<strong>Tesla Powerwall</strong>) are fully installed at close of escrow. However, <strong>they cannot be turned on until PG&E grants official Permission to Operate (PTO)</strong>.
+    Your home is built with an integrated clean energy system where three key pieces of equipment work together:
   </p>
 
+  <!-- Equipment Overview Cards -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.85rem; margin: 1rem 0 1.25rem 0;">
+    
+    <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.95rem; font-size: 0.825rem;">
+      <div style="font-weight: 700; color: #60A5FA; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.4rem;">
+        <span style="background: rgba(96, 165, 250, 0.15); color: #60A5FA; padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.75rem; font-weight: 800;">1</span>
+        <span>GAF Energy Solar Panels / Shingles</span>
+      </div>
+      <p style="color: var(--text-secondary); margin: 0; line-height: 1.45;">
+        Mounted on the roof to capture sunlight and generate Direct Current (DC) electricity.
+      </p>
+    </div>
+
+    <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.95rem; font-size: 0.825rem;">
+      <div style="font-weight: 700; color: #F59E0B; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.4rem;">
+        <span style="background: rgba(245, 158, 11, 0.15); color: #F59E0B; padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.75rem; font-weight: 800;">2</span>
+        <span>Enphase Microinverters</span>
+      </div>
+      <p style="color: var(--text-secondary); margin: 0; line-height: 1.45;">
+        Mounted under roof panels to convert DC power into usable Alternating Current (AC) electricity right at the source.
+      </p>
+    </div>
+
+    <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.95rem; font-size: 0.825rem;">
+      <div style="font-weight: 700; color: #4ADE80; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.4rem;">
+        <span style="background: rgba(74, 222, 128, 0.15); color: #4ADE80; padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.75rem; font-weight: 800;">3</span>
+        <span>Tesla Powerwall & Gateway</span>
+      </div>
+      <p style="color: var(--text-secondary); margin: 0; line-height: 1.45;">
+        Stores excess solar power, provides home backup power during outages, and offsets expensive peak PG&E utility rates.
+      </p>
+    </div>
+
+  </div>
+
   <!-- PTO Critical Warning Callout -->
-  <div style="background: rgba(234, 179, 8, 0.12); border: 1px solid rgba(234, 179, 8, 0.35); border-left: 4px solid #EAB308; border-radius: var(--radius-sm); padding: 0.85rem 1rem; margin: 1rem 0; font-size: 0.875rem;">
+  <div style="background: rgba(234, 179, 8, 0.12); border: 1px solid rgba(234, 179, 8, 0.35); border-left: 4px solid #EAB308; border-radius: var(--radius-sm); padding: 0.85rem 1rem; margin-bottom: 1.25rem; font-size: 0.875rem;">
     <div style="display: flex; align-items: center; gap: 0.5rem; color: #FEF08A; font-weight: 700; margin-bottom: 0.35rem;">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
       <span>Keep System OFF Until Official PTO Is Granted</span>
     </div>
     <div style="color: var(--text-secondary); font-size: 0.825rem; line-height: 1.5;">
-      Running your solar system before PG&E issues PTO can result in severe billing penalties, uncredited power export, or smart meter errors.
+      Do <strong>NOT</strong> turn the solar breakers or Powerwall switch on until PG&E issues official written Permission to Operate (PTO). Running early can trigger billing penalties or uncredited power generation.
     </div>
   </div>
 
-  <!-- 1. The 4-Step Activation Timeline -->
-  <div style="margin: 1.25rem 0;">
+  <!-- 1. Activation Process & PTO -->
+  <div style="margin-bottom: 1.25rem;">
     <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-      <span>1. The 4-Step Activation Timeline</span>
+      <span>1. Activation Process & Permission to Operate (PTO)</span>
     </h4>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.85rem;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.85rem; margin-bottom: 1rem;">
       
-      <!-- Step 1 -->
       <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.95rem; font-size: 0.825rem;">
-        <div style="font-weight: 700; color: var(--accent-link); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.35rem;">
-          <span style="background: rgba(96, 165, 250, 0.15); color: var(--accent-link); width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800;">1</span>
-          <span>City Inspection Final</span>
+        <div style="font-weight: 700; color: var(--accent-link); margin-bottom: 0.35rem;">
+          Step 1: City Inspection Sign-off
         </div>
         <p style="color: var(--text-secondary); margin: 0; line-height: 1.45;">
-          Lennar & GAF Energy obtain final building permit sign-offs from the City of Tracy.
+          Lennar and GAF Energy finalize construction and obtain final building inspection approvals from the City of Tracy.
         </p>
       </div>
 
-      <!-- Step 2 -->
       <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.95rem; font-size: 0.825rem;">
-        <div style="font-weight: 700; color: var(--accent-link); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.35rem;">
-          <span style="background: rgba(96, 165, 250, 0.15); color: var(--accent-link); width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800;">2</span>
-          <span>PG&E Submission</span>
+        <div style="font-weight: 700; color: var(--accent-link); margin-bottom: 0.35rem;">
+          Step 2: Interconnection Submission
         </div>
         <p style="color: var(--text-secondary); margin: 0; line-height: 1.45;">
-          GAF Energy submits interconnection package (permit finals, single-line diagrams, authorization).
+          GAF Energy submits permit finals, electrical single-line diagrams, and authorization forms to PG&E.
         </p>
       </div>
 
-      <!-- Step 3 -->
       <div style="background: #0F172A; border: 1px solid rgba(34, 197, 94, 0.35); border-radius: var(--radius-md); padding: 0.95rem; font-size: 0.825rem;">
         <div style="font-weight: 700; color: #86EFAC; margin-bottom: 0.35rem; display: flex; align-items: center; justify-content: space-between;">
-          <div style="display: flex; align-items: center; gap: 0.35rem;">
-            <span style="background: rgba(34, 197, 94, 0.15); color: #86EFAC; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800;">3</span>
-            <span>PTO Approval</span>
-          </div>
+          <span>Step 3: PTO Issuance</span>
           <span style="font-size: 0.7rem; color: #86EFAC; background: rgba(34, 197, 94, 0.15); padding: 0.1rem 0.4rem; border-radius: 4px;">10–30 Days</span>
         </div>
         <p style="color: var(--text-secondary); margin: 0; line-height: 1.45;">
-          PG&E reviews file and issues official PTO confirmation letter via email.
-        </p>
-      </div>
-
-      <!-- Step 4 -->
-      <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.95rem; font-size: 0.825rem;">
-        <div style="font-weight: 700; color: var(--accent-link); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.35rem;">
-          <span style="background: rgba(96, 165, 250, 0.15); color: var(--accent-link); width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800;">4</span>
-          <span>Turn-On & App Setup</span>
-        </div>
-        <p style="color: var(--text-secondary); margin: 0; line-height: 1.45;">
-          Turn on breakers/disconnects and pair your system with the Tesla app.
+          PG&E reviews the submission and emails your official PTO approval confirmation letter.
         </p>
       </div>
 
     </div>
+
+    <!-- How to Avoid Delays Box -->
+    <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1rem;">
+      <strong style="color: var(--accent-link); font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">How to Avoid Delays:</strong>
+      <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.825rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.45rem;">
+        <li style="display: flex; align-items: flex-start; gap: 0.45rem;">
+          <span style="color: #4ADE80; font-weight: 700;">✓</span>
+          <span><strong>Set up PG&E immediately:</strong> Ensure your PG&E residential electric account is active on day 1 of escrow close. Account name/address mismatches stall processing.</span>
+        </li>
+        <li style="display: flex; align-items: flex-start; gap: 0.45rem;">
+          <span style="color: #4ADE80; font-weight: 700;">✓</span>
+          <span><strong>Sign authorization forms promptly:</strong> Watch inbox & spam for e-signature requests from <strong>GAF Energy</strong> or <strong>PG&E</strong> (Agreement & Customer Authorization) and complete right away.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Turning System ON Steps -->
+    <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem;">
+      <strong style="color: var(--text-primary); font-size: 0.875rem; display: block; margin-bottom: 0.65rem;">Turning the System ON (After PTO Arrives):</strong>
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.825rem; color: var(--text-secondary);">
+        <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
+          <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">1</span>
+          <span>Switch dedicated breakers labeled <strong>Solar PV</strong>, <strong>Energy Storage</strong>, and <strong>Powerwall</strong> in your main electrical panel to <strong>ON</strong>.</span>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
+          <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">2</span>
+          <span>Flip exterior AC/DC disconnect levers up to <strong>ON</strong> position.</span>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
+          <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">3</span>
+          <span>Turn the power toggle switch on the side of the Tesla Powerwall unit to <strong>ON</strong>.</span>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- 2. Resident Action Checklist -->
-  <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.1rem; margin-bottom: 1.25rem;">
-    <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.65rem; display: flex; align-items: center; gap: 0.4rem;">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-      <span>2. Resident Action Checklist (To Avoid Delays)</span>
+  <!-- 2. Tesla App vs. Enphase App: Role & Differences -->
+  <div style="margin-bottom: 1.25rem;">
+    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">
+      2. Tesla App vs. Enphase App: Role & Differences
     </h4>
-    <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.825rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.5rem;">
-      <li style="display: flex; align-items: flex-start; gap: 0.45rem;">
-        <span style="color: #4ADE80; font-weight: 700;">✓</span>
-        <span><strong>Activate your PG&E account on Day 1:</strong> Ensure electric service is active immediately upon closing. Account mismatches pause interconnection review.</span>
-      </li>
-      <li style="display: flex; align-items: flex-start; gap: 0.45rem;">
-        <span style="color: #4ADE80; font-weight: 700;">✓</span>
-        <span><strong>Sign authorization emails:</strong> Check inbox & spam folders for DocuSign requests from <strong>GAF Energy</strong>, <strong>Lennar</strong>, or <strong>PG&E</strong> (Agreement & Authorization) and sign promptly.</span>
-      </li>
-      <li style="display: flex; align-items: flex-start; gap: 0.45rem;">
-        <span style="color: #F87171; font-weight: 700;">✕</span>
-        <span><strong>Keep system OFF until PTO:</strong> Do not flip breakers early to avoid billing penalties or meter sync issues.</span>
-      </li>
-    </ul>
+
+    <div style="overflow-x: auto; margin-bottom: 0.85rem;">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.825rem; text-align: left; background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+        <thead>
+          <tr style="border-bottom: 1px solid var(--border-subtle); background: rgba(30, 41, 59, 0.7);">
+            <th style="padding: 0.65rem 0.85rem; color: var(--text-primary);">Feature / Purpose</th>
+            <th style="padding: 0.65rem 0.85rem; color: var(--accent-link);">Tesla App</th>
+            <th style="padding: 0.65rem 0.85rem; color: #F59E0B;">Enphase Enlighten App</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--border-subtle);">
+            <td style="padding: 0.65rem 0.85rem; font-weight: 600; color: var(--text-primary);">Main Function</td>
+            <td style="padding: 0.65rem 0.85rem; color: var(--text-secondary);"><strong>Whole-Home Energy & Battery Management</strong></td>
+            <td style="padding: 0.65rem 0.85rem; color: var(--text-secondary);"><strong>Roof Array Health & Microinverter Diagnostics</strong></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border-subtle);">
+            <td style="padding: 0.65rem 0.85rem; font-weight: 600; color: var(--text-primary);">Data Shown</td>
+            <td style="padding: 0.65rem 0.85rem; color: var(--text-secondary);">Total solar produced, Powerwall battery charge %, real-time home power usage, grid import/export.</td>
+            <td style="padding: 0.65rem 0.85rem; color: var(--text-secondary);">Detailed, panel-by-panel wattage produced by each individual solar shingle/panel.</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border-subtle);">
+            <td style="padding: 0.65rem 0.85rem; font-weight: 600; color: var(--text-primary);">Problem Solving</td>
+            <td style="padding: 0.65rem 0.85rem; color: var(--text-secondary);">Alerts you to overall generation drops, household usage spikes, or grid outages.</td>
+            <td style="padding: 0.65rem 0.85rem; color: var(--text-secondary);">Pinpoints exact underperforming, shaded, dirty, or faulty roof panels.</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.65rem 0.85rem; font-weight: 600; color: var(--text-primary);">Controls & Modes</td>
+            <td style="padding: 0.65rem 0.85rem; color: var(--text-secondary);">Configures <strong>Time-Based Control</strong> (discharges battery during PG&E 4–9 PM peak rates) & <strong>Self-Powered</strong> mode.</td>
+            <td style="padding: 0.65rem 0.85rem; color: var(--text-secondary);">View-only production monitoring and diagnostic performance reporting.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
+      💡 <em>In practice:</em> Use the <strong>Tesla App</strong> daily to manage household power flows, battery backup, and rate savings. Use the <strong>Enphase App</strong> as a diagnostic check to verify all roof panels & microinverters are operating at peak efficiency.
+    </p>
   </div>
 
-  <!-- 3. What to Do Once PTO Arrives -->
-  <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.15rem; margin-bottom: 1.25rem;">
-    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--accent-link); margin-bottom: 0.85rem;">
-      3. What to Do Once PTO Arrives
+  <!-- 3. How to Get Free Enphase App Access (Purchased vs. Leased) -->
+  <div style="margin-bottom: 1.25rem;">
+    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.65rem;">
+      3. How to Get Free Enphase App Access (Purchased vs. Leased)
     </h4>
+    <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.75rem; line-height: 1.5;">
+      Standard homeowner access to the Enphase Enlighten app is <strong>100% free</strong>—original new-construction home buyers do not pay any subscription, activation, or transfer fees.
+    </p>
 
-    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.85rem;">
       
-      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
-        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">1</span>
-        <div>
-          <strong style="color: var(--text-primary);">Flip the Breakers:</strong> Switch dedicated <strong>Solar PV</strong>, <strong>Energy Storage</strong>, and <strong>Powerwall</strong> breakers in your main electrical panel to <strong>ON</strong>, along with exterior AC/DC disconnect levers.
+      <!-- Purchased Card -->
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem;">
+        <div style="font-weight: 700; color: #60A5FA; font-size: 0.875rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.35rem;">
+          <span>If You OWN / Purchased the System:</span>
         </div>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.825rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.4rem;">
+          <li>• Contact <strong>Enphase Customer Support</strong> or GAF Energy Support.</li>
+          <li>• Provide your full name, email, home address, and <strong>Enphase Gateway Serial Number</strong> (located on Envoy/Gateway box near main panel or garage).</li>
+          <li>• They will register your email as primary system owner, granting full access to your interactive array map.</li>
+        </ul>
       </div>
 
-      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
-        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">2</span>
-        <div>
-          <strong style="color: var(--text-primary);">Download Tesla App:</strong> Sign in, tap <strong>Add Product</strong>, and scan the QR code on your Tesla Gateway / Powerwall unit.
+      <!-- Leased Card -->
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem;">
+        <div style="font-weight: 700; color: #F59E0B; font-size: 0.875rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.35rem;">
+          <span>If System is LEASED / PPA:</span>
         </div>
-      </div>
-
-      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
-        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">3</span>
-        <div>
-          <strong style="color: var(--text-primary);">Connect to Wi-Fi:</strong> Pair the Gateway to your home <strong>2.4 GHz Wi-Fi network</strong>.
-        </div>
-      </div>
-
-      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
-        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">4</span>
-        <div>
-          <strong style="color: var(--text-primary);">Choose Operational Mode:</strong> Select <strong>Time-Based Control</strong> (discharges battery during expensive PG&E 4:00 PM – 9:00 PM peak rates) or <strong>Self-Powered</strong> (prioritizes running home 100% on stored solar energy).
-        </div>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.825rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.4rem;">
+          <li>• Contact your <strong>Solar Lease Provider</strong> (e.g. GAF Energy / Lennar Solar partner).</li>
+          <li>• Because the leasing company remains the legal equipment owner, their support team will send an <strong>authorized homeowner guest invitation</strong> to your email.</li>
+          <li>• This allows you to monitor generation without altering master owner settings.</li>
+        </ul>
       </div>
 
     </div>
   </div>
 
-  <!-- 4. Support Contacts Box -->
-  <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.85rem 1rem; margin-bottom: 0.85rem; font-size: 0.825rem;">
-    <strong style="color: var(--text-primary); display: block; margin-bottom: 0.4rem;">Support Contacts:</strong>
-    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.35rem; color: var(--text-secondary);">
-      <li>• <strong>GAF Energy Customer Support:</strong> For interconnection status or DocuSign updates.</li>
-      <li>• <strong>Lennar Customer Care:</strong> If City of Tracy final building permit sign-off is pending (<a href="tel:8882142494" style="color: var(--accent-link);">(888) 214-2494</a>).</li>
-      <li>• <strong>PG&E Solar Interconnection:</strong> Call <a href="tel:18777434112" style="color: var(--accent-link); font-weight: 600;">1-877-743-4112</a> or check your PG&E online portal.</li>
+  <!-- 4. Key Contacts -->
+  <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 0.85rem; font-size: 0.825rem;">
+    <strong style="color: var(--accent-link); display: block; margin-bottom: 0.5rem; font-size: 0.875rem;">Key Support Contacts:</strong>
+    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.4rem; color: var(--text-secondary);">
+      <li>• <strong>GAF Energy Support:</strong> Call <a href="tel:18007663411" style="color: var(--accent-link); font-weight: 600;">1-800-766-3411</a> for solar onboarding, lease assistance, & initial account registration.</li>
+      <li>• <strong>PG&E Solar Interconnection:</strong> Call <a href="tel:18777434112" style="color: var(--accent-link); font-weight: 600;">1-877-743-4112</a> to track PTO application status.</li>
+      <li>• <strong>Lennar Customer Care:</strong> Call <a href="tel:18882142494" style="color: var(--accent-link); font-weight: 600;">1-888-214-2494</a> if City of Tracy final building permit sign-off is pending.</li>
+      <li>• <strong>Enphase Support:</strong> Call <a href="tel:18777974743" style="color: var(--accent-link); font-weight: 600;">1-877-797-4743</a> for gateway connection help & Enlighten account linking.</li>
     </ul>
   </div>
 
-  <!-- Summer 2026 Note -->
+  <!-- Note -->
   <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
-    ℹ️ <em>Note: Solar activation procedures and PG&E timelines are as of Summer 2026.</em>
+    ℹ️ <em>Note: Solar activation procedures and PG&E interconnection guidelines are as of 2026 community records.</em>
   </div>
 </div>`,
-    "keywords": ["solar", "tesla", "powerwall", "pto", "permission to operate", "pg&e", "gaf energy", "activation", "battery", "lennar", "app", "breakers", "interconnection"]
+    "keywords": ["solar", "tesla", "powerwall", "enphase", "gaf", "pto", "permission to operate", "pg&e", "microinverter", "activation", "battery", "enlighten", "app", "lease", "purchased", "breakers", "interconnection"]
   },
   {
     "id": "faq-010",
