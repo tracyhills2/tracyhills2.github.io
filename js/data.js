@@ -82,9 +82,9 @@ const CONTACTS_DATA = {
   "developer": {
     "name": "Lennar Homes",
     "customerCarePhone": "(888) 214-2494",
-    "afterHoursPhone": "Coming Soon",
-    "warrantyPortal": "https://www.lennar.com/my-lennar",
-    "hours": "Mon - Fri: 8:00 AM - 5:00 PM (After-hours details coming soon)"
+    "afterHoursPhone": "(800) 295-7361",
+    "warrantyPortal": "https://myhome.lennar.com",
+    "hours": "Mon - Fri: 7:00 AM - 4:00 PM | After-Hours Emergency: (800) 295-7361"
   }
 };
 
@@ -370,11 +370,11 @@ const FAQ_DATA = [
     <div>
       <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.3rem;">Lennar Customer Care</h4>
       <div style="font-size: 0.825rem; color: var(--text-secondary);">
-        Phone: <a href="tel:8882142494" style="color: var(--accent-link); font-weight: 600;">(888) 214-2494</a> | Mon – Fri: 8:00 AM – 5:00 PM
+        Phone: <a href="tel:8882142494" style="color: var(--accent-link); font-weight: 600;">(888) 214-2494</a> (7 AM–4 PM Mon–Fri) | After-Hours Emergency: <a href="tel:8002957361" style="color: #F59E0B; font-weight: 600;">(800) 295-7361</a>
       </div>
     </div>
-    <a href="https://www.lennar.com/my-lennar" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.35rem; background: var(--bg-surface); border: 1px solid var(--border-subtle); color: var(--text-primary); font-size: 0.8rem; font-weight: 600; padding: 0.4rem 0.85rem; border-radius: var(--radius-sm); text-decoration: none;">
-      <span>MyLennar Portal ↗</span>
+    <a href="https://myhome.lennar.com" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.35rem; background: var(--bg-surface); border: 1px solid var(--border-subtle); color: var(--text-primary); font-size: 0.8rem; font-weight: 600; padding: 0.4rem 0.85rem; border-radius: var(--radius-sm); text-decoration: none;">
+      <span>MyHome Portal ↗</span>
     </a>
   </div>
 
@@ -557,39 +557,55 @@ const FAQ_DATA = [
     "question": "How do I submit a new home warranty service request to Lennar?",
     "answer": `<div class="faq-details">
   <p>
-    New home warranty claims and customer care service requests should be submitted directly through the official <strong>MyLennar Portal</strong>.
+    Non-emergency home warranty claims and customer care requests should be submitted directly through the official <strong>MyLennar / MyHome Portal</strong> (<strong>myhome.lennar.com</strong>).
   </p>
 
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1rem 0;">
     <!-- MyLennar Portal Card -->
     <div style="background: #0F172A; border: 1px solid rgba(96, 165, 250, 0.3); border-radius: var(--radius-md); padding: 1.1rem; display: flex; flex-direction: column; justify-content: space-between;">
       <div>
-        <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--accent-link); margin-bottom: 0.35rem;">MyLennar Care Portal</h4>
+        <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--accent-link); margin-bottom: 0.35rem;">MyHome Lennar Care Portal</h4>
         <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
-          Submit detailed service tickets, upload photos of warrantable defects, and track technician appointment status.
+          Submit non-emergency service requests during business hours, upload photos of defects, and track appointment status.
         </p>
       </div>
-      <a href="https://www.lennar.com/my-lennar" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; background: var(--accent-primary); color: #FFF; font-weight: 600; font-size: 0.825rem; padding: 0.5rem 1rem; border-radius: var(--radius-sm); text-decoration: none;">
-        <span>Open MyLennar Portal ↗</span>
+      <a href="https://myhome.lennar.com" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; background: var(--accent-primary); color: #FFF; font-weight: 600; font-size: 0.825rem; padding: 0.5rem 1rem; border-radius: var(--radius-sm); text-decoration: none;">
+        <span>Open MyHome Lennar Portal ↗</span>
       </a>
     </div>
 
-    <!-- Phone Line Card -->
+    <!-- Emergency & Business Hours Card -->
     <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.1rem;">
-      <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">Lennar Customer Care Phone</h4>
-      <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.5rem;">
-        Speak directly with a customer care representative:
-      </p>
-      <a href="tel:8882142494" style="color: var(--accent-link); font-weight: 700; font-size: 0.95rem;">(888) 214-2494</a>
-      <div style="font-size: 0.775rem; color: var(--text-muted); margin-top: 0.35rem;">
-        Mon – Fri: 8:00 AM – 5:00 PM
+      <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">Lennar Customer Care Contacts</h4>
+      
+      <div style="margin-bottom: 0.65rem;">
+        <span style="font-size: 0.775rem; color: var(--text-muted); display: block;">Business Hours (7:00 AM – 4:00 PM Mon–Fri):</span>
+        <a href="tel:8882142494" style="color: var(--accent-link); font-weight: 700; font-size: 0.9rem;">(888) 214-2494</a>
+      </div>
+
+      <div>
+        <span style="font-size: 0.775rem; color: #FEF08A; font-weight: 700; display: block;">After-Hours Emergency Message Center:</span>
+        <a href="tel:8002957361" style="color: #F59E0B; font-weight: 700; font-size: 0.95rem;">(800) 295-7361</a>
+        <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">
+          Mon–Fri: 4:00 PM – 7:00 AM | Weekends & Holidays: 24 Hours
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- Emergency Criteria Box -->
+  <div style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: var(--radius-md); padding: 0.9rem 1rem; margin: 1rem 0;">
+    <strong style="color: #FCA5A5; font-size: 0.85rem; display: block; margin-bottom: 0.4rem;">⚠️ What Qualifies as a Lennar After-Hours Emergency?</strong>
+    <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.3rem;">
+      <li>• No heat in winter / cold weather or no AC in summer / warm weather</li>
+      <li>• Severe plumbing problems or hazardous electrical situations</li>
+      <li>• Any condition endangering health/safety or gas leak smell</li>
+    </ul>
+  </div>
+
   <!-- Summer 2026 Note -->
   <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
-    ℹ️ <em>Note: Builder warranty procedures and contacts are as of Summer 2026.</em>
+    ℹ️ <em>Note: Lennar Customer Care emergency procedures as of August 2026 update.</em>
   </div>
 </div>`,
     "keywords": ["lennar", "warranty", "customer care", "repair", "new home", "builder", "mylennar", "service request"]
