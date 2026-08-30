@@ -108,6 +108,37 @@ function initFaqPage() {
   let currentCategory = 'All';
   let currentSearchQuery = '';
 
+  // Inject Google FAQPage JSON-LD Structured Data for Search Engine Rich Snippets
+  function injectFaqSchema() {
+    if (typeof FAQ_DATA === 'undefined') return;
+    const existingScript = document.getElementById('faq-schema-jsonld');
+    if (existingScript) existingScript.remove();
+
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": FAQ_DATA.map(faq => {
+        const cleanAnswer = faq.answer.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+        return {
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": cleanAnswer
+          }
+        };
+      })
+    };
+
+    const script = document.createElement('script');
+    script.id = 'faq-schema-jsonld';
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+  }
+
+  injectFaqSchema();
+
   const CATEGORIES = [
     'All',
     'HOA',
