@@ -847,6 +847,63 @@ img, svg {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
 }
 
+/* Mobile Responsive Adjustments for Accordions & Rich Cards */
+.accordion-content {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.accordion-content a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 640px) {
+  .accordion-header {
+    padding: 1rem 0.85rem;
+  }
+  
+  .accordion-content {
+    padding: 0.75rem 0.85rem 1rem 0.85rem;
+  }
+
+  /* Force single column layout for multi-card grids on mobile screens */
+  .accordion-content div[style*="display: grid"],
+  .accordion-content div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  /* Ensure card headers & badge containers wrap cleanly on mobile */
+  .accordion-content div[style*="justify-content: space-between"] {
+    flex-wrap: wrap !important;
+    gap: 0.4rem !important;
+  }
+
+  /* Ensure badge pills inside card headers wrap and align cleanly */
+  .accordion-content span[style*="border-radius: 4px"],
+  .accordion-content span[style*="border-radius:var(--radius-sm)"],
+  .accordion-content span[style*="border-radius: var(--radius-sm)"] {
+    white-space: nowrap;
+    flex-shrink: 0;
+    align-self: flex-start;
+  }
+
+  /* Compact floating back-to-top button on mobile screens so it does not obscure card text */
+  .floating-top-btn {
+    bottom: 16px;
+    right: 14px;
+    width: 38px;
+    height: 38px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  }
+
+  .floating-top-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 /* --------------------------------------------------------------------------
    Print Stylesheet (@media print)
    -------------------------------------------------------------------------- */
