@@ -386,12 +386,9 @@ function initProvidersPage() {
               ${websiteHtml}
             </div>
           </div>
-          <div style="margin-top: auto; padding-top: 0.75rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: var(--text-muted);">
-            <span>Updated: ${p.lastUpdated || 'Coming Soon'}</span>
-            <div style="display: flex; align-items: center; gap: 0.2rem;">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <span>Rating: Coming Soon</span>
-            </div>
+          <div class="trust-meta-bar">
+            <span class="trust-badge trust-badge-recommendation">⭐ Community Recommendation</span>
+            <span class="trust-meta-date">Last Reviewed: August 22, 2026</span>
           </div>
         `;
 
