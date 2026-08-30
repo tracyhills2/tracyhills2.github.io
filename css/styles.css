@@ -853,6 +853,62 @@ img, svg {
   text-decoration: underline;
 }
 
+/* Content Trust & Metadata System */
+.trust-meta-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding-top: 0.65rem;
+  margin-top: 0.75rem;
+  border-top: 1px dashed var(--border-subtle);
+  font-size: 0.775rem;
+  color: var(--text-muted);
+}
+
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.trust-badge-official {
+  background: rgba(34, 197, 94, 0.12);
+  color: #86EFAC;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.trust-badge-community {
+  background: rgba(245, 158, 11, 0.12);
+  color: #FDE047;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.trust-badge-recommendation {
+  background: rgba(168, 85, 247, 0.12);
+  color: #C084FC;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.trust-badge-external {
+  background: rgba(59, 130, 246, 0.12);
+  color: #93C5FD;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.trust-meta-date {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text-muted);
+}
+
 /* Service Provider Directory Disclaimer Banner */
 .provider-disclaimer-banner {
   background: rgba(30, 58, 138, 0.2);
