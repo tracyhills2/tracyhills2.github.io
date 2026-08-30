@@ -1,0 +1,5 @@
+# robots.txt for Tracy Hills II Community Resource Hub
+User-agent: *
+Allow: /
+
+Sitemap: sitemap.xml
