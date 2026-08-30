@@ -766,7 +766,7 @@ const FAQ_DATA = [
   <div style="background: rgba(234, 179, 8, 0.1); border: 1px solid rgba(234, 179, 8, 0.3); border-radius: var(--radius-sm); padding: 0.85rem 1rem; font-size: 0.825rem; color: #FDE047; display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.85rem;">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink: 0; margin-top: 0.1rem;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
     <div style="line-height: 1.5;">
-      <strong style="color: #FEF08A;">Important Advice Before Purchasing:</strong> Always test your water first and clarify what specific issues you are trying to address—hardness, chlorine, sediment, TDS, or drinking-water quality—as different filtration systems solve different problems.
+      <strong style="color: #FEF08A;">Important Advice Before Purchasing:</strong> Always test your water first and clarify what specific issues you are trying to address (hardness, chlorine, sediment, TDS, or drinking-water quality), as different filtration systems solve different problems.
     </div>
   </div>
 
