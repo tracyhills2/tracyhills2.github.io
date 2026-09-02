@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initScrollToTop();
   initDynamicYear();
+  initMobileOnboardingTour();
   
   if (document.getElementById('announcements-list-container')) {
     initAnnouncements();
@@ -59,6 +60,140 @@ function initMobileNav() {
       closeDrawer();
     }
   });
+}
+
+/* --------------------------------------------------------------------------
+   First-Time Mobile Interactive Onboarding Tour
+   -------------------------------------------------------------------------- */
+function initMobileOnboardingTour() {
+  const isMobile = window.innerWidth < 840;
+  const tourSeen = localStorage.getItem('tracyHillsMobileTourSeen');
+  
+  // Expose global helper for easy testing/replay if needed
+  window.resetMobileTour = function() {
+    localStorage.removeItem('tracyHillsMobileTourSeen');
+    location.reload();
+  };
+
+  if (!isMobile || tourSeen) return;
+
+  const menuBtn = document.querySelector('[data-tour="menu-toggle"]') || document.getElementById('mobile-menu-toggle');
+  const drawerOverlay = document.getElementById('mobile-nav-overlay');
+  const drawerLinks = document.querySelectorAll('.mobile-drawer-links .nav-link');
+
+  if (!menuBtn) return;
+
+  // 3.5 second delay allowing user to review the home page first
+  let tourTimer = setTimeout(() => {
+    startStep1();
+  }, 3500);
+
+  // If user opens the menu on their own during the 3.5s delay, mark tour seen & cancel timer!
+  function handleEarlyMenuClick() {
+    clearTimeout(tourTimer);
+    localStorage.setItem('tracyHillsMobileTourSeen', 'true');
+    menuBtn.removeEventListener('click', handleEarlyMenuClick);
+  }
+  menuBtn.addEventListener('click', handleEarlyMenuClick);
+
+  let backdrop, pointer, tourCard;
+
+  function cleanup() {
+    if (backdrop) backdrop.remove();
+    if (pointer) pointer.remove();
+    if (tourCard) tourCard.remove();
+    menuBtn.classList.remove('tour-spotlight');
+    drawerLinks.forEach(link => link.classList.remove('tour-highlight-pulse'));
+    document.body.style.overflow = '';
+    localStorage.setItem('tracyHillsMobileTourSeen', 'true');
+  }
+
+  function positionPointer() {
+    if (!pointer || !menuBtn) return;
+    const rect = menuBtn.getBoundingClientRect();
+    pointer.style.top = (rect.bottom + 6) + 'px';
+    pointer.style.right = (window.innerWidth - rect.right) + 'px';
+  }
+
+  function startStep1() {
+    // Backdrop
+    backdrop = document.createElement('div');
+    backdrop.className = 'tour-backdrop active';
+    document.body.appendChild(backdrop);
+
+    // Spotlight menu toggle
+    menuBtn.classList.add('tour-spotlight');
+
+    // Pointer Hand Animation
+    pointer = document.createElement('div');
+    pointer.className = 'tour-pointer-container';
+    pointer.innerHTML = `<span class="tour-pointer-hand">👆</span>`;
+    document.body.appendChild(pointer);
+    positionPointer();
+
+    // Onboarding Card
+    tourCard = document.createElement('div');
+    tourCard.className = 'tour-card active';
+    tourCard.innerHTML = `
+      <div class="tour-card-header">
+        <span class="tour-step-badge">Step 1 of 2</span>
+        <button class="tour-card-close" id="tour-close-btn" aria-label="Close tour">✕</button>
+      </div>
+      <div class="tour-card-title">Explore Community Pages 📱</div>
+      <div class="tour-card-body">
+        Tap the <strong>MENU</strong> button in the top-right corner to easily access Quick Contacts, Service Directory, FAQs, and About info.
+      </div>
+      <div class="tour-card-footer">
+        <button class="tour-btn-skip" id="tour-skip-btn">Skip</button>
+        <button class="tour-btn-primary" id="tour-step1-next">Explore Menu Now →</button>
+      </div>
+    `;
+    document.body.appendChild(tourCard);
+
+    // Event Listeners for Step 1
+    document.getElementById('tour-close-btn').addEventListener('click', cleanup);
+    document.getElementById('tour-skip-btn').addEventListener('click', cleanup);
+
+    const step1NextBtn = document.getElementById('tour-step1-next');
+    
+    function goToStep2() {
+      // Open the drawer
+      if (drawerOverlay) drawerOverlay.classList.add('open');
+      menuBtn.classList.remove('tour-spotlight');
+      if (pointer) pointer.style.display = 'none';
+      startStep2();
+    }
+
+    step1NextBtn.addEventListener('click', goToStep2);
+    menuBtn.addEventListener('click', function handleMenuClickOnce() {
+      menuBtn.removeEventListener('click', handleMenuClickOnce);
+      goToStep2();
+    }, { once: true });
+
+    window.addEventListener('resize', positionPointer);
+  }
+
+  function startStep2() {
+    // Highlight links inside drawer
+    drawerLinks.forEach(link => link.classList.add('tour-highlight-pulse'));
+
+    tourCard.innerHTML = `
+      <div class="tour-card-header">
+        <span class="tour-step-badge">Step 2 of 2</span>
+        <button class="tour-card-close" id="tour-close-btn2" aria-label="Close tour">✕</button>
+      </div>
+      <div class="tour-card-title">All Options Right Here ✨</div>
+      <div class="tour-card-body">
+        Select <strong>Quick Contacts</strong> for city & HOA numbers, <strong>Service Directory</strong> for resident-recommended vendors, or <strong>FAQ</strong> for answers.
+      </div>
+      <div class="tour-card-footer" style="justify-content: flex-end;">
+        <button class="tour-btn-primary" id="tour-finish-btn">Awesome, Got It!</button>
+      </div>
+    `;
+
+    document.getElementById('tour-close-btn2').addEventListener('click', cleanup);
+    document.getElementById('tour-finish-btn').addEventListener('click', cleanup);
+  }
 }
 
 /* --------------------------------------------------------------------------

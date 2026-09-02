@@ -1591,6 +1591,32 @@ const PROVIDERS_DATA = [
     "lastUpdated": "2026-08-22"
   },
   {
+    "id": "sp-408",
+    "businessName": "Mohammad",
+    "category": "Plumber",
+    "contactPerson": "Mohammad",
+    "phone": "(510) 468-1058",
+    "email": null,
+    "website": null,
+    "description": "Plumbing Repairs & Services",
+    "communityNotes": "Plumber recommended by residents.",
+    "isPlaceholder": false,
+    "lastUpdated": "2026-09-01"
+  },
+  {
+    "id": "sp-409",
+    "businessName": "Jeff Kwan",
+    "category": "Plumber",
+    "contactPerson": "Jeff Kwan",
+    "phone": "(650) 273-2267",
+    "email": null,
+    "website": null,
+    "description": "Plumbing Repairs & Services",
+    "communityNotes": "Plumber recommended by residents.",
+    "isPlaceholder": false,
+    "lastUpdated": "2026-09-01"
+  },
+  {
     "id": "sp-501",
     "businessName": "Samuel Ramirez",
     "category": "Electrician",
@@ -1683,6 +1709,32 @@ const PROVIDERS_DATA = [
     "lastUpdated": "2026-08-22"
   },
   {
+    "id": "sp-508",
+    "businessName": "Paul",
+    "category": "Electrician",
+    "contactPerson": "Paul",
+    "phone": "(925) 382-0948",
+    "email": null,
+    "website": null,
+    "description": "Electrical installation, wiring, and panel services.",
+    "communityNotes": "Lennar's electrical contractor. His team worked on most Tracy Hills II homes, so he is very familiar with the electrical installation & layout. On the higher side for cost.",
+    "isPlaceholder": false,
+    "lastUpdated": "2026-09-01"
+  },
+  {
+    "id": "sp-509",
+    "businessName": "Carla",
+    "category": "Electrician",
+    "contactPerson": "Carla",
+    "phone": "(209) 323-0904",
+    "email": null,
+    "website": null,
+    "description": "Electrical services, wiring, and maintenance.",
+    "communityNotes": "Contracted with Lennar in Tracy Hills II, giving her deep familiarity with how home electrical systems are set up here. On the higher side for cost.",
+    "isPlaceholder": false,
+    "lastUpdated": "2026-09-01"
+  },
+  {
     "id": "sp-601",
     "businessName": "Santiago",
     "category": "Painter",
@@ -1694,6 +1746,32 @@ const PROVIDERS_DATA = [
     "communityNotes": null,
     "isPlaceholder": false,
     "lastUpdated": "2026-08-22"
+  },
+  {
+    "id": "sp-602",
+    "businessName": "Oscar",
+    "category": "Painter",
+    "contactPerson": "Oscar",
+    "phone": "(209) 496-7066",
+    "email": null,
+    "website": null,
+    "description": "Interior & Exterior Painting Services",
+    "communityNotes": "Painter recommended by residents.",
+    "isPlaceholder": false,
+    "lastUpdated": "2026-09-01"
+  },
+  {
+    "id": "sp-603",
+    "businessName": "Nick",
+    "category": "Painter",
+    "contactPerson": "Nick",
+    "phone": "(209) 456-9779",
+    "email": null,
+    "website": null,
+    "description": "Interior & Exterior Painting Services",
+    "communityNotes": "Painter recommended by residents.",
+    "isPlaceholder": false,
+    "lastUpdated": "2026-09-01"
   },
   {
     "id": "sp-701",
@@ -1863,6 +1941,20 @@ const PROVIDERS_DATA = [
     "communityNotes": "Blinds installer recommended by residents.",
     "isPlaceholder": false,
     "lastUpdated": "2026-08-29"
+  },
+  {
+    "id": "sp-1001",
+    "businessName": "Ivan",
+    "category": "Window Cleaning",
+    "categories": ["Window Cleaning", "Solar Services", "Pest Control", "Handyman"],
+    "contactPerson": "Ivan",
+    "phone": "(925) 758-2765",
+    "email": null,
+    "website": null,
+    "description": "Solar panel cleaning, birdproofing & bird spikes installation, window cleaning, permanent holiday lights installation, and wasp/bee nest removal.",
+    "communityNotes": "Tracy Hills local resident. Highly recommended by many residents for exterior home services.",
+    "isPlaceholder": false,
+    "lastUpdated": "2026-09-01"
   }
 ];
 
