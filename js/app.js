@@ -546,6 +546,19 @@ function initProvidersPage() {
             </div>` 
           : '';
 
+        let formattedDate = 'August 22, 2026';
+        if (p.lastUpdated) {
+          const parts = p.lastUpdated.split('-');
+          if (parts.length === 3) {
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            const monthName = months[parseInt(parts[1], 10) - 1];
+            const dayNum = parseInt(parts[2], 10);
+            if (monthName) {
+              formattedDate = `${monthName} ${dayNum}, ${parts[0]}`;
+            }
+          }
+        }
+
         card.innerHTML = `
           <div>
             <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; margin-bottom: 0.65rem;">
@@ -567,7 +580,7 @@ function initProvidersPage() {
           </div>
           <div class="trust-meta-bar">
             <span class="trust-badge trust-badge-recommendation">⭐ Community Recommendation</span>
-            <span class="trust-meta-date">Last Reviewed: August 22, 2026</span>
+            <span class="trust-meta-date">Last Reviewed: ${formattedDate}</span>
           </div>
         `;
 
