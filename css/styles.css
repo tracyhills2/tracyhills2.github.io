@@ -333,16 +333,244 @@ img, svg {
 
 .mobile-toggle {
   color: var(--text-primary);
-  padding: 0.5rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0.4rem 0.75rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   flex-shrink: 0;
+  transition: all var(--transition-fast);
+  position: relative;
+  z-index: 60;
+}
+
+.mobile-toggle:hover, .mobile-toggle:active {
+  background: var(--bg-surface-hover);
+  border-color: var(--accent-link);
+}
+
+.mobile-toggle-text {
+  color: var(--text-primary);
 }
 
 @media (min-width: 840px) {
   .mobile-toggle {
     display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   First-Time Mobile Interactive Onboarding Tour
+   -------------------------------------------------------------------------- */
+.tour-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(6px);
+  z-index: 990;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.tour-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Spotlight Highlight Ring around Menu Button */
+.tour-spotlight {
+  position: relative;
+  z-index: 1000 !important;
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.6), 0 0 25px rgba(37, 99, 235, 0.8) !important;
+  border-color: var(--accent-link) !important;
+  animation: tour-pulse-ring 1.8s infinite;
+}
+
+@keyframes tour-pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0px rgba(96, 165, 250, 0.7), 0 0 15px rgba(37, 99, 235, 0.8);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(96, 165, 250, 0), 0 0 30px rgba(37, 99, 235, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 0 0px rgba(96, 165, 250, 0), 0 0 15px rgba(37, 99, 235, 0.8);
+  }
+}
+
+/* Animated Hand / Pointer Arrow */
+.tour-pointer-container {
+  position: fixed;
+  z-index: 1001;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  transition: all 0.3s ease;
+}
+
+.tour-pointer-hand {
+  font-size: 2.2rem;
+  line-height: 1;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+  animation: tour-bounce-hand 1.2s infinite ease-in-out;
+  transform-origin: bottom right;
+}
+
+@keyframes tour-bounce-hand {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-6px, 8px) rotate(-10deg);
+  }
+}
+
+/* Coachmark Onboarding Card */
+.tour-card {
+  position: fixed;
+  right: 1rem;
+  left: 1rem;
+  top: 80px;
+  max-width: 420px;
+  margin: 0 auto;
+  background: var(--bg-surface);
+  border: 1px solid var(--accent-link);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  z-index: 1002;
+  opacity: 0;
+  transform: translateY(-15px) scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tour-card.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.tour-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+.tour-step-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(37, 99, 235, 0.25);
+  color: var(--accent-link);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+}
+
+.tour-card-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.2rem;
+  line-height: 1;
+  transition: color var(--transition-fast);
+}
+
+.tour-card-close:hover {
+  color: var(--text-primary);
+}
+
+.tour-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.tour-card-body {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.1rem;
+}
+
+.tour-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.tour-btn-primary {
+  background: var(--accent-primary);
+  color: #FFFFFF;
+  border: none;
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+  transition: all var(--transition-fast);
+}
+
+.tour-btn-primary:hover {
+  background: var(--accent-primary-hover);
+  transform: translateY(-1px);
+}
+
+.tour-btn-skip {
+  background: transparent;
+  color: var(--text-muted);
+  border: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.tour-btn-skip:hover {
+  color: var(--text-primary);
+}
+
+/* Highlight items inside drawer during Step 2 */
+.tour-drawer-highlight {
+  position: relative;
+  z-index: 105;
+}
+
+.mobile-drawer-links .nav-link.tour-highlight-pulse {
+  animation: tour-link-pulse 1.5s infinite alternate;
+  background: rgba(37, 99, 235, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.2rem;
+}
+
+@keyframes tour-link-pulse {
+  from {
+    border-left: 3px solid var(--accent-primary);
+    color: #FFFFFF;
+  }
+  to {
+    border-left: 3px solid var(--accent-link);
+    color: var(--accent-link);
+    box-shadow: 0 0 12px rgba(96, 165, 250, 0.3);
   }
 }
 
