@@ -397,9 +397,40 @@ function initProvidersPage() {
   let currentCategory = 'All';
   let currentSearchQuery = '';
 
-  // Handle URL Query Params if present (e.g. ?q=handyman)
+  // Function to sync current category and search query with URL address bar
+  function updateUrlState() {
+    if (!window.history || !window.history.replaceState) return;
+    const url = new URL(window.location.href);
+    if (currentCategory && currentCategory !== 'All') {
+      url.searchParams.set('category', currentCategory);
+    } else {
+      url.searchParams.delete('category');
+      url.searchParams.delete('cat');
+    }
+    if (currentSearchQuery && currentSearchQuery.trim()) {
+      url.searchParams.set('q', currentSearchQuery.trim());
+    } else {
+      url.searchParams.delete('q');
+    }
+    window.history.replaceState(null, '', url.pathname + (url.searchParams.toString() ? '?' + url.searchParams.toString() : '') + url.hash);
+  }
+
+  // Handle URL Query Params if present (e.g. ?category=Garage Door Repair, ?cat=garage-door-repair, ?q=garage, or #Garage-Door-Repair)
   const urlParams = new URLSearchParams(window.location.search);
+  const rawCatParam = urlParams.get('category') || urlParams.get('cat') || (window.location.hash ? window.location.hash.substring(1) : null);
   const qParam = urlParams.get('q');
+
+  if (rawCatParam) {
+    const decoded = decodeURIComponent(rawCatParam).trim();
+    const matchedCategory = PROVIDER_CATEGORIES.find(cat => 
+      cat.toLowerCase() === decoded.toLowerCase() ||
+      cat.toLowerCase().replace(/[^a-z0-9]+/g, '-') === decoded.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+    );
+    if (matchedCategory) {
+      currentCategory = matchedCategory;
+    }
+  }
+
   if (qParam && searchInput) {
     searchInput.value = qParam;
     currentSearchQuery = qParam;
@@ -415,6 +446,7 @@ function initProvidersPage() {
     allBtn.textContent = `All (${PROVIDERS_DATA.length})`;
     allBtn.addEventListener('click', () => {
       currentCategory = 'All';
+      updateUrlState();
       renderCategories();
       renderProviders();
     });
@@ -446,6 +478,7 @@ function initProvidersPage() {
 
       btn.addEventListener('click', () => {
         currentCategory = cat;
+        updateUrlState();
         renderCategories();
         renderProviders();
       });
@@ -609,6 +642,7 @@ function initProvidersPage() {
         currentCategory = 'All';
         renderCategories();
       }
+      updateUrlState();
       renderProviders();
     });
   }
@@ -618,6 +652,7 @@ function initProvidersPage() {
       if (searchInput) searchInput.value = '';
       currentSearchQuery = '';
       currentCategory = 'All';
+      updateUrlState();
       renderCategories();
       renderProviders();
     });
