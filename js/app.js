@@ -475,6 +475,7 @@ function initProvidersPage() {
       if (q.startsWith('blind') || q.startsWith('curtain') || q.startsWith('shade') || q.startsWith('shutter')) synonyms.push('blinds', 'curtains', 'shades', 'shutters', 'window');
       if (q.startsWith('grocer') || q.startsWith('food') || q.startsWith('deliver') || q.startsWith('produc')) synonyms.push('grocery', 'groceries', 'delivery', 'produce', 'food');
       if (q.startsWith('epoxy') || q.startsWith('granite') || q.startsWith('quartz') || q.startsWith('stone')) synonyms.push('epoxy', 'granite', 'quartz', 'stone', 'restoration');
+      if (q.startsWith('garage') || q.startsWith('door')) synonyms.push('garage', 'door', 'repair');
 
       const matchesQuery = synonyms.some((term) =>
         provider.businessName.toLowerCase().includes(term) ||
