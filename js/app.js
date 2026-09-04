@@ -473,6 +473,8 @@ function initProvidersPage() {
       if (q.startsWith('roof')) synonyms.push('roofing', 'roof');
       if (q.startsWith('garden') || q.startsWith('landscap') || q.startsWith('lawn') || q.startsWith('paver') || q.startsWith('hardscap')) synonyms.push('gardener', 'gardening', 'landscaper', 'landscaping', 'lawn', 'paver', 'pavers', 'hardscape', 'hardscaping');
       if (q.startsWith('blind') || q.startsWith('curtain') || q.startsWith('shade') || q.startsWith('shutter')) synonyms.push('blinds', 'curtains', 'shades', 'shutters', 'window');
+      if (q.startsWith('grocer') || q.startsWith('food') || q.startsWith('deliver') || q.startsWith('produc')) synonyms.push('grocery', 'groceries', 'delivery', 'produce', 'food');
+      if (q.startsWith('epoxy') || q.startsWith('granite') || q.startsWith('quartz') || q.startsWith('stone')) synonyms.push('epoxy', 'granite', 'quartz', 'stone', 'restoration');
 
       const matchesQuery = synonyms.some((term) =>
         provider.businessName.toLowerCase().includes(term) ||
@@ -480,6 +482,7 @@ function initProvidersPage() {
         provider.description.toLowerCase().includes(term) ||
         (provider.contactPerson && provider.contactPerson.toLowerCase().includes(term)) ||
         (provider.communityNotes && provider.communityNotes.toLowerCase().includes(term)) ||
+        (provider.whatsAppGroup && provider.whatsAppGroup.toLowerCase().includes(term)) ||
         (provider.keywords && provider.keywords.some((k) => k.toLowerCase().includes(term)))
       );
 
@@ -532,6 +535,13 @@ function initProvidersPage() {
             </div>` 
           : '';
 
+        let whatsAppHtml = p.whatsAppGroup
+          ? `<div style="display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#4ADE80"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+              <a href="${p.whatsAppGroup}" target="_blank" rel="noopener noreferrer" style="color: #4ADE80; font-weight: 600;">Join WhatsApp Group ↗</a>
+            </div>`
+          : '';
+
         let emailHtml = p.email 
           ? `<div style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-secondary);">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
@@ -573,6 +583,7 @@ function initProvidersPage() {
             </p>
             ${communityNotesHtml}
             <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.825rem; margin-bottom: 1rem; border-top: 1px solid var(--border-subtle); padding-top: 0.75rem;">
+              ${whatsAppHtml}
               ${phoneHtml}
               ${emailHtml}
               ${websiteHtml}
