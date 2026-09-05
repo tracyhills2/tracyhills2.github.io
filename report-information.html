@@ -129,7 +129,7 @@
           <span>Correction Assistant Form</span>
         </h3>
         <p style="font-size: 0.85rem; margin-bottom: 1.25rem;">
-          Fill out the fields below and click <strong>"Prepare Email Correction"</strong> to generate a formatted email to <strong style="color: var(--accent-link);">tracyhillsphase2@gmail.com</strong>.
+          Fill out the fields below and click <strong>"Submit Information Correction"</strong> to dispatch a report directly to the community website administrators.
         </p>
 
         <form id="correction-form" onsubmit="event.preventDefault(); sendCorrectionEmail();">
@@ -156,14 +156,27 @@
             <textarea id="report-description" rows="4" placeholder="Describe the incorrect detail and provide the updated information..." required style="width: 100%; background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.65rem 0.85rem; color: var(--text-primary); font-size: 0.875rem; line-height: 1.5; resize: vertical;"></textarea>
           </div>
 
-          <div style="margin-bottom: 1.25rem;">
-            <label for="report-source" style="display: block; font-size: 0.825rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.35rem;">Official Source or Reference Link (Optional)</label>
-            <input type="text" id="report-source" placeholder="e.g. https://www.cityoftracy.org or Seabreeze HOA newsletter" style="width: 100%; background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.6rem 0.85rem; color: var(--text-primary); font-size: 0.875rem;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-bottom: 1.25rem;">
+            <div>
+              <label for="report-source" style="display: block; font-size: 0.825rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.35rem;">Official Source or Reference Link (Optional)</label>
+              <input type="text" id="report-source" placeholder="e.g. https://www.cityoftracy.org or HOA document" style="width: 100%; background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.6rem 0.85rem; color: var(--text-primary); font-size: 0.875rem;">
+            </div>
+            <div>
+              <label for="report-email" style="display: block; font-size: 0.825rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.35rem;">Your Email Address (Optional for status updates)</label>
+              <input type="email" id="report-email" placeholder="e.g. resident@example.com" style="width: 100%; background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.6rem 0.85rem; color: var(--text-primary); font-size: 0.875rem;">
+            </div>
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+          <!-- Anti-Spam Honeypot Field -->
+          <div style="position: absolute; left: -9999px; opacity: 0; pointer-events: none;" aria-hidden="true">
+            <input type="text" id="report-hp-field" name="b_hp_field" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div id="report-status-banner" style="display: none; padding: 0.75rem 1rem; border-radius: var(--radius-sm); margin-bottom: 1rem; font-size: 0.875rem;"></div>
+
+          <button type="submit" id="report-submit-btn" class="btn btn-primary" style="width: 100%; justify-content: center;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-            <span>Prepare Email Correction</span>
+            <span>Submit Information Correction</span>
           </button>
         </form>
       </div>
@@ -241,25 +254,70 @@
   <!-- Vanilla Scripts -->
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/whatsapp-modal.js"></script>
   <script>
-    function sendCorrectionEmail() {
-      const page = document.getElementById('report-page').value;
+    async function sendCorrectionEmail() {
+      const page = document.getElementById('report-page').value.trim();
       const type = document.getElementById('report-type').value;
-      const description = document.getElementById('report-description').value;
-      const source = document.getElementById('report-source').value;
+      const description = document.getElementById('report-description').value.trim();
+      const source = document.getElementById('report-source').value.trim();
+      const senderEmail = document.getElementById('report-email').value.trim();
+      const hpField = document.getElementById('report-hp-field') ? document.getElementById('report-hp-field').value : '';
 
-      const subject = encodeURIComponent(`[Website Correction Request] ${page} (${type})`);
-      const body = encodeURIComponent(
-        `Website Content Correction Request\n` +
-        `----------------------------------------\n` +
-        `Page / Section: ${page}\n` +
-        `Issue Type: ${type}\n\n` +
-        `Description & Correction:\n${description}\n\n` +
-        `Official Reference / Link:\n${source || 'N/A'}\n\n` +
-        `Submitted via Tracy Hills II Community Resource Portal`
-      );
+      const btn = document.getElementById('report-submit-btn');
+      const banner = document.getElementById('report-status-banner');
 
-      window.location.href = `mailto:tracyhillsphase2@gmail.com?subject=${subject}&body=${body}`;
+      if (!page || !description) {
+        banner.style.background = 'rgba(220, 38, 38, 0.15)';
+        banner.style.border = '1px solid rgba(239, 68, 68, 0.4)';
+        banner.style.color = '#FCA5A5';
+        banner.textContent = 'Please fill in all required fields marked with *';
+        banner.style.display = 'block';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerHTML = '<span>Submitting report...</span>';
+      banner.style.display = 'none';
+
+      try {
+        const response = await fetch('https://tracy-hills-api.tracyhillsphase2.workers.dev/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            formType: 'website_report',
+            pageName: page,
+            issueType: type,
+            description: description,
+            referenceSource: source,
+            senderEmail: senderEmail,
+            b_hp_field: hpField
+          })
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.success) {
+          banner.style.background = 'rgba(21, 128, 61, 0.2)';
+          banner.style.border = '1px solid rgba(74, 222, 128, 0.4)';
+          banner.style.color = '#4ADE80';
+          banner.textContent = 'Thank you! Your information correction report has been submitted to website administrators for review.';
+          banner.style.display = 'block';
+          document.getElementById('correction-form').reset();
+        } else {
+          throw new Error(data.message || 'Error submitting report.');
+        }
+      } catch (err) {
+        console.error('Report submission error:', err);
+        banner.style.background = 'rgba(220, 38, 38, 0.15)';
+        banner.style.border = '1px solid rgba(239, 68, 68, 0.4)';
+        banner.style.color = '#FCA5A5';
+        banner.textContent = err.message || 'Network error. Please try again later.';
+        banner.style.display = 'block';
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg> <span>Submit Information Correction</span>`;
+      }
     }
   </script>
 
