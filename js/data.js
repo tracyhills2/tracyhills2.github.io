@@ -1144,6 +1144,108 @@ const FAQ_DATA = [
   </div>
 </div>`,
     "keywords": ["recommend", "provider", "contractor", "handyman", "directory", "suggest", "vendor", "email"]
+  },
+  {
+    "id": "faq-014",
+    "category": "Utilities",
+    "question": "How do I quickly set up AT&T Fiber or Comcast Xfinity internet for my new Tracy Hills II home?",
+    "answer": `<div class="faq-details">
+  <p>
+    Lennar has assigned dedicated, direct-connectivity representatives for Tracy Hills II rather than general customer service call centers, making internet installation and account setup much faster:
+  </p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1rem 0;">
+    <!-- AT&T Card -->
+    <div style="background: #0F172A; border: 1px solid rgba(59, 130, 246, 0.35); border-radius: var(--radius-md); padding: 1.1rem;">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+        <h4 style="font-size: 0.95rem; font-weight: 700; color: #60A5FA; margin: 0;">🌐 AT&T Fiber Representative</h4>
+        <span style="background: rgba(59, 130, 246, 0.15); color: #60A5FA; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px;">Direct Contact</span>
+      </div>
+      <div style="font-size: 0.85rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.35rem;">
+        <div><strong>Contact:</strong> Max Mejia</div>
+        <div><strong>Phone:</strong> <a href="tel:5106974445" style="color: var(--accent-link); font-weight: 700;">(510) 697-4445</a></div>
+        <div><strong>Email:</strong> <a href="mailto:MaxMejia@advanced-connectivity.com" style="color: var(--accent-link);">MaxMejia@advanced-connectivity.com</a></div>
+      </div>
+    </div>
+
+    <!-- Comcast Card -->
+    <div style="background: #0F172A; border: 1px solid rgba(168, 85, 247, 0.35); border-radius: var(--radius-md); padding: 1.1rem;">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+        <h4 style="font-size: 0.95rem; font-weight: 700; color: #C084FC; margin: 0;">📡 Comcast Xfinity Representative</h4>
+        <span style="background: rgba(168, 85, 247, 0.15); color: #C084FC; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px;">Direct Contact</span>
+      </div>
+      <div style="font-size: 0.85rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.35rem;">
+        <div><strong>Contact:</strong> Raul Ramirez</div>
+        <div><strong>Phone:</strong> <a href="tel:2094202548" style="color: var(--accent-link); font-weight: 700;">(209) 420-2548</a></div>
+        <div><strong>Email:</strong> <a href="mailto:Raul_Ramirez@comcast.com" style="color: var(--accent-link);">Raul_Ramirez@comcast.com</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
+    ℹ️ <em>Note: Lennar direct connectivity representative contact details are current as of September 2026.</em>
+  </div>
+</div>`,
+    "keywords": ["internet", "att", "comcast", "xfinity", "fiber", "wifi", "max mejia", "raul ramirez", "broadband", "connectivity", "lennar rep"]
+  },
+  {
+    "id": "faq-015",
+    "category": "Community Resources",
+    "question": "How do I get my cluster mailbox keys as a new move-in homeowner?",
+    "answer": `<div class="faq-details">
+  <p>
+    Mailbox key assignments and key distributions for Tracy Hills II are handled directly by the <strong>United States Postal Service (USPS)</strong> rather than Seabreeze HOA Management or Lennar.
+  </p>
+
+  <!-- Post Office Details Card -->
+  <div style="background: #0F172A; border: 1px solid rgba(59, 130, 246, 0.35); border-radius: var(--radius-md); padding: 1.1rem; margin: 1rem 0;">
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.65rem;">
+      <h4 style="font-size: 0.95rem; font-weight: 700; color: #60A5FA; margin: 0; display: flex; align-items: center; gap: 0.4rem;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        <span>Tracy Post Office Branch</span>
+      </h4>
+      <span style="background: rgba(59, 130, 246, 0.15); color: #60A5FA; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px;">Commercial Dr.</span>
+    </div>
+    
+    <div style="font-size: 0.85rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.35rem;">
+      <div><strong>Address:</strong> 4025 B Commercial Dr., Tracy, CA 95304</div>
+      <div><strong>Phone:</strong> <a href="tel:2098340953" style="color: var(--accent-link); font-weight: 700;">(209) 834-0953</a></div>
+    </div>
+  </div>
+
+  <!-- Required Documents Box with Soft Copy Callout -->
+  <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.1rem; margin-bottom: 1rem;">
+    <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.65rem; display: flex; align-items: center; gap: 0.4rem;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+      <span>Required Documents for USPS</span>
+    </h4>
+    <ul style="list-style: none; padding: 0; margin: 0 0 0.85rem 0; font-size: 0.825rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.45rem;">
+      <li style="display: flex; align-items: flex-start; gap: 0.45rem;">
+        <span style="color: #4ADE80; font-weight: 700;">✓</span>
+        <span><strong>Recorded Grant Deed</strong> or <strong>Final Settlement Statement (ALTA / Buyer Statement)</strong> confirming your name and lot address.</span>
+      </li>
+      <li style="display: flex; align-items: flex-start; gap: 0.45rem;">
+        <span style="color: #4ADE80; font-weight: 700;">✓</span>
+        <span><strong>Government Photo ID</strong> (CA Driver's License or Passport).</span>
+      </li>
+    </ul>
+
+    <!-- Soft Copy Callout -->
+    <div style="background: rgba(34, 197, 94, 0.12); border: 1px solid rgba(34, 197, 94, 0.35); border-radius: var(--radius-sm); padding: 0.65rem 0.85rem; font-size: 0.8rem; color: #86EFAC; display: flex; align-items: center; gap: 0.5rem;">
+      <span>📱 <strong>Resident Tip:</strong> Most homeowners report that the Tracy Post Office accepts <strong>digital soft copies</strong> (PDFs shown on your smartphone)!</span>
+    </div>
+  </div>
+
+  <!-- Quick Maintenance Responsibilities Note -->
+  <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.85rem 1rem; font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5;">
+    🔑 <strong>Lock Responsibilities (CC&R §8.2.12):</strong> Homeowners are responsible for maintaining their individual mailbox slot lock and keys. If you notice physical damage or vandalism to the overall cluster frame, report it to <strong>Seabreeze HOA Management</strong>.
+  </div>
+
+  <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
+    ℹ️ <em>Note: Mailbox key distribution and USPS guidelines are current as of 2026 community records.</em>
+  </div>
+</div>`,
+    "keywords": ["mail", "mailbox", "key", "keys", "post office", "usps", "tracy post office", "grant deed", "cbu", "cluster mailbox", "lock", "rekey", "soft copy", "digital copy", "seabreeze", "management", "alta", "settlement statement"]
   }
 ];
 
@@ -1585,8 +1687,9 @@ const PROVIDERS_DATA = [
     "phone": "(209) 319-0563",
     "email": null,
     "website": null,
-    "description": "Plumbing & Drain Services",
-    "communityNotes": null,
+    "description": "24/7 Emergency Plumbing & Drain Services in Tracy.",
+    "communityNotes": "Offers 24/7 emergency plumbing response.",
+    "is247Service": true,
     "isPlaceholder": false,
     "lastUpdated": "2026-08-22"
   },
@@ -1993,8 +2096,10 @@ const PROVIDERS_DATA = [
     "phone": null,
     "email": null,
     "website": "https://www.tonysplumbing.com/",
-    "description": "Professional plumbing, heating, and air conditioning repair and installation services.",
-    "communityNotes": "Plumbing, Heating & Air Conditioning services.",
+    "description": "Professional plumbing, heating, and air conditioning repair and installation services. Offers 24/7 emergency service.",
+    "communityNotes": "Plumbing, Heating & Air Conditioning services with 24/7 emergency dispatch.",
+    "communityRecommended": false,
+    "is247Service": true,
     "isPlaceholder": false,
     "lastUpdated": "2026-09-03"
   },
@@ -2019,8 +2124,9 @@ const PROVIDERS_DATA = [
     "phone": "(209) 471-2972",
     "email": null,
     "website": null,
-    "description": "Plumbing and drain rooter services.",
-    "communityNotes": "Plumbing & rooter service. Contact person: Alain.",
+    "description": "Plumbing and drain rooter services. 24/7 emergency repairs available.",
+    "communityNotes": "Plumbing & rooter service with 24/7 emergency dispatch. Contact person: Alain.",
+    "is247Service": true,
     "isPlaceholder": false,
     "lastUpdated": "2026-09-03"
   },
@@ -2058,8 +2164,9 @@ const PROVIDERS_DATA = [
     "phone": "(209) 837-3852",
     "email": null,
     "website": null,
-    "description": "Professional plumbing, drain cleaning, and repair services.",
-    "communityNotes": "Plumbing and drain services.",
+    "description": "Professional 24/7 emergency plumbing, drain cleaning, and repair services.",
+    "communityNotes": "24/7 Emergency plumbing and drain services.",
+    "is247Service": true,
     "isPlaceholder": false,
     "lastUpdated": "2026-09-03"
   },
@@ -2099,8 +2206,9 @@ const PROVIDERS_DATA = [
     "phone": "(209) 440-7940",
     "email": null,
     "website": null,
-    "description": "Professional garage door repair, spring replacement, opener installation, and maintenance services in Tracy.",
-    "communityNotes": "Garage door repair & maintenance technicians in Tracy.",
+    "description": "Professional garage door repair, spring replacement, opener installation, 24/7 emergency service, and maintenance in Tracy.",
+    "communityNotes": "24/7 Emergency garage door repair & maintenance technicians in Tracy.",
+    "is247Service": true,
     "isPlaceholder": false,
     "lastUpdated": "2026-09-03"
   },
@@ -2112,8 +2220,10 @@ const PROVIDERS_DATA = [
     "phone": "(209) 637-1312",
     "email": null,
     "website": null,
-    "description": "Garage door parts supply, spring replacement, door installation, and repair services.",
-    "communityNotes": "Garage door parts & repair LLC.",
+    "description": "Garage door parts supply, spring replacement, door installation, and 24/7 emergency repair services.",
+    "communityNotes": "Garage door parts & 24/7 emergency repair LLC.",
+    "communityRecommended": false,
+    "is247Service": true,
     "isPlaceholder": false,
     "lastUpdated": "2026-09-03"
   },
@@ -2125,8 +2235,10 @@ const PROVIDERS_DATA = [
     "phone": "(209) 243-8003",
     "email": null,
     "website": null,
-    "description": "Fast and reliable garage door repair, opener troubleshooting, spring replacement, and maintenance.",
-    "communityNotes": "Garage door repair services.",
+    "description": "Fast and reliable 24/7 garage door repair, opener troubleshooting, spring replacement, and maintenance.",
+    "communityNotes": "24/7 Garage door emergency repair services.",
+    "communityRecommended": false,
+    "is247Service": true,
     "isPlaceholder": false,
     "lastUpdated": "2026-09-03"
   },
@@ -2138,8 +2250,10 @@ const PROVIDERS_DATA = [
     "phone": "(209) 735-1495",
     "email": null,
     "website": null,
-    "description": "Residential garage door repair, track alignment, cable replacement, and routine maintenance.",
-    "communityNotes": "Garage door repair & maintenance.",
+    "description": "Residential garage door repair, track alignment, cable replacement, 24/7 emergency repair, and routine maintenance.",
+    "communityNotes": "24/7 Emergency garage door repair & maintenance.",
+    "communityRecommended": false,
+    "is247Service": true,
     "isPlaceholder": false,
     "lastUpdated": "2026-09-03"
   },
@@ -2151,8 +2265,10 @@ const PROVIDERS_DATA = [
     "phone": "(209) 221-4463",
     "email": null,
     "website": null,
-    "description": "Overhead garage door repair, replacement, opener servicing, and emergency repairs in Tracy.",
-    "communityNotes": "Overhead garage door repair in Tracy.",
+    "description": "Overhead garage door repair, replacement, opener servicing, and 24/7 emergency repairs in Tracy.",
+    "communityNotes": "24/7 Overhead garage door emergency repair in Tracy.",
+    "communityRecommended": false,
+    "is247Service": true,
     "isPlaceholder": false,
     "lastUpdated": "2026-09-03"
   },
@@ -2164,8 +2280,10 @@ const PROVIDERS_DATA = [
     "phone": "(209) 792-0896",
     "email": null,
     "website": null,
-    "description": "Comprehensive garage door repair, installation, spring replacement, and maintenance services.",
-    "communityNotes": "Garage door repair and maintenance services.",
+    "description": "Comprehensive garage door repair, installation, spring replacement, and 24/7 emergency service.",
+    "communityNotes": "24/7 Emergency garage door repair and maintenance services.",
+    "communityRecommended": false,
+    "is247Service": true,
     "isPlaceholder": false,
     "lastUpdated": "2026-09-03"
   },
@@ -2177,8 +2295,10 @@ const PROVIDERS_DATA = [
     "phone": "(209) 319-0790",
     "email": null,
     "website": null,
-    "description": "Residential garage door repair, opener installation, tune-ups, and panel replacement services.",
-    "communityNotes": "Garage door services.",
+    "description": "Residential garage door repair, 24/7 live dispatch, opener installation, tune-ups, and panel replacement services.",
+    "communityNotes": "24/7 Live dispatch & garage door services.",
+    "communityRecommended": false,
+    "is247Service": true,
     "isPlaceholder": false,
     "lastUpdated": "2026-09-03"
   },
@@ -2195,6 +2315,34 @@ const PROVIDERS_DATA = [
     "communityNotes": "Handyman and Garage Door Repair services.",
     "isPlaceholder": false,
     "lastUpdated": "2026-09-03"
+  },
+  {
+    "id": "sp-1501",
+    "businessName": "AT&T Fiber Internet (Lennar Direct Connectivity)",
+    "category": "Internet / Technology Services",
+    "contactPerson": "Max Mejia",
+    "phone": "(510) 697-4445",
+    "email": "MaxMejia@advanced-connectivity.com",
+    "website": "https://www.att.com",
+    "description": "Dedicated AT&T direct-connectivity representative for Tracy Hills II residents, enabling fast high-speed fiber internet setup for new homes without waiting on general customer service hotlines.",
+    "communityNotes": "Lennar direct-connectivity representative for Tracy Hills II.",
+    "isPlaceholder": false,
+    "communityRecommended": false,
+    "lastUpdated": "2026-09-04"
+  },
+  {
+    "id": "sp-1502",
+    "businessName": "Xfinity / Comcast (Lennar Direct Connectivity)",
+    "category": "Internet / Technology Services",
+    "contactPerson": "Raul Ramirez",
+    "phone": "(209) 420-2548",
+    "email": "Raul_Ramirez@comcast.com",
+    "website": "https://www.xfinity.com",
+    "description": "Dedicated Comcast / Xfinity direct-connectivity representative for Tracy Hills II residents, providing priority scheduling & fast internet/TV activation for new homeowners.",
+    "communityNotes": "Lennar direct-connectivity representative for Tracy Hills II.",
+    "isPlaceholder": false,
+    "communityRecommended": false,
+    "lastUpdated": "2026-09-04"
   }
 ];
 

@@ -590,6 +590,13 @@ function initProvidersPage() {
             </div>` 
           : '';
 
+        let reviewUrlHtml = (p.googleReviewUrl || p.reviewUrl)
+          ? `<div style="display: flex; align-items: center; gap: 0.5rem; color: #F59E0B;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <a href="${p.googleReviewUrl || p.reviewUrl}" target="_blank" rel="noopener noreferrer" style="color: #FBBF24;">Google / Yelp Reviews ↗</a>
+            </div>`
+          : '';
+
         let formattedDate = 'August 22, 2026';
         if (p.lastUpdated) {
           const parts = p.lastUpdated.split('-');
@@ -602,6 +609,14 @@ function initProvidersPage() {
             }
           }
         }
+
+        let recBadgeHtml = (p.communityRecommended === false)
+          ? `<span class="trust-badge" style="background: rgba(148, 163, 184, 0.12); color: #94A3B8; border: 1px solid rgba(148, 163, 184, 0.25);">📋 Directory Listing</span>`
+          : `<span class="trust-badge trust-badge-recommendation">⭐ Community Recommendation</span>`;
+
+        let service247Html = (p.is247Service || (p.description && p.description.includes('24/7')) || (p.communityNotes && p.communityNotes.includes('24/7')))
+          ? `<span class="trust-badge" style="background: rgba(220, 38, 38, 0.15); color: #FCA5A5; border: 1px solid rgba(239, 68, 68, 0.35);">⚡ 24/7 Emergency Service</span>`
+          : '';
 
         card.innerHTML = `
           <div>
@@ -621,10 +636,14 @@ function initProvidersPage() {
               ${phoneHtml}
               ${emailHtml}
               ${websiteHtml}
+              ${reviewUrlHtml}
             </div>
           </div>
-          <div class="trust-meta-bar">
-            <span class="trust-badge trust-badge-recommendation">⭐ Community Recommendation</span>
+          <div class="trust-meta-bar" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem;">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem;">
+              ${recBadgeHtml}
+              ${service247Html}
+            </div>
             <span class="trust-meta-date">Last Reviewed: ${formattedDate}</span>
           </div>
         `;
