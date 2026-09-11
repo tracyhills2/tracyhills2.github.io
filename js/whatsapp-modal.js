@@ -72,12 +72,15 @@
             </div>
 
             <!-- Resident Advocacy Email Group Opt-In -->
-            <div class="wa-advocacy-box" style="background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(59, 130, 246, 0.35); border-radius: 8px; padding: 0.85rem 1rem; margin-bottom: 1.25rem;">
-              <label style="display: flex; align-items: flex-start; gap: 0.65rem; cursor: pointer; color: #F8FAFC; font-size: 0.875rem; font-weight: 600;">
-                <input type="checkbox" id="wa-advocacy-optin" style="margin-top: 0.2rem; accent-color: #3B82F6; width: 18px; height: 18px;" onchange="document.getElementById('wa-advocacy-options').style.display = this.checked ? 'block' : 'none'">
-                <span>
-                  📢 Also join Tracy Hills II Resident Advocacy Email Group
-                  <span style="display: block; font-weight: 400; font-size: 0.775rem; color: #94A3B8; margin-top: 0.15rem;">
+            <div class="wa-advocacy-box">
+              <label style="display: flex; align-items: flex-start; gap: 0.75rem; cursor: pointer; color: #F8FAFC; width: 100%;">
+                <input type="checkbox" id="wa-advocacy-optin" class="wa-advocacy-optin-checkbox" onchange="document.getElementById('wa-advocacy-options').style.display = this.checked ? 'block' : 'none'; this.closest('.wa-advocacy-box').style.borderColor = this.checked ? '#3B82F6' : 'rgba(59, 130, 246, 0.45)';">
+                <span style="flex: 1; min-width: 0;">
+                  <span style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.25rem;">
+                    <strong style="font-size: 0.9rem; color: #FFFFFF; font-weight: 700;">📢 Also join Tracy Hills II Resident Advocacy Email Group</strong>
+                    <span style="font-size: 0.675rem; font-weight: 700; text-transform: uppercase; background: rgba(59, 130, 246, 0.25); color: #60A5FA; border: 1px solid rgba(96, 165, 250, 0.4); border-radius: 4px; padding: 0.15rem 0.45rem; flex-shrink: 0; white-space: nowrap;">Optional Opt-In</span>
+                  </span>
+                  <span style="display: block; font-weight: 400; font-size: 0.775rem; color: #CBD5E1; line-height: 1.45;">
                     Receive critical emails regarding HOA governance, City of Tracy representation, builder updates, and school district matters.
                   </span>
                 </span>
@@ -87,20 +90,20 @@
                 <div style="font-weight: 600; color: #60A5FA; margin-bottom: 0.5rem;">I agree to receive updates / participate in (optional):</div>
                 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.4rem 0.75rem; margin-bottom: 0.75rem;">
-                  <label style="display: flex; align-items: center; gap: 0.4rem; cursor: pointer;">
-                    <input type="checkbox" class="wa-advocacy-topic" value="HOA Communication & Governance" checked style="accent-color: #3B82F6;">
+                  <label style="display: flex; align-items: center; gap: 0.45rem; cursor: pointer;">
+                    <input type="checkbox" class="wa-advocacy-topic" value="HOA Communication & Governance" checked style="accent-color: #3B82F6; width: 16px; height: 16px; flex-shrink: 0;">
                     <span>HOA Governance</span>
                   </label>
-                  <label style="display: flex; align-items: center; gap: 0.4rem; cursor: pointer;">
-                    <input type="checkbox" class="wa-advocacy-topic" value="City of Tracy Issues" checked style="accent-color: #3B82F6;">
+                  <label style="display: flex; align-items: center; gap: 0.45rem; cursor: pointer;">
+                    <input type="checkbox" class="wa-advocacy-topic" value="City of Tracy Issues" checked style="accent-color: #3B82F6; width: 16px; height: 16px; flex-shrink: 0;">
                     <span>City of Tracy Issues</span>
                   </label>
-                  <label style="display: flex; align-items: center; gap: 0.4rem; cursor: pointer;">
-                    <input type="checkbox" class="wa-advocacy-topic" value="Developer / Lennar Matters" checked style="accent-color: #3B82F6;">
+                  <label style="display: flex; align-items: center; gap: 0.45rem; cursor: pointer;">
+                    <input type="checkbox" class="wa-advocacy-topic" value="Developer / Lennar Matters" checked style="accent-color: #3B82F6; width: 16px; height: 16px; flex-shrink: 0;">
                     <span>Developer / Lennar</span>
                   </label>
-                  <label style="display: flex; align-items: center; gap: 0.4rem; cursor: pointer;">
-                    <input type="checkbox" class="wa-advocacy-topic" value="Jefferson School District" checked style="accent-color: #3B82F6;">
+                  <label style="display: flex; align-items: center; gap: 0.45rem; cursor: pointer;">
+                    <input type="checkbox" class="wa-advocacy-topic" value="Jefferson School District" checked style="accent-color: #3B82F6; width: 16px; height: 16px; flex-shrink: 0;">
                     <span>Jefferson School Dist.</span>
                   </label>
                 </div>

@@ -1994,6 +1994,32 @@ const PROVIDERS_DATA = [
     "lastUpdated": "2026-08-29"
   },
   {
+    "id": "sp-808",
+    "businessName": "Paco",
+    "category": "Landscaper / Gardener",
+    "contactPerson": "Paco",
+    "phone": "(209) 663-0407",
+    "email": null,
+    "website": null,
+    "description": "Specializes in landscaping, hardscaping, planters, raised beds, trellises, fountains, and pergolas.",
+    "communityNotes": "Detail-oriented landscaping & hardscaping specialist recommended by residents.",
+    "isPlaceholder": false,
+    "lastUpdated": "2026-09-10"
+  },
+  {
+    "id": "sp-809",
+    "businessName": "Pergola Installation Services",
+    "category": "Landscaper / Gardener",
+    "contactPerson": null,
+    "phone": "(209) 510-1047",
+    "email": null,
+    "website": null,
+    "description": "Pergola installation, landscaping, and hardscaping services.",
+    "communityNotes": "Pergola & hardscaping specialist recommended by residents.",
+    "isPlaceholder": false,
+    "lastUpdated": "2026-09-10"
+  },
+  {
     "id": "sp-901",
     "businessName": "Star Blindz",
     "category": "Curtains / Blinds",
