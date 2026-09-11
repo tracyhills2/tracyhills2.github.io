@@ -242,6 +242,55 @@ function initFaqPage() {
 
   let currentCategory = 'All';
   let currentSearchQuery = '';
+  let targetIdFromUrl = '';
+
+  // Parse URL parameters and Hash (#solar, #faq-013, ?q=solar, ?id=faq-013, ?category=Utilities)
+  const urlParams = new URLSearchParams(window.location.search);
+  const qParam = urlParams.get('q') || urlParams.get('search');
+  const catParam = urlParams.get('category') || urlParams.get('cat');
+  const idParam = urlParams.get('id');
+  const hashParam = window.location.hash ? window.location.hash.substring(1).toLowerCase() : '';
+
+  if (catParam) {
+    const decodedCat = decodeURIComponent(catParam).trim();
+    const matchedCat = [
+      'HOA', 'Seabreeze', 'City Services', 'Lennar / Developer', 
+      'Utilities', 'Safety', 'Community Resources', 'WhatsApp / Communication'
+    ].find(c => c.toLowerCase() === decodedCat.toLowerCase());
+    if (matchedCat) currentCategory = matchedCat;
+  }
+
+  if (idParam) {
+    targetIdFromUrl = idParam.toLowerCase();
+  } else if (hashParam) {
+    targetIdFromUrl = hashParam;
+  }
+
+  if (qParam) {
+    currentSearchQuery = qParam;
+    if (searchInput) searchInput.value = qParam;
+  } else if (targetIdFromUrl === 'solar' || targetIdFromUrl === 'faq-013') {
+    currentSearchQuery = 'solar';
+    if (searchInput) searchInput.value = 'solar';
+  }
+
+  function updateUrlState() {
+    if (!window.history || !window.history.replaceState) return;
+    const url = new URL(window.location.href);
+    if (currentCategory && currentCategory !== 'All') {
+      url.searchParams.set('category', currentCategory);
+    } else {
+      url.searchParams.delete('category');
+      url.searchParams.delete('cat');
+    }
+    if (currentSearchQuery && currentSearchQuery.trim()) {
+      url.searchParams.set('q', currentSearchQuery.trim());
+    } else {
+      url.searchParams.delete('q');
+      url.searchParams.delete('search');
+    }
+    window.history.replaceState(null, '', url.pathname + (url.searchParams.toString() ? '?' + url.searchParams.toString() : '') + url.hash);
+  }
 
   // Inject Google FAQPage JSON-LD Structured Data for Search Engine Rich Snippets
   function injectFaqSchema() {
@@ -297,6 +346,7 @@ function initFaqPage() {
       btn.textContent = cat;
       btn.addEventListener('click', () => {
         currentCategory = cat;
+        updateUrlState();
         renderCategories();
         renderFaqs();
       });
@@ -329,9 +379,15 @@ function initFaqPage() {
 
       filtered.forEach((item, index) => {
         const accordion = document.createElement('div');
-        accordion.className = `accordion-item ${index === 0 && currentSearchQuery ? 'open' : ''}`;
+        const itemId = item.id || `faq-${index}`;
+        accordion.id = itemId;
+
+        const isTarget = targetIdFromUrl && (itemId.toLowerCase() === targetIdFromUrl || (targetIdFromUrl === 'solar' && item.keywords && item.keywords.includes('solar')));
+        const shouldBeOpen = isTarget || (index === 0 && currentSearchQuery);
+
+        accordion.className = `accordion-item ${shouldBeOpen ? 'open' : ''}`;
         accordion.innerHTML = `
-          <button class="accordion-header" aria-expanded="${index === 0 && currentSearchQuery ? 'true' : 'false'}">
+          <button class="accordion-header" aria-expanded="${shouldBeOpen ? 'true' : 'false'}">
             <div style="display: flex; flex-direction: column; gap: 0.25rem;">
               <span class="badge" style="align-self: flex-start;">${item.category}</span>
               <span>${item.question}</span>
@@ -353,6 +409,12 @@ function initFaqPage() {
         });
 
         container.appendChild(accordion);
+
+        if (isTarget) {
+          setTimeout(() => {
+            accordion.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 100);
+        }
       });
     }
   }
@@ -361,6 +423,7 @@ function initFaqPage() {
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       currentSearchQuery = e.target.value;
+      updateUrlState();
       renderFaqs();
     });
   }
@@ -370,6 +433,7 @@ function initFaqPage() {
       if (searchInput) searchInput.value = '';
       currentSearchQuery = '';
       currentCategory = 'All';
+      updateUrlState();
       renderCategories();
       renderFaqs();
     });
