@@ -45,9 +45,9 @@
             </div>
 
             <div class="wa-form-group">
-              <label for="wa-community-name" class="wa-label">Sub-Community / Collection Name *</label>
+              <label for="wa-community-name" class="wa-label">Tracy Hills II Community *</label>
               <select id="wa-community-name" class="wa-input" required style="background: #1E293B; color: #F8FAFC;">
-                <option value="">Select sub-community collection...</option>
+                <option value="">Select your community (e.g. Boulder, Crestwick)...</option>
                 <option value="Boulder">Boulder</option>
                 <option value="Cairnway">Cairnway</option>
                 <option value="Crestwick">Crestwick</option>
@@ -195,6 +195,26 @@
 
     // Attach click interceptor to all WhatsApp community links
     attachWhatsAppInterceptors();
+
+    // Auto-open modal if URL hash or search parameter requests it (e.g. #whatsapp or ?join=whatsapp)
+    checkUrlAutoOpen();
+
+    window.addEventListener('hashchange', checkUrlAutoOpen);
+  }
+
+  // Auto-open modal if URL contains #whatsapp, #join-whatsapp, #join, or ?join=whatsapp
+  function checkUrlAutoOpen() {
+    const hash = (window.location.hash || '').toLowerCase();
+    const search = (window.location.search || '').toLowerCase();
+    if (
+      hash === '#whatsapp' ||
+      hash === '#join-whatsapp' ||
+      hash === '#join' ||
+      search.includes('join=whatsapp') ||
+      search.includes('whatsapp=1')
+    ) {
+      setTimeout(openModal, 250);
+    }
   }
 
   // Intercept all links targeting WhatsApp community
