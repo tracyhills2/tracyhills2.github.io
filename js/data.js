@@ -242,7 +242,7 @@ const FAQ_DATA = [
       <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.825rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.5rem;">
         <li style="display: flex; align-items: flex-start; gap: 0.4rem;">
           <span style="color: var(--accent-link); font-weight: 700;">•</span>
-          <span><strong>New Homeowner Submittal:</strong> Initial landscape plans must be submitted within <strong>6 months</strong> (recommended within 90 days) of close of escrow.</span>
+          <span><strong>Initial Landscape Submittal Deadline:</strong> Initial landscape improvement plans must be submitted to the ARC within <strong>90 days</strong> of close of escrow.</span>
         </li>
         <li style="display: flex; align-items: flex-start; gap: 0.4rem;">
           <span style="color: var(--accent-link); font-weight: 700;">•</span>
