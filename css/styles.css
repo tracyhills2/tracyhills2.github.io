@@ -1763,12 +1763,16 @@ img, svg {
 .requirement-badge {
   font-size: 0.7rem;
   font-weight: 800;
-  padding: 0.15rem 0.45rem;
+  padding: 0.2rem 0.55rem;
   border-radius: 4px;
-  white-space: nowrap;
-  flex-shrink: 0;
-  margin-top: 0.1rem;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  box-sizing: border-box;
   display: inline-block;
+  line-height: 1.35;
+  margin-top: 0.1rem;
 }
 
 .badge-red {
@@ -2017,7 +2021,64 @@ img, svg {
   overflow-wrap: break-word;
 }
 
-@media (max-width: 900px) {
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.timeline-badge {
+  background: rgba(239, 68, 68, 0.15);
+  color: #FCA5A5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  display: inline-block;
+}
+
+.timeline-text {
+  flex: 1;
+  min-width: 0;
+  line-height: 1.55;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.timeline-title {
+  color: var(--text-primary);
+  display: inline;
+}
+
+.timeline-desc {
+  margin: 0;
+  display: inline;
+}
+
+@media (max-width: 992px) {
+  .timeline-item {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.4rem !important;
+  }
+  .timeline-text {
+    width: 100% !important;
+  }
+  .timeline-title {
+    display: block !important;
+    margin-bottom: 0.2rem !important;
+    font-size: 0.925rem !important;
+  }
+  .timeline-desc {
+    display: block !important;
+    line-height: 1.55 !important;
+  }
   .template-card-body {
     flex-direction: column !important;
     align-items: stretch !important;
@@ -2056,6 +2117,26 @@ img, svg {
   }
   .directory-callout-text {
     width: 100% !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Display Utility Classes (Desktop vs Mobile text variants)
+   -------------------------------------------------------------------------- */
+.desktop-only {
+  display: inline !important;
+}
+
+.mobile-only {
+  display: none !important;
+}
+
+@media (max-width: 640px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: inline !important;
   }
 }
 
