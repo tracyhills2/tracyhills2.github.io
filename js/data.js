@@ -161,6 +161,26 @@ const FAQ_DATA = [
     "category": "HOA",
     "question": "What are the Architectural Review Committee (ARC) approval rules, fees, deadlines, and submittal process?",
     "answer": `<div class="faq-arc-details">
+  <!-- Prominent ARC Submittal Resource Banner -->
+  <div style="background: rgba(37, 99, 235, 0.15); border: 1px solid var(--accent-primary); border-radius: var(--radius-md); padding: 1.1rem; margin-bottom: 1.25rem;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.85rem; margin-bottom: 0.5rem;">
+      <div>
+        <span style="background: var(--accent-primary); color: #FFF; font-size: 0.725rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; text-transform: uppercase;">Universal Master Template</span>
+        <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin: 0.35rem 0 0.15rem 0;">Download Universal ARC Submittal Master Template (.docx)</h4>
+        <p style="font-size: 0.825rem; color: var(--text-secondary); margin: 0;">Consolidates Forms B, C, D, G, Phase 2 Fire Protection Plan specifications, and visual placeholders.</p>
+      </div>
+      <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+        <a href="assets/Tracy_Hills_II_HOA_ARC_Landscaping_Submittal_Master_Template_2026.docx" download class="btn btn-primary btn-sm" style="gap: 0.4rem;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <span>Download .docx Template</span>
+        </a>
+        <a href="arc-application.html" class="btn btn-outline btn-sm" style="gap: 0.4rem;">
+          <span>Full ARC Submittal Guide ↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <p>
     Prior to commencing any exterior addition, modification, construction, hardscape, or landscaping work on your lot, you must obtain written approval from the Architectural Review Committee (ARC).
   </p>
@@ -1272,7 +1292,7 @@ const PROVIDERS_DATA = [
     "email": null,
     "website": null,
     "description": "General contracting, home improvements, and remodeling projects.",
-    "communityNotes": "Contractor recommended from Sunny’s Manteca neighbor.",
+    "communityNotes": "Contractor recommended by neighbor.",
     "isPlaceholder": false,
     "lastUpdated": "2026-08-22"
   },
@@ -1389,7 +1409,7 @@ const PROVIDERS_DATA = [
     "email": null,
     "website": null,
     "description": "General handyman services and maintenance work.",
-    "communityNotes": "Handyman (provided by Amar).",
+    "communityNotes": "Handyman recommended by Phase II residents.",
     "isPlaceholder": false,
     "lastUpdated": "2026-08-22"
   },
@@ -1428,7 +1448,7 @@ const PROVIDERS_DATA = [
     "email": null,
     "website": null,
     "description": "Handyman and electrical installation/repair services.",
-    "communityNotes": "Handyman / Electrician (provided by KSR).",
+    "communityNotes": "Handyman / Electrician recommended by Phase II residents.",
     "isPlaceholder": false,
     "lastUpdated": "2026-08-22"
   },
@@ -2369,6 +2389,36 @@ const PROVIDERS_DATA = [
     "isPlaceholder": false,
     "communityRecommended": false,
     "lastUpdated": "2026-09-04"
+  },
+  {
+    "id": "sp-1601",
+    "businessName": "Lennar Subcontractor Electrician",
+    "category": "Electrician",
+    "categories": ["Electrician"],
+    "contactPerson": "Third-Party Lennar Electrician",
+    "phone": "(209) 898-9485",
+    "email": null,
+    "website": null,
+    "description": "Skilled third-party electrician for Lennar homes specializing in fast electrical repairs, troubleshooting, wiring, and EV charger installations.",
+    "communityNotes": "Skilled third-party electrician for Lennar homes. Known for fast electrical repairs, quick troubleshooting, wiring, and familiar with the electrical layout of Tracy Hills homes.",
+    "communityRecommended": true,
+    "isPlaceholder": false,
+    "lastUpdated": "2026-09-13"
+  },
+  {
+    "id": "sp-1602",
+    "businessName": "Paco Landscaping & Hardscaping",
+    "category": "Landscaper / Gardener",
+    "categories": ["Landscaper / Gardener", "General Contractor"],
+    "contactPerson": "Paco",
+    "phone": "(209) 663-0407",
+    "email": null,
+    "website": null,
+    "description": "Detail-oriented landscaping and hardscaping contractor specializing in fountains, planters, raised garden beds, trellises, pergolas, pavers, and complete yard landscaping.",
+    "communityNotes": "Detail-oriented landscaping and hardscaping contractor with experience in fountains, planters, raised garden beds, trellises, pergolas, pavers, and complete yard landscaping.",
+    "communityRecommended": true,
+    "isPlaceholder": false,
+    "lastUpdated": "2026-09-13"
   }
 ];
 

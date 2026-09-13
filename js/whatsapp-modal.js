@@ -45,6 +45,21 @@
             </div>
 
             <div class="wa-form-group">
+              <label for="wa-community-name" class="wa-label">Sub-Community / Collection Name *</label>
+              <select id="wa-community-name" class="wa-input" required style="background: #1E293B; color: #F8FAFC;">
+                <option value="">Select sub-community collection...</option>
+                <option value="Boulder">Boulder</option>
+                <option value="Cairnway">Cairnway</option>
+                <option value="Crestwick">Crestwick</option>
+                <option value="Rangewood">Rangewood</option>
+                <option value="Ridgerton">Ridgerton</option>
+                <option value="Rockingham">Rockingham</option>
+                <option value="Slateshire">Slateshire</option>
+                <option value="Other / Phase II Resident">Other / Phase II Resident</option>
+              </select>
+            </div>
+
+            <div class="wa-form-group">
               <label for="wa-address" class="wa-label">Tracy Hills II Address / Lot # *</label>
               <input type="text" id="wa-address" class="wa-input" placeholder="e.g. 1234 Corning Way / Lot 45" required>
             </div>
@@ -63,12 +78,12 @@
 
             <div class="wa-form-group">
               <label for="wa-neighbors" class="wa-label">Immediate Neighbors' Names or Lot #s <span style="font-weight: 400; color: #94A3B8;">(Helps speed up verification)</span></label>
-              <input type="text" id="wa-neighbors" class="wa-input" placeholder="e.g. Left neighbor: John Smith / Facing across: Lot 42">
+              <input type="text" id="wa-neighbors" class="wa-input" placeholder="e.g. Left neighbor / Facing across: Lot 42">
             </div>
 
             <div class="wa-form-group">
-              <label for="wa-notes" class="wa-label">Additional Notes (Optional)</label>
-              <input type="text" id="wa-notes" class="wa-input" placeholder="e.g. Move-in date / Phase II Lot owner">
+              <label for="wa-notes" class="wa-label">Additional Notes / Resident Family Members to Add <span style="font-weight: 400; color: #94A3B8;">(Optional)</span></label>
+              <input type="text" id="wa-notes" class="wa-input" placeholder="e.g. Names & phone numbers of resident family members living at address to add to group">
             </div>
 
             <!-- Resident Advocacy Email Group Opt-In -->
@@ -89,7 +104,7 @@
               <div id="wa-advocacy-options" style="display: none; margin-top: 0.85rem; padding-top: 0.85rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; color: #CBD5E1;">
                 <div style="font-weight: 600; color: #60A5FA; margin-bottom: 0.5rem;">I agree to receive updates / participate in (optional):</div>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.4rem 0.75rem; margin-bottom: 0.75rem;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.4rem 0.75rem;">
                   <label style="display: flex; align-items: center; gap: 0.45rem; cursor: pointer;">
                     <input type="checkbox" class="wa-advocacy-topic" value="HOA Communication & Governance" checked style="accent-color: #3B82F6; width: 16px; height: 16px; flex-shrink: 0;">
                     <span>HOA Governance</span>
@@ -106,21 +121,6 @@
                     <input type="checkbox" class="wa-advocacy-topic" value="Jefferson School District" checked style="accent-color: #3B82F6; width: 16px; height: 16px; flex-shrink: 0;">
                     <span>Jefferson School Dist.</span>
                   </label>
-                </div>
-
-                <div>
-                  <label for="wa-community-name" style="display: block; font-size: 0.775rem; font-weight: 600; color: #94A3B8; margin-bottom: 0.25rem;">Sub-Community / Collection Name (Optional)</label>
-                  <select id="wa-community-name" style="width: 100%; background: #0F172A; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; padding: 0.45rem 0.65rem; color: #F8FAFC; font-size: 0.8rem;">
-                    <option value="">Select sub-community collection...</option>
-                    <option value="Rockingham">Rockingham</option>
-                    <option value="Crestwick">Crestwick</option>
-                    <option value="Cairnway">Cairnway</option>
-                    <option value="Slateshire">Slateshire</option>
-                    <option value="Ridgerton">Ridgerton</option>
-                    <option value="Rangewood">Rangewood</option>
-                    <option value="Boulder">Boulder</option>
-                    <option value="Other / Phase II Resident">Other / Phase II Resident</option>
-                  </select>
                 </div>
               </div>
             </div>
@@ -258,7 +258,7 @@
     const communityName = document.getElementById('wa-community-name') ? document.getElementById('wa-community-name').value : '';
     const advocacyTopics = Array.from(document.querySelectorAll('.wa-advocacy-topic:checked')).map(cb => cb.value);
 
-    if (!fullName || !address || !phone || !email) {
+    if (!fullName || !communityName || !address || !phone || !email) {
       errorBanner.textContent = 'Please fill out all required fields marked with *';
       errorBanner.style.display = 'block';
       return;
@@ -277,14 +277,17 @@
         },
         body: JSON.stringify({
           formType: 'whatsapp_verification',
+          subject: `[WhatsApp Request] ${fullName} (${communityName})${joinAdvocacy ? ' [Advocacy Opt-In]' : ''}`,
           fullName: fullName,
+          communityName: communityName,
+          subCommunity: communityName,
+          community: communityName,
           address: address,
           phone: phone,
           email: email,
           neighbors: neighbors,
           notes: notes,
           joinAdvocacy: joinAdvocacy,
-          communityName: communityName,
           advocacyTopics: joinAdvocacy ? advocacyTopics : [],
           b_hp_field: hpField
         })
