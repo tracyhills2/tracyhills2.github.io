@@ -143,7 +143,7 @@ const FAQ_DATA = [
           <span>Email: <a href="mailto:customercare@seabreezemgmt.com" style="color: var(--accent-link);">customercare@seabreezemgmt.com</a></span>
         </div>
         <div style="font-size: 0.775rem; color: var(--text-muted); margin-top: 0.25rem;">
-          Mon – Fri: 8:00 AM – 5:00 PM (After-hours emergency call center active 24/7).
+          Mon - Fri: 8:00 AM - 5:00 PM (After-hours emergency call center active 24/7).
         </div>
       </div>
     </div>
@@ -151,7 +151,7 @@ const FAQ_DATA = [
 
   <!-- Summer 2026 Note -->
   <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
-    ℹ️ <em>Note: The details provided above are as of Summer 2026.</em>
+    <em>Note: The details provided above are as of Summer 2026.</em>
   </div>
 </div>`,
     "keywords": ["dues", "payment", "seabreeze", "portal", "hoa fee", "cinc", "billing", "account", "management"]
@@ -405,7 +405,7 @@ const FAQ_DATA = [
     <div>
       <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.3rem;">Lennar Customer Care</h4>
       <div style="font-size: 0.825rem; color: var(--text-secondary);">
-        Phone: <a href="tel:8882142494" style="color: var(--accent-link); font-weight: 600;">(888) 214-2494</a> (7 AM–4 PM Mon–Fri) | After-Hours Emergency: <a href="tel:8002957361" style="color: #F59E0B; font-weight: 600;">(800) 295-7361</a>
+        Phone: <a href="tel:8882142494" style="color: var(--accent-link); font-weight: 600;">(888) 214-2494</a> (7 AM - 4 PM Mon-Fri) | After-Hours Emergency: <a href="tel:8002957361" style="color: #F59E0B; font-weight: 600;">(800) 295-7361</a>
       </div>
     </div>
     <a href="https://myhome.lennar.com" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.35rem; background: var(--bg-surface); border: 1px solid var(--border-subtle); color: var(--text-primary); font-size: 0.8rem; font-weight: 600; padding: 0.4rem 0.85rem; border-radius: var(--radius-sm); text-decoration: none;">
@@ -415,7 +415,7 @@ const FAQ_DATA = [
 
   <!-- Summer 2026 Note -->
   <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
-    ℹ️ <em>Note: Street maintenance responsibility and builder contact details are as of Summer 2026.</em>
+    <em>Note: Street maintenance responsibility and builder contact details are as of Summer 2026.</em>
   </div>
 </div>`,
     "keywords": ["street", "road", "pothole", "curb", "maintenance", "lennar", "city of tracy", "paving"]
@@ -471,15 +471,15 @@ const FAQ_DATA = [
 
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin: 1rem 0;">
     <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem; font-size: 0.825rem;">
-      <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">📦 Cardboard & Boxes</strong>
+      <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">Cardboard & Boxes</strong>
       Flattened oversized boxes, packaging materials, and clean paperboard.
     </div>
     <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem; font-size: 0.825rem;">
-      <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">🖥️ E-Waste & Electronics</strong>
+      <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">E-Waste & Electronics</strong>
       Monitors, TVs, computers, printers, small appliances, and cables.
     </div>
     <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem; font-size: 0.825rem;">
-      <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">🛋️ Bulky Household Items</strong>
+      <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">Bulky Household Items</strong>
       Furniture, mattresses, water heaters, and large metal scrap.
     </div>
   </div>
@@ -614,7 +614,7 @@ const FAQ_DATA = [
       <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">Lennar Customer Care Contacts</h4>
       
       <div style="margin-bottom: 0.65rem;">
-        <span style="font-size: 0.775rem; color: var(--text-muted); display: block;">Business Hours (7:00 AM – 4:00 PM Mon–Fri):</span>
+        <span style="font-size: 0.775rem; color: var(--text-muted); display: block;">Business Hours (7:00 AM - 4:00 PM Mon-Fri):</span>
         <a href="tel:8882142494" style="color: var(--accent-link); font-weight: 700; font-size: 0.9rem;">(888) 214-2494</a>
       </div>
 
@@ -622,7 +622,7 @@ const FAQ_DATA = [
         <span style="font-size: 0.775rem; color: #FEF08A; font-weight: 700; display: block;">After-Hours Emergency Message Center:</span>
         <a href="tel:8002957361" style="color: #F59E0B; font-weight: 700; font-size: 0.95rem;">(800) 295-7361</a>
         <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">
-          Mon–Fri: 4:00 PM – 7:00 AM | Weekends & Holidays: 24 Hours
+          Mon-Fri: 4:00 PM - 7:00 AM | Weekends & Holidays: 24 Hours
         </div>
       </div>
     </div>
@@ -630,7 +630,7 @@ const FAQ_DATA = [
 
   <!-- Emergency Criteria Box -->
   <div style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: var(--radius-md); padding: 0.9rem 1rem; margin: 1rem 0;">
-    <strong style="color: #FCA5A5; font-size: 0.85rem; display: block; margin-bottom: 0.4rem;">⚠️ What Qualifies as a Lennar After-Hours Emergency?</strong>
+    <strong style="color: #FCA5A5; font-size: 0.85rem; display: block; margin-bottom: 0.4rem;">What Qualifies as a Lennar After-Hours Emergency?</strong>
     <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.3rem;">
       <li>• No heat in winter / cold weather or no AC in summer / warm weather</li>
       <li>• Severe plumbing problems or hazardous electrical situations</li>
@@ -725,7 +725,7 @@ const FAQ_DATA = [
       <div>
         <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.65rem; gap: 0.5rem; flex-wrap: wrap;">
           <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin: 0;">1. One-Vendor Solution</h4>
-          <span style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; font-size: 0.775rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid rgba(239, 68, 68, 0.3);">$3,000 – $10,000+</span>
+          <span style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; font-size: 0.775rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid rgba(239, 68, 68, 0.3);">$3,000 to $10,000+</span>
         </div>
         <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.85rem; line-height: 1.5;">
           Some water-treatment companies sell, install, and maintain a combination of a whole-home filtration/conditioning system along with a reverse osmosis (RO) drinking-water system. Complete vendor-installed packages often feature systems like <strong>Clack WS1</strong> or <strong>Puronics</strong>.
@@ -742,7 +742,7 @@ const FAQ_DATA = [
         </div>
       </div>
       <div style="font-size: 0.775rem; color: var(--text-muted); border-top: 1px solid var(--border-subtle); padding-top: 0.6rem; margin-top: 0.5rem;">
-        💡 <em>Note: Clearly verify what exact improvements the proposed system will provide before signing a contract.</em>
+        <em>Note: Clearly verify what exact improvements the proposed system will provide before signing a contract.</em>
       </div>
     </div>
 
@@ -751,7 +751,7 @@ const FAQ_DATA = [
       <div>
         <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.65rem; gap: 0.5rem; flex-wrap: wrap;">
           <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--accent-link); margin: 0;">2. Select Equipment & Hire Installer</h4>
-          <span style="background: rgba(34, 197, 94, 0.15); color: #86EFAC; font-size: 0.775rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid rgba(34, 197, 94, 0.3);">~$1,350 – $3,200 Total</span>
+          <span style="background: rgba(34, 197, 94, 0.15); color: #86EFAC; font-size: 0.775rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid rgba(34, 197, 94, 0.3);">~$1,350 to $3,200 Total</span>
         </div>
         <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem; line-height: 1.5;">
           Purchase your own whole-home water softener/filtration system and RO system, then hire a qualified installer to connect them. Popular options like <strong>Aquasure</strong> and <strong>Waterdrop</strong> are available through Amazon and Home Depot.
@@ -763,15 +763,15 @@ const FAQ_DATA = [
           <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.3rem; color: var(--text-secondary);">
             <li style="display: flex; justify-content: space-between; gap: 0.5rem;">
               <span>• Whole-home water softener:</span>
-              <strong style="color: var(--text-primary); flex-shrink: 0;">$450 – $1,000</strong>
+              <strong style="color: var(--text-primary); flex-shrink: 0;">$450 to $1,000</strong>
             </li>
             <li style="display: flex; justify-content: space-between; gap: 0.5rem;">
               <span>• RO drinking system:</span>
-              <strong style="color: var(--text-primary); flex-shrink: 0;">$200 – $1,200</strong>
+              <strong style="color: var(--text-primary); flex-shrink: 0;">$200 to $1,200</strong>
             </li>
             <li style="display: flex; justify-content: space-between; gap: 0.5rem;">
               <span>• Installation labor:</span>
-              <strong style="color: var(--text-primary); flex-shrink: 0;">$700 – $1,000</strong>
+              <strong style="color: var(--text-primary); flex-shrink: 0;">$700 to $1,000</strong>
             </li>
           </ul>
         </div>
@@ -884,11 +884,11 @@ const FAQ_DATA = [
     </div>
   </div>
 
-  <!-- 1. Activation Process & PTO -->
+  <!-- Activation Process & PTO -->
   <div style="margin-bottom: 1.25rem;">
     <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-      <span>1. Activation Process & Permission to Operate (PTO)</span>
+      <span>Activation Process & Permission to Operate (PTO)</span>
     </h4>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.85rem; margin-bottom: 1rem;">
@@ -914,7 +914,7 @@ const FAQ_DATA = [
       <div style="background: #0F172A; border: 1px solid rgba(34, 197, 94, 0.35); border-radius: var(--radius-md); padding: 0.95rem; font-size: 0.825rem;">
         <div style="font-weight: 700; color: #86EFAC; margin-bottom: 0.35rem; display: flex; align-items: center; justify-content: space-between;">
           <span>Step 3: PTO Issuance</span>
-          <span style="font-size: 0.7rem; color: #86EFAC; background: rgba(34, 197, 94, 0.15); padding: 0.1rem 0.4rem; border-radius: 4px;">10–30 Days</span>
+          <span style="font-size: 0.7rem; color: #86EFAC; background: rgba(34, 197, 94, 0.15); padding: 0.1rem 0.4rem; border-radius: 4px;">10-30 Days</span>
         </div>
         <p style="color: var(--text-secondary); margin: 0; line-height: 1.45;">
           PG&E reviews the submission and emails your official PTO approval confirmation letter.
@@ -958,10 +958,10 @@ const FAQ_DATA = [
     </div>
   </div>
 
-  <!-- 2. Tesla App vs. Enphase App: Role & Differences -->
+  <!-- Tesla App vs. Enphase App: Role & Differences -->
   <div style="margin-bottom: 1.25rem;">
     <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">
-      2. Tesla App vs. Enphase App: Role & Differences
+      Tesla App vs. Enphase App: Role & Differences
     </h4>
 
     <!-- Responsive App Comparison Cards -->
@@ -970,7 +970,7 @@ const FAQ_DATA = [
       <!-- Tesla App Card -->
       <div style="background: #0F172A; border: 1px solid rgba(96, 165, 250, 0.35); border-radius: var(--radius-md); padding: 1rem;">
         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.65rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem;">
-          <h5 style="font-size: 0.9rem; font-weight: 700; color: var(--accent-link); margin: 0;">⚡ Tesla App</h5>
+          <h5 style="font-size: 0.9rem; font-weight: 700; color: var(--accent-link); margin: 0;">Tesla App</h5>
           <span style="font-size: 0.7rem; color: #93C5FD; background: rgba(59, 130, 246, 0.15); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 600;">Whole-Home & Battery</span>
         </div>
         <div style="display: flex; flex-direction: column; gap: 0.55rem; font-size: 0.825rem; color: var(--text-secondary);">
@@ -988,7 +988,7 @@ const FAQ_DATA = [
           </div>
           <div>
             <strong style="color: var(--text-primary); display: block; font-size: 0.775rem;">Controls & Modes:</strong>
-            Configures Time-Based Control (discharges battery during PG&E 4–9 PM peak rates) & Self-Powered mode.
+            Configures Time-Based Control (discharges battery during PG&E 4-9 PM peak rates) & Self-Powered mode.
           </div>
         </div>
       </div>
@@ -996,7 +996,7 @@ const FAQ_DATA = [
       <!-- Enphase Enlighten App Card -->
       <div style="background: #0F172A; border: 1px solid rgba(245, 158, 11, 0.35); border-radius: var(--radius-md); padding: 1rem;">
         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.65rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem;">
-          <h5 style="font-size: 0.9rem; font-weight: 700; color: #F59E0B; margin: 0;">☀️ Enphase Enlighten App</h5>
+          <h5 style="font-size: 0.9rem; font-weight: 700; color: #F59E0B; margin: 0;">Enphase Enlighten App</h5>
           <span style="font-size: 0.7rem; color: #FDE047; background: rgba(245, 158, 11, 0.15); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 600;">Roof Array & Diagnostics</span>
         </div>
         <div style="display: flex; flex-direction: column; gap: 0.55rem; font-size: 0.825rem; color: var(--text-secondary);">
@@ -1022,17 +1022,17 @@ const FAQ_DATA = [
     </div>
     
     <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
-      💡 <em>In practice:</em> Use the <strong>Tesla App</strong> daily to manage household power flows, battery backup, and rate savings. Use the <strong>Enphase App</strong> as a diagnostic check to verify all roof panels & microinverters are operating at peak efficiency.
+      <em>In practice:</em> Use the <strong>Tesla App</strong> daily to manage household power flows, battery backup, and rate savings. Use the <strong>Enphase App</strong> as a diagnostic check to verify all roof panels & microinverters are operating at peak efficiency.
     </p>
   </div>
 
-  <!-- 3. How to Get Free Enphase App Access (Purchased vs. Leased) -->
+  <!-- How to Get Free Enphase App Access (Purchased vs. Leased) -->
   <div style="margin-bottom: 1.25rem;">
     <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.65rem;">
-      3. How to Get Free Enphase App Access (Purchased vs. Leased)
+      How to Get Free Enphase App Access (Purchased vs. Leased)
     </h4>
     <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.75rem; line-height: 1.5;">
-      Standard homeowner access to the Enphase Enlighten app is <strong>100% free</strong>—original new-construction home buyers do not pay any subscription, activation, or transfer fees.
+      Standard homeowner access to the Enphase Enlighten app is <strong>100% free</strong>; original new-construction home buyers do not pay any subscription, activation, or transfer fees.
     </p>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.85rem;">
@@ -1114,13 +1114,13 @@ const FAQ_DATA = [
   </div>
 
   <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.75rem 1rem; font-size: 0.8rem; color: var(--text-muted); display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between;">
-    <span>🐾 Animal Control: <a href="tel:2098316364" style="color: var(--text-primary); font-weight: 600;">(209) 831-6364</a></span>
-    <span>📋 Code Enforcement: <a href="tel:2098316410" style="color: var(--text-primary); font-weight: 600;">(209) 831-6410</a></span>
+    <span>Animal Control: <a href="tel:2098316364" style="color: var(--text-primary); font-weight: 600;">(209) 831-6364</a></span>
+    <span>Code Enforcement: <a href="tel:2098316410" style="color: var(--text-primary); font-weight: 600;">(209) 831-6410</a></span>
   </div>
 
   <!-- Summer 2026 Note -->
   <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
-    ℹ️ <em>Note: Emergency and non-emergency phone numbers are as of Summer 2026.</em>
+    <em>Note: Emergency and non-emergency phone numbers are as of Summer 2026.</em>
   </div>
 </div>`,
     "keywords": ["police", "safety", "emergency", "non-emergency", "fire", "911", "security", "tracy police"]
@@ -1160,7 +1160,7 @@ const FAQ_DATA = [
 
   <!-- Summer 2026 Note -->
   <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
-    ℹ️ <em>Note: The details provided above are as of Summer 2026.</em>
+    <em>Note: The details provided above are as of Summer 2026.</em>
   </div>
 </div>`,
     "keywords": ["recommend", "provider", "contractor", "handyman", "directory", "suggest", "vendor", "email"]
@@ -1178,7 +1178,7 @@ const FAQ_DATA = [
     <!-- AT&T Card -->
     <div style="background: #0F172A; border: 1px solid rgba(59, 130, 246, 0.35); border-radius: var(--radius-md); padding: 1.1rem;">
       <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
-        <h4 style="font-size: 0.95rem; font-weight: 700; color: #60A5FA; margin: 0;">🌐 AT&T Fiber Representative</h4>
+        <h4 style="font-size: 0.95rem; font-weight: 700; color: #60A5FA; margin: 0;">AT&T Fiber Representative</h4>
         <span style="background: rgba(59, 130, 246, 0.15); color: #60A5FA; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px;">Direct Contact</span>
       </div>
       <div style="font-size: 0.85rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.35rem;">
@@ -1191,7 +1191,7 @@ const FAQ_DATA = [
     <!-- Comcast Card -->
     <div style="background: #0F172A; border: 1px solid rgba(168, 85, 247, 0.35); border-radius: var(--radius-md); padding: 1.1rem;">
       <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
-        <h4 style="font-size: 0.95rem; font-weight: 700; color: #C084FC; margin: 0;">📡 Comcast Xfinity Representative</h4>
+        <h4 style="font-size: 0.95rem; font-weight: 700; color: #C084FC; margin: 0;">Comcast Xfinity Representative</h4>
         <span style="background: rgba(168, 85, 247, 0.15); color: #C084FC; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px;">Direct Contact</span>
       </div>
       <div style="font-size: 0.85rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.35rem;">
@@ -1203,7 +1203,7 @@ const FAQ_DATA = [
   </div>
 
   <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
-    ℹ️ <em>Note: Lennar direct connectivity representative contact details are current as of September 2026.</em>
+    <em>Note: Lennar direct connectivity representative contact details are current as of September 2026.</em>
   </div>
 </div>`,
     "keywords": ["internet", "att", "comcast", "xfinity", "fiber", "wifi", "max mejia", "raul ramirez", "broadband", "connectivity", "lennar rep"]
@@ -1252,17 +1252,17 @@ const FAQ_DATA = [
 
     <!-- Soft Copy Callout -->
     <div style="background: rgba(34, 197, 94, 0.12); border: 1px solid rgba(34, 197, 94, 0.35); border-radius: var(--radius-sm); padding: 0.65rem 0.85rem; font-size: 0.8rem; color: #86EFAC; display: flex; align-items: center; gap: 0.5rem;">
-      <span>📱 <strong>Resident Tip:</strong> Most homeowners report that the Tracy Post Office accepts <strong>digital soft copies</strong> (PDFs shown on your smartphone)!</span>
+      <span><strong>Resident Tip:</strong> Most homeowners report that the Tracy Post Office accepts <strong>digital soft copies</strong> (PDFs shown on your smartphone)!</span>
     </div>
   </div>
 
   <!-- Quick Maintenance Responsibilities Note -->
   <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.85rem 1rem; font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5;">
-    🔑 <strong>Lock Responsibilities (CC&R §8.2.12):</strong> Homeowners are responsible for maintaining their individual mailbox slot lock and keys. If you notice physical damage or vandalism to the overall cluster frame, report it to <strong>Seabreeze HOA Management</strong>.
+    <strong>Lock Responsibilities (CC&R §8.2.12):</strong> Homeowners are responsible for maintaining their individual mailbox slot lock and keys. If you notice physical damage or vandalism to the overall cluster frame, report it to <strong>Seabreeze HOA Management</strong>.
   </div>
 
   <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
-    ℹ️ <em>Note: Mailbox key distribution and USPS guidelines are current as of 2026 community records.</em>
+    <em>Note: Mailbox key distribution and USPS guidelines are current as of 2026 community records.</em>
   </div>
 </div>`,
     "keywords": ["mail", "mailbox", "key", "keys", "post office", "usps", "tracy post office", "grant deed", "cbu", "cluster mailbox", "lock", "rekey", "soft copy", "digital copy", "seabreeze", "management", "alta", "settlement statement"]
