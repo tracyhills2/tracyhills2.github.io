@@ -247,32 +247,32 @@
           </div>
 
           <!-- Template Download Box -->
-          <div style="background: var(--bg-surface); border: 2px solid var(--accent-primary); border-radius: var(--radius-lg); padding: 1.5rem; margin-bottom: 1.5rem; position: relative;">
-            <div style="position: absolute; top: -12px; left: 20px; background: var(--accent-primary); color: #FFF; font-size: 0.75rem; font-weight: 800; padding: 0.15rem 0.75rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em;">Recommended Submittal Document</div>
+          <div class="template-download-box">
+            <div class="template-badge">Recommended Submittal Document</div>
             
-            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.25rem; margin-top: 0.25rem;">
-              <div style="flex: 1; min-width: 280px;">
-                <div style="display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.5rem;">
-                  <div style="width: 40px; height: 40px; border-radius: var(--radius-md); background: rgba(37, 99, 235, 0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <div class="template-card-body">
+              <div class="template-info-section">
+                <div class="template-header-row">
+                  <div class="template-icon-box">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
                   </div>
-                  <div>
-                    <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0;">Universal ARC Submittal Master Template</h3>
-                    <span style="font-size: 0.8rem; color: var(--accent-link); font-weight: 600;">Microsoft Word (.docx) • 46 KB</span>
+                  <div class="template-title-box">
+                    <h3>Universal ARC Submittal Master Template</h3>
+                    <span class="template-meta">Microsoft Word (.docx) • 46 KB</span>
                   </div>
                 </div>
-                <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.55; margin: 0 0 0.5rem 0;">
+                <p class="template-description">
                   <strong>One Consolidated Digital Submittal Package:</strong> The template provides guideline-aligned prompts and modular sample language to help organize your submittal. Residents must customize all dimensions, materials, locations, setbacks, and drainage details to accurately reflect their specific lot before submitting. Template completion does not guarantee ARC approval.
                 </p>
-                <div style="font-size: 0.8rem; color: #86EFAC; display: flex; align-items: center; gap: 0.4rem;">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div class="template-note">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink: 0; margin-top: 0.15rem;"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   <span>Fill this template out on your computer and convert to PDF to email directly to management.</span>
                 </div>
               </div>
 
-              <div style="min-width: 220px; flex-shrink: 0;">
-                <a href="assets/Tracy_Hills_II_HOA_ARC_Landscaping_Submittal_Master_Template_2026.docx" download class="btn btn-primary" style="width: 100%; justify-content: center; padding: 0.85rem 1.25rem; font-size: 0.95rem; gap: 0.5rem; box-shadow: var(--shadow-md);">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <div class="template-cta-section">
+                <a href="assets/Tracy_Hills_II_HOA_ARC_Landscaping_Submittal_Master_Template_2026.docx" download class="btn btn-primary template-btn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink: 0;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                   <span>Download Master Template (.docx)</span>
                 </a>
               </div>
@@ -385,21 +385,21 @@
           </div>
 
           <!-- Required Checks & Fees Card -->
-          <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.35rem;">
+          <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.35rem; width: 100%; box-sizing: border-box;">
             <h3 style="font-size: 1rem; font-weight: 700; color: var(--accent-link); margin-bottom: 0.85rem; display: flex; align-items: center; gap: 0.5rem;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
               <span>Submittal Fees & Security Deposit</span>
             </h3>
-            <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem;">
-              <div style="background: #0F172A; border-radius: var(--radius-md); padding: 0.75rem 1rem; border: 1px solid var(--border-subtle);">
-                <div style="display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--text-primary); margin-bottom: 0.2rem;">
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem; width: 100%;">
+              <div class="fee-card-item">
+                <div class="fee-card-header">
                   <span>Review Fee:</span>
                   <span style="color: #FCA5A5;">$200 Full / $175 Minor</span>
                 </div>
                 <p style="font-size: 0.775rem; color: var(--text-muted); margin: 0;">Non-refundable review fee payable to <em>Tracy Hills II Community Association</em> ($200 for full landscaping/hardscape, $175 for minor projects).</p>
               </div>
-              <div style="background: #0F172A; border-radius: var(--radius-md); padding: 0.75rem 1rem; border: 1px solid var(--border-subtle);">
-                <div style="display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--text-primary); margin-bottom: 0.2rem;">
+              <div class="fee-card-item">
+                <div class="fee-card-header">
                   <span>Security Deposit:</span>
                   <span style="color: #86EFAC;">$250 (Refundable, subject to applicable deductions)</span>
                 </div>
@@ -469,40 +469,40 @@
             </div>
 
             <!-- Pre-Flight Checklist -->
-            <div style="background: var(--bg-surface); border: 1px solid var(--accent-primary); border-radius: var(--radius-lg); padding: 1.35rem 1.5rem; margin: 0.5rem 0;">
+            <div style="background: var(--bg-surface); border: 1px solid var(--accent-primary); border-radius: var(--radius-lg); padding: 1.35rem 1.25rem; margin: 0.5rem 0; width: 100%; box-sizing: border-box;">
               <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.35rem;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                 <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin: 0;">Final Pre-Flight Check: Approval-Ready Checklist</h3>
               </div>
               <p style="font-size: 0.825rem; color: var(--text-muted); margin-bottom: 1rem;">
                 Verify these items before submitting your package to Management to prevent delays or returns:
               </p>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0.65rem; font-size: 0.85rem; color: var(--text-secondary);">
-                <label style="display: flex; align-items: flex-start; gap: 0.6rem; cursor: pointer; background: #0F172A; padding: 0.6rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+              <div class="checklist-grid">
+                <label class="checklist-item">
                   <input type="checkbox" style="margin-top: 0.2rem; accent-color: var(--accent-primary);">
                   <span>Homeowner name, property address, lot number, and tract number completed.</span>
                 </label>
-                <label style="display: flex; align-items: flex-start; gap: 0.6rem; cursor: pointer; background: #0F172A; padding: 0.6rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+                <label class="checklist-item">
                   <input type="checkbox" style="margin-top: 0.2rem; accent-color: var(--accent-primary);">
                   <span>2D site layout (Sheet L-1) includes property lines, dimensions, setbacks, drainage arrows, and a North Arrow.</span>
                 </label>
-                <label style="display: flex; align-items: flex-start; gap: 0.6rem; cursor: pointer; background: #0F172A; padding: 0.6rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+                <label class="checklist-item">
                   <input type="checkbox" style="margin-top: 0.2rem; accent-color: var(--accent-primary);">
                   <span>Existing site photos included (front and rear elevations, rear yard, each side yard, and surrounding conditions).</span>
                 </label>
-                <label style="display: flex; align-items: flex-start; gap: 0.6rem; cursor: pointer; background: #0F172A; padding: 0.6rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+                <label class="checklist-item">
                   <input type="checkbox" style="margin-top: 0.2rem; accent-color: var(--accent-primary);">
                   <span>Exhibit G contains visual cut sheets or photos for all proposed items.</span>
                 </label>
-                <label style="display: flex; align-items: flex-start; gap: 0.6rem; cursor: pointer; background: #0F172A; padding: 0.6rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+                <label class="checklist-item">
                   <input type="checkbox" style="margin-top: 0.2rem; accent-color: var(--accent-primary);">
                   <span>Form D signed by adjacent, rear, and facing neighbors (or noted 'Builder / Vacant Lot').</span>
                 </label>
-                <label style="display: flex; align-items: flex-start; gap: 0.6rem; cursor: pointer; background: #0F172A; padding: 0.6rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+                <label class="checklist-item">
                   <input type="checkbox" style="margin-top: 0.2rem; accent-color: var(--accent-primary);">
                   <span>Forms B, C, and G completed, signed, and dated.</span>
                 </label>
-                <label style="display: flex; align-items: flex-start; gap: 0.6rem; cursor: pointer; background: #0F172A; padding: 0.6rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); grid-column: 1 / -1;">
+                <label class="checklist-item">
                   <input type="checkbox" style="margin-top: 0.2rem; accent-color: var(--accent-primary);">
                   <span>Review fee check ($200 full / $175 minor) and $250 security deposit check prepared (payable as required by current Management instructions).</span>
                 </label>
@@ -567,17 +567,17 @@
                 <span>Patio Covers, Pergolas & Shade Structures</span>
               </h3>
               <div style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.85rem;">
-                <div style="display: flex; align-items: flex-start; gap: 0.6rem; background: #0F172A; padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.3);">
-                  <span style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border: 1px solid rgba(239, 68, 68, 0.3); font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 0.1rem;">Required [V12 §IV.B.6 & FPP Appendix B / CBC Ch 7A]</span>
-                  <span style="color: var(--text-secondary); line-height: 1.5;">Requires Full ARC Review. Phase 2 properties are subject to California Building Code Chapter 7A wildfire ignition-resistance standards. Minimum setbacks: 3'-0" from side property lines; 5'-0" from rear property line (7'-0" from rear property line if adjacent to a street).</span>
+                <div class="requirement-item req-red">
+                  <span class="requirement-badge badge-red">Required [V12 §IV.B.6 & FPP Appendix B / CBC Ch 7A]</span>
+                  <span class="requirement-text">Requires Full ARC Review. Phase 2 properties are subject to California Building Code Chapter 7A wildfire ignition-resistance standards. Minimum setbacks: 3'-0" from side property lines; 5'-0" from rear property line (7'-0" from rear property line if adjacent to a street).</span>
                 </div>
-                <div style="display: flex; align-items: flex-start; gap: 0.6rem; background: #0F172A; padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid rgba(234, 179, 8, 0.3);">
-                  <span style="background: rgba(234, 179, 8, 0.15); color: #FDE047; border: 1px solid rgba(234, 179, 8, 0.3); font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 0.1rem;">Recommended</span>
-                  <span style="color: var(--text-secondary); line-height: 1.5;">Heavy-gauge extruded aluminum is a recommended non-combustible approach for typical Phase 2 applications to satisfy fire-hardening standards and prevent review delays. Include manufacturer spec cuts and dimensioned framing details.</span>
+                <div class="requirement-item req-yellow">
+                  <span class="requirement-badge badge-yellow">Recommended</span>
+                  <span class="requirement-text">Heavy-gauge extruded aluminum is a recommended non-combustible approach for typical Phase 2 applications to satisfy fire-hardening standards and prevent review delays. Include manufacturer spec cuts and dimensioned framing details.</span>
                 </div>
-                <div style="display: flex; align-items: flex-start; gap: 0.6rem; background: #0F172A; padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid rgba(59, 130, 246, 0.3);">
-                  <span style="background: rgba(59, 130, 246, 0.15); color: #93C5FD; border: 1px solid rgba(59, 130, 246, 0.3); font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 0.1rem;">Verify</span>
-                  <span style="color: var(--text-secondary); line-height: 1.5;">If proposing alternative or fire-retardant treated wood assemblies, verify compliance with FPP Appendix B and submit full engineering/fire rating specifications.</span>
+                <div class="requirement-item req-blue">
+                  <span class="requirement-badge badge-blue">Verify</span>
+                  <span class="requirement-text">If proposing alternative or fire-retardant treated wood assemblies, verify compliance with FPP Appendix B and submit full engineering/fire rating specifications.</span>
                 </div>
               </div>
             </div>
@@ -589,17 +589,17 @@
                 <span>Retaining Walls & Planter Curbs</span>
               </h3>
               <div style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.85rem;">
-                <div style="display: flex; align-items: flex-start; gap: 0.6rem; background: #0F172A; padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.3);">
-                  <span style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border: 1px solid rgba(239, 68, 68, 0.3); font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 0.1rem;">Required [V12 §IV.B.5.i]</span>
-                  <span style="color: var(--text-secondary); line-height: 1.5;">Maximum permitted height of retaining walls and terraced curbs is 24 inches (2 feet) from finished grade. Retaining walls are not permitted adjacent to the existing Residence.</span>
+                <div class="requirement-item req-red">
+                  <span class="requirement-badge badge-red">Required [V12 §IV.B.5.i]</span>
+                  <span class="requirement-text">Maximum permitted height of retaining walls and terraced curbs is 24 inches (2 feet) from finished grade. Retaining walls are not permitted adjacent to the existing Residence.</span>
                 </div>
-                <div style="display: flex; align-items: flex-start; gap: 0.6rem; background: #0F172A; padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.3);">
-                  <span style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border: 1px solid rgba(239, 68, 68, 0.3); font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 0.1rem;">Required [V12 §IV.B.3]</span>
-                  <span style="color: var(--text-secondary); line-height: 1.5;">Where soil is mounded against an existing wall or a raised planter occurs, provide required clearance (18" clear of perimeter walls) and adequate waterproofing/drainage. Thoroseal or equivalent waterproofing treatment is required where specified.</span>
+                <div class="requirement-item req-red">
+                  <span class="requirement-badge badge-red">Required [V12 §IV.B.3]</span>
+                  <span class="requirement-text">Where soil is mounded against an existing wall or a raised planter occurs, provide required clearance (18" clear of perimeter walls) and adequate waterproofing/drainage. Thoroseal or equivalent waterproofing treatment is required where specified.</span>
                 </div>
-                <div style="display: flex; align-items: flex-start; gap: 0.6rem; background: #0F172A; padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid rgba(59, 130, 246, 0.3);">
-                  <span style="background: rgba(59, 130, 246, 0.15); color: #93C5FD; border: 1px solid rgba(59, 130, 246, 0.3); font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 0.1rem;">Verify</span>
-                  <span style="color: var(--text-secondary); line-height: 1.5;">Walls exceeding 24 inches or structural site retaining conditions require civil engineering calculations, City grading permits, and major ARC review.</span>
+                <div class="requirement-item req-blue">
+                  <span class="requirement-badge badge-blue">Verify</span>
+                  <span class="requirement-text">Walls exceeding 24 inches or structural site retaining conditions require civil engineering calculations, City grading permits, and major ARC review.</span>
                 </div>
               </div>
             </div>
@@ -611,17 +611,17 @@
                 <span>Tree Setbacks & Root Barriers</span>
               </h3>
               <div style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.85rem;">
-                <div style="display: flex; align-items: flex-start; gap: 0.6rem; background: #0F172A; padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.3);">
-                  <span style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border: 1px solid rgba(239, 68, 68, 0.3); font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 0.1rem;">Required [V12 §IV.D.6]</span>
-                  <span style="color: var(--text-secondary); line-height: 1.5;"><strong>Tree Setback:</strong> Proposed trees should be kept at least 5'-0" from property lines and boundary fences.</span>
+                <div class="requirement-item req-red">
+                  <span class="requirement-badge badge-red">Required [V12 §IV.D.6]</span>
+                  <span class="requirement-text"><strong>Tree Setback:</strong> Proposed trees should be kept at least 5'-0" from property lines and boundary fences.</span>
                 </div>
-                <div style="display: flex; align-items: flex-start; gap: 0.6rem; background: #0F172A; padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.3);">
-                  <span style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border: 1px solid rgba(239, 68, 68, 0.3); font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 0.1rem;">Required [V12 §IV.D.6]</span>
-                  <span style="color: var(--text-secondary); line-height: 1.5;"><strong>Root Barrier:</strong> Trees planted within 5 feet of perimeter walls and/or adjoining residences must incorporate an approved root-barrier device.</span>
+                <div class="requirement-item req-red">
+                  <span class="requirement-badge badge-red">Required [V12 §IV.D.6]</span>
+                  <span class="requirement-text"><strong>Root Barrier:</strong> Trees planted within 5 feet of perimeter walls and/or adjoining residences must incorporate an approved root-barrier device.</span>
                 </div>
-                <div style="display: flex; align-items: flex-start; gap: 0.6rem; background: #0F172A; padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid rgba(234, 179, 8, 0.3);">
-                  <span style="background: rgba(234, 179, 8, 0.15); color: #FDE047; border: 1px solid rgba(234, 179, 8, 0.3); font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 0.1rem;">Recommended</span>
-                  <span style="color: var(--text-secondary); line-height: 1.5;">Show tree species, container size, installed location, and mature canopy diameter on site plans.</span>
+                <div class="requirement-item req-yellow">
+                  <span class="requirement-badge badge-yellow">Recommended</span>
+                  <span class="requirement-text">Show tree species, container size, installed location, and mature canopy diameter on site plans.</span>
                 </div>
               </div>
             </div>
@@ -633,17 +633,17 @@
                 <span>Phase 2 Fire Protection Plan: Prohibited Plants & Trees (Appendix A)</span>
               </h3>
               <div style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.85rem;">
-                <div style="display: flex; align-items: flex-start; gap: 0.6rem; background: #0F172A; padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.3);">
-                  <span style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border: 1px solid rgba(239, 68, 68, 0.3); font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 0.1rem;">Required [FPP Appendix A]</span>
-                  <span style="color: var(--text-secondary); line-height: 1.5;">Proposed vegetation must comply with the complete prohibited-plant schedule and applicable fuel-modification requirements. Prohibited species include, among others, Cypress, Palms, Pines, Junipers, Bamboo, and Eucalyptus. Do not rely on summary examples alone; verify every proposed species against the complete official Appendix A schedule below.</span>
+                <div class="requirement-item req-red">
+                  <span class="requirement-badge badge-red">Required [FPP Appendix A]</span>
+                  <span class="requirement-text">Proposed vegetation must comply with the complete prohibited-plant schedule and applicable fuel-modification requirements. Prohibited species include, among others, Cypress, Palms, Pines, Junipers, Bamboo, and Eucalyptus. Do not rely on summary examples alone; verify every proposed species against the complete official Appendix A schedule below.</span>
                 </div>
-                <div style="display: flex; align-items: flex-start; gap: 0.6rem; background: #0F172A; padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid rgba(234, 179, 8, 0.3);">
-                  <span style="background: rgba(234, 179, 8, 0.15); color: #FDE047; border: 1px solid rgba(234, 179, 8, 0.3); font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 0.1rem;">Recommended</span>
-                  <span style="color: var(--text-secondary); line-height: 1.5;">Select from proven non-pyrophytic trees and ornamentals (Crape Myrtle, Japanese Maple, Western Redbud, Fruit Trees, Star Jasmine).</span>
+                <div class="requirement-item req-yellow">
+                  <span class="requirement-badge badge-yellow">Recommended</span>
+                  <span class="requirement-text">Select from proven non-pyrophytic trees and ornamentals (Crape Myrtle, Japanese Maple, Western Redbud, Fruit Trees, Star Jasmine).</span>
                 </div>
-                <div style="display: flex; align-items: flex-start; gap: 0.6rem; background: #0F172A; padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid rgba(59, 130, 246, 0.3);">
-                  <span style="background: rgba(59, 130, 246, 0.15); color: #93C5FD; border: 1px solid rgba(59, 130, 246, 0.3); font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 0.1rem;">Verify</span>
-                  <span style="color: var(--text-secondary); line-height: 1.5;">Vegetation selection and fuel modification must comply with the complete Phase 2 FPP Appendix A schedule.</span>
+                <div class="requirement-item req-blue">
+                  <span class="requirement-badge badge-blue">Verify</span>
+                  <span class="requirement-text">Vegetation selection and fuel modification must comply with the complete Phase 2 FPP Appendix A schedule.</span>
                 </div>
               </div>
             </div>
@@ -655,13 +655,13 @@
                 <span>Drainage & Grading</span>
               </h3>
               <div style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.85rem;">
-                <div style="display: flex; align-items: flex-start; gap: 0.6rem; background: #0F172A; padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.3);">
-                  <span style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border: 1px solid rgba(239, 68, 68, 0.3); font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 0.1rem;">Required [V12 §IV.B.3 / Form G]</span>
-                  <span style="color: var(--text-secondary); line-height: 1.5;">Maintain established lot drainage patterns. Hardscape surfaces require minimum 1.0% positive drainage; landscape areas require minimum 2.0% positive drainage directed away from structures. Do not direct runoff or sheet flow onto adjacent lots. New drainage inlets and sub-drains must connect to the existing drainage system provided by the Declarant.</span>
+                <div class="requirement-item req-red">
+                  <span class="requirement-badge badge-red">Required [V12 §IV.B.3 / Form G]</span>
+                  <span class="requirement-text">Maintain established lot drainage patterns. Hardscape surfaces require minimum 1.0% positive drainage; landscape areas require minimum 2.0% positive drainage directed away from structures. Do not direct runoff or sheet flow onto adjacent lots. New drainage inlets and sub-drains must connect to the existing drainage system provided by the Declarant.</span>
                 </div>
-                <div style="display: flex; align-items: flex-start; gap: 0.6rem; background: #0F172A; padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid rgba(234, 179, 8, 0.3);">
-                  <span style="background: rgba(234, 179, 8, 0.15); color: #FDE047; border: 1px solid rgba(234, 179, 8, 0.3); font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 0.1rem;">Recommended</span>
-                  <span style="color: var(--text-secondary); line-height: 1.5;">Indicate surface slope arrows, elevations where applicable, and catch basin locations on Sheet L-1.</span>
+                <div class="requirement-item req-yellow">
+                  <span class="requirement-badge badge-yellow">Recommended</span>
+                  <span class="requirement-text">Indicate surface slope arrows, elevations where applicable, and catch basin locations on Sheet L-1.</span>
                 </div>
               </div>
             </div>
@@ -673,9 +673,9 @@
                 <span>Existing Site Photos (Form B)</span>
               </h3>
               <div style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.85rem;">
-                <div style="display: flex; align-items: flex-start; gap: 0.6rem; background: #0F172A; padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.3);">
-                  <span style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border: 1px solid rgba(239, 68, 68, 0.3); font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 0.1rem;">Required [Form B]</span>
-                  <span style="color: var(--text-secondary); line-height: 1.5;">Existing Site Photos: Include clear color photographs of the front elevation, rear yard, both side yards, and any surrounding conditions relevant to the proposed improvement. Add additional photographs where needed to fully document the project area.</span>
+                <div class="requirement-item req-red">
+                  <span class="requirement-badge badge-red">Required [Form B]</span>
+                  <span class="requirement-text">Existing Site Photos: Include clear color photographs of the front elevation, rear yard, both side yards, and any surrounding conditions relevant to the proposed improvement. Add additional photographs where needed to fully document the project area.</span>
                 </div>
               </div>
             </div>
@@ -687,9 +687,9 @@
                 <span>Product Specifications (Exhibit G)</span>
               </h3>
               <div style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.85rem;">
-                <div style="display: flex; align-items: flex-start; gap: 0.6rem; background: #0F172A; padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid rgba(239, 68, 68, 0.3);">
-                  <span style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border: 1px solid rgba(239, 68, 68, 0.3); font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 0.1rem;">Required [Form B / ARC Review Mandate]</span>
-                  <span style="color: var(--text-secondary); line-height: 1.5;">Attach visual manufacturer specification sheets, catalog cuts, or material sample swatches for all proposed improvements (pergolas, stone veneer, flatwork, sheds, turf, etc.) in Exhibit G to prevent an incomplete package notice.</span>
+                <div class="requirement-item req-red">
+                  <span class="requirement-badge badge-red">Required [Form B / ARC Review Mandate]</span>
+                  <span class="requirement-text">Attach visual manufacturer specification sheets, catalog cuts, or material sample swatches for all proposed improvements (pergolas, stone veneer, flatwork, sheds, turf, etc.) in Exhibit G to prevent an incomplete package notice.</span>
                 </div>
               </div>
             </div>
@@ -698,9 +698,9 @@
         </div>
 
         <!-- Landscaping & Contractor Directory Callout Section -->
-        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.5rem;">
-          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.25rem;">
-            <div style="flex: 1; min-width: 280px;">
+        <div class="directory-callout-box">
+          <div class="directory-callout-content">
+            <div class="directory-callout-text">
               <div style="margin-bottom: 0.4rem;">
                 <span class="badge badge-accent">Resident Directory</span>
               </div>
@@ -709,14 +709,14 @@
                 Need help with 2D plan drawings, artificial turf installation, aluminum pergolas, pavers, concrete, or retaining walls? Explore contractor recommendations shared by fellow Tracy Hills II neighbors or suggest a licensed provider you've hired.
               </p>
             </div>
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-              <a href="providers.html" class="btn btn-primary" style="gap: 0.4rem; padding: 0.65rem 1.15rem; font-size: 0.875rem;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                <span>Browse Service Directory</span>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; width: 100%; max-width: 400px;">
+              <a href="providers.html" class="btn btn-primary" style="gap: 0.4rem; padding: 0.65rem 1.15rem; font-size: 0.875rem; flex: 1; min-width: 150px; justify-content: center; text-align: center;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink: 0;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <span>Browse Directory</span>
               </a>
-              <a href="suggest-provider.html" class="btn" style="background: var(--bg-base); border: 1px solid var(--border-subtle); color: var(--text-primary); gap: 0.4rem; padding: 0.65rem 1.15rem; font-size: 0.875rem;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
-                <span>Suggest a Contractor</span>
+              <a href="suggest-provider.html" class="btn" style="background: var(--bg-base); border: 1px solid var(--border-subtle); color: var(--text-primary); gap: 0.4rem; padding: 0.65rem 1.15rem; font-size: 0.875rem; flex: 1; min-width: 150px; justify-content: center; text-align: center;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2" style="flex-shrink: 0;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                <span>Suggest Contractor</span>
               </a>
             </div>
           </div>
