@@ -304,7 +304,7 @@ const FAQ_DATA = [
       <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
         <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">2</span>
         <div>
-          <strong style="color: var(--text-primary);">Collect Neighbor Signatures (Form D):</strong> Show your plan drawing to left/right adjacent neighbors, rear neighbors, and 3 facing neighbors across the street to sign Form D (or note "Vacant/Builder" if unoccupied).
+          <strong style="color: var(--text-primary);">Collect Neighbor Signatures (Form D):</strong> Show your plan drawing to left/right adjacent neighbors, rear neighbors, and 3 facing neighbors across the street to sign Form D (neighbor signatures verify notification only, not approval; write <em>"Builder/Vacant"</em> if lot is unoccupied).
         </div>
       </div>
 
@@ -325,7 +325,7 @@ const FAQ_DATA = [
       <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
         <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">5</span>
         <div>
-          <strong style="color: var(--text-primary);">Send Package to Seabreeze:</strong> Email your consolidated PDF to <a href="mailto:csteam@seabreezemgmt.com" style="color: var(--accent-link); font-weight: 600;">csteam@seabreezemgmt.com</a> (or mail to Seabreeze Management Company, 4305 Hacienda Dr., Suite 350, Pleasanton, CA 94588) with the two checks.
+          <strong style="color: var(--text-primary);">Convert to PDF & Send to Seabreeze:</strong> Convert your completed Word document to a single, consolidated PDF file and email to <a href="mailto:csteam@seabreezemgmt.com" style="color: var(--accent-link); font-weight: 600;">csteam@seabreezemgmt.com</a> (or mail to Seabreeze Management Company, 4305 Hacienda Dr., Suite 350, Pleasanton, CA 94588) with the two checks.
         </div>
       </div>
 
