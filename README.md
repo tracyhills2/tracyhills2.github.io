@@ -33,13 +33,12 @@ The **Tracy Hills II Community Resource Hub** serves as a central directory for 
 
 ### 1. WhatsApp Resident Verification Modal (`js/whatsapp-modal.js`)
 - Intercepts all "Join WhatsApp Community" links site-wide.
-- Displays a mobile-friendly modal requesting verification details (Full Name, Address / Lot #, Phone, Email, Immediate Neighbors, and Notes).
+- Displays a mobile-friendly modal requesting required verification details (Full Name, Sub-Community Collection, Address / Lot #, Phone, Email) and optional fields (Immediate Neighbors, Additional Notes / Family Members to Add).
 - Formats emails for admins with a 1-click **"Chat with Resident on WhatsApp"** deep-link button (`https://wa.me/...`).
 
 ### 2. Resident Advocacy Email Group Opt-In
 - Integrated directly into the WhatsApp verification workflow.
 - Expandable toggle allows residents to opt into important community updates regarding **HOA Governance**, **City of Tracy Issues**, **Developer / Lennar Matters**, and the **Jefferson School District**.
-- Includes sub-community collection tag selection (*Rockingham, Crestwick, Cairnway, Slateshire, Ridgerton, Rangewood, Boulder*).
 
 ### 3. Service Directory & Suggest/List a Provider (`providers.html` & `suggest-provider.html`)
 - Categorized listing of local contractors and service providers (electricians, handymen, plumbers, hardscaping, solar, house cleaning, HVAC, internet & technology).
