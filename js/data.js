@@ -170,7 +170,7 @@ const FAQ_DATA = [
         <p style="font-size: 0.825rem; color: var(--text-secondary); margin: 0;">Consolidates Forms B, C, D, G, Phase 2 Fire Protection Plan specifications, and visual placeholders.</p>
       </div>
       <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-        <a href="assets/Tracy_Hills_II_HOA_ARC_Landscaping_Submittal_Master_Template_2026.docx" download class="btn btn-primary btn-sm" style="gap: 0.4rem;">
+        <a href="assets/Tracy_Hills_II_HOA_Universal_Submittal_Master_Template_2026.docx" download class="btn btn-primary btn-sm" style="gap: 0.4rem;">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
           <span>Download .docx Template</span>
         </a>
