@@ -2123,20 +2123,191 @@ img, svg {
 /* --------------------------------------------------------------------------
    Responsive Display Utility Classes (Desktop vs Mobile text variants)
    -------------------------------------------------------------------------- */
-.desktop-only {
-  display: inline !important;
+
+/* --------------------------------------------------------------------------
+   Firewise Certificate Card & Full-Size Lightbox Modal
+   -------------------------------------------------------------------------- */
+.firewise-card {
+  background: linear-gradient(145deg, #0F172A 0%, #1E293B 100%);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.1);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
-.mobile-only {
-  display: none !important;
+.firewise-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(74, 222, 128, 0.7);
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.2);
+}
+
+.firewise-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ADE80;
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.firewise-preview-container {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  margin: 0.85rem 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #0B1120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.firewise-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.3s ease;
+}
+
+.firewise-card:hover .firewise-preview-img {
+  transform: scale(1.03);
+}
+
+.firewise-overlay-hint {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  color: #FFFFFF;
+  font-size: 0.825rem;
+  font-weight: 600;
+  opacity: 0.9;
+  transition: opacity 0.2s ease, background 0.2s ease;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.firewise-card:hover .firewise-overlay-hint {
+  opacity: 1;
+  background: rgba(15, 23, 42, 0.35);
+}
+
+.firewise-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+}
+
+.firewise-lightbox-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.firewise-lightbox-container {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  max-width: 900px;
+  width: 100%;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transform: scale(0.95);
+  transition: transform var(--transition-fast);
+}
+
+.firewise-lightbox-overlay.open .firewise-lightbox-container {
+  transform: scale(1);
+}
+
+.firewise-lightbox-header {
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-base);
+}
+
+.firewise-lightbox-body {
+  padding: 1rem;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #0B1120;
+  flex: 1;
+  min-height: 200px;
+}
+
+.firewise-lightbox-img {
+  max-width: 100%;
+  max-height: 68vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.firewise-lightbox-footer {
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 @media (max-width: 640px) {
-  .desktop-only {
-    display: none !important;
+  .firewise-lightbox-container {
+    max-height: 96vh;
   }
-  .mobile-only {
-    display: inline !important;
+  .firewise-lightbox-img {
+    max-height: 58vh;
+  }
+  .firewise-lightbox-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .firewise-lightbox-footer .btn {
+    width: 100%;
+    justify-content: center;
   }
 }
+
 
