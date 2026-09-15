@@ -550,14 +550,135 @@ function initProvidersPage() {
     });
   }
 
+  // Create & Return Firewise 2026 Certificate Card
+  function createFirewiseCard() {
+    const card = document.createElement('div');
+    card.className = 'firewise-card';
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-label', 'View Firewise 2026 Certificate');
+
+    card.innerHTML = `
+      <div>
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.4rem;">
+          <span class="firewise-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>Firewise USA® Site</span>
+          </span>
+          <span style="font-size: 0.75rem; color: #4ADE80; font-weight: 700; background: rgba(34, 197, 94, 0.15); padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid rgba(74, 222, 128, 0.3);">2026 Certificate</span>
+        </div>
+
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
+          Tracy Hills II Firewise Certificate
+        </h3>
+        <p style="color: var(--text-secondary); font-size: 0.825rem; line-height: 1.5; margin-bottom: 0.5rem;">
+          Present this official 2026 Firewise USA® Site Certificate to your Homeowners Insurance agent to inquire about community wildfire risk reduction discounts.
+        </p>
+
+        <div class="firewise-preview-container">
+          <img src="images/2026/Firewise-2026.jpeg" alt="Tracy Hills II Firewise USA 2026 Certificate" class="firewise-preview-img" loading="lazy">
+          <div class="firewise-overlay-hint">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            <span>Click / Tap to View Full Size</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-subtle); padding-top: 0.65rem; margin-top: 0.25rem;">
+        <span style="font-size: 0.775rem; color: var(--accent-link); font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+          Full View & Download
+        </span>
+        <span style="font-size: 0.725rem; color: var(--text-muted);">Format: JPEG</span>
+      </div>
+    `;
+
+    card.addEventListener('click', () => openFirewiseModal());
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openFirewiseModal();
+      }
+    });
+
+    return card;
+  }
+
+  // Open Full-Size Lightbox Popup Modal for Firewise Certificate
+  function openFirewiseModal() {
+    let modalOverlay = document.getElementById('firewise-modal-overlay');
+    if (!modalOverlay) {
+      modalOverlay = document.createElement('div');
+      modalOverlay.id = 'firewise-modal-overlay';
+      modalOverlay.className = 'firewise-lightbox-overlay';
+      modalOverlay.innerHTML = `
+        <div class="firewise-lightbox-container" role="dialog" aria-modal="true" aria-labelledby="firewise-modal-title">
+          <div class="firewise-lightbox-header">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <h3 id="firewise-modal-title" style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin: 0;">
+                Firewise USA® Community Certificate (2026)
+              </h3>
+            </div>
+            <button id="firewise-modal-close" style="color: var(--text-muted); padding: 0.35rem; border-radius: var(--radius-sm); border: none; background: transparent; cursor: pointer;" aria-label="Close modal">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
+          <div class="firewise-lightbox-body">
+            <img src="images/2026/Firewise-2026.jpeg" alt="Tracy Hills II Firewise USA 2026 Certificate - Full View" class="firewise-lightbox-img">
+          </div>
+          <div class="firewise-lightbox-footer">
+            <div style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.4;">
+              <strong style="color: var(--text-primary);">Tracy Hills Phase II Firewise Certificate:</strong> Share this document with your home insurance representative.
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <a href="images/2026/Firewise-2026.jpeg" download="Firewise-2026.jpeg" class="btn btn-primary btn-sm" style="gap: 0.4rem; background: #16A34A; border-color: #22C55E; color: #FFFFFF;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Download Certificate</span>
+              </a>
+              <button id="firewise-modal-close-btn" class="btn btn-outline btn-sm">Close</button>
+            </div>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(modalOverlay);
+
+      const closeModal = () => {
+        modalOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+      };
+
+      document.getElementById('firewise-modal-close').addEventListener('click', closeModal);
+      document.getElementById('firewise-modal-close-btn').addEventListener('click', closeModal);
+      modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) closeModal();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalOverlay.classList.contains('open')) {
+          closeModal();
+        }
+      });
+    }
+
+    modalOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
   // Render Providers Grid Cards
   function renderProviders() {
     if (!container) return;
     container.innerHTML = '';
 
+    const q = currentSearchQuery.toLowerCase().trim();
+    const shouldShowFirewise = (currentCategory === 'Home Insurance') ||
+      (q && (q.includes('insurance') || q.includes('firewise') || q.includes('fire')));
+
+    if (shouldShowFirewise) {
+      container.appendChild(createFirewiseCard());
+    }
+
     const filtered = PROVIDERS_DATA.filter((provider) => {
       const matchesCategory = currentCategory === 'All' || provider.category === currentCategory || (provider.categories && provider.categories.includes(currentCategory));
-      const q = currentSearchQuery.toLowerCase().trim();
       if (!q) return matchesCategory;
 
       // Smart Keyword & Synonym Expansion
@@ -596,12 +717,13 @@ function initProvidersPage() {
       return orderA - orderB;
     });
 
-    if (filtered.length === 0) {
+    if (filtered.length === 0 && !shouldShowFirewise) {
       if (noResultsContainer) noResultsContainer.style.display = 'block';
     } else {
       if (noResultsContainer) noResultsContainer.style.display = 'none';
+    }
 
-      filtered.forEach((p) => {
+    filtered.forEach((p) => {
         const card = document.createElement('div');
         card.className = 'card card-hoverable';
         card.style.display = 'flex';
@@ -714,7 +836,6 @@ function initProvidersPage() {
 
         container.appendChild(card);
       });
-    }
   }
 
   // Search input listener
