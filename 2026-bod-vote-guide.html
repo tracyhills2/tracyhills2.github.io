@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracy Hills II - 2026 Board Election Voting Guide</title>
+
+  <!-- Meta Descriptions & SEO -->
+  <meta name="description" content="Official step-by-step voting guide for the Tracy Hills II 2026 Board of Directors election. Learn how to mark your ballot, double-nest envelopes, and meet the Oct 15 quorum deadline.">
+  <meta name="keywords" content="Tracy Hills II, Board Election 2026, HOA Voting Guide, Pro Elections LLC, Secret Ballot, Quorum Requirements">
+  <meta name="author" content="Tracy Hills II Community">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph & Twitter Meta -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Tracy Hills II Community Resource Hub">
+  <meta property="og:title" content="Tracy Hills II - 2026 Board Election Voting Guide">
+  <meta property="og:description" content="Step-by-step homeowner instructions for completing and returning your 2026 Board Election ballot to ensure your vote counts toward our 367-ballot quorum.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tracy Hills II - 2026 Board Election Voting Guide">
+  <meta name="twitter:description" content="Step-by-step homeowner instructions for completing and returning your 2026 Board Election ballot.">
+
+  <!-- Google Fonts Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    /* Dark Aesthetic Custom Styles for 2026 BOD Vote Guide */
+    :root {
+      --guide-bg: #0b1329;
+      --guide-card-bg: #111c38;
+      --guide-card-alt: #0f172a;
+      --guide-border: rgba(255, 255, 255, 0.12);
+      --guide-border-light: rgba(255, 255, 255, 0.22);
+      --guide-emerald: #6ee7b7;
+      --guide-emerald-bg: rgba(16, 185, 129, 0.18);
+      --guide-amber: #fbbf24;
+      --guide-amber-bg: rgba(245, 158, 11, 0.18);
+      --guide-teal: #2dd4bf;
+      --guide-teal-bg: rgba(13, 148, 136, 0.2);
+    }
+
+    body {
+      background-color: var(--guide-bg) !important;
+      color: #f8fafc;
+    }
+
+    .guide-header {
+      background: linear-gradient(180deg, #0d1733 0%, #0b1329 100%);
+      border-bottom: 1px solid var(--guide-border);
+      padding: 1.25rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(12px);
+    }
+
+    .guide-header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .guide-brand-title {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .guide-badge-election {
+      background: var(--guide-amber-bg);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.775rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .guide-hero {
+      padding: 3rem 0 2.5rem 0;
+      text-align: center;
+      background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.12) 0%, transparent 70%);
+      border-bottom: 1px solid var(--guide-border);
+    }
+
+    .guide-hero-title {
+      font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      margin-bottom: 0.85rem;
+    }
+
+    .guide-hero-subtitle {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: #cbd5e1;
+      max-width: 760px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Cards & Containers */
+    .guide-card {
+      background: var(--guide-card-bg);
+      border: 1px solid var(--guide-border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .guide-card:hover {
+      border-color: var(--guide-border-light);
+    }
+
+    /* Quorum Alert Box */
+    .quorum-box {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(15, 23, 42, 0.8) 100%);
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quorum-box::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 5px;
+      background: #fbbf24;
+    }
+
+    .quorum-number {
+      font-size: 2.25rem;
+      font-weight: 900;
+      color: #fbbf24;
+      line-height: 1;
+    }
+
+    /* Step Number Pills */
+    .step-number-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(16, 185, 129, 0.18);
+      color: #6ee7b7;
+      border: 1px solid rgba(52, 211, 153, 0.45);
+      padding: 0.4rem 0.95rem;
+      border-radius: 9999px;
+      font-size: 0.825rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    /* Grid for Packet Items */
+    .packet-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    @media (min-width: 640px) {
+      .packet-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .packet-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .packet-card {
+      background: var(--guide-card-bg);
+      border: 1px solid var(--guide-border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .packet-thumb {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid var(--guide-border);
+      background: var(--guide-card-alt);
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .packet-thumb:hover {
+      opacity: 0.9;
+      transform: scale(1.02);
+    }
+
+    .ballot-thumb-container {
+      width: 100%;
+      height: 170px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--guide-border);
+      margin-bottom: 1rem;
+      cursor: pointer;
+      background: var(--guide-card-alt);
+    }
+
+    .ballot-thumb-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 74%;
+      transform: scale(1.35);
+      transform-origin: 50% 74%;
+    }
+
+    @media (max-width: 640px) {
+      .ballot-thumb-img {
+        object-position: 50% 51.5% !important;
+        transform: scale(1.18) !important;
+        transform-origin: 50% 51.5% !important;
+      }
+    }
+
+    /* Envelope Visual Showcase */
+    .envelope-showcase {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .envelope-showcase {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .envelope-card-inner {
+      background: linear-gradient(135deg, rgba(13, 148, 136, 0.15) 0%, rgba(15, 23, 42, 0.8) 100%);
+      border: 1.5px solid rgba(13, 148, 136, 0.4);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .envelope-card-outer {
+      background: linear-gradient(135deg, rgba(248, 250, 252, 0.05) 0%, rgba(15, 23, 42, 0.8) 100%);
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    /* Checklist Section */
+    .checklist-container {
+      background: var(--guide-card-bg);
+      border: 1px solid var(--guide-border);
+      border-radius: 16px;
+      padding: 1.75rem;
+    }
+
+    /* Responsive Media Queries */
+    @media (max-width: 640px) {
+      .guide-header-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+      }
+
+      .guide-header-content a[target="_blank"] {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .guide-hero {
+        padding: 2rem 0 1.5rem 0;
+      }
+
+      .guide-hero-subtitle {
+        font-size: 0.925rem;
+      }
+
+      .dark-modal-content {
+        max-height: 94vh;
+        border-radius: 12px;
+      }
+
+      .dark-modal-header {
+        padding: 0.85rem 1rem;
+      }
+
+      .dark-modal-body {
+        padding: 1rem;
+      }
+
+      #sample-view-zoom > div {
+        padding: 0.65rem !important;
+      }
+
+      #sample-view-zoom > div > div:last-child {
+        height: 420px !important;
+        max-width: 100% !important;
+      }
+
+      #sample-view-zoom img {
+        width: 178% !important;
+        transform: translate(-41.5%, -28.8%) !important;
+      }
+    }
+
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem;
+      background: var(--guide-card-alt);
+      border: 1px solid var(--guide-border);
+      border-radius: 10px;
+      margin-bottom: 0.75rem;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s ease;
+    }
+
+    .checklist-item:hover {
+      border-color: rgba(16, 185, 129, 0.4);
+      background: rgba(16, 185, 129, 0.04);
+    }
+
+    .checklist-item.checked {
+      border-color: rgba(16, 185, 129, 0.6);
+      background: rgba(16, 185, 129, 0.08);
+    }
+
+    .checklist-checkbox {
+      width: 24px;
+      height: 24px;
+      min-width: 24px;
+      min-height: 24px;
+      margin-top: 0.15rem;
+      accent-color: #10b981;
+      cursor: pointer;
+    }
+
+    .progress-bar-bg {
+      width: 100%;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 9999px;
+      overflow: hidden;
+      margin: 1rem 0 1.5rem 0;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+      transition: width 0.3s ease;
+    }
+
+    /* Modal System */
+    .dark-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 10, 24, 0.88);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    .dark-modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .dark-modal-content {
+      background: #0f172a;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 820px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+      transform: scale(0.95);
+      transition: transform 0.25s ease;
+    }
+
+    .dark-modal-overlay.active .dark-modal-content {
+      transform: scale(1);
+    }
+
+    .dark-modal-header {
+      padding: 1.15rem 1.5rem;
+      border-bottom: 1px solid var(--guide-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #111c38;
+    }
+
+    .dark-modal-body {
+      padding: 1.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .dark-modal-close {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: #94a3b8;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .dark-modal-close:hover {
+      background: rgba(239, 68, 68, 0.2);
+      color: #ef4444;
+    }
+
+    .btn-view-photo {
+      width: 100%;
+      margin-top: auto;
+      padding: 0.6rem 1rem;
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid var(--guide-border);
+      border-radius: 8px;
+      color: #f8fafc;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-view-photo:hover {
+      background: #1e293b;
+      border-color: var(--guide-emerald);
+      color: var(--guide-emerald);
+    }
+
+    /* Mock Sample Ballot UI */
+    .mock-ballot {
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: 8px;
+      padding: 1.5rem;
+      font-family: Arial, sans-serif;
+      max-width: 480px;
+      margin: 0 auto;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    .mock-ballot-header {
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 0.75rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .mock-candidate-row {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .mock-bubble {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .mock-bubble.filled {
+      background: #0f172a;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header (Standalone - No Back/Home links) -->
+  <header class="guide-header">
+    <div class="container guide-header-content">
+      <a href="index.html" class="guide-brand-title" aria-label="Tracy Hills II Home" style="text-decoration: none;">
+        <img src="images/tracy-hills-logo.svg" alt="Tracy Hills Logo" style="height: 28px; width: auto;">
+        <div style="border-left: 1px solid var(--guide-border); padding-left: 0.6rem; margin-left: 0.15rem;">
+          <span style="font-weight: 700; font-size: 0.775rem; color: #6ee7b7; letter-spacing: 0.08em; display: block; line-height: 1.2;">PHASE II</span>
+          <span style="display: block; font-size: 0.65rem; color: #cbd5e1; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Community Voting Guide</span>
+        </div>
+      </a>
+      <a href="https://pro-ei.com/hoa/hills2" target="_blank" rel="noopener noreferrer" style="background: rgba(16, 185, 129, 0.18); border: 1px solid rgba(52, 211, 153, 0.45); color: #6ee7b7; padding: 0.45rem 0.95rem; border-radius: 9999px; font-size: 0.775rem; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.45rem; transition: all 0.2s ease; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.15);">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        <span>Official Pro Elections Portal ↗</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="guide-hero">
+      <div class="container" style="max-width: 860px;">
+        <div style="margin-bottom: 1rem;">
+          <span class="guide-badge-election" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.4);">Community Voter Resource</span>
+        </div>
+        <h1 class="guide-hero-title">Tracy Hills II - 2026 Board Election Voting Guide</h1>
+        <p class="guide-hero-subtitle" style="color: #cbd5e1; font-weight: 500;">
+          Step-by-step homeowner instructions for completing and returning your mail-in ballot
+        </p>
+        <div style="margin-top: 1rem; font-size: 0.8rem; color: #cbd5e1; display: inline-flex; align-items: center; gap: 0.45rem; background: rgba(30, 41, 59, 0.8); padding: 0.4rem 0.95rem; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.15);">
+          <span>ℹ️ Independent resident volunteer guide &bull; Unofficial community resource</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <div class="container" style="padding-top: 2.5rem; padding-bottom: 4rem; max-width: 1050px;">
+
+      <!-- STEP 1: INSPECT YOUR PACKET -->
+      <section style="margin-bottom: 3.5rem;">
+        <span class="step-number-badge">Step 1 of 4</span>
+        <h2 style="font-size: 1.6rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">Inspect Your Election Packet</h2>
+        <p style="color: #94a3b8; font-size: 0.975rem; margin-bottom: 1.5rem;">
+          Your official election envelope arrived via US Mail. Verify that your packet contains all four required items before marking your vote:
+        </p>
+
+        <div class="packet-grid">
+          <!-- Item 1 -->
+          <div class="packet-card">
+            <img src="images/2026/BOD-Election/Mail.jpg" alt="Outer Delivery Envelope" class="packet-thumb" onclick="openModal('modal-mail')">
+            <h3 style="font-size: 1.05rem; font-weight: 700; color: #ffffff; margin-bottom: 0.35rem;">1. Delivery Envelope</h3>
+            <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 1rem; flex: 1;">
+              Outer envelope labeled <em>"IMPORTANT: BALLOT ENCLOSED"</em>. Can be recycled once inner items are verified.
+            </p>
+            <button class="btn-view-photo" onclick="openModal('modal-mail')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span>View Photo & Tips</span>
+            </button>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="packet-card">
+            <div class="ballot-thumb-container" onclick="openModal('modal-ballot')">
+              <img src="images/2026/BOD-Election/Ballot.jpg" alt="Ballot & Instructions Sheet" class="ballot-thumb-img">
+            </div>
+            <h3 style="font-size: 1.05rem; font-weight: 700; color: #ffffff; margin-bottom: 0.35rem;">2. Ballot & Instructions</h3>
+            <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 1rem; flex: 1;">
+              Two-sided official paper sheet. Front lists candidate options; back details rules, quorum & meeting info.
+            </p>
+            <button class="btn-view-photo" onclick="openModal('modal-ballot')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span>View Photo & Tips</span>
+            </button>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="packet-card">
+            <img src="images/2026/BOD-Election/Ballot_Envelope.jpg" alt="Secret Ballot Envelope" class="packet-thumb" onclick="openModal('modal-secret-env')">
+            <h3 style="font-size: 1.05rem; font-weight: 700; color: #ffffff; margin-bottom: 0.35rem;">3. Secret Ballot Envelope</h3>
+            <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 1rem; flex: 1;">
+              Inner teal/blue envelope labeled <em>"SECRET BALLOT ENVELOPE"</em>. Protects voter anonymity.
+            </p>
+            <button class="btn-view-photo" onclick="openModal('modal-secret-env')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span>View Photo & Tips</span>
+            </button>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="packet-card">
+            <img src="images/2026/BOD-Election/Return_Envelope.jpg" alt="Return Envelope" class="packet-thumb" onclick="openModal('modal-return-env')">
+            <h3 style="font-size: 1.05rem; font-weight: 700; color: #ffffff; margin-bottom: 0.35rem;">4. Outer Return Envelope</h3>
+            <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 1rem; flex: 1;">
+              White envelope labeled <em>"RETURN ENVELOPE"</em> with pre-paid Business Reply postage and homeowner signature lines.
+            </p>
+            <button class="btn-view-photo" onclick="openModal('modal-return-env')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span>View Photo & Tips</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- STEP 2: MARK YOUR BALLOT CORRECTLY -->
+      <section style="margin-bottom: 3.5rem;">
+        <span class="step-number-badge">Step 2 of 4</span>
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem;">
+          <h2 style="font-size: 1.6rem; font-weight: 800; color: #ffffff;">Mark Your Ballot Correctly</h2>
+          <button onclick="openModal('modal-sample-ballot')" style="padding: 0.55rem 1.1rem; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 8px; color: #34d399; font-weight: 700; font-size: 0.875rem; display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer; transition: all 0.2s ease;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span>View Sample Ballot</span>
+          </button>
+        </div>
+        <p style="color: #94a3b8; font-size: 0.975rem; margin-bottom: 1.5rem;">
+          There are <strong>two (2) open seats</strong> on the Board of Directors. You may select up to two candidates (or write in a qualified candidate).
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1.25rem;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+            <!-- DO Rules -->
+            <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 12px; padding: 1.35rem;">
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.85rem; color: #34d399; font-weight: 700; font-size: 1.05rem;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>DO THIS (Valid Marking)</span>
+              </div>
+              <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.6rem;">
+                <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                  <span style="color: #34d399;">●</span>
+                  <span>Use <strong>blue or black ink pen only</strong>.</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                  <span style="color: #34d399;">●</span>
+                  <span>Completely fill in the circle next to your candidate choices solid (●).</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                  <span style="color: #34d399;">●</span>
+                  <span>Select up to <strong>two (2) candidates total</strong>.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- DONT Rules -->
+            <div style="background: rgba(239, 68, 68, 0.06); border: 1px solid rgba(239, 68, 68, 0.25); border-radius: 12px; padding: 1.35rem;">
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.85rem; color: #f87171; font-weight: 700; font-size: 1.05rem;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <span>DO NOT DO THIS (Voids Ballot)</span>
+              </div>
+              <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.6rem;">
+                <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                  <span style="color: #f87171;">✕</span>
+                  <span><strong>DO NOT use pencil</strong>, red ink, or highlighters.</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                  <span style="color: #f87171;">✕</span>
+                  <span><strong>DO NOT use checkmarks (✓) or "X" marks</strong>; bubbles must be filled solid.</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                  <span style="color: #f87171;">✕</span>
+                  <span><strong>DO NOT select more than 2 choices</strong>. Overvoting automatically voids your ballot.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STEP 3: THE 2-ENVELOPE SYSTEM -->
+      <section style="margin-bottom: 3.5rem;">
+        <span class="step-number-badge">Step 3 of 4</span>
+        <h2 style="font-size: 1.6rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">The 2-Envelope Packaging System</h2>
+        <p style="color: #94a3b8; font-size: 0.975rem; margin-bottom: 1.5rem;">
+          California HOA election law requires strict double-nesting to guarantee vote anonymity while verifying homeowner eligibility.
+        </p>
+
+        <div class="envelope-showcase">
+          <!-- Inner Teal Envelope -->
+          <div class="envelope-card-inner">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+              <span style="background: rgba(13, 148, 136, 0.3); color: #2dd4bf; border: 1px solid rgba(45, 212, 191, 0.4); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Envelope #1 (Inner)</span>
+              <span style="color: #2dd4bf; font-weight: 800; font-size: 0.9rem;">TEAL COLOR</span>
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">"SECRET BALLOT ENVELOPE"</h3>
+            <p style="font-size: 0.9rem; color: #cbd5e1; line-height: 1.5; margin-bottom: 1rem;">
+              Fold your marked paper ballot and place it inside this teal envelope, then seal it shut securely.
+            </p>
+            <div style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 8px; padding: 0.75rem; font-size: 0.85rem; color: #fca5a5; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink: 0;"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+              <span><strong>DO NOT WRITE OR SIGN</strong> anything on the teal envelope!</span>
+            </div>
+          </div>
+
+          <!-- Outer White Envelope -->
+          <div class="envelope-card-outer">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+              <span style="background: rgba(255, 255, 255, 0.15); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.25); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Envelope #2 (Outer)</span>
+              <span style="color: #ffffff; font-weight: 800; font-size: 0.9rem;">WHITE COLOR</span>
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">"RETURN ENVELOPE"</h3>
+            <p style="font-size: 0.9rem; color: #cbd5e1; line-height: 1.5; margin-bottom: 1rem;">
+              Insert the sealed teal Secret Ballot Envelope inside this white Business Reply envelope.
+            </p>
+            <div style="background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 8px; padding: 0.75rem; font-size: 0.85rem; color: #fcd34d; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink: 0;"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              <span><strong>REQUIRED:</strong> Fill out Owner Name, Tracy Hills II Address, and SIGN the back!</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STEP 4: INTERACTIVE PRE-FLIGHT CHECKLIST -->
+      <section style="margin-bottom: 3.5rem;">
+        <span class="step-number-badge">Step 4 of 4</span>
+        <h2 style="font-size: 1.6rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">Interactive Pre-Flight Checklist</h2>
+        <p style="color: #94a3b8; font-size: 0.975rem; margin-bottom: 1.5rem;">
+          Tap each checkbox before dropping your ballot in the mail to ensure 100% compliance:
+        </p>
+
+        <div class="checklist-container">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <span style="font-size: 0.9rem; font-weight: 700; color: #cbd5e1;" id="checklist-progress-text">0 of 5 Completed</span>
+            <span class="guide-badge-election" id="checklist-badge" style="background: rgba(30, 41, 59, 0.8); color: #94a3b8; border-color: rgba(255, 255, 255, 0.1);">Action Needed</span>
+          </div>
+
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="checklist-progress-bar"></div>
+          </div>
+
+          <!-- Items -->
+          <div class="checklist-item" onclick="toggleChecklist(this)">
+            <input type="checkbox" class="checklist-checkbox" onclick="event.stopPropagation(); updateChecklistState();">
+            <div>
+              <strong style="color: #ffffff; font-size: 0.95rem; display: block; margin-bottom: 0.2rem;">1. Mark Ballot in Ink</strong>
+              <span style="color: #94a3b8; font-size: 0.85rem;">Marked ballot using blue or black pen (maximum 2 choices, filled solid ●).</span>
+            </div>
+          </div>
+
+          <div class="checklist-item" onclick="toggleChecklist(this)">
+            <input type="checkbox" class="checklist-checkbox" onclick="event.stopPropagation(); updateChecklistState();">
+            <div>
+              <strong style="color: #ffffff; font-size: 0.95rem; display: block; margin-bottom: 0.2rem;">2. Seal in Teal Envelope</strong>
+              <span style="color: #94a3b8; font-size: 0.85rem;">Sealed inside teal "SECRET BALLOT ENVELOPE" (with no writing or signatures on it).</span>
+            </div>
+          </div>
+
+          <div class="checklist-item" onclick="toggleChecklist(this)">
+            <input type="checkbox" class="checklist-checkbox" onclick="event.stopPropagation(); updateChecklistState();">
+            <div>
+              <strong style="color: #ffffff; font-size: 0.95rem; display: block; margin-bottom: 0.2rem;">3. Insert into White Return Envelope</strong>
+              <span style="color: #94a3b8; font-size: 0.85rem;">Teal envelope placed securely inside the outer white "RETURN ENVELOPE".</span>
+            </div>
+          </div>
+
+          <div class="checklist-item" onclick="toggleChecklist(this)">
+            <input type="checkbox" class="checklist-checkbox" onclick="event.stopPropagation(); updateChecklistState();">
+            <div>
+              <strong style="color: #ffffff; font-size: 0.95rem; display: block; margin-bottom: 0.2rem;">4. Complete Name, Address & Signature</strong>
+              <span style="color: #94a3b8; font-size: 0.85rem;">Owner Name, Tracy Hills II address, and SIGNATURE signed on the back of outer white envelope.</span>
+            </div>
+          </div>
+
+          <div class="checklist-item" onclick="toggleChecklist(this)">
+            <input type="checkbox" class="checklist-checkbox" onclick="event.stopPropagation(); updateChecklistState();">
+            <div>
+              <strong style="color: #ffffff; font-size: 0.95rem; display: block; margin-bottom: 0.2rem;">5. Drop in US Mail</strong>
+              <span style="color: #94a3b8; font-size: 0.85rem;">Dropped into standard outgoing US Mail (No postage required - Business Reply Mail).</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEGAL QUORUM REQUIREMENT -->
+      <div class="quorum-box" style="margin-bottom: 3.5rem;">
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            <div style="flex: 1; min-width: 240px;">
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <span style="font-size: 0.85rem; font-weight: 800; color: #fbbf24; text-transform: uppercase; letter-spacing: 0.05em;">Community Quorum Notice</span>
+              </div>
+              <h2 style="font-size: 1.4rem; font-weight: 800; color: #ffffff; line-height: 1.3;">367 Homeowner Ballots Required for Legal Quorum</h2>
+            </div>
+            <div style="background: rgba(15, 23, 42, 0.85); padding: 0.65rem 1.15rem; border-radius: 12px; border: 1.5px solid rgba(245, 158, 11, 0.45); display: flex; align-items: center; gap: 0.85rem;">
+              <span class="quorum-number" style="color: #fbbf24; font-size: 2.25rem; font-weight: 900; line-height: 1;">367</span>
+              <span style="font-size: 0.775rem; color: #f8fafc; font-weight: 700; line-height: 1.25; display: block;">Minimum Ballots<br>Needed</span>
+            </div>
+          </div>
+          <p style="font-size: 0.95rem; color: #e2e8f0; line-height: 1.6; margin: 0;">
+            Every single ballot matters! If the association fails to reach the <strong>367-ballot quorum requirement</strong>, the election must be postponed and rescheduled. This wastes HOA funds on re-mailing costs and delays essential community governance.
+          </p>
+          <div style="display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.85rem 1.1rem; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(52, 211, 153, 0.45); border-radius: 10px; font-size: 0.9rem; color: #f8fafc; line-height: 1.55;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2.5" style="flex-shrink: 0; margin-top: 0.1rem;"><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <strong style="color: #6ee7b7; font-size: 0.925rem;">Pro Tip:</strong> Even if you choose not to select candidates, returning a blank ballot still counts toward quorum and saves HOA funds!
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DEADLINES & CONTACT DETAILS -->
+      <section style="background: var(--guide-card-bg); border: 1px solid var(--guide-border); border-radius: 16px; padding: 2rem;">
+        <h2 style="font-size: 1.5rem; font-weight: 800; color: #ffffff; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.65rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Deadlines, Counting &amp; Contact Info</span>
+        </h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          <!-- Target Mail Date -->
+          <div style="background: var(--guide-card-alt); border: 1px solid var(--guide-border); border-radius: 12px; padding: 1.25rem;">
+            <div style="color: #fbbf24; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem;">Target Mailing Date</div>
+            <div style="font-size: 1.25rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">October 07, 2026</div>
+            <p style="font-size: 0.875rem; color: #cbd5e1; line-height: 1.5; margin: 0;">
+              Recommended mail-by date to ensure USPS transit time to the Inspector of Election in Murphys, CA.
+            </p>
+          </div>
+
+          <!-- Strict Cutoff -->
+          <div style="background: var(--guide-card-alt); border: 1px solid var(--guide-border); border-radius: 12px; padding: 1.25rem;">
+            <div style="color: #f87171; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem;">Strict Mail Receipt Cut-Off</div>
+            <div style="font-size: 1.25rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">October 15, 2026 at 2:00 PM</div>
+            <p style="font-size: 0.875rem; color: #cbd5e1; line-height: 1.5; margin: 0;">
+              Ballots must be received by Pro Elections LLC by 2:00 PM. <strong>Hand deliveries will NOT be accepted at the annual meeting.</strong>
+            </p>
+          </div>
+        </div>
+
+        <!-- Annual Meeting & Zoom Box -->
+        <div style="margin-top: 1.5rem; background: rgba(15, 23, 42, 0.7); border: 1px solid var(--guide-border); border-radius: 12px; padding: 1.35rem;">
+          <h3 style="font-size: 1.15rem; font-weight: 800; color: #ffffff; margin-bottom: 1.1rem; display: flex; align-items: center; gap: 0.65rem;">
+            <div style="background: rgba(96, 165, 250, 0.18); color: #60a5fa; width: 34px; height: 34px; border-radius: 8px; border: 1px solid rgba(96, 165, 250, 0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <span>Annual Meeting &amp; Ballot Counting Session</span>
+          </h3>
+
+          <div style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.9rem; color: #f8fafc;">
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <span style="font-size: 1.1rem; flex-shrink: 0; line-height: 1.2;">📅</span>
+              <div>
+                <strong style="color: #94a3b8; font-size: 0.775rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.15rem;">Date &amp; Time</strong>
+                <span style="color: #ffffff; font-weight: 700; font-size: 0.95rem;">Thursday, October 15, 2026 at 3:30 PM</span>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <span style="font-size: 1.1rem; flex-shrink: 0; line-height: 1.2;">📍</span>
+              <div>
+                <strong style="color: #94a3b8; font-size: 0.775rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.15rem;">In-Person Location</strong>
+                <span style="color: #ffffff; font-weight: 600;">Sam Matthew's Park Community Rec Center, 2670 Emery St, Tracy, CA</span>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <span style="font-size: 1.1rem; flex-shrink: 0; line-height: 1.2;">💻</span>
+              <div>
+                <strong style="color: #94a3b8; font-size: 0.775rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">Virtual Zoom Stream</strong>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; color: #cbd5e1;">
+                  <span>Meeting ID: <code style="color: #60a5fa; background: rgba(30, 41, 59, 0.9); padding: 0.2rem 0.55rem; border-radius: 6px; border: 1px solid rgba(96, 165, 250, 0.35); font-weight: 700; font-family: monospace;">817 3591 6159</code></span>
+                  <span>Passcode: <code style="color: #60a5fa; background: rgba(30, 41, 59, 0.9); padding: 0.2rem 0.55rem; border-radius: 6px; border: 1px solid rgba(96, 165, 250, 0.35); font-weight: 700; font-family: monospace;">535977</code></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Box -->
+        <div style="margin-top: 1.5rem; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--guide-border); border-radius: 12px; padding: 1.15rem 1.25rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; align-items: center;">
+          <div>
+            <div style="font-size: 0.775rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">Official Inspector of Elections</div>
+            <div style="color: #ffffff; font-weight: 700; font-size: 0.95rem;">Pro Elections LLC</div>
+            <div style="color: #cbd5e1; font-size: 0.85rem; margin-top: 0.15rem;">PO Box 390, Murphys, CA 95247</div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; font-size: 0.875rem;">
+            <a href="tel:2095591448" style="color: #38bdf8; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(56, 189, 248, 0.12); padding: 0.45rem 0.85rem; border-radius: 8px; border: 1px solid rgba(56, 189, 248, 0.3); transition: all 0.2s ease;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>(209) 559-1448</span>
+            </a>
+            <a href="https://pro-ei.com/hoa/hills2" target="_blank" rel="noopener noreferrer" style="color: #6ee7b7; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(16, 185, 129, 0.15); padding: 0.45rem 0.85rem; border-radius: 8px; border: 1px solid rgba(52, 211, 153, 0.4); transition: all 0.2s ease;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <span>pro-ei.com/hoa/hills2 ↗</span>
+            </a>
+          </div>
+        </div>
+      </section>/div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer style="background: #070d1d; border-top: 1px solid var(--guide-border); padding: 2.5rem 0; color: #cbd5e1; font-size: 0.85rem;">
+    <div class="container" style="max-width: 1050px;">
+      <!-- Footer Disclaimer Component -->
+      <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: #fbbf24; font-size: 0.9rem; margin-bottom: 0.5rem;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Independent Community Voting Guide Disclaimer</span>
+        </div>
+        <p style="font-size: 0.825rem; color: #94a3b8; line-height: 1.6; margin-bottom: 0.65rem;">
+          This 2026 Board Election Voting Guide is published independently by resident volunteers as a non-partisan community educational service to encourage voter participation and help residents understand proper voting steps. It is <strong>not an official publication, representative, or release</strong> from the Tracy Hills II Community Association (HOA), Seabreeze Management Company, or Pro Elections LLC (Inspector of Elections).
+        </p>
+        <p style="font-size: 0.825rem; color: #94a3b8; line-height: 1.6; margin-bottom: 0;">
+          All official election terms, voting rules, and candidate choices are governed strictly by your official paper ballot packet and HOA CC&amp;Rs. This website does not endorse candidates or provide formal legal counsel. <a href="disclaimer.html" target="_blank" style="color: #60a5fa; font-weight: 600; text-decoration: underline;">Read Full Terms of Use &amp; Legal Disclaimer ↗</a>
+        </p>
+      </div>
+
+      <div style="text-align: center; color: #64748b; font-size: 0.8rem;">
+        © <span class="dynamic-year">2026</span> Tracy Hills II Community Resource Hub. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODALS -->
+
+  <!-- Modal 1: Delivery Envelope -->
+  <div id="modal-mail" class="dark-modal-overlay" onclick="closeModalOnBackdrop(event, 'modal-mail')">
+    <div class="dark-modal-content">
+      <div class="dark-modal-header">
+        <h3 style="color: #ffffff; font-size: 1.1rem; font-weight: 700;">1. Outer Delivery Envelope</h3>
+        <button class="dark-modal-close" onclick="closeModal('modal-mail')">✕</button>
+      </div>
+      <div class="dark-modal-body">
+        <img src="images/2026/BOD-Election/Mail.jpg" alt="Outer Delivery Envelope" style="width: 100%; max-height: 480px; object-fit: contain; border-radius: 8px; border: 1px solid var(--guide-border); margin-bottom: 1.25rem;">
+        <h4 style="color: #ffffff; font-size: 1rem; margin-bottom: 0.5rem;">Key Packet Information:</h4>
+        <ul style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6; padding-left: 1.25rem;">
+          <li>This is the outer mailer envelope sent to your registered address by Pro Elections LLC.</li>
+          <li>Clearly printed with <em>"IMPORTANT: BALLOT ENCLOSED"</em> in bold lettering.</li>
+          <li>Once you open this package and verify that all inner materials (Ballot sheet, Teal Secret Ballot Envelope, and White Return Envelope) are present, this outer mailer can be recycled.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Ballot & Instructions Sheet -->
+  <div id="modal-ballot" class="dark-modal-overlay" onclick="closeModalOnBackdrop(event, 'modal-ballot')">
+    <div class="dark-modal-content">
+      <div class="dark-modal-header">
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+          <h3 style="color: #ffffff; font-size: 1.1rem; font-weight: 700;">2. Ballot &amp; Instructions Sheet</h3>
+          <div style="display: flex; gap: 0.35rem; background: rgba(255,255,255,0.06); padding: 0.2rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); flex-shrink: 0;">
+            <button id="tab-btn-ballot" onclick="switchBallotTab('front')" style="padding: 0.35rem 0.75rem; background: #10b981; color: #0f172a; border-radius: 6px; font-weight: 700; font-size: 0.75rem; border: none; cursor: pointer; white-space: nowrap;">Front Side</button>
+            <button id="tab-btn-instructions" onclick="switchBallotTab('back')" style="padding: 0.35rem 0.75rem; background: transparent; color: #cbd5e1; border-radius: 6px; font-weight: 700; font-size: 0.75rem; border: none; cursor: pointer; white-space: nowrap;">Back Side</button>
+          </div>
+        </div>
+        <button class="dark-modal-close" onclick="closeModal('modal-ballot')">✕</button>
+      </div>
+      <div class="dark-modal-body">
+        <div id="tab-content-front">
+          <img src="images/2026/BOD-Election/Ballot.jpg" alt="Official Ballot Front" style="width: 100%; max-height: 480px; object-fit: contain; border-radius: 8px; border: 1px solid var(--guide-border); margin-bottom: 1.25rem;">
+          <p style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            The <strong>Front Side</strong> contains the candidate selection list for the 2 open Board seats. Fill in up to two (2) bubbles completely using a blue or black pen.
+          </p>
+        </div>
+        <div id="tab-content-back" style="display: none;">
+          <img src="images/2026/BOD-Election/Instructions.jpg" alt="Official Instructions Back" style="width: 100%; max-height: 480px; object-fit: contain; border-radius: 8px; border: 1px solid var(--guide-border); margin-bottom: 1.25rem;">
+          <p style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            The <strong>Back Side</strong> outlines statutory California voting rules, quorum requirements (367 ballots), voter qualification criteria, and meeting logistics.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Secret Ballot Envelope -->
+  <div id="modal-secret-env" class="dark-modal-overlay" onclick="closeModalOnBackdrop(event, 'modal-secret-env')">
+    <div class="dark-modal-content">
+      <div class="dark-modal-header">
+        <h3 style="color: #ffffff; font-size: 1.1rem; font-weight: 700;">3. Inner Secret Ballot Envelope (Teal)</h3>
+        <button class="dark-modal-close" onclick="closeModal('modal-secret-env')">✕</button>
+      </div>
+      <div class="dark-modal-body">
+        <img src="images/2026/BOD-Election/Ballot_Envelope.jpg" alt="Secret Ballot Envelope" style="width: 100%; max-height: 480px; object-fit: contain; border-radius: 8px; border: 1px solid var(--guide-border); margin-bottom: 1.25rem;">
+        <h4 style="color: #ffffff; font-size: 1rem; margin-bottom: 0.5rem;">Envelope Requirements:</h4>
+        <ul style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6; padding-left: 1.25rem;">
+          <li>Labeled <strong>"SECRET BALLOT ENVELOPE"</strong> in distinct teal/blue paper.</li>
+          <li>Fold your completed paper ballot and place it inside, then seal it completely shut.</li>
+          <li><strong style="color: #ef4444;">CRITICAL RULE:</strong> Do NOT sign or write your name, address, or any identifying marks on this teal envelope. Any writing on this envelope voids secrecy!</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: Return Envelope -->
+  <div id="modal-return-env" class="dark-modal-overlay" onclick="closeModalOnBackdrop(event, 'modal-return-env')">
+    <div class="dark-modal-content">
+      <div class="dark-modal-header">
+        <h3 style="color: #ffffff; font-size: 1.1rem; font-weight: 700;">4. Outer Return Envelope (White)</h3>
+        <button class="dark-modal-close" onclick="closeModal('modal-return-env')">✕</button>
+      </div>
+      <div class="dark-modal-body">
+        <img src="images/2026/BOD-Election/Return_Envelope.jpg" alt="Return Envelope" style="width: 100%; max-height: 480px; object-fit: contain; border-radius: 8px; border: 1px solid var(--guide-border); margin-bottom: 1.25rem;">
+        <h4 style="color: #ffffff; font-size: 1rem; margin-bottom: 0.5rem;">Outer Return Envelope Requirements:</h4>
+        <ul style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6; padding-left: 1.25rem;">
+          <li>Outer white envelope with pre-paid Business Reply postage addressed to Pro Elections LLC in Murphys, CA.</li>
+          <li>Insert your sealed teal Secret Ballot Envelope inside this outer envelope.</li>
+          <li><strong style="color: #f59e0b;">REQUIRED FIELDS ON BACK:</strong> You must print your Owner Name, your Tracy Hills II Property Address, and affix your official SIGNATURE on the designated lines on the back flap.</li>
+          <li>Unsigned return envelopes cannot be verified by the Election Inspector and will be voided!</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5: Sample Ballot -->
+  <div id="modal-sample-ballot" class="dark-modal-overlay" onclick="closeModalOnBackdrop(event, 'modal-sample-ballot')">
+    <div class="dark-modal-content" style="max-width: 860px;">
+      <div class="dark-modal-header">
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+          <h3 style="color: #ffffff; font-size: 1.1rem; font-weight: 700;">Official Sample Ballot Demonstration</h3>
+          <div style="display: flex; gap: 0.35rem; background: rgba(255,255,255,0.06); padding: 0.2rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+            <button id="tab-btn-sample-full" onclick="switchSampleBallotView('full')" style="padding: 0.3rem 0.75rem; background: #10b981; color: #0f172a; border-radius: 6px; font-weight: 700; font-size: 0.75rem; border: none; cursor: pointer; transition: all 0.2s;">Full Sample Ballot</button>
+            <button id="tab-btn-sample-zoom" onclick="switchSampleBallotView('zoom')" style="padding: 0.3rem 0.75rem; background: transparent; color: #cbd5e1; border-radius: 6px; font-weight: 700; font-size: 0.75rem; border: none; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.3rem;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              <span>Zoom Candidate List</span>
+            </button>
+          </div>
+        </div>
+        <button class="dark-modal-close" onclick="closeModal('modal-sample-ballot')">✕</button>
+      </div>
+      <div class="dark-modal-body" style="background: #090d16;">
+        <!-- Highlight Callout Banner -->
+        <div style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 10px; padding: 0.85rem 1.1rem; margin-bottom: 1.25rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+          <div style="background: #10b981; color: #0f172a; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; flex-shrink: 0; margin-top: 0.1rem;">✓</div>
+          <div style="flex: 1; font-size: 0.875rem; color: #e2e8f0; line-height: 1.5;">
+            <strong style="color: #34d399; font-size: 0.925rem;">Candidate Selection Area Highlighted:</strong>
+            On the official sample ballot sheet (<code>Sample_Ballot.png</code>), choices are marked by filling the circle solid (<strong style="color: #ffffff;">●</strong>) with blue or black pen. Notice <strong style="color: #34d399;">Candidate 5</strong> and <strong style="color: #34d399;">Candidate 8</strong> are selected as sample choices.
+          </div>
+        </div>
+
+        <!-- View 1: Full Sample Ballot Image -->
+        <div id="sample-view-full" style="text-align: center; position: relative;">
+          <div style="position: relative; display: inline-block; width: 100%; max-width: 680px;">
+            <img src="images/2026/BOD-Election/Sample_Ballot.png" alt="Official Sample Ballot - Sample_Ballot.png" style="width: 100%; max-height: 560px; object-fit: contain; border-radius: 10px; border: 1px solid var(--guide-border); box-shadow: 0 10px 30px rgba(0,0,0,0.5); background: #ffffff;">
+          </div>
+        </div>
+
+        <!-- View 2: Zoomed Candidate List Focus -->
+        <div id="sample-view-zoom" style="display: none; text-align: center;">
+          <div style="border: 1px solid var(--guide-border); border-radius: 12px; padding: 1rem; background: #0f172a; width: 100%; max-width: 760px; margin: 0 auto; position: relative; box-shadow: 0 12px 32px rgba(0,0,0,0.5);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem; padding: 0 0.25rem;">
+              <span style="font-size: 0.85rem; color: #34d399; font-weight: 700; display: inline-flex; align-items: center; gap: 0.4rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                Magnified Candidate Selection Box - All Candidates (1 to 10 + Write-in)
+              </span>
+              <span style="font-size: 0.75rem; color: #34d399; background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); padding: 0.25rem 0.65rem; border-radius: 6px; font-weight: 700;">
+                ● Candidate 5 &amp; ● Candidate 8 Highlighted
+              </span>
+            </div>
+            
+            <div style="overflow: hidden; width: 100%; max-width: 520px; height: 560px; border-radius: 10px; border: 2.5px solid #10b981; background: #ffffff; margin: 0 auto; position: relative; box-shadow: 0 10px 28px rgba(16, 185, 129, 0.3);">
+              <img src="images/2026/BOD-Election/Sample_Ballot.png" alt="Zoomed Candidate Selection Section" style="width: 172%; max-width: none; transform: translate(-41.5%, -29.2%); display: block;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Candidate Selection Breakdown Cards -->
+        <div style="margin-top: 1.25rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.85rem;">
+          <div style="background: rgba(30, 41, 59, 0.6); border: 1px solid var(--guide-border); border-radius: 8px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.8rem; text-transform: uppercase; color: #94a3b8; font-weight: 700; margin-bottom: 0.3rem;">Selected Candidates in Sample</div>
+            <div style="font-size: 0.95rem; font-weight: 700; color: #34d399;">● Candidate 5 &amp; ● Candidate 8</div>
+            <div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.25rem;">Two candidate bubbles completely filled with solid pen mark.</div>
+          </div>
+          <div style="background: rgba(30, 41, 59, 0.6); border: 1px solid var(--guide-border); border-radius: 8px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.8rem; text-transform: uppercase; color: #94a3b8; font-weight: 700; margin-bottom: 0.3rem;">Max Seats Available</div>
+            <div style="font-size: 0.95rem; font-weight: 700; color: #f8fafc;">Up to Two (2) Votes</div>
+            <div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.25rem;">You may select 1 or 2 candidates (or 0 for quorum only).</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript logic -->
+  <script>
+    // Modal Management
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function closeModalOnBackdrop(event, id) {
+      if (event.target.id === id) {
+        closeModal(id);
+      }
+    }
+
+    // Ballot Front/Back Tab Switching
+    function switchBallotTab(tab) {
+      const frontContent = document.getElementById('tab-content-front');
+      const backContent = document.getElementById('tab-content-back');
+      const btnFront = document.getElementById('tab-btn-ballot');
+      const btnBack = document.getElementById('tab-btn-instructions');
+
+      if (tab === 'front') {
+        frontContent.style.display = 'block';
+        backContent.style.display = 'none';
+        btnFront.style.background = '#10b981';
+        btnFront.style.color = '#0f172a';
+        btnBack.style.background = 'rgba(255,255,255,0.1)';
+        btnBack.style.color = '#cbd5e1';
+      } else {
+        frontContent.style.display = 'none';
+        backContent.style.display = 'block';
+        btnBack.style.background = '#10b981';
+        btnBack.style.color = '#0f172a';
+        btnFront.style.background = 'rgba(255,255,255,0.1)';
+        btnFront.style.color = '#cbd5e1';
+      }
+    }
+
+    // Sample Ballot View Switcher (Full vs Zoomed Candidate Section)
+    function switchSampleBallotView(view) {
+      const fullView = document.getElementById('sample-view-full');
+      const zoomView = document.getElementById('sample-view-zoom');
+      const btnFull = document.getElementById('tab-btn-sample-full');
+      const btnZoom = document.getElementById('tab-btn-sample-zoom');
+
+      if (!fullView || !zoomView) return;
+
+      if (view === 'full') {
+        fullView.style.display = 'block';
+        zoomView.style.display = 'none';
+        btnFull.style.background = '#10b981';
+        btnFull.style.color = '#0f172a';
+        btnZoom.style.background = 'transparent';
+        btnZoom.style.color = '#cbd5e1';
+      } else {
+        fullView.style.display = 'none';
+        zoomView.style.display = 'block';
+        btnZoom.style.background = '#10b981';
+        btnZoom.style.color = '#0f172a';
+        btnFull.style.background = 'transparent';
+        btnFull.style.color = '#cbd5e1';
+      }
+    }
+
+    // Checklist Logic & Persistence
+    function toggleChecklist(itemElement) {
+      const checkbox = itemElement.querySelector('.checklist-checkbox');
+      if (checkbox) {
+        checkbox.checked = !checkbox.checked;
+        updateChecklistState();
+      }
+    }
+
+    function updateChecklistState() {
+      const items = document.querySelectorAll('.checklist-item');
+      let checkedCount = 0;
+
+      items.forEach((item) => {
+        const checkbox = item.querySelector('.checklist-checkbox');
+        if (checkbox && checkbox.checked) {
+          item.classList.add('checked');
+          checkedCount++;
+        } else {
+          item.classList.remove('checked');
+        }
+      });
+
+      const total = items.length;
+      const progressPercent = (checkedCount / total) * 100;
+
+      const bar = document.getElementById('checklist-progress-bar');
+      const text = document.getElementById('checklist-progress-text');
+      const badge = document.getElementById('checklist-badge');
+
+      if (bar) bar.style.width = progressPercent + '%';
+      if (text) text.textContent = `${checkedCount} of ${total} Completed`;
+
+      if (badge) {
+        if (checkedCount === total) {
+          badge.textContent = 'Ready to Mail! ✉️';
+          badge.style.background = 'rgba(16, 185, 129, 0.2)';
+          badge.style.color = '#34d399';
+          badge.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+        } else if (checkedCount > 0) {
+          badge.textContent = 'In Progress';
+          badge.style.background = 'rgba(245, 158, 11, 0.2)';
+          badge.style.color = '#fcd34d';
+          badge.style.borderColor = 'rgba(245, 158, 11, 0.4)';
+        } else {
+          badge.textContent = 'Action Needed';
+          badge.style.background = 'rgba(30, 41, 59, 0.8)';
+          badge.style.color = '#94a3b8';
+          badge.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+        }
+      }
+    }
+
+    // Escape key modal handler
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.dark-modal-overlay.active').forEach(modal => {
+          modal.classList.remove('active');
+        });
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+
+  <!-- Cloudflare Web Analytics -->
+  <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "df8c32b5189748b98cff8eec5268cd60"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>
