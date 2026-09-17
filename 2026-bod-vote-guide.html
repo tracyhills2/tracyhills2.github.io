@@ -581,7 +581,7 @@
         <span class="step-number-badge">Step 1 of 5</span>
         <h2 style="font-size: 1.6rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">Check Your Packet</h2>
         <p style="color: #94a3b8; font-size: 0.975rem; margin-bottom: 1.5rem;">
-          Verify that your official election envelope contains all four required items before marking your vote:
+          Verify that your election packet contains these four items before marking your ballot:
         </p>
 
         <div class="packet-grid">
@@ -779,7 +779,7 @@
 
         <div class="checklist-container">
           <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
-            <span style="font-size: 0.9rem; font-weight: 700; color: #cbd5e1;" id="checklist-progress-text">0 of 8 Completed</span>
+            <span style="font-size: 0.9rem; font-weight: 700; color: #cbd5e1;" id="checklist-progress-text">0 of 7 Completed</span>
             <span class="guide-badge-election" id="checklist-badge" style="background: rgba(30, 41, 59, 0.8); color: #94a3b8; border-color: rgba(255, 255, 255, 0.1);">Action Needed</span>
           </div>
 
@@ -798,28 +798,21 @@
           <div class="checklist-item" onclick="toggleChecklist(this)">
             <input type="checkbox" class="checklist-checkbox" onclick="event.stopPropagation(); updateChecklistState();">
             <div>
-              <strong style="color: #ffffff; font-size: 0.95rem; display: block;">I filled each selected circle completely, matching the example on the ballot.</strong>
+              <strong style="color: #ffffff; font-size: 0.95rem; display: block;">I filled each selected circle completely, as shown on the ballot.</strong>
             </div>
           </div>
 
           <div class="checklist-item" onclick="toggleChecklist(this)">
             <input type="checkbox" class="checklist-checkbox" onclick="event.stopPropagation(); updateChecklistState();">
             <div>
-              <strong style="color: #ffffff; font-size: 0.95rem; display: block;">I placed the completed ballot inside the Secret Ballot Envelope and sealed it.</strong>
+              <strong style="color: #ffffff; font-size: 0.95rem; display: block;">I placed the completed ballot in the Secret Ballot Envelope and sealed it.</strong>
             </div>
           </div>
 
           <div class="checklist-item" onclick="toggleChecklist(this)">
             <input type="checkbox" class="checklist-checkbox" onclick="event.stopPropagation(); updateChecklistState();">
             <div>
-              <strong style="color: #ffffff; font-size: 0.95rem; display: block;">I completed and signed the required information on the Return Envelope.</strong>
-            </div>
-          </div>
-
-          <div class="checklist-item" onclick="toggleChecklist(this)">
-            <input type="checkbox" class="checklist-checkbox" onclick="event.stopPropagation(); updateChecklistState();">
-            <div>
-              <strong style="color: #ffffff; font-size: 0.95rem; display: block;">I placed the sealed Secret Ballot Envelope inside the Return Envelope.</strong>
+              <strong style="color: #ffffff; font-size: 0.95rem; display: block;">I placed the sealed Secret Ballot Envelope inside the Return Envelope and completed/signed the required information.</strong>
             </div>
           </div>
 
@@ -833,7 +826,7 @@
           <div class="checklist-item" onclick="toggleChecklist(this)">
             <input type="checkbox" class="checklist-checkbox" onclick="event.stopPropagation(); updateChecklistState();">
             <div>
-              <strong style="color: #ffffff; font-size: 0.95rem; display: block;">I will place the Return Envelope in USPS mail - no stamp/postage is required.</strong>
+              <strong style="color: #ffffff; font-size: 0.95rem; display: block;">I will place the Return Envelope in USPS mail - no stamp or postage is required.</strong>
             </div>
           </div>
 
@@ -841,16 +834,6 @@
             <input type="checkbox" class="checklist-checkbox" onclick="event.stopPropagation(); updateChecklistState();">
             <div>
               <strong style="color: #ffffff; font-size: 0.95rem; display: block;">I will mail it early enough for Pro Elections LLC to receive it by October 15, 2026 at 2:00 PM.</strong>
-            </div>
-          </div>
-
-          <!-- Final Call to Action -->
-          <div style="margin-top: 1.25rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(15, 23, 42, 0.9) 100%); border: 1.5px solid rgba(16, 185, 129, 0.4); border-radius: 10px; padding: 1.15rem 1.25rem;">
-            <div style="font-size: 1rem; font-weight: 800; color: #34d399; margin-bottom: 0.35rem;">
-              Ready? Mail your sealed Return Envelope using USPS. No stamp is required.
-            </div>
-            <div style="font-size: 0.875rem; color: #cbd5e1;">
-              <strong>Deadline:</strong> Pro Elections LLC must <strong>RECEIVE</strong> your ballot by October 15, 2026 at 2:00 PM.
             </div>
           </div>
         </div>
@@ -1005,7 +988,6 @@
         <ul style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6; padding-left: 1.25rem;">
           <li>This is the outer mailer envelope sent to your registered address by Pro Elections LLC.</li>
           <li>Clearly printed with <em>"IMPORTANT: BALLOT ENCLOSED"</em> in bold lettering.</li>
-          <li>Once you open this package and verify that all inner materials (Ballot sheet, Teal Secret Ballot Envelope, and White Return Envelope) are present, this outer mailer can be recycled.</li>
         </ul>
       </div>
     </div>
