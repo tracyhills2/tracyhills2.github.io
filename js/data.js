@@ -731,12 +731,16 @@ const FAQ_DATA = [
           Some water-treatment companies sell, install, and maintain a combination of a whole-home filtration/conditioning system along with a reverse osmosis (RO) drinking-water system. Complete vendor-installed packages often feature systems like <strong>Clack WS1</strong> or <strong>Puronics</strong>.
         </p>
         <div style="display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.825rem; margin-bottom: 0.85rem;">
-          <div style="display: flex; align-items: flex-start; gap: 0.4rem;">
-            <span style="color: #4ADE80; font-weight: 700; flex-shrink: 0;">✓</span>
+          <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
+            <span style="width: 1.15rem; height: 1.15rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
             <span style="color: var(--text-secondary);"><strong>Advantage:</strong> Convenience of dealing with one company as a single point of contact if issues arise.</span>
           </div>
-          <div style="display: flex; align-items: flex-start; gap: 0.4rem;">
-            <span style="color: #F87171; font-weight: 700; flex-shrink: 0;">✕</span>
+          <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
+            <span style="width: 1.15rem; height: 1.15rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F87171" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </span>
             <span style="color: var(--text-secondary);"><strong>Downside:</strong> Fewer component customization options & higher overall investment cost.</span>
           </div>
         </div>
@@ -777,12 +781,16 @@ const FAQ_DATA = [
         </div>
 
         <div style="display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.825rem; margin-bottom: 0.65rem;">
-          <div style="display: flex; align-items: flex-start; gap: 0.4rem;">
-            <span style="color: #4ADE80; font-weight: 700; flex-shrink: 0;">✓</span>
+          <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
+            <span style="width: 1.15rem; height: 1.15rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
             <span style="color: var(--text-secondary);"><strong>Advantage:</strong> Freedom to choose component specs & achieve high quality at lower overall cost.</span>
           </div>
-          <div style="display: flex; align-items: flex-start; gap: 0.4rem;">
-            <span style="color: #F87171; font-weight: 700; flex-shrink: 0;">✕</span>
+          <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
+            <span style="width: 1.15rem; height: 1.15rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F87171" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </span>
             <span style="color: var(--text-secondary);"><strong>Downside:</strong> Requires extra upfront research and coordination.</span>
           </div>
         </div>
@@ -927,12 +935,16 @@ const FAQ_DATA = [
     <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1rem;">
       <strong style="color: var(--accent-link); font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">How to Avoid Delays:</strong>
       <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.825rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.45rem;">
-        <li style="display: flex; align-items: flex-start; gap: 0.45rem;">
-          <span style="color: #4ADE80; font-weight: 700;">✓</span>
+        <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+          <span style="width: 1.15rem; height: 1.15rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </span>
           <span><strong>Set up PG&E immediately:</strong> Ensure your PG&E residential electric account is active on day 1 of escrow close. Account name/address mismatches stall processing.</span>
         </li>
-        <li style="display: flex; align-items: flex-start; gap: 0.45rem;">
-          <span style="color: #4ADE80; font-weight: 700;">✓</span>
+        <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+          <span style="width: 1.15rem; height: 1.15rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </span>
           <span><strong>Sign authorization forms promptly:</strong> Watch inbox & spam for e-signature requests from <strong>GAF Energy</strong> or <strong>PG&E</strong> (Agreement & Customer Authorization) and complete right away.</span>
         </li>
       </ul>
@@ -1240,12 +1252,16 @@ const FAQ_DATA = [
       <span>Required Documents for USPS</span>
     </h4>
     <ul style="list-style: none; padding: 0; margin: 0 0 0.85rem 0; font-size: 0.825rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.45rem;">
-      <li style="display: flex; align-items: flex-start; gap: 0.45rem;">
-        <span style="color: #4ADE80; font-weight: 700;">✓</span>
+      <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+        <span style="width: 1.15rem; height: 1.15rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </span>
         <span><strong>Recorded Grant Deed</strong> or <strong>Final Settlement Statement (ALTA / Buyer Statement)</strong> confirming your name and lot address.</span>
       </li>
-      <li style="display: flex; align-items: flex-start; gap: 0.45rem;">
-        <span style="color: #4ADE80; font-weight: 700;">✓</span>
+      <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+        <span style="width: 1.15rem; height: 1.15rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </span>
         <span><strong>Government Photo ID</strong> (CA Driver's License or Passport).</span>
       </li>
     </ul>
