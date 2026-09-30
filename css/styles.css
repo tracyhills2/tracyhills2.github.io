@@ -646,6 +646,303 @@ img, svg {
   }
 }
 
+/* Stacking context fixes for Mobile Onboarding Tour */
+.site-header.tour-header-active {
+  z-index: 1005 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Board Election Voting Reminder Popup (Active till October 15)
+   -------------------------------------------------------------------------- */
+.vote-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1050;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
+}
+
+.vote-modal-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.vote-modal-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -46%) scale(0.96);
+  width: calc(100% - 2rem);
+  max-width: 480px;
+  background: var(--bg-surface, #1E293B);
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  border-radius: var(--radius-xl, 1rem);
+  padding: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75), 0 0 35px rgba(37, 99, 235, 0.25);
+  z-index: 1055;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s ease;
+  overflow: hidden;
+}
+
+.vote-modal-dialog.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.vote-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-muted, #94A3B8);
+  font-size: 1.25rem;
+  line-height: 1;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full, 9999px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast, 0.2s ease);
+}
+
+.vote-modal-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--text-primary, #FFFFFF);
+  transform: scale(1.05);
+}
+
+.vote-badge-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.vote-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(37, 99, 235, 0.2);
+  color: var(--accent-link, #60A5FA);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full, 9999px);
+}
+
+.vote-deadline-pill {
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: rgba(239, 68, 68, 0.2);
+  color: #FCA5A5;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full, 9999px);
+}
+
+.vote-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary, #FFFFFF);
+  line-height: 1.3;
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.01em;
+}
+
+.vote-alert-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: var(--radius-md, 0.5rem);
+  padding: 0.75rem 0.9rem;
+  margin-bottom: 0.85rem;
+}
+
+.vote-alert-icon {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.vote-alert-text {
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #FDE68A;
+}
+
+.vote-alert-text strong {
+  color: #FFFBEB;
+}
+
+.vote-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary, #94A3B8);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.vote-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.vote-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  width: 100%;
+  padding: 0.75rem 1.1rem;
+  border-radius: var(--radius-md, 0.5rem);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: all var(--transition-fast, 0.2s ease);
+}
+
+.vote-btn-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+/* Option 1: Already Voted */
+.vote-btn-success {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34D399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.vote-btn-success:hover {
+  background: rgba(16, 185, 129, 0.25);
+  border-color: #34D399;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.25);
+}
+
+/* Option 2: Will Vote */
+.vote-btn-primary {
+  background: var(--accent-primary, #2563EB);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+}
+
+.vote-btn-primary:hover {
+  background: var(--accent-primary-hover, #1D4ED8);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.5);
+}
+
+/* Option 3: Voting Guide */
+.vote-btn-guide {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary, #FFFFFF);
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.12));
+}
+
+.vote-btn-guide:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent-link, #60A5FA);
+  color: var(--accent-link, #60A5FA);
+  transform: translateY(-1px);
+}
+
+/* Appreciation / Thank You State View */
+.vote-thankyou-view {
+  text-align: center;
+  padding: 1.25rem 0.5rem;
+  animation: vote-fade-in 0.35s ease;
+}
+
+@keyframes vote-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.vote-thankyou-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: var(--radius-full, 9999px);
+  background: rgba(16, 185, 129, 0.15);
+  border: 2px solid rgba(52, 211, 153, 0.4);
+  margin-bottom: 1rem;
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.3);
+}
+
+.vote-thankyou-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.vote-thankyou-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary, #FFFFFF);
+  margin-bottom: 0.6rem;
+}
+
+.vote-thankyou-text {
+  font-size: 0.92rem;
+  color: var(--text-secondary, #94A3B8);
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vote-thankyou-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.vote-thankyou-footer .vote-btn-primary {
+  max-width: 220px;
+}
+
+@media (max-width: 480px) {
+  .vote-modal-dialog {
+    width: calc(100% - 1.5rem);
+    padding: 1.25rem 1rem;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  .vote-title {
+    font-size: 1.2rem;
+  }
+  .vote-btn {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.88rem;
+  }
+}
+
 /* Mobile Nav Drawer Overlay */
 .mobile-nav-overlay {
   position: fixed;
@@ -664,6 +961,7 @@ img, svg {
 .mobile-nav-overlay.open {
   opacity: 1;
   pointer-events: auto;
+  z-index: 1005;
 }
 
 .mobile-nav-drawer {
