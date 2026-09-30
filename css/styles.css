@@ -821,6 +821,7 @@ img, svg {
   border: none;
   text-decoration: none;
   box-sizing: border-box;
+  white-space: nowrap;
   transition: all var(--transition-fast, 0.2s ease);
 }
 
@@ -948,7 +949,7 @@ img, svg {
     font-size: 1.2rem;
   }
   .vote-btn {
-    padding: 0.7rem 0.9rem;
+    padding: 0.7rem 0.8rem;
     font-size: 0.88rem;
   }
 }
