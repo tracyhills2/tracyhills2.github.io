@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initScrollToTop();
   initDynamicYear();
-  initMobileOnboardingTour();
+  initWelcomePopupController();
   
   if (document.getElementById('announcements-list-container')) {
     initAnnouncements();
@@ -63,7 +63,214 @@ function initMobileNav() {
 }
 
 /* --------------------------------------------------------------------------
-   First-Time Mobile Interactive Onboarding Tour
+   Welcome / Announcement Popup Controller
+   Manages the time-sensitive Board Election Voting Reminder (Active until
+   October 15, 2026), and automatically falls back to the Mobile Onboarding Tour.
+   -------------------------------------------------------------------------- */
+function getEffectiveDate() {
+  const urlParam = new URLSearchParams(window.location.search).get('testDate');
+  if (urlParam) return new Date(urlParam);
+  const sessionDate = sessionStorage.getItem('tracyHillsSimulatedDate');
+  if (sessionDate) return new Date(sessionDate);
+  return new Date();
+}
+
+function initWelcomePopupController() {
+  // Remove legacy localStorage key if present so users aren't permanently blocked
+  localStorage.removeItem('tracyHillsVoteStatus');
+
+  // Election ballot receipt cutoff: October 15, 2026 at 00:00:00 (receipt deadline 2:00 PM)
+  // Per requirement: Active till Oct 14th, starting Oct 15th returns to the original approach
+  const ELECTION_CUTOFF = new Date('2026-10-15T00:00:00');
+  const currentDate = getEffectiveDate();
+
+  // Expose testing helpers to easily test both states and reset
+  window.resetVotePopup = function() {
+    sessionStorage.removeItem('tracyHillsVoteSeenInSession');
+    localStorage.removeItem('tracyHillsVoteStatus');
+    localStorage.removeItem('tracyHillsMobileTourSeen');
+    location.reload();
+  };
+
+  window.simulateDate = function(dateStr) {
+    if (dateStr) {
+      sessionStorage.setItem('tracyHillsSimulatedDate', dateStr);
+    } else {
+      sessionStorage.removeItem('tracyHillsSimulatedDate');
+    }
+    location.reload();
+  };
+
+  if (currentDate < ELECTION_CUTOFF) {
+    initElectionVotingPopup();
+  } else {
+    initMobileOnboardingTour();
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Board Election Voting Reminder Popup (Active till October 15)
+   Displays to every user each time they start a session (new tab/revisit).
+   -------------------------------------------------------------------------- */
+function initElectionVotingPopup() {
+  // If already on the voting guide page itself, don't show the popup
+  if (window.location.pathname.includes('2026-bod-vote-guide')) {
+    return;
+  }
+
+  // Check if already shown or dismissed in this browser session
+  const sessionSeen = sessionStorage.getItem('tracyHillsVoteSeenInSession');
+  if (sessionSeen) {
+    return;
+  }
+
+  // 2.5 second delay allowing user to orient on the page
+  let popupTimer = setTimeout(() => {
+    showVotingModal();
+  }, 2500);
+
+  function showVotingModal() {
+    // Backdrop
+    const backdrop = document.createElement('div');
+    backdrop.className = 'vote-modal-backdrop';
+    backdrop.id = 'vote-modal-backdrop';
+    document.body.appendChild(backdrop);
+
+    // Dialog Card
+    const dialog = document.createElement('div');
+    dialog.className = 'vote-modal-dialog';
+    dialog.id = 'vote-modal-dialog';
+    dialog.setAttribute('role', 'dialog');
+    dialog.setAttribute('aria-modal', 'true');
+    dialog.setAttribute('aria-labelledby', 'vote-modal-title');
+
+    dialog.innerHTML = `
+      <div id="vote-modal-content">
+        <div class="vote-badge-container">
+          <span class="vote-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+            Tracy Hills II &bull; Board Election
+          </span>
+          <span class="vote-deadline-pill">Deadline: Oct 15</span>
+        </div>
+
+        <h3 class="vote-title" id="vote-modal-title">
+          Mail In Your Ballot Early! 🗳️
+        </h3>
+
+        <div class="vote-alert-banner">
+          <div class="vote-alert-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          </div>
+          <div class="vote-alert-text">
+            Ballots must be <strong>RECEIVED</strong> by the election inspector (Pro Elections LLC) by <strong>October 15, 2026 at 2:00 PM</strong>.
+          </div>
+        </div>
+
+        <p class="vote-description">
+          Ensure your ballot arrives in time by mailing it early (suggested mail date is <strong>October 7</strong>). Every homeowner's vote is vital for community representation!
+        </p>
+
+        <div class="vote-actions">
+          <button class="vote-btn vote-btn-success" id="vote-btn-already">
+            <span class="vote-btn-icon">✓</span>
+            <span>I Have Already Voted</span>
+          </button>
+
+          <button class="vote-btn vote-btn-primary" id="vote-btn-will-vote">
+            <span class="vote-btn-icon">👍</span>
+            <span>I Got It, I Will Vote</span>
+          </button>
+
+          <a href="2026-bod-vote-guide.html" class="vote-btn vote-btn-guide" id="vote-btn-guide">
+            <span class="vote-btn-icon">📖</span>
+            <span>I Need Help on How to Vote</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(dialog);
+
+    // Trigger entrance animation in next frame
+    requestAnimationFrame(() => {
+      backdrop.classList.add('active');
+      dialog.classList.add('active');
+    });
+
+    let autoCloseTimer = null;
+
+    function closeModal() {
+      if (autoCloseTimer) clearTimeout(autoCloseTimer);
+      // Mark seen for this browser session so it doesn't interrupt page-to-page navigation
+      sessionStorage.setItem('tracyHillsVoteSeenInSession', 'true');
+      backdrop.classList.remove('active');
+      dialog.classList.remove('active');
+      setTimeout(() => {
+        if (backdrop) backdrop.remove();
+        if (dialog) dialog.remove();
+      }, 350);
+    }
+
+    // Backdrop click
+    backdrop.addEventListener('click', () => closeModal());
+
+    // Escape key
+    function handleKeyDown(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+        window.removeEventListener('keydown', handleKeyDown);
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown);
+
+    // Option 1: Already Voted
+    document.getElementById('vote-btn-already').addEventListener('click', () => {
+      sessionStorage.setItem('tracyHillsVoteSeenInSession', 'true');
+      const contentEl = document.getElementById('vote-modal-content');
+      if (contentEl) {
+        contentEl.innerHTML = `
+          <div class="vote-thankyou-view">
+            <div class="vote-thankyou-icon-wrapper">
+              <div class="vote-thankyou-icon">🎉</div>
+            </div>
+            <h3 class="vote-thankyou-title">Thank You for Voting! 🙌</h3>
+            <p class="vote-thankyou-text">
+              Your vote and active participation help ensure our Tracy Hills Phase II community is strong, vibrant, and resident-focused. We appreciate you!
+            </p>
+            <div class="vote-thankyou-footer">
+              <button class="vote-btn vote-btn-primary" id="vote-thankyou-done">Awesome, Got It!</button>
+            </div>
+          </div>
+        `;
+
+        document.getElementById('vote-thankyou-done').addEventListener('click', () => {
+          closeModal();
+        });
+
+        // Auto-close after 2.8 seconds
+        autoCloseTimer = setTimeout(() => {
+          closeModal();
+        }, 2800);
+      }
+    });
+
+    // Option 2: Will Vote
+    document.getElementById('vote-btn-will-vote').addEventListener('click', () => {
+      closeModal();
+    });
+
+    // Option 3: Guide Link
+    document.getElementById('vote-btn-guide').addEventListener('click', () => {
+      sessionStorage.setItem('tracyHillsVoteSeenInSession', 'true');
+      closeModal();
+    });
+  }
+}
+
+/* --------------------------------------------------------------------------
+   First-Time Mobile Interactive Onboarding Tour (Restored after Oct 15)
    -------------------------------------------------------------------------- */
 function initMobileOnboardingTour() {
   const isMobile = window.innerWidth < 840;
@@ -80,6 +287,7 @@ function initMobileOnboardingTour() {
   const menuBtn = document.querySelector('[data-tour="menu-toggle"]') || document.getElementById('mobile-menu-toggle');
   const drawerOverlay = document.getElementById('mobile-nav-overlay');
   const drawerLinks = document.querySelectorAll('.mobile-drawer-links .nav-link');
+  const siteHeader = document.querySelector('.site-header');
 
   if (!menuBtn) return;
 
@@ -103,6 +311,7 @@ function initMobileOnboardingTour() {
     if (pointer) pointer.remove();
     if (tourCard) tourCard.remove();
     menuBtn.classList.remove('tour-spotlight');
+    if (siteHeader) siteHeader.classList.remove('tour-header-active');
     drawerLinks.forEach(link => link.classList.remove('tour-highlight-pulse'));
     document.body.style.overflow = '';
     localStorage.setItem('tracyHillsMobileTourSeen', 'true');
@@ -116,6 +325,9 @@ function initMobileOnboardingTour() {
   }
 
   function startStep1() {
+    // Elevate site-header stacking context so the spotlighted menu button is above backdrop
+    if (siteHeader) siteHeader.classList.add('tour-header-active');
+
     // Backdrop
     backdrop = document.createElement('div');
     backdrop.className = 'tour-backdrop active';
@@ -160,6 +372,7 @@ function initMobileOnboardingTour() {
       // Open the drawer
       if (drawerOverlay) drawerOverlay.classList.add('open');
       menuBtn.classList.remove('tour-spotlight');
+      if (siteHeader) siteHeader.classList.remove('tour-header-active');
       if (pointer) pointer.style.display = 'none';
       startStep2();
     }
@@ -694,6 +907,8 @@ function initProvidersPage() {
       if (q.startsWith('grocer') || q.startsWith('food') || q.startsWith('deliver') || q.startsWith('produc')) synonyms.push('grocery', 'groceries', 'delivery', 'produce', 'food');
       if (q.startsWith('epoxy') || q.startsWith('granite') || q.startsWith('quartz') || q.startsWith('stone')) synonyms.push('epoxy', 'granite', 'quartz', 'stone', 'restoration');
       if (q.startsWith('garage') || q.startsWith('door')) synonyms.push('garage', 'door', 'repair');
+      if (q.startsWith('bird') || q.startsWith('pigeon') || q.startsWith('critter') || q.startsWith('solar')) synonyms.push('bird', 'birdproof', 'birdproofing', 'pigeon', 'pigeons', 'solar', 'mesh', 'critter', 'guard');
+      if (q.startsWith('pest') || q.startsWith('bug') || q.startsWith('insect') || q.startsWith('spider') || q.startsWith('ant') || q.startsWith('rodent')) synonyms.push('pest', 'pests', 'pest control', 'bugs', 'insects', 'spiders', 'ants', 'rodents', 'exterminator');
 
       const matchesQuery = synonyms.some((term) =>
         provider.businessName.toLowerCase().includes(term) ||
