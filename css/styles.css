@@ -724,9 +724,9 @@ img, svg {
 .vote-badge-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 0.5rem;
   margin-bottom: 0.85rem;
-  flex-wrap: wrap;
 }
 
 .vote-badge {
@@ -742,6 +742,8 @@ img, svg {
   border: 1px solid rgba(96, 165, 250, 0.3);
   padding: 0.25rem 0.65rem;
   border-radius: var(--radius-full, 9999px);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .vote-deadline-pill {
@@ -752,6 +754,9 @@ img, svg {
   border: 1px solid rgba(239, 68, 68, 0.35);
   padding: 0.25rem 0.65rem;
   border-radius: var(--radius-full, 9999px);
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: auto;
 }
 
 .vote-title {
@@ -933,6 +938,11 @@ img, svg {
     padding: 1.25rem 1rem;
     max-height: 90vh;
     overflow-y: auto;
+  }
+  .vote-badge,
+  .vote-deadline-pill {
+    font-size: 0.72rem;
+    padding: 0.22rem 0.55rem;
   }
   .vote-title {
     font-size: 1.2rem;
