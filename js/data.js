@@ -2108,6 +2108,20 @@ const PROVIDERS_DATA = [
     "lastUpdated": "2026-08-29"
   },
   {
+    "id": "sp-905",
+    "businessName": "Smart Shades USA",
+    "category": "Curtains / Blinds",
+    "contactPerson": null,
+    "phone": "(925) 268-9798",
+    "email": null,
+    "website": "http://www.smartshadeusa.com",
+    "description": "Modern solar powered remote control blinds, shades, and window coverings direct from manufacturer at wholesale pricing.",
+    "communityNotes": "Resident recommended for modern solar powered remote control blinds direct from manufacturer at wholesale pricing.",
+    "keywords": ["smart shades", "blinds", "shades", "solar blinds", "motorized blinds", "remote control", "window coverings", "wholesale blinds"],
+    "isPlaceholder": false,
+    "lastUpdated": "2026-09-30"
+  },
+  {
     "id": "sp-1001",
     "businessName": "Ivan",
     "category": "Window Cleaning",

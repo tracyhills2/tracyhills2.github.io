@@ -184,7 +184,7 @@ function initElectionVotingPopup() {
 
           <a href="2026-bod-vote-guide.html" class="vote-btn vote-btn-guide" id="vote-btn-guide">
             <span class="vote-btn-icon">📖</span>
-            <span>I Need Help on How to Vote</span>
+            <span>I Need Help Voting</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </a>
         </div>
@@ -903,7 +903,7 @@ function initProvidersPage() {
       if (q.startsWith('paint')) synonyms.push('painter', 'painting');
       if (q.startsWith('roof')) synonyms.push('roofing', 'roof');
       if (q.startsWith('garden') || q.startsWith('landscap') || q.startsWith('lawn') || q.startsWith('paver') || q.startsWith('hardscap')) synonyms.push('gardener', 'gardening', 'landscaper', 'landscaping', 'lawn', 'paver', 'pavers', 'hardscape', 'hardscaping');
-      if (q.startsWith('blind') || q.startsWith('curtain') || q.startsWith('shade') || q.startsWith('shutter')) synonyms.push('blinds', 'curtains', 'shades', 'shutters', 'window');
+      if (q.startsWith('blind') || q.startsWith('curtain') || q.startsWith('shade') || q.startsWith('shutter') || q.startsWith('window')) synonyms.push('blinds', 'curtains', 'shades', 'shutters', 'window');
       if (q.startsWith('grocer') || q.startsWith('food') || q.startsWith('deliver') || q.startsWith('produc')) synonyms.push('grocery', 'groceries', 'delivery', 'produce', 'food');
       if (q.startsWith('epoxy') || q.startsWith('granite') || q.startsWith('quartz') || q.startsWith('stone')) synonyms.push('epoxy', 'granite', 'quartz', 'stone', 'restoration');
       if (q.startsWith('garage') || q.startsWith('door')) synonyms.push('garage', 'door', 'repair');
