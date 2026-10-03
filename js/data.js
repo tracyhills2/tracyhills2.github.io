@@ -1966,16 +1966,17 @@ const PROVIDERS_DATA = [
   },
   {
     "id": "sp-803",
-    "businessName": "Arsh Newnest Landscape",
+    "businessName": "NewNest Landscaping",
     "category": "Landscaper / Gardener",
-    "contactPerson": "Arsh",
-    "phone": "(510) 786-8106",
+    "contactPerson": "Arsh (Arshdeep Dhillon)",
+    "phone": "(209) 580-5907",
     "email": null,
-    "website": null,
-    "description": "Custom landscaping design, yard maintenance, and outdoor living projects.",
-    "communityNotes": "Landscaping contractor recommended by residents.",
+    "website": "https://newnestlandscaping.com",
+    "instagram": "https://www.instagram.com/newnestlandscaping/",
+    "description": "Full-service landscape design-build and outdoor living transformations: luxury pavers, synthetic turf, pergolas, retaining walls, and outdoor kitchens. (CSLB #1138697)",
+    "communityNotes": "Recommended by multiple Tracy Hills Phase 2 residents for outdoor improvements, pavers, turf, and landscape design. Direct/Mobile: (510) 786-8106.",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-29"
+    "lastUpdated": "2026-10-03"
   },
   {
     "id": "sp-804",
@@ -2022,12 +2023,13 @@ const PROVIDERS_DATA = [
     "category": "Landscaper / Gardener",
     "contactPerson": "Kingdom Pavers",
     "phone": "(925) 408-9550",
-    "email": null,
-    "website": null,
-    "description": "Custom paver installation, patio stones, retaining walls, and hardscaping services.",
+    "email": "kingdompaver@gmail.com",
+    "website": "https://kingdompaverusa.com",
+    "instagram": "https://www.instagram.com/kingdompavers_/",
+    "description": "Custom paver installation, luxury patios, driveways, retaining walls, and outdoor living transformations.",
     "communityNotes": "Paver & hardscaping specialist recommended by residents.",
     "isPlaceholder": false,
-    "lastUpdated": "2026-08-29"
+    "lastUpdated": "2026-10-03"
   },
   {
     "id": "sp-808",

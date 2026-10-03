@@ -902,7 +902,7 @@ function initProvidersPage() {
       if (q.startsWith('handy')) synonyms.push('handyman', 'repair');
       if (q.startsWith('paint')) synonyms.push('painter', 'painting');
       if (q.startsWith('roof')) synonyms.push('roofing', 'roof');
-      if (q.startsWith('garden') || q.startsWith('landscap') || q.startsWith('lawn') || q.startsWith('paver') || q.startsWith('hardscap')) synonyms.push('gardener', 'gardening', 'landscaper', 'landscaping', 'lawn', 'paver', 'pavers', 'hardscape', 'hardscaping');
+      if (q.startsWith('garden') || q.startsWith('landscap') || q.startsWith('lawn') || q.startsWith('paver') || q.startsWith('hardscap') || q.startsWith('turf')) synonyms.push('gardener', 'gardening', 'landscaper', 'landscaping', 'lawn', 'paver', 'pavers', 'hardscape', 'hardscaping', 'turf');
       if (q.startsWith('blind') || q.startsWith('curtain') || q.startsWith('shade') || q.startsWith('shutter') || q.startsWith('window')) synonyms.push('blinds', 'curtains', 'shades', 'shutters', 'window');
       if (q.startsWith('grocer') || q.startsWith('food') || q.startsWith('deliver') || q.startsWith('produc')) synonyms.push('grocery', 'groceries', 'delivery', 'produce', 'food');
       if (q.startsWith('epoxy') || q.startsWith('granite') || q.startsWith('quartz') || q.startsWith('stone')) synonyms.push('epoxy', 'granite', 'quartz', 'stone', 'restoration');
@@ -917,6 +917,9 @@ function initProvidersPage() {
         (provider.contactPerson && provider.contactPerson.toLowerCase().includes(term)) ||
         (provider.communityNotes && provider.communityNotes.toLowerCase().includes(term)) ||
         (provider.whatsAppGroup && provider.whatsAppGroup.toLowerCase().includes(term)) ||
+        (provider.website && provider.website.toLowerCase().includes(term)) ||
+        (provider.instagram && provider.instagram.toLowerCase().includes(term)) ||
+        (provider.phone && provider.phone.includes(term)) ||
         (provider.keywords && provider.keywords.some((k) => k.toLowerCase().includes(term)))
       );
 
@@ -987,7 +990,14 @@ function initProvidersPage() {
         let websiteHtml = p.website 
           ? `<div style="display: flex; align-items: center; gap: 0.5rem; color: var(--accent-link);">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path></svg>
-              <a href="${p.website}" target="_blank" rel="noopener noreferrer">Visit Website</a>
+              <a href="${p.website}" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+            </div>` 
+          : '';
+
+        let instagramHtml = p.instagram 
+          ? `<div style="display: flex; align-items: center; gap: 0.5rem; color: #EC4899;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#EC4899" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <a href="${p.instagram}" target="_blank" rel="noopener noreferrer" style="color: #F472B6;">Instagram Profile ↗</a>
             </div>` 
           : '';
 
@@ -1037,6 +1047,7 @@ function initProvidersPage() {
               ${phoneHtml}
               ${emailHtml}
               ${websiteHtml}
+              ${instagramHtml}
               ${reviewUrlHtml}
             </div>
           </div>
