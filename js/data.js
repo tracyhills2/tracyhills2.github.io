@@ -2127,7 +2127,7 @@ const PROVIDERS_DATA = [
     "id": "sp-1001",
     "businessName": "Ivan",
     "category": "Window Cleaning",
-    "categories": ["Window Cleaning", "Solar Services", "Bird Proofing", "Pest Control", "Handyman"],
+    "categories": ["Holiday Lights", "Window Cleaning", "Solar Services", "Bird Proofing", "Pest Control", "Handyman"],
     "contactPerson": "Ivan",
     "phone": "(925) 758-2765",
     "email": null,
@@ -2135,7 +2135,8 @@ const PROVIDERS_DATA = [
     "description": "Solar panel cleaning, birdproofing & bird spikes installation, window cleaning, permanent holiday lights installation, and wasp/bee nest removal.",
     "communityNotes": "Tracy Hills local resident. Highly recommended by many residents for exterior home services.",
     "isPlaceholder": false,
-    "lastUpdated": "2026-09-01"
+    "keywords": ["holiday lights", "christmas lights", "permanent lights", "solar", "bird proofing", "window cleaning", "ivan"],
+    "lastUpdated": "2026-10-03"
   },
   {
     "id": "sp-1101",
@@ -2499,6 +2500,150 @@ const PROVIDERS_DATA = [
     "isPlaceholder": false,
     "keywords": ["pest", "pest control", "amd", "markos", "bugs", "insects", "spiders", "ants", "rodents", "no contract", "exterminator"],
     "lastUpdated": "2026-09-29"
+  },
+  {
+    "id": "sp-1801",
+    "businessName": "Juan Partida",
+    "category": "Holiday Lights",
+    "categories": ["Holiday Lights"],
+    "contactPerson": "Juan Partida",
+    "phone": "(209) 605-9128",
+    "email": null,
+    "website": null,
+    "description": "Holiday and seasonal lighting installation, roofline lights, and exterior home decor.",
+    "communityNotes": "Holiday lights installer recommended by residents.",
+    "communityRecommended": true,
+    "isPlaceholder": false,
+    "keywords": ["holiday lights", "christmas lights", "lights", "juan partida", "lighting"],
+    "lastUpdated": "2026-10-03"
+  },
+  {
+    "id": "sp-1802",
+    "businessName": "Bryan",
+    "category": "Holiday Lights",
+    "categories": ["Holiday Lights"],
+    "contactPerson": "Bryan",
+    "phone": "(925) 980-9792",
+    "email": null,
+    "website": null,
+    "description": "Holiday light installation, custom roofline lighting, and exterior decorations.",
+    "communityNotes": "Holiday lights installer recommended by residents.",
+    "communityRecommended": true,
+    "isPlaceholder": false,
+    "keywords": ["holiday lights", "christmas lights", "lights", "bryan", "lighting"],
+    "lastUpdated": "2026-10-03"
+  },
+  {
+    "id": "sp-1803",
+    "businessName": "Brandon",
+    "category": "Holiday Lights",
+    "categories": ["Holiday Lights"],
+    "contactPerson": "Brandon",
+    "phone": "(209) 627-6754",
+    "email": null,
+    "website": null,
+    "description": "Holiday lighting installation and outdoor seasonal lighting services.",
+    "communityNotes": "Holiday lights installer recommended by residents.",
+    "communityRecommended": true,
+    "isPlaceholder": false,
+    "keywords": ["holiday lights", "christmas lights", "lights", "brandon", "lighting"],
+    "lastUpdated": "2026-10-03"
+  },
+  {
+    "id": "sp-1804",
+    "businessName": "Ali (Bird Spikes & Holiday Lights)",
+    "category": "Holiday Lights",
+    "categories": ["Holiday Lights", "Bird Proofing"],
+    "contactPerson": "Ali",
+    "phone": "(530) 717-7214",
+    "email": null,
+    "website": null,
+    "description": "Holiday light installation, roofline lighting, bird spike installation, and bird proofing services.",
+    "communityNotes": "Holiday lights and bird spike specialist recommended by residents.",
+    "communityRecommended": true,
+    "isPlaceholder": false,
+    "keywords": ["holiday lights", "christmas lights", "bird spikes", "bird proofing", "ali", "lights", "lighting"],
+    "lastUpdated": "2026-10-03"
+  },
+  {
+    "id": "sp-1805",
+    "businessName": "Custodio",
+    "category": "Holiday Lights",
+    "categories": ["Holiday Lights"],
+    "contactPerson": "Custodio",
+    "phone": "(209) 207-1330",
+    "email": null,
+    "website": null,
+    "description": "Holiday lighting installation, roofline lights setup, and exterior seasonal decor.",
+    "communityNotes": "Holiday lights installer recommended by residents.",
+    "communityRecommended": true,
+    "isPlaceholder": false,
+    "keywords": ["holiday lights", "christmas lights", "lights", "custodio", "lighting"],
+    "lastUpdated": "2026-10-03"
+  },
+  {
+    "id": "sp-1806",
+    "businessName": "Mario (Painting & Holiday Lights)",
+    "category": "Holiday Lights",
+    "categories": ["Holiday Lights", "Painter"],
+    "contactPerson": "Mario",
+    "phone": "(925) 290-9485",
+    "email": null,
+    "website": null,
+    "description": "Interior and exterior painting services and seasonal holiday light installation.",
+    "communityNotes": "Painter and holiday lights installer recommended by residents.",
+    "communityRecommended": true,
+    "isPlaceholder": false,
+    "keywords": ["holiday lights", "christmas lights", "painter", "painting", "mario", "lights", "lighting"],
+    "lastUpdated": "2026-10-03"
+  },
+  {
+    "id": "sp-1807",
+    "businessName": "Johnny",
+    "category": "Holiday Lights",
+    "categories": ["Holiday Lights"],
+    "contactPerson": "Johnny",
+    "phone": "(209) 229-0674",
+    "email": null,
+    "website": null,
+    "description": "Holiday lighting setup, roofline lights installation, and removal services.",
+    "communityNotes": "Holiday lights installer recommended by residents.",
+    "communityRecommended": true,
+    "isPlaceholder": false,
+    "keywords": ["holiday lights", "christmas lights", "lights", "johnny", "lighting"],
+    "lastUpdated": "2026-10-03"
+  },
+  {
+    "id": "sp-1808",
+    "businessName": "Eric",
+    "category": "Holiday Lights",
+    "categories": ["Holiday Lights"],
+    "contactPerson": "Eric",
+    "phone": "(209) 456-2148",
+    "email": null,
+    "website": null,
+    "description": "Holiday lights installation, exterior roofline lighting, and seasonal decor setup.",
+    "communityNotes": "Holiday lights installer recommended by residents.",
+    "communityRecommended": true,
+    "isPlaceholder": false,
+    "keywords": ["holiday lights", "christmas lights", "lights", "eric", "lighting"],
+    "lastUpdated": "2026-10-03"
+  },
+  {
+    "id": "sp-1809",
+    "businessName": "Ariel Light",
+    "category": "Holiday Lights",
+    "categories": ["Holiday Lights"],
+    "contactPerson": "Ariel",
+    "phone": "(415) 465-9007",
+    "email": null,
+    "website": null,
+    "description": "Holiday lights installation, custom exterior lighting, and festive roofline displays.",
+    "communityNotes": "Holiday lights installer recommended by residents.",
+    "communityRecommended": true,
+    "isPlaceholder": false,
+    "keywords": ["holiday lights", "christmas lights", "lights", "ariel light", "ariel", "lighting"],
+    "lastUpdated": "2026-10-03"
   }
 ];
 
@@ -2532,7 +2677,8 @@ const PROVIDER_CATEGORIES = [
   'Tree Services',
   'Fence Repair',
   'Garage Door Repair',
-  'Pressure Washing'
+  'Pressure Washing',
+  'Holiday Lights'
 ];
 
 const CATEGORY_COLORS = {
@@ -2565,7 +2711,8 @@ const CATEGORY_COLORS = {
   'Tree Services': { color: '#10B981', bg: 'rgba(16, 185, 129, 0.14)', border: 'rgba(16, 185, 129, 0.35)', solid: '#047857' },
   'Fence Repair': { color: '#A1A1AA', bg: 'rgba(161, 161, 170, 0.14)', border: 'rgba(161, 161, 170, 0.35)', solid: '#52525B' },
   'Garage Door Repair': { color: '#EC4899', bg: 'rgba(236, 72, 153, 0.14)', border: 'rgba(236, 72, 153, 0.35)', solid: '#BE185D' },
-  'Pressure Washing': { color: '#38BDF8', bg: 'rgba(56, 189, 248, 0.14)', border: 'rgba(56, 189, 248, 0.35)', solid: '#0284C7' }
+  'Pressure Washing': { color: '#38BDF8', bg: 'rgba(56, 189, 248, 0.14)', border: 'rgba(56, 189, 248, 0.35)', solid: '#0284C7' },
+  'Holiday Lights': { color: '#FBBF24', bg: 'rgba(251, 191, 36, 0.14)', border: 'rgba(251, 191, 36, 0.35)', solid: '#D97706' }
 };
 
 const FALLBACK_CATEGORY_PALETTE = [

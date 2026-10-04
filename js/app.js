@@ -909,6 +909,7 @@ function initProvidersPage() {
       if (q.startsWith('garage') || q.startsWith('door')) synonyms.push('garage', 'door', 'repair');
       if (q.startsWith('bird') || q.startsWith('pigeon') || q.startsWith('critter') || q.startsWith('solar')) synonyms.push('bird', 'birdproof', 'birdproofing', 'pigeon', 'pigeons', 'solar', 'mesh', 'critter', 'guard');
       if (q.startsWith('pest') || q.startsWith('bug') || q.startsWith('insect') || q.startsWith('spider') || q.startsWith('ant') || q.startsWith('rodent')) synonyms.push('pest', 'pests', 'pest control', 'bugs', 'insects', 'spiders', 'ants', 'rodents', 'exterminator');
+      if (q.startsWith('light') || q.startsWith('holiday') || q.startsWith('xmas') || q.startsWith('christma')) synonyms.push('holiday lights', 'lights', 'lighting', 'holiday', 'christmas', 'xmas', 'permanent lights');
 
       const matchesQuery = synonyms.some((term) =>
         provider.businessName.toLowerCase().includes(term) ||
