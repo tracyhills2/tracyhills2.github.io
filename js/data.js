@@ -2644,6 +2644,39 @@ const PROVIDERS_DATA = [
     "isPlaceholder": false,
     "keywords": ["holiday lights", "christmas lights", "lights", "ariel light", "ariel", "lighting"],
     "lastUpdated": "2026-10-03"
+  },
+  {
+    "id": "sp-1810",
+    "businessName": "Holiday Light Pros (Govee Permanent Lights)",
+    "category": "Holiday Lights",
+    "categories": ["Holiday Lights"],
+    "contactPerson": null,
+    "phone": "(619) 771-2576",
+    "email": null,
+    "website": null,
+    "description": "Professional installation of Govee outdoor permanent smart lights with seamless underglow effect for residential and commercial properties. Features smart app control, millions of colors, weatherproof durable design, energy efficiency, and custom presets for holidays, events, and everyday year-round ambience. Call or text for a free quote.",
+    "communityNotes": "Specializes in Govee permanent outdoor smart lighting and holiday lighting installation. Free quotes available via call or text.",
+    "communityRecommended": true,
+    "isPlaceholder": false,
+    "keywords": ["holiday lights", "christmas lights", "permanent lights", "govee", "outdoor permanent lights", "seamless underglow", "underglow", "holiday light pros", "smart lights", "ambient lighting", "commercial lighting", "roofline lighting", "eaves lights", "lighting"],
+    "lastUpdated": "2026-10-04"
+  },
+  {
+    "id": "sp-1811",
+    "businessName": "Active Plumbing",
+    "category": "Plumber",
+    "categories": ["Plumber", "Water Softener"],
+    "contactPerson": "Majid Durrani",
+    "phone": "(510) 200-2497",
+    "email": null,
+    "website": null,
+    "description": "Comprehensive plumbing and water treatment services specializing in water softeners, whole house filtration systems, water heaters, and drinking water systems.",
+    "communityNotes": "Majid is a Tracy Hills II local resident. Specializes in water softeners, whole house filtration systems, water heaters, and drinking water systems.",
+    "communityRecommended": true,
+    "isLocalResident": true,
+    "isPlaceholder": false,
+    "keywords": ["active plumbing", "majid", "durrani", "plumber", "plumbing", "water softener", "water softeners", "whole house filtration", "filtration", "water filtration", "water heater", "water heaters", "drinking water", "ro", "reverse osmosis", "local resident", "resident", "tracy hills 2 resident"],
+    "lastUpdated": "2026-10-05"
   }
 ];
 

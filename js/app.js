@@ -898,6 +898,7 @@ function initProvidersPage() {
       const synonyms = [q];
       if (q.startsWith('electric')) synonyms.push('electrician', 'electrical', 'electric');
       if (q.startsWith('plumb')) synonyms.push('plumber', 'plumbing');
+      if (q.startsWith('soften') || q.startsWith('water') || q.startsWith('filtrat') || q.startsWith('ro')) synonyms.push('water softener', 'water', 'softener', 'filtration', 'reverse osmosis', 'ro', 'filter');
       if (q.startsWith('contract')) synonyms.push('contractor', 'contracting');
       if (q.startsWith('handy')) synonyms.push('handyman', 'repair');
       if (q.startsWith('paint')) synonyms.push('painter', 'painting');
@@ -909,7 +910,7 @@ function initProvidersPage() {
       if (q.startsWith('garage') || q.startsWith('door')) synonyms.push('garage', 'door', 'repair');
       if (q.startsWith('bird') || q.startsWith('pigeon') || q.startsWith('critter') || q.startsWith('solar')) synonyms.push('bird', 'birdproof', 'birdproofing', 'pigeon', 'pigeons', 'solar', 'mesh', 'critter', 'guard');
       if (q.startsWith('pest') || q.startsWith('bug') || q.startsWith('insect') || q.startsWith('spider') || q.startsWith('ant') || q.startsWith('rodent')) synonyms.push('pest', 'pests', 'pest control', 'bugs', 'insects', 'spiders', 'ants', 'rodents', 'exterminator');
-      if (q.startsWith('light') || q.startsWith('holiday') || q.startsWith('xmas') || q.startsWith('christma')) synonyms.push('holiday lights', 'lights', 'lighting', 'holiday', 'christmas', 'xmas', 'permanent lights');
+      if (q.startsWith('light') || q.startsWith('holiday') || q.startsWith('xmas') || q.startsWith('christma') || q.startsWith('govee') || q.startsWith('permanent') || q.startsWith('underglow')) synonyms.push('holiday lights', 'lights', 'lighting', 'holiday', 'christmas', 'xmas', 'permanent lights', 'govee', 'underglow');
 
       const matchesQuery = synonyms.some((term) =>
         provider.businessName.toLowerCase().includes(term) ||
@@ -960,7 +961,10 @@ function initProvidersPage() {
         }).join('');
 
         let contactPersonHtml = p.contactPerson 
-          ? `<div style="font-size: 0.825rem; color: var(--text-muted); font-weight: 500; margin-bottom: 0.65rem;">Contact: ${p.contactPerson}</div>` 
+          ? `<div style="font-size: 0.825rem; color: var(--text-muted); font-weight: 500; margin-bottom: 0.65rem; display: flex; align-items: center; gap: 0.45rem; flex-wrap: wrap;">
+              <span>Contact: <strong style="color: var(--text-primary);">${p.contactPerson}</strong></span>
+              ${p.isLocalResident ? `<span class="trust-badge" style="background: rgba(16, 185, 129, 0.15); color: #86EFAC; border: 1px solid rgba(34, 197, 94, 0.35); font-size: 0.7rem; padding: 0.1rem 0.45rem;">🏡 Tracy Hills II Resident</span>` : ''}
+            </div>` 
           : '';
         
         let communityNotesHtml = p.communityNotes 
@@ -1026,6 +1030,10 @@ function initProvidersPage() {
           ? `<span class="trust-badge" style="background: rgba(148, 163, 184, 0.12); color: #94A3B8; border: 1px solid rgba(148, 163, 184, 0.25);">📋 Directory Listing</span>`
           : `<span class="trust-badge trust-badge-recommendation">⭐ Community Recommendation</span>`;
 
+        let residentBadgeHtml = (p.isLocalResident || (p.communityNotes && p.communityNotes.toLowerCase().includes('resident')))
+          ? `<span class="trust-badge" style="background: rgba(16, 185, 129, 0.15); color: #86EFAC; border: 1px solid rgba(34, 197, 94, 0.35);">🏡 Phase 2 Resident</span>`
+          : '';
+
         let service247Html = (p.is247Service || (p.description && p.description.includes('24/7')) || (p.communityNotes && p.communityNotes.includes('24/7')))
           ? `<span class="trust-badge" style="background: rgba(220, 38, 38, 0.15); color: #FCA5A5; border: 1px solid rgba(239, 68, 68, 0.35);">⚡ 24/7 Emergency Service</span>`
           : '';
@@ -1055,6 +1063,7 @@ function initProvidersPage() {
           <div class="trust-meta-bar" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem;">
             <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem;">
               ${recBadgeHtml}
+              ${residentBadgeHtml}
               ${service247Html}
             </div>
             <span class="trust-meta-date">Last Reviewed: ${formattedDate}</span>
