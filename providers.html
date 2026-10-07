@@ -31,10 +31,7 @@
   <header class="site-header">
     <div class="container header-container">
       <a href="index.html" class="brand-logo" aria-label="Tracy Hills II Home">
-        <img src="images/tracy-hills-logo.svg" alt="Tracy Hills Logo" style="height: 28px; width: auto;">
-        <div style="border-left: 1px solid var(--border-subtle); padding-left: 0.6rem; margin-left: 0.15rem;">
-          <div class="brand-text-sub" style="font-weight: 700; color: var(--accent-link); letter-spacing: 0.08em;">PHASE II</div>
-        </div>
+        <img src="images/thp2-logo.svg" alt="Tracy Hills Phase II Community Logo" class="brand-logo-img">
       </a>
 
       <nav class="desktop-nav">
@@ -65,10 +62,7 @@
     <div class="mobile-nav-drawer">
       <div class="mobile-drawer-header">
         <div class="brand-logo">
-          <img src="images/tracy-hills-logo.svg" alt="Tracy Hills Logo" style="height: 24px; width: auto;">
-          <div style="border-left: 1px solid var(--border-subtle); padding-left: 0.5rem; margin-left: 0.15rem;">
-            <span class="brand-text-sub" style="font-weight: 700; color: var(--accent-link); letter-spacing: 0.08em;">PHASE II</span>
-          </div>
+          <img src="images/thp2-logo.svg" alt="Tracy Hills Phase II Logo" style="height: 34px; width: auto;">
         </div>
         <button id="mobile-drawer-close" style="color: var(--text-muted); padding: 0.25rem;">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -160,9 +154,8 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div style="display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.85rem;">
-            <img src="images/tracy-hills-logo.svg" alt="Tracy Hills Logo" style="height: 22px; width: auto;">
-            <span style="font-weight: 700; font-size: 0.8rem; color: var(--accent-link); border-left: 1px solid var(--border-subtle); padding-left: 0.5rem; letter-spacing: 0.05em;">PHASE II</span>
+          <div style="display: flex; align-items: center; margin-bottom: 0.85rem;">
+            <img src="images/thp2-logo.svg" alt="Tracy Hills Phase II Logo" style="height: 34px; width: auto;">
           </div>
           <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; margin-bottom: 1rem;">
             Independent community resource built by resident volunteers. We do not provide direct services. This site serves as a quick central directory for official HOA, builder, city, and resident details.
@@ -215,6 +208,85 @@
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
   <script src="js/whatsapp-modal.js"></script>
+  <script>
+    async function submitVendorRecommendation() {
+      const recName = document.getElementById('recommender-name').value.trim();
+      const recAddress = document.getElementById('recommender-address').value.trim();
+      const recEmail = document.getElementById('recommender-email').value.trim();
+      const recPhone = document.getElementById('recommender-phone').value.trim();
+
+      const name = document.getElementById('vendor-name').value.trim();
+      const category = document.getElementById('vendor-category').value;
+      const contact = document.getElementById('vendor-contact').value.trim();
+      const review = document.getElementById('vendor-review').value.trim();
+
+      const btn = document.getElementById('vendor-submit-btn');
+      const banner = document.getElementById('vendor-status-banner');
+
+      if (!recName || !recAddress || !name || !contact || !review) {
+        banner.style.background = 'rgba(220, 38, 38, 0.15)';
+        banner.style.border = '1px solid rgba(239, 68, 68, 0.4)';
+        banner.style.color = '#FCA5A5';
+        banner.textContent = 'Please fill out all required fields marked with *';
+        banner.style.display = 'block';
+        return;
+      }
+
+      if (!recEmail && !recPhone) {
+        banner.style.background = 'rgba(220, 38, 38, 0.15)';
+        banner.style.border = '1px solid rgba(239, 68, 68, 0.4)';
+        banner.style.color = '#FCA5A5';
+        banner.textContent = 'Please provide at least your Email Address or Phone Number for resident verification.';
+        banner.style.display = 'block';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Submitting...';
+      banner.style.display = 'none';
+
+      const contactList = [recEmail, recPhone].filter(Boolean).join(' | ');
+
+      try {
+        const response = await fetch('https://tracy-hills-api.tracyhillsphase2.workers.dev/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            formType: 'provider_submission',
+            businessName: name,
+            recommendedBy: `${recName} (${recAddress} - ${contactList})`,
+            senderEmail: recEmail || undefined,
+            category: category,
+            contactInfo: contact,
+            reviewText: review
+          })
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.success) {
+          banner.style.background = 'rgba(21, 128, 61, 0.2)';
+          banner.style.border = '1px solid rgba(74, 222, 128, 0.4)';
+          banner.style.color = '#4ADE80';
+          banner.textContent = 'Thank you! Your vendor recommendation and resident verification have been sent to community admins for review.';
+          banner.style.display = 'block';
+          document.getElementById('suggest-vendor-form').reset();
+        } else {
+          throw new Error(data.message || 'Error submitting recommendation.');
+        }
+      } catch (err) {
+        console.error('Vendor submission error:', err);
+        banner.style.background = 'rgba(220, 38, 38, 0.15)';
+        banner.style.border = '1px solid rgba(239, 68, 68, 0.4)';
+        banner.style.color = '#FCA5A5';
+        banner.textContent = err.message || 'Network error submitting recommendation.';
+        banner.style.display = 'block';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Submit Recommendation';
+      }
+    }
+  </script>
 
   <!-- Cloudflare Web Analytics -->
   <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "df8c32b5189748b98cff8eec5268cd60"}'></script>
