@@ -961,10 +961,7 @@ function initProvidersPage() {
         }).join('');
 
         let contactPersonHtml = p.contactPerson 
-          ? `<div style="font-size: 0.825rem; color: var(--text-muted); font-weight: 500; margin-bottom: 0.65rem; display: flex; align-items: center; gap: 0.45rem; flex-wrap: wrap;">
-              <span>Contact: <strong style="color: var(--text-primary);">${p.contactPerson}</strong></span>
-              ${p.isLocalResident ? `<span class="trust-badge" style="background: rgba(16, 185, 129, 0.15); color: #86EFAC; border: 1px solid rgba(34, 197, 94, 0.35); font-size: 0.7rem; padding: 0.1rem 0.45rem;">🏡 Tracy Hills II Resident</span>` : ''}
-            </div>` 
+          ? `<div style="font-size: 0.825rem; color: var(--text-muted); font-weight: 500; margin-bottom: 0.65rem;">Contact: <strong style="color: var(--text-primary);">${p.contactPerson}</strong></div>` 
           : '';
         
         let communityNotesHtml = p.communityNotes 
@@ -1030,7 +1027,7 @@ function initProvidersPage() {
           ? `<span class="trust-badge" style="background: rgba(148, 163, 184, 0.12); color: #94A3B8; border: 1px solid rgba(148, 163, 184, 0.25);">📋 Directory Listing</span>`
           : `<span class="trust-badge trust-badge-recommendation">⭐ Community Recommendation</span>`;
 
-        let residentBadgeHtml = (p.isLocalResident || (p.communityNotes && p.communityNotes.toLowerCase().includes('resident')))
+        let residentBadgeHtml = (p.isLocalResident === true)
           ? `<span class="trust-badge" style="background: rgba(16, 185, 129, 0.15); color: #86EFAC; border: 1px solid rgba(34, 197, 94, 0.35);">🏡 Phase 2 Resident</span>`
           : '';
 
