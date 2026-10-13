@@ -1299,8 +1299,9 @@ function initProvidersPage() {
     if (feed) {
       if (pReviews.length > 0) {
         feed.innerHTML = pReviews.map(r => {
-          const reviewTextHtml = r.reviewText
-            ? `<p class="review-item-text">"${escapeHtml(r.reviewText)}"</p>`
+          const cleanReviewText = (r.reviewText || '').trim().replace(/\r\n/g, '\n').replace(/\n{3,}/g, '\n\n');
+          const reviewTextHtml = cleanReviewText
+            ? `<p class="review-item-text">"${escapeHtml(cleanReviewText)}"</p>`
             : `<p class="review-item-star-only">★ Star rating submitted by verified resident (no comment)</p>`;
 
           return `
