@@ -365,7 +365,7 @@
 
               <div>
                 <label for="reviewer-phone-input" class="review-input-label">Phone Number <span style="color: var(--accent-alert);">*</span></label>
-                <input type="tel" id="reviewer-phone-input" class="review-text-input" placeholder="e.g. (209) 555-0123" required autocomplete="tel">
+                <input type="tel" id="reviewer-phone-input" class="review-text-input" placeholder="e.g. (209) 555-0123" maxlength="14" oninput="if(window.formatUSPhone) this.value = window.formatUSPhone(this.value);" required autocomplete="tel">
               </div>
 
               <div>
@@ -390,9 +390,9 @@
     </div>
   </div>
 
-  <script src="js/data.js?v=2.5"></script>
-  <script src="js/app.js?v=2.5"></script>
-  <script src="js/whatsapp-modal.js"></script>
+  <script src="js/data.js?v=2.6"></script>
+  <script src="js/app.js?v=2.6"></script>
+  <script src="js/whatsapp-modal.js?v=2.6"></script>
 
   <!-- Cloudflare Web Analytics -->
   <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "df8c32b5189748b98cff8eec5268cd60"}'></script>

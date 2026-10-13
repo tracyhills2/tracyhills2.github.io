@@ -207,7 +207,7 @@
                 </div>
                 <div>
                   <label for="rec-phone" style="display: block; font-size: 0.825rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.35rem;">Your Phone Number</label>
-                  <input type="tel" id="rec-phone" placeholder="e.g. (209) 555-0199" style="width: 100%; padding: 0.65rem 0.85rem; background: #1E293B; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: var(--text-primary); font-size: 0.875rem;">
+                  <input type="tel" id="rec-phone" placeholder="e.g. (209) 555-0199" maxlength="14" oninput="if(window.formatUSPhone) this.value = window.formatUSPhone(this.value);" style="width: 100%; padding: 0.65rem 0.85rem; background: #1E293B; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: var(--text-primary); font-size: 0.875rem;">
                 </div>
               </div>
             </div>
@@ -267,6 +267,24 @@
                   <input type="checkbox" id="provider-247" style="accent-color: #EF4444; width: 18px; height: 18px; flex-shrink: 0;">
                   <span>⚡ Offers 24/7 Emergency Dispatch / Service in Tracy</span>
                 </label>
+              </div>
+
+              <!-- Star Rating Selector (For Resident Recommendations) -->
+              <div id="sec-provider-rating" style="margin-bottom: 1.25rem;">
+                <label class="review-form-label" style="display: block; font-size: 0.825rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.35rem;">
+                  <span>Your Overall Rating *</span>
+                </label>
+                <div class="star-rating-picker-wrapper" style="display: flex; align-items: center; gap: 0.85rem; flex-wrap: wrap;">
+                  <div class="star-rating-picker" id="suggest-star-picker">
+                    <button type="button" class="star-pick-btn active" data-value="1" aria-label="Rate 1 star">★</button>
+                    <button type="button" class="star-pick-btn active" data-value="2" aria-label="Rate 2 stars">★</button>
+                    <button type="button" class="star-pick-btn active" data-value="3" aria-label="Rate 3 stars">★</button>
+                    <button type="button" class="star-pick-btn active" data-value="4" aria-label="Rate 4 stars">★</button>
+                    <button type="button" class="star-pick-btn active" data-value="5" aria-label="Rate 5 stars">★</button>
+                  </div>
+                  <span id="suggest-star-feedback" class="star-rating-feedback-label">5 Stars - Outstanding / Highly Recommended</span>
+                </div>
+                <input type="hidden" id="suggest-selected-rating" value="5">
               </div>
 
               <div style="margin-bottom: 1.25rem;">
@@ -358,9 +376,9 @@
   </footer>
 
   <!-- Vanilla Scripts -->
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/whatsapp-modal.js"></script>
+  <script src="js/data.js?v=2.6"></script>
+  <script src="js/app.js?v=2.6"></script>
+  <script src="js/whatsapp-modal.js?v=2.6"></script>
   <script>
     let activeSubmissionType = 'resident_recommendation';
 
@@ -415,6 +433,7 @@
       const vendorBox = document.getElementById('type-box-vendor');
       const residentNotice = document.getElementById('notice-box-resident');
       const vendorNotice = document.getElementById('notice-box-vendor');
+      const secRating = document.getElementById('sec-provider-rating');
       
       const sec1Title = document.getElementById('sec-1-title');
       const sec2Title = document.getElementById('sec-2-title');
@@ -438,6 +457,7 @@
 
         residentNotice.style.display = 'none';
         vendorNotice.style.display = 'block';
+        if (secRating) secRating.style.display = 'none';
 
         sec1Title.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> <span>1. Business Representative Contact</span>`;
         sec2Title.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> <span>2. Service & Business Listing Details</span>`;
@@ -464,6 +484,7 @@
 
         vendorNotice.style.display = 'none';
         residentNotice.style.display = 'block';
+        if (secRating) secRating.style.display = 'block';
 
         sec1Title.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> <span>1. Your Resident Verification Details</span>`;
         sec2Title.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg> <span>2. Recommended Provider Information</span>`;
@@ -483,6 +504,54 @@
 
         if (btnSubmitText) btnSubmitText.textContent = 'Submit Provider Recommendation';
       }
+    }
+
+    // Star Rating Picker Interactive Controller
+    const SUGGEST_STAR_LABELS = {
+      1: '1 Star - Poor / Did Not Complete',
+      2: '2 Stars - Below Average',
+      3: '3 Stars - Average / Met Expectations',
+      4: '4 Stars - Good / Recommended',
+      5: '5 Stars - Outstanding / Highly Recommended'
+    };
+
+    let suggestRating = 5;
+    const suggestStarPicker = document.getElementById('suggest-star-picker');
+    const suggestStarFeedback = document.getElementById('suggest-star-feedback');
+    const suggestRatingInput = document.getElementById('suggest-selected-rating');
+
+    function updateSuggestStarDisplay(val) {
+      if (!suggestStarPicker) return;
+      const btns = suggestStarPicker.querySelectorAll('.star-pick-btn');
+      btns.forEach(btn => {
+        const bVal = parseInt(btn.dataset.value, 10);
+        if (bVal <= val) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      if (suggestStarFeedback) {
+        suggestStarFeedback.textContent = SUGGEST_STAR_LABELS[val] || `${val} Stars`;
+      }
+    }
+
+    if (suggestStarPicker) {
+      const btns = suggestStarPicker.querySelectorAll('.star-pick-btn');
+      btns.forEach(btn => {
+        const bVal = parseInt(btn.dataset.value, 10);
+        btn.addEventListener('click', () => {
+          suggestRating = bVal;
+          if (suggestRatingInput) suggestRatingInput.value = bVal;
+          updateSuggestStarDisplay(bVal);
+        });
+        btn.addEventListener('mouseenter', () => {
+          updateSuggestStarDisplay(bVal);
+        });
+      });
+      suggestStarPicker.addEventListener('mouseleave', () => {
+        updateSuggestStarDisplay(suggestRating);
+      });
     }
 
     async function submitProviderRecommendation() {
@@ -520,34 +589,61 @@
         return;
       }
 
+      if (recPhone && window.isValidUSPhone && !window.isValidUSPhone(recPhone)) {
+        banner.style.background = 'rgba(220, 38, 38, 0.15)';
+        banner.style.border = '1px solid rgba(239, 68, 68, 0.4)';
+        banner.style.color = '#FCA5A5';
+        banner.textContent = 'Please enter a valid 10-digit US phone number: (XXX) XXX-XXXX';
+        banner.style.display = 'block';
+        return;
+      }
+
       btn.disabled = true;
       const btnSubmitText = document.getElementById('btn-submit-text');
       if (btnSubmitText) {
-        btnSubmitText.textContent = 'Submitting submission...';
+        btnSubmitText.textContent = 'Submitting recommendation & review...';
       } else {
-        btn.innerHTML = '<span>Submitting submission...</span>';
+        btn.innerHTML = '<span>Submitting recommendation & review...</span>';
       }
       banner.style.display = 'none';
 
-      const contactList = [recEmail, recPhone].filter(Boolean).join(' | ');
+      // Standardize US formatted phone number storage
+      const formattedRecPhone = (recPhone && window.formatUSPhone) ? window.formatUSPhone(recPhone) : recPhone;
+      let formattedContact = contact;
+      if (window.isValidUSPhone && window.isValidUSPhone(contact)) {
+        formattedContact = window.formatUSPhone(contact);
+      }
+      const contactList = [recEmail, formattedRecPhone].filter(Boolean).join(' | ');
+      const curRating = parseInt((document.getElementById('suggest-selected-rating') || {}).value || '5', 10);
+
+      // Prepare payload for Cloudflare Worker & Resend Admin Email
+      // Include the star rating directly in the review text and payload so admins have all details
+      let formattedReviewText = review;
+      if (activeSubmissionType === 'resident_recommendation') {
+        formattedReviewText = `[Rating: ${curRating}/5 Stars]\n${review}`;
+      }
+
+      const workerPayload = {
+        formType: 'provider_submission',
+        submissionType: activeSubmissionType,
+        businessName: name,
+        recommendedBy: `${recName} (${recAddress} - ${contactList})`,
+        senderEmail: recEmail || undefined,
+        category: category,
+        contactInfo: formattedContact,
+        reviewLink: reviewLink,
+        is247Service: is247,
+        reviewText: formattedReviewText,
+        rating: activeSubmissionType === 'resident_recommendation' ? curRating : undefined,
+        b_hp_field: hpField
+      };
 
       try {
+        // Send email notification to admins via Cloudflare Worker API Gateway
         const response = await fetch('https://tracy-hills-api.tracyhillsphase2.workers.dev/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            formType: 'provider_submission',
-            submissionType: activeSubmissionType,
-            businessName: name,
-            recommendedBy: `${recName} (${recAddress} - ${contactList})`,
-            senderEmail: recEmail || undefined,
-            category: category,
-            contactInfo: contact,
-            reviewLink: reviewLink,
-            is247Service: is247,
-            reviewText: review,
-            b_hp_field: hpField
-          })
+          body: JSON.stringify(workerPayload)
         });
 
         const data = await response.json();
@@ -556,11 +652,14 @@
           banner.style.background = 'rgba(21, 128, 61, 0.2)';
           banner.style.border = '1px solid rgba(74, 222, 128, 0.4)';
           banner.style.color = '#4ADE80';
-          banner.textContent = activeSubmissionType === 'vendor_self_listing'
-            ? 'Thank you! Your business self-listing has been submitted to community admins for directory review.'
-            : 'Thank you! Your provider recommendation and resident verification have been sent to community admins for directory review.';
+          banner.innerHTML = activeSubmissionType === 'vendor_self_listing'
+            ? '<strong>✅ Business Listing Received!</strong><br>Thank you! Your business self-listing has been emailed to community admins for directory review.'
+            : `<strong>✅ Recommendation Sent!</strong><br>Thank you! Your provider recommendation with a <strong>${curRating}-Star Rating</strong> and review note have been emailed to community admins for directory review.`;
           banner.style.display = 'block';
           document.getElementById('suggest-provider-form').reset();
+          suggestRating = 5;
+          updateSuggestStarDisplay(5);
+          if (suggestRatingInput) suggestRatingInput.value = '5';
           toggleSubmissionType('resident_recommendation');
         } else {
           throw new Error(data.message || 'Error submitting form.');
@@ -595,6 +694,12 @@
           vendorRadio.checked = true;
           toggleSubmissionType('vendor_self_listing');
         }
+      }
+
+      // Attach US phone auto-formatters
+      if (window.attachUSPhoneFormatter) {
+        window.attachUSPhoneFormatter(document.getElementById('rec-phone'));
+        window.attachUSPhoneFormatter(document.getElementById('provider-contact'), true);
       }
 
       // Attach real-time duplicate provider listeners
