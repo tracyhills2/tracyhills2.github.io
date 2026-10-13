@@ -946,13 +946,12 @@ function initProvidersPage() {
           ? `<span class="trust-badge" style="background: rgba(148, 163, 184, 0.12); color: #94A3B8; border: 1px solid rgba(148, 163, 184, 0.25);">📋 Directory Listing</span>`
           : `<span class="trust-badge trust-badge-recommendation">⭐ Community Recommendation</span>`;
 
-        let residentBadgeHtml = (p.isLocalResident === true)
-          ? `<span class="trust-badge" style="background: rgba(16, 185, 129, 0.15); color: #86EFAC; border: 1px solid rgba(34, 197, 94, 0.35);">🏡 Phase 2 Resident</span>`
-          : '';
-
-        let service247Html = (p.is247Service || (p.description && p.description.includes('24/7')) || (p.communityNotes && p.communityNotes.includes('24/7')))
-          ? `<span class="trust-badge" style="background: rgba(220, 38, 38, 0.15); color: #FCA5A5; border: 1px solid rgba(239, 68, 68, 0.35);">⚡ 24/7 Emergency Service</span>`
-          : '';
+        let cornerRibbonHtml = '';
+        if (p.is247Service || (p.description && p.description.includes('24/7')) || (p.communityNotes && p.communityNotes.includes('24/7'))) {
+          cornerRibbonHtml = `<div class="card-corner-ribbon ribbon-emergency" title="24/7 Emergency Service"><span>⚡ 24/7</span></div>`;
+        } else if (p.isLocalResident === true) {
+          cornerRibbonHtml = `<div class="card-corner-ribbon ribbon-resident" title="Tracy Hills Phase 2 Resident"><span>🏡 Resident</span></div>`;
+        }
 
         // Provider Rating & Reviews Integration
         const pSummary = (reviewsState.summaries && reviewsState.summaries[p.id]) || null;
@@ -963,28 +962,36 @@ function initProvidersPage() {
         if (pReviewsCount > 0) {
           ratingBarHtml = `
             <div class="provider-rating-bar">
-              <button type="button" class="provider-rating-badge btn-open-reviews-view" data-provider-id="${p.id}" title="Read ${pReviewsCount} resident reviews">
-                <span class="stars-gold">${generateStarsHtml(pRating)}</span>
-                <span class="rating-number">${pRating.toFixed(1)}</span>
-                <span class="rating-count">(${pReviewsCount} ${pReviewsCount === 1 ? 'review' : 'reviews'}) ↗</span>
-              </button>
-              <button type="button" class="btn-write-review-action btn-open-write-review" data-provider-id="${p.id}" data-provider-name="${escapeHtml(p.businessName)}" data-provider-category="${escapeHtml(p.category)}">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
-                <span>Rate & Review</span>
-              </button>
+              <div class="provider-rating-row-stars">
+                <button type="button" class="provider-rating-badge btn-open-reviews-view" data-provider-id="${p.id}" title="Read ${pReviewsCount} resident reviews">
+                  <span class="stars-gold">${generateStarsHtml(pRating)}</span>
+                  <span class="rating-number">${pRating.toFixed(1)}</span>
+                  <span class="rating-count">(${pReviewsCount} ${pReviewsCount === 1 ? 'review' : 'reviews'}) ↗</span>
+                </button>
+              </div>
+              <div class="provider-rating-row-action">
+                <button type="button" class="btn-write-review-action btn-open-write-review" data-provider-id="${p.id}" data-provider-name="${escapeHtml(p.businessName)}" data-provider-category="${escapeHtml(p.category)}">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                  <span>Rate & Review</span>
+                </button>
+              </div>
             </div>
           `;
         } else {
           ratingBarHtml = `
             <div class="provider-rating-bar">
-              <span class="provider-rating-badge no-reviews">
-                <span class="stars-empty">★★★★★</span>
-                <span class="no-reviews-label">No reviews</span>
-              </span>
-              <button type="button" class="btn-write-review-action be-first btn-open-write-review" data-provider-id="${p.id}" data-provider-name="${escapeHtml(p.businessName)}" data-provider-category="${escapeHtml(p.category)}">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
-                <span>Be first to review</span>
-              </button>
+              <div class="provider-rating-row-stars">
+                <span class="provider-rating-badge no-reviews">
+                  <span class="stars-empty">★★★★★</span>
+                  <span class="no-reviews-label">No reviews</span>
+                </span>
+              </div>
+              <div class="provider-rating-row-action">
+                <button type="button" class="btn-write-review-action be-first btn-open-write-review" data-provider-id="${p.id}" data-provider-name="${escapeHtml(p.businessName)}" data-provider-category="${escapeHtml(p.category)}">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                  <span>Be first to review</span>
+                </button>
+              </div>
             </div>
           `;
         }
@@ -1005,15 +1012,12 @@ function initProvidersPage() {
         }
 
         card.innerHTML = `
+          ${cornerRibbonHtml}
           <div class="provider-card-top">
-            <!-- 1. Category Badges (Left) & Feature Badges (Right - Pink box area) -->
+            <!-- 1. Category Badges (Left) -->
             <div class="provider-card-header-bar">
               <div class="provider-categories-wrap">
                 ${categoryBadgesHtml}
-              </div>
-              <div class="provider-feature-badges-wrap">
-                ${residentBadgeHtml}
-                ${service247Html}
               </div>
             </div>
 
@@ -1045,15 +1049,18 @@ function initProvidersPage() {
 
           <!-- Bottom Section: Trust Meta & Resident Reviews -->
           <div class="provider-card-footer">
-            <!-- 5. Listing Type & Verification Date ONLY -->
+            <!-- 5. Listing Type & Verification Date on Two Separate Lines -->
             <div class="trust-meta-bar">
               <div class="trust-badges-wrap">
                 ${recBadgeHtml}
               </div>
-              <span class="trust-meta-date">Verified: ${formattedDate}</span>
+              <div class="trust-meta-date">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>Verified: ${formattedDate}</span>
+              </div>
             </div>
 
-            <!-- 6. Resident Community Reviews Action Bar (At Card Footer) -->
+            <!-- 6. Resident Community Reviews Action Bar (Line 1: Stars, Line 2: Button) -->
             ${ratingBarHtml}
           </div>
         `;
@@ -1197,16 +1204,20 @@ function initProvidersPage() {
         `);
       }
 
+      let modalCornerRibbonHtml = '';
+      if (provider.is247Service || (provider.description && provider.description.includes('24/7')) || (provider.communityNotes && provider.communityNotes.includes('24/7'))) {
+        modalCornerRibbonHtml = `<div class="card-corner-ribbon ribbon-emergency" title="24/7 Emergency Service"><span>⚡ 24/7</span></div>`;
+      } else if (provider.isLocalResident === true) {
+        modalCornerRibbonHtml = `<div class="card-corner-ribbon ribbon-resident" title="Tracy Hills Phase 2 Resident"><span>🏡 Resident</span></div>`;
+      }
+
       detailsBox.innerHTML = `
-        <div class="modal-provider-profile">
-          <!-- 1. Category Badges (Left) & Feature Badges (Right) -->
-          <div class="provider-card-header-bar" style="margin-bottom: 0.75rem;">
+        <div class="modal-provider-profile" style="position: relative; overflow: hidden;">
+          ${modalCornerRibbonHtml}
+          <!-- 1. Category Badges (Left) -->
+          <div class="provider-card-header-bar" style="margin-bottom: 0.75rem; padding-right: 60px;">
             <div class="provider-categories-wrap">
               ${categoryBadgesHtml}
-            </div>
-            <div class="provider-feature-badges-wrap">
-              ${residentBadgeHtml}
-              ${service247Html}
             </div>
           </div>
 
@@ -1229,12 +1240,15 @@ function initProvidersPage() {
             ${contactItems.join('')}
           </div>
 
-          <!-- 5. Trust Meta Bar: Listing Type & Listing Verified Date ONLY -->
-          <div class="trust-meta-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; border-top: 1px dashed var(--border-subtle); padding-top: 0.65rem; margin-top: 0.25rem;">
+          <!-- 5. Trust Meta Bar: Listing Type & Listing Verified Date on Two Lines -->
+          <div class="trust-meta-bar" style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.35rem; border-top: 1px dashed var(--border-subtle); padding-top: 0.65rem; margin-top: 0.25rem;">
             <div class="trust-badges-wrap">
               ${recBadgeHtml}
             </div>
-            <span class="trust-meta-date" style="font-size: 0.775rem; color: var(--text-muted); margin-left: auto;">Listing Verified: ${formattedDate}</span>
+            <div class="trust-meta-date" style="font-size: 0.75rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.35rem;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Listing Verified: ${formattedDate}</span>
+            </div>
           </div>
         </div>
       `;
