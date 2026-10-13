@@ -1006,9 +1006,15 @@ function initProvidersPage() {
 
         card.innerHTML = `
           <div class="provider-card-top">
-            <!-- 1. Category Badges -->
-            <div class="provider-categories-wrap">
-              ${categoryBadgesHtml}
+            <!-- 1. Category Badges (Left) & Feature Badges (Right - Pink box area) -->
+            <div class="provider-card-header-bar">
+              <div class="provider-categories-wrap">
+                ${categoryBadgesHtml}
+              </div>
+              <div class="provider-feature-badges-wrap">
+                ${residentBadgeHtml}
+                ${service247Html}
+              </div>
             </div>
 
             <!-- 2. Business & Contact Name (Clickable to open full pop-up) -->
@@ -1039,12 +1045,10 @@ function initProvidersPage() {
 
           <!-- Bottom Section: Trust Meta & Resident Reviews -->
           <div class="provider-card-footer">
-            <!-- 5. Listing Type & Verification Date -->
+            <!-- 5. Listing Type & Verification Date ONLY -->
             <div class="trust-meta-bar">
               <div class="trust-badges-wrap">
                 ${recBadgeHtml}
-                ${residentBadgeHtml}
-                ${service247Html}
               </div>
               <span class="trust-meta-date">Verified: ${formattedDate}</span>
             </div>
@@ -1195,9 +1199,15 @@ function initProvidersPage() {
 
       detailsBox.innerHTML = `
         <div class="modal-provider-profile">
-          <!-- 1. Category Badges ONLY (Cleanly separated on top) -->
-          <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; margin-bottom: 0.65rem;">
-            ${categoryBadgesHtml}
+          <!-- 1. Category Badges (Left) & Feature Badges (Right) -->
+          <div class="provider-card-header-bar" style="margin-bottom: 0.75rem;">
+            <div class="provider-categories-wrap">
+              ${categoryBadgesHtml}
+            </div>
+            <div class="provider-feature-badges-wrap">
+              ${residentBadgeHtml}
+              ${service247Html}
+            </div>
           </div>
 
           <!-- 2. Primary Contact Person -->
@@ -1219,14 +1229,12 @@ function initProvidersPage() {
             ${contactItems.join('')}
           </div>
 
-          <!-- 5. Trust Meta Bar: Community Recommendation & Listing Verified Date TOGETHER -->
-          <div class="trust-meta-bar" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; border-top: 1px dashed var(--border-subtle); padding-top: 0.65rem; margin-top: 0.25rem;">
-            <div class="trust-badges-wrap" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem;">
+          <!-- 5. Trust Meta Bar: Listing Type & Listing Verified Date ONLY -->
+          <div class="trust-meta-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; border-top: 1px dashed var(--border-subtle); padding-top: 0.65rem; margin-top: 0.25rem;">
+            <div class="trust-badges-wrap">
               ${recBadgeHtml}
-              ${residentBadgeHtml}
-              ${service247Html}
             </div>
-            <span class="trust-meta-date" style="font-size: 0.775rem; color: var(--text-muted);">Listing Verified: ${formattedDate}</span>
+            <span class="trust-meta-date" style="font-size: 0.775rem; color: var(--text-muted); margin-left: auto;">Listing Verified: ${formattedDate}</span>
           </div>
         </div>
       `;
@@ -1327,6 +1335,9 @@ function initProvidersPage() {
         openWriteReviewModal(provider.id, provider.businessName, provider.category);
       };
     }
+
+    const reviewsBody = reviewsViewModal.querySelector('.custom-modal-body');
+    if (reviewsBody) reviewsBody.scrollTop = 0;
 
     reviewsViewModal.classList.add('active');
     reviewsViewModal.setAttribute('aria-hidden', 'false');
@@ -1455,6 +1466,9 @@ function initProvidersPage() {
       writeReviewSubmitBtn.disabled = false;
       writeReviewSubmitBtn.innerHTML = '<span>Submit Review for Verification</span>';
     }
+
+    const writeReviewBody = writeReviewModal.querySelector('.custom-modal-body');
+    if (writeReviewBody) writeReviewBody.scrollTop = 0;
 
     writeReviewModal.classList.add('active');
     writeReviewModal.setAttribute('aria-hidden', 'false');
