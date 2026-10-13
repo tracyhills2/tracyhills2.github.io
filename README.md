@@ -59,9 +59,9 @@ The **Tracy Hills II Community Resource Hub** serves as a central directory for 
 
 ```
 website/
-├── index.html              # Home / Community Resource Portal Overview
-├── contacts.html           # Quick Directory & Emergency Contacts (Printable)
-├── providers.html          # Community Service Directory (Search & Category Filters)
+├── index.html              # Home / Community Resource Hub Overview
+├── contacts.html           # Quick Contacts & Emergency Numbers (Printable)
+├── providers.html          # Community Service Providers (Search & Category Filters)
 ├── suggest-provider.html   # Dedicated Mobile Page to Recommend Vendors
 ├── report-information.html # Website Correction & Information Update Form
 ├── faq.html                # Frequently Asked Questions (Accordion Search)
