@@ -2693,6 +2693,22 @@ const PROVIDERS_DATA = [
     "isPlaceholder": false,
     "keywords": ["nunez", "nunez landscaping", "landscaping", "landscaper", "gardener", "concrete", "stamped concrete", "manteca", "hardscape", "hardscaping", "backyard", "flatwork", "patio", "pavers", "licensed", "contractor", "ken"],
     "lastUpdated": "2026-10-12"
+  },
+  {
+    "id": "sp-1813",
+    "businessName": "Joe (Landscaping & Hardscaping)",
+    "category": "Landscaper / Gardener",
+    "categories": ["Landscaper / Gardener", "General Contractor"],
+    "contactPerson": "Joe",
+    "phone": "(408) 509-1236",
+    "email": null,
+    "website": null,
+    "description": "Landscaping, hardscaping, and yard improvement services. Known for reliable execution and affordable pricing for community yard projects.",
+    "communityNotes": "Recommended by Rangewood resident Uppula Dhanalakshmi (Rockingham): 'He did not cheat anyone. Once agreed the work, he finished and did it very cheap for the whole Rangewood community.' Highly in demand and reliable for yard and hardscaping work.",
+    "communityRecommended": true,
+    "isPlaceholder": false,
+    "keywords": ["joe", "joe landscaping", "landscaping", "landscaper", "hardscape", "hardscaping", "gardener", "yard", "patio", "pavers", "rangewood", "rockingham", "uppula", "dhanalakshmi"],
+    "lastUpdated": "2026-10-12"
   }
 ];
 

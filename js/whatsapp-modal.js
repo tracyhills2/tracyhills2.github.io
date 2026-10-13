@@ -67,7 +67,7 @@
             <div class="wa-form-grid">
               <div class="wa-form-group">
                 <label for="wa-phone" class="wa-label">WhatsApp Phone Number *</label>
-                <input type="tel" id="wa-phone" class="wa-input" placeholder="e.g. (209) 555-0199" required>
+                <input type="tel" id="wa-phone" class="wa-input" placeholder="e.g. (209) 555-0199" maxlength="14" oninput="if(window.formatUSPhone) this.value = window.formatUSPhone(this.value);" required>
               </div>
 
               <div class="wa-form-group">
@@ -163,6 +163,60 @@
     </div>
   `;
 
+  // Self-contained phone formatting fallback helpers
+  function formatPhone(val) {
+    return window.formatUSPhone ? window.formatUSPhone(val) : (function (v) {
+      if (!v) return '';
+      let d = String(v).replace(/\D/g, '');
+      if (d.length === 11 && d.startsWith('1')) d = d.slice(1);
+      d = d.slice(0, 10);
+      if (d.length === 0) return '';
+      if (d.length <= 3) return `(${d}`;
+      if (d.length <= 6) return `(${d.slice(0, 3)}) ${d.slice(3)}`;
+      return `(${d.slice(0, 3)}) ${d.slice(3, 6)}-${d.slice(6, 10)}`;
+    })(val);
+  }
+
+  function validatePhone(val) {
+    if (window.isValidUSPhone) return window.isValidUSPhone(val);
+    if (!val) return false;
+    let d = String(val).replace(/\D/g, '');
+    if (d.length === 11 && d.startsWith('1')) d = d.slice(1);
+    return d.length === 10;
+  }
+
+  function bindPhoneFormatter(input) {
+    if (window.attachUSPhoneFormatter) {
+      window.attachUSPhoneFormatter(input);
+      return;
+    }
+    if (!input || input.dataset.usPhoneAttached) return;
+    input.dataset.usPhoneAttached = 'true';
+    input.setAttribute('inputmode', 'tel');
+    input.setAttribute('maxlength', '14');
+
+    input.addEventListener('input', function (e) {
+      let d = input.value.replace(/\D/g, '');
+      if (d.length === 11 && d.startsWith('1')) d = d.slice(1);
+      d = d.slice(0, 10);
+      if (e && e.inputType === 'deleteContentBackward') {
+        const prev = input.dataset.prevDigits || '';
+        if (d.length === prev.length && d.length > 0) d = d.slice(0, -1);
+      }
+      input.dataset.prevDigits = d;
+      if (!d) { input.value = ''; return; }
+      let f = '';
+      if (d.length <= 3) f = `(${d}`;
+      else if (d.length <= 6) f = `(${d.slice(0, 3)}) ${d.slice(3)}`;
+      else f = `(${d.slice(0, 3)}) ${d.slice(3, 6)}-${d.slice(6, 10)}`;
+      input.value = f;
+    });
+
+    input.addEventListener('blur', function () {
+      if (input.value) input.value = formatPhone(input.value);
+    });
+  }
+
   // Inject Modal DOM elements when DOM is ready
   function initModal() {
     if (document.getElementById('whatsapp-modal-overlay')) return;
@@ -175,6 +229,11 @@
     const overlay = document.getElementById('whatsapp-modal-overlay');
     const closeBtn = document.getElementById('wa-modal-close');
     const successCloseBtn = document.getElementById('wa-success-close-btn');
+    const phoneInput = document.getElementById('wa-phone');
+
+    if (phoneInput) {
+      bindPhoneFormatter(phoneInput);
+    }
 
     closeBtn.addEventListener('click', closeModal);
     successCloseBtn.addEventListener('click', closeModal);
@@ -245,6 +304,11 @@
     if (advocacyOptions) advocacyOptions.style.display = 'none';
     document.getElementById('wa-verification-form').reset();
 
+    const phoneInput = document.getElementById('wa-phone');
+    if (phoneInput && window.attachUSPhoneFormatter) {
+      window.attachUSPhoneFormatter(phoneInput);
+    }
+
     overlay.classList.add('active');
     overlay.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
@@ -284,6 +348,14 @@
       return;
     }
 
+    if (!validatePhone(phone)) {
+      errorBanner.textContent = 'Please enter a valid 10-digit US phone number: (XXX) XXX-XXXX';
+      errorBanner.style.display = 'block';
+      return;
+    }
+
+    const formattedPhone = formatPhone(phone);
+
     // UI Loading state
     submitBtn.disabled = true;
     submitBtn.innerHTML = `<span class="wa-spinner"></span> <span>Submitting...</span>`;
@@ -303,7 +375,7 @@
           subCommunity: communityName,
           community: communityName,
           address: address,
-          phone: phone,
+          phone: formattedPhone,
           email: email,
           neighbors: neighbors,
           notes: notes,

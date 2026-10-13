@@ -22,6 +22,101 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* --------------------------------------------------------------------------
+   US Phone Number Formatting & Validation Utilities
+   Standard US Format: (XXX) XXX-XXXX
+   -------------------------------------------------------------------------- */
+function formatUSPhone(value) {
+  if (!value) return '';
+  let digits = String(value).replace(/\D/g, '');
+  if (digits.length === 11 && digits.startsWith('1')) {
+    digits = digits.slice(1);
+  }
+  digits = digits.slice(0, 10);
+  if (digits.length === 0) return '';
+  if (digits.length <= 3) return `(${digits}`;
+  if (digits.length <= 6) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+  return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6, 10)}`;
+}
+
+function isValidUSPhone(value) {
+  if (!value) return false;
+  let digits = String(value).replace(/\D/g, '');
+  if (digits.length === 11 && digits.startsWith('1')) {
+    digits = digits.slice(1);
+  }
+  return digits.length === 10;
+}
+
+function attachUSPhoneFormatter(input, allowNonPhone) {
+  if (!input || input.dataset.usPhoneAttached) return;
+  input.dataset.usPhoneAttached = 'true';
+  input.setAttribute('inputmode', 'tel');
+  if (!allowNonPhone) {
+    input.setAttribute('maxlength', '14');
+  }
+
+  function handleInput(e) {
+    const raw = input.value;
+    if (allowNonPhone) {
+      if (raw.includes('@') || raw.toLowerCase().includes('http') || /[a-zA-Z]/.test(raw)) {
+        return;
+      }
+    }
+
+    let digits = raw.replace(/\D/g, '');
+    if (digits.length === 11 && digits.startsWith('1')) {
+      digits = digits.slice(1);
+    }
+    digits = digits.slice(0, 10);
+
+    if (e && e.inputType === 'deleteContentBackward') {
+      const prevDigits = input.dataset.prevDigits || '';
+      if (digits.length === prevDigits.length && digits.length > 0) {
+        digits = digits.slice(0, -1);
+      }
+    }
+    input.dataset.prevDigits = digits;
+
+    if (!digits) {
+      if (!allowNonPhone) input.value = '';
+      return;
+    }
+
+    let formatted = '';
+    if (digits.length <= 3) {
+      formatted = `(${digits}`;
+    } else if (digits.length <= 6) {
+      formatted = `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+    } else {
+      formatted = `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6, 10)}`;
+    }
+    input.value = formatted;
+  }
+
+  input.addEventListener('input', handleInput);
+
+  input.addEventListener('blur', function() {
+    if (allowNonPhone) {
+      if (input.value.includes('@') || input.value.toLowerCase().includes('http') || /[a-zA-Z]/.test(input.value)) {
+        return;
+      }
+    }
+    if (input.value) {
+      input.value = formatUSPhone(input.value);
+    }
+  });
+
+  if (input.value) {
+    handleInput({ inputType: 'initial' });
+  }
+}
+
+// Expose globally for cross-script access
+window.formatUSPhone = formatUSPhone;
+window.isValidUSPhone = isValidUSPhone;
+window.attachUSPhoneFormatter = attachUSPhoneFormatter;
+
+/* --------------------------------------------------------------------------
    Dynamic Copyright Year Generator
    -------------------------------------------------------------------------- */
 function initDynamicYear() {
@@ -1472,7 +1567,10 @@ function initProvidersPage() {
     if (txtInput) txtInput.value = '';
     if (nameInput) nameInput.value = '';
     if (addrInput) addrInput.value = '';
-    if (phoneInput) phoneInput.value = '';
+    if (phoneInput) {
+      phoneInput.value = '';
+      attachUSPhoneFormatter(phoneInput);
+    }
     if (emailInput) emailInput.value = '';
     if (hpInput) hpInput.value = '';
 
@@ -1612,13 +1710,12 @@ function initProvidersPage() {
 
       // 8. Phone format validation (if provided)
       if (reviewerPhone.trim()) {
-        const digits = reviewerPhone.replace(/\D/g, '');
-        if (digits.length < 10) {
+        if (!isValidUSPhone(reviewerPhone)) {
           if (banner) {
             banner.style.background = 'rgba(220, 38, 38, 0.15)';
             banner.style.border = '1px solid rgba(239, 68, 68, 0.4)';
             banner.style.color = '#FCA5A5';
-            banner.textContent = 'Please enter a valid 10-digit phone number.';
+            banner.textContent = 'Please enter a valid 10-digit US phone number: (XXX) XXX-XXXX';
             banner.style.display = 'block';
           }
           return;
@@ -1642,7 +1739,7 @@ function initProvidersPage() {
             reviewText: reviewText.trim(), // Optional review text (allows rating-only)
             reviewerName: reviewerName.trim(),
             reviewerAddress: reviewerAddress.trim(),
-            reviewerPhone: reviewerPhone.trim(),
+            reviewerPhone: reviewerPhone.trim() ? formatUSPhone(reviewerPhone) : '',
             reviewerEmail: reviewerEmail.trim(),
             b_hp_field: hpField.trim()
           })
