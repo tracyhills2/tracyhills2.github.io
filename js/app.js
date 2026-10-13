@@ -588,7 +588,10 @@ function initProvidersPage() {
       const raw = localStorage.getItem(REVIEWS_CACHE_KEY);
       if (!raw) return false;
       const parsed = JSON.parse(raw);
-      if (parsed && parsed.data && (Date.now() - parsed.timestamp < REVIEWS_CACHE_TTL)) {
+      // Only use cache if it has reviews data and is within TTL. If empty, re-fetch immediately.
+      const hasData = parsed && parsed.data && parsed.data.summaries && Object.keys(parsed.data.summaries).length > 0;
+      const effectiveTtl = hasData ? REVIEWS_CACHE_TTL : 30 * 1000;
+      if (parsed && parsed.data && (Date.now() - parsed.timestamp < effectiveTtl)) {
         reviewsState = parsed.data;
         return true;
       }
@@ -609,10 +612,11 @@ function initProvidersPage() {
     }
   }
 
-  async function fetchLiveReviews() {
+  async function fetchLiveReviews(retryCount = 1) {
     try {
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 6500);
+      // Google Apps Script cold starts often take 6-10s; 15s timeout ensures it completes even on mobile/VPN
+      const timeoutId = setTimeout(() => controller.abort(), 15000);
       const res = await fetch(REVIEWS_API_ENDPOINT, { signal: controller.signal });
       clearTimeout(timeoutId);
       if (!res.ok) throw new Error('HTTP ' + res.status);
@@ -626,7 +630,11 @@ function initProvidersPage() {
         renderProviders(); // Re-render with live rating stars
       }
     } catch (err) {
-      console.warn('Live reviews fetch failed, fallback active:', err);
+      console.warn('Live reviews fetch attempt failed:', err);
+      // Retry once if first attempt failed or timed out during container spin-up
+      if (retryCount > 0) {
+        setTimeout(() => fetchLiveReviews(retryCount - 1), 2500);
+      }
     }
   }
 
