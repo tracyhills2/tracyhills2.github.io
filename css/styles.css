@@ -2509,10 +2509,50 @@ img, svg {
 
 /* Provider Card Layout & Strict Horizontal Alignment System */
 .provider-card {
+  position: relative !important;
+  overflow: hidden !important;
   display: flex !important;
   flex-direction: column !important;
   height: 100% !important;
   box-sizing: border-box !important;
+}
+
+/* Card Corner Ribbon (Triangle Badge on Top-Right Corner) */
+.card-corner-ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.card-corner-ribbon span {
+  position: absolute;
+  display: block;
+  width: 115px;
+  padding: 3px 0;
+  text-align: center;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  right: -26px;
+  top: 16px;
+  transform: rotate(45deg);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.card-corner-ribbon.ribbon-emergency span {
+  background: linear-gradient(135deg, #EF4444, #B91C1C);
+  color: #FFFFFF;
+}
+
+.card-corner-ribbon.ribbon-resident span {
+  background: linear-gradient(135deg, #10B981, #047857);
+  color: #FFFFFF;
 }
 
 .provider-card-top {
@@ -2523,11 +2563,11 @@ img, svg {
 .provider-card-header-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 0.5rem;
   margin-bottom: 0.65rem;
   min-height: 28px;
-  flex-wrap: wrap;
+  padding-right: 58px; /* Reserves space so category badge never overlaps top-right ribbon */
+  box-sizing: border-box;
 }
 
 .provider-categories-wrap {
@@ -2546,23 +2586,6 @@ img, svg {
 .provider-card .category-dot {
   width: 6px;
   height: 6px;
-}
-
-.provider-feature-badges-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.35rem;
-  margin-left: auto;
-}
-
-.provider-feature-badges-wrap .trust-badge {
-  font-size: 0.7rem;
-  padding: 0.18rem 0.45rem;
-  border-radius: var(--radius-sm, 4px);
-  white-space: nowrap;
-  font-weight: 600;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .provider-business-name {
@@ -2648,26 +2671,23 @@ img, svg {
   min-height: 1.6rem;
 }
 
-/* Pinned footer - anchors Trust Meta (Red Line 2) and Rating Bar (Red Line 3) */
+/* Pinned footer - anchors Trust Meta and Rating Bar */
 .provider-card-footer {
   margin-top: auto;
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
 }
 
 .provider-card-footer .trust-meta-bar {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 0.75rem; /* Extra space before review rating box */
   padding-top: 0.65rem;
   border-top: 1px dashed var(--border-subtle);
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  gap: 0.5rem;
-  height: 36px;
-  min-height: 36px;
+  flex-direction: column; /* Line 1: Recommendation, Line 2: Verified Date */
+  align-items: flex-start;
+  gap: 0.35rem;
+  min-height: 52px; /* Uniform height across all cards for horizontal grid row baseline */
   box-sizing: border-box;
 }
 
@@ -2675,7 +2695,6 @@ img, svg {
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  flex-shrink: 0;
 }
 
 .provider-card-footer .trust-badge {
@@ -2689,22 +2708,19 @@ img, svg {
   white-space: nowrap;
   font-size: 0.725rem;
   color: var(--text-muted);
-  text-align: right;
+  text-align: left;
   line-height: 1.25;
-  margin-left: auto;
-  flex-shrink: 0;
-}
-
-/* Provider Card Rating Bar - Guarantees 1-line layout & exact 40px height */
-.provider-rating-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: nowrap; /* Never breaks into 2 lines! */
   gap: 0.35rem;
-  padding: 0.35rem 0.55rem;
-  height: 40px;
-  min-height: 40px;
+}
+
+/* Provider Card Rating Bar - Line 1: Stars, Line 2: Action Button */
+.provider-rating-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0.55rem 0.65rem;
   box-sizing: border-box;
   background: rgba(15, 23, 42, 0.65);
   border: 1px solid var(--border-subtle);
@@ -2717,26 +2733,31 @@ img, svg {
   background: rgba(15, 23, 42, 0.85);
 }
 
+.provider-rating-row-stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .provider-rating-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
+  justify-content: center;
+  gap: 0.35rem;
   background: transparent;
   border: none;
-  padding: 0.15rem 0.25rem;
-  border-radius: 4px;
+  padding: 0.1rem 0;
   cursor: pointer;
   color: var(--text-primary);
-  font-size: 0.775rem;
+  font-size: 0.8rem;
   text-decoration: none;
   white-space: nowrap;
-  flex-shrink: 0;
   line-height: 1;
-  transition: background var(--transition-fast), color var(--transition-fast);
+  transition: color var(--transition-fast);
 }
 
 .provider-rating-badge:hover {
-  background: rgba(245, 158, 11, 0.12);
   color: #FBBF24;
 }
 
@@ -2746,7 +2767,6 @@ img, svg {
 }
 
 .provider-rating-badge.no-reviews:hover {
-  background: transparent;
   color: var(--text-muted);
 }
 
@@ -2784,22 +2804,27 @@ img, svg {
   line-height: 1;
 }
 
+.provider-rating-row-action {
+  width: 100%;
+}
+
 .btn-write-review-action {
-  display: inline-flex;
+  width: 100%;
+  display: flex;
   align-items: center;
-  gap: 0.25rem;
-  font-size: 0.72rem;
+  justify-content: center;
+  gap: 0.35rem;
+  font-size: 0.775rem;
   font-weight: 600;
   color: var(--accent-link);
   background: rgba(37, 99, 235, 0.12);
   border: 1px solid rgba(96, 165, 250, 0.3);
-  padding: 0.28rem 0.5rem;
-  border-radius: var(--radius-full);
+  padding: 0.4rem 0.65rem;
+  border-radius: var(--radius-sm);
   cursor: pointer;
   white-space: nowrap;
-  flex-shrink: 0;
-  line-height: 1;
-  height: 28px;
+  line-height: 1.25;
+  height: 32px;
   box-sizing: border-box;
   transition: all var(--transition-fast);
 }
