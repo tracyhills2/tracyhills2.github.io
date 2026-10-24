@@ -22,7 +22,7 @@ const EVENTS_DATA = [
   {
     "id": "evt-001",
     "title": "HOA Board Meeting",
-    "date": "2026-10-22",
+    "date": "2026-12-10",
     "time": "Time To Be Announced",
     "location": "Zoom",
     "description": "Upcoming quarterly HOA Board Meeting for Tracy Hills II. Meeting agenda and Zoom stream link will be shared by Seabreeze Management prior to the meeting.",
@@ -40,16 +40,17 @@ const CONTACTS_DATA = {
     "portalUrl": "https://commarea.cincwebaxis.com",
     "staff": [
       {
-        "name": "Jackie Beasley",
-        "email": "jackie.beasley@seabreezemgmt.com"
-      },
-      {
-        "name": "Lorenzo Faderogao",
-        "email": "lorenzo.faderogao@seabreezemgmt.com"
+        "name": "Brittney Zaragoza",
+        "role": "Senior Community Manager",
+        "email": "Brittney.Zaragoza@seabreezemgmt.com"
       },
       {
         "name": "Belinda Prunty",
         "email": "Belinda.Prunty@seabreezemgmt.com"
+      },
+      {
+        "name": "Lorenzo Faderogao",
+        "email": "lorenzo.faderogao@seabreezemgmt.com"
       },
       {
         "name": "Victoria Ellis",
