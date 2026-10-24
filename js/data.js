@@ -34,7 +34,9 @@ const CONTACTS_DATA = {
   "hoa": {
     "managementCompany": "Seabreeze Management Company",
     "businessHours": "(800) 232-7517",
-    "customerServiceEmail": "customercare@seabreezemgmt.com",
+    "customerServiceEmail": "tracyhills2@seabreezemgmt.com",
+    "generalEmail": "tracyhills2@seabreezemgmt.com",
+    "customerCareEmail": "customercare@seabreezemgmt.com",
     "customerServicePhone": "(800) 232-7517",
     "afterHoursEmergency": "(800) 232-7517",
     "portalUrl": "https://commarea.cincwebaxis.com",
@@ -141,7 +143,7 @@ const FAQ_DATA = [
         </div>
         <div style="display: flex; align-items: center; gap: 0.5rem;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          <span>Email: <a href="mailto:customercare@seabreezemgmt.com" style="color: var(--accent-link);">customercare@seabreezemgmt.com</a></span>
+          <span>Email: <a href="mailto:tracyhills2@seabreezemgmt.com" style="color: var(--accent-link);">tracyhills2@seabreezemgmt.com</a> / <a href="mailto:customercare@seabreezemgmt.com" style="color: var(--accent-link);">customercare@seabreezemgmt.com</a></span>
         </div>
         <div style="font-size: 0.775rem; color: var(--text-muted); margin-top: 0.25rem;">
           Mon - Fri: 8:00 AM - 5:00 PM (After-hours emergency call center active 24/7).
