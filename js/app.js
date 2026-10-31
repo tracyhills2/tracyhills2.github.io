@@ -837,7 +837,7 @@ function initProvidersPage() {
           </div>
           <div class="firewise-lightbox-footer">
             <div style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.4;">
-              <strong style="color: var(--text-primary);">Tracy Hills Phase II Firewise Certificate:</strong> Share this document with your home insurance representative.
+              <strong style="color: var(--text-primary);">Tracy Hills II Firewise Certificate:</strong> Share this document with your home insurance representative.
             </div>
             <div style="display: flex; gap: 0.5rem; align-items: center;">
               <a href="images/2026/Firewise-2026.jpeg" download="Firewise-2026.jpeg" class="btn btn-primary btn-sm" style="gap: 0.4rem; background: #16A34A; border-color: #22C55E; color: #FFFFFF;">
@@ -1238,7 +1238,7 @@ function initProvidersPage() {
         : `<span class="trust-badge trust-badge-recommendation">⭐ Community Recommendation</span>`;
 
       let residentBadgeHtml = (provider.isLocalResident === true)
-        ? `<span class="trust-badge" style="background: rgba(16, 185, 129, 0.15); color: #86EFAC; border: 1px solid rgba(34, 197, 94, 0.35);">🏡 Phase 2 Resident</span>`
+        ? `<span class="trust-badge" style="background: rgba(16, 185, 129, 0.15); color: #86EFAC; border: 1px solid rgba(34, 197, 94, 0.35);">🏡 Tracy Hills II Resident</span>`
         : '';
 
       let service247Html = (provider.is247Service || (provider.description && provider.description.includes('24/7')) || (provider.communityNotes && provider.communityNotes.includes('24/7')))
@@ -1425,7 +1425,7 @@ function initProvidersPage() {
               ${reviewTextHtml}
               <div class="review-item-footer">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-                <span>Verified by Tracy Hills Phase II Community Volunteer</span>
+                <span>Verified by Tracy Hills II Community Volunteer</span>
               </div>
             </div>
           `;

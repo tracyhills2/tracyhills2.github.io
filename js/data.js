@@ -654,7 +654,7 @@ const FAQ_DATA = [
     "question": "How do I join the resident WhatsApp and Facebook groups?",
     "answer": `<div class="faq-details">
   <p>
-    Connect with fellow Tracy Hills Phase II homeowners across our active community communication channels:
+    Connect with fellow Tracy Hills II homeowners across our active community communication channels:
   </p>
 
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1rem 0;">
@@ -1428,7 +1428,7 @@ const PROVIDERS_DATA = [
     "email": null,
     "website": null,
     "description": "General handyman services and maintenance work.",
-    "communityNotes": "Handyman recommended by Phase II residents.",
+    "communityNotes": "Handyman recommended by Tracy Hills II residents.",
     "isPlaceholder": false,
     "lastUpdated": "2026-08-22"
   },
@@ -1441,7 +1441,7 @@ const PROVIDERS_DATA = [
     "email": null,
     "website": null,
     "description": "General handyman, home repairs, and maintenance services.",
-    "communityNotes": "Handyman recommended by Phase II residents.",
+    "communityNotes": "Handyman recommended by Tracy Hills II residents.",
     "isPlaceholder": false,
     "lastUpdated": "2026-08-22"
   },
@@ -1454,7 +1454,7 @@ const PROVIDERS_DATA = [
     "email": null,
     "website": null,
     "description": "General handyman, home maintenance, and repair services.",
-    "communityNotes": "Handyman recommended by Phase II residents.",
+    "communityNotes": "Handyman recommended by Tracy Hills II residents.",
     "isPlaceholder": false,
     "lastUpdated": "2026-08-22"
   },
@@ -1467,7 +1467,7 @@ const PROVIDERS_DATA = [
     "email": null,
     "website": null,
     "description": "Handyman and electrical installation/repair services.",
-    "communityNotes": "Handyman / Electrician recommended by Phase II residents.",
+    "communityNotes": "Handyman / Electrician recommended by Tracy Hills II residents.",
     "isPlaceholder": false,
     "lastUpdated": "2026-08-22"
   },
@@ -1506,7 +1506,7 @@ const PROVIDERS_DATA = [
     "email": null,
     "website": null,
     "description": "Home insurance services.",
-    "communityNotes": "Tracy Hills Phase 2 Resident, and highly recommended",
+    "communityNotes": "Tracy Hills II Resident, and highly recommended",
     "isPlaceholder": false,
     "lastUpdated": "2026-08-22"
   },
@@ -1977,7 +1977,7 @@ const PROVIDERS_DATA = [
     "website": "https://newnestlandscaping.com",
     "instagram": "https://www.instagram.com/newnestlandscaping/",
     "description": "Full-service landscape design-build and outdoor living transformations: luxury pavers, synthetic turf, pergolas, retaining walls, and outdoor kitchens. (CSLB #1138697)",
-    "communityNotes": "Recommended by multiple Tracy Hills Phase 2 residents for outdoor improvements, pavers, turf, and landscape design. Direct/Mobile: (510) 786-8106.",
+    "communityNotes": "Recommended by multiple Tracy Hills II residents for outdoor improvements, pavers, turf, and landscape design. Direct/Mobile: (510) 786-8106.",
     "isPlaceholder": false,
     "lastUpdated": "2026-10-03"
   },

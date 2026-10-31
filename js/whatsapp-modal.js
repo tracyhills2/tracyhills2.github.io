@@ -24,7 +24,7 @@
             </div>
             <div>
               <h3 id="wa-modal-title" class="wa-modal-title">Resident Verification</h3>
-              <p class="wa-modal-subtitle">Tracy Hills Phase II WhatsApp Community</p>
+              <p class="wa-modal-subtitle">Tracy Hills II WhatsApp Community</p>
             </div>
           </div>
           <button type="button" id="wa-modal-close" class="wa-modal-close-btn" aria-label="Close modal">&times;</button>
@@ -34,7 +34,7 @@
         <div id="wa-modal-body-form" class="wa-modal-body">
           <div class="wa-notice-box">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-            <span>This is a private group for Tracy Hills Phase II resident homeowners. Information is used solely by volunteer admins to verify residency and is never shared publicly.</span>
+            <span>This is a private group for Tracy Hills II resident homeowners. Information is used solely by volunteer admins to verify residency and is never shared publicly.</span>
           </div>
 
           <form id="wa-verification-form" onsubmit="event.preventDefault(); window.submitWhatsAppVerification();">
@@ -55,7 +55,7 @@
                 <option value="Ridgerton">Ridgerton</option>
                 <option value="Rockingham">Rockingham</option>
                 <option value="Slateshire">Slateshire</option>
-                <option value="Other / Phase II Resident">Other / Phase II Resident</option>
+                <option value="Other / Tracy Hills II Resident">Other / Tracy Hills II Resident</option>
               </select>
             </div>
 
