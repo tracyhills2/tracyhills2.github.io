@@ -2170,6 +2170,20 @@ const PROVIDERS_DATA = [
     "lastUpdated": "2026-09-03"
   },
   {
+    "id": "sp-1103",
+    "businessName": "New India Supermarket - Tracy",
+    "category": "Grocery Delivery",
+    "contactPerson": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "whatsAppGroup": "https://chat.whatsapp.com/ECHTonFmXqGHSxUDa6KlPL?s=sh&p=i&mlu=4&ilr=4&iam=2",
+    "description": "Grocery delivery service for Tracy Hills II residents.",
+    "communityNotes": "Delivers groceries to Tracy Hills II. Order & coordinate via WhatsApp group.",
+    "isPlaceholder": false,
+    "lastUpdated": "2026-11-01"
+  },
+  {
     "id": "sp-410",
     "businessName": "Tony's Plumbing - Heating - Air",
     "category": "Plumber",
