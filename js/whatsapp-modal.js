@@ -279,7 +279,7 @@
   // Intercept all links targeting WhatsApp community
   function attachWhatsAppInterceptors() {
     document.addEventListener('click', function (e) {
-      const target = e.target.closest('a[href*="chat.whatsapp.com"], .js-whatsapp-join');
+      const target = e.target.closest('a[href*="JbKtulmPtaKJ3CA4htB0uS"], .js-whatsapp-join');
       if (target) {
         e.preventDefault();
         e.stopPropagation();
