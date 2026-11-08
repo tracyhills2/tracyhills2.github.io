@@ -1,5 +1,6 @@
 # robots.txt for Tracy Hills II Community Resource Hub
 User-agent: *
 Allow: /
+Disallow: /backoffice/
 
 Sitemap: https://tracyhills2.github.io/sitemap.xml
