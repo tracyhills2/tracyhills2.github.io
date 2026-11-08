@@ -398,11 +398,11 @@ function initModalHandlers() {
   const syncReviewCheckbox = document.getElementById('field-sync-review');
   const syncReviewFields = document.getElementById('bo-initial-review-fields');
 
-  if (closeBtn) closeBtn.addEventListener('click', closeProviderModal);
-  if (cancelBtn) cancelBtn.addEventListener('click', closeProviderModal);
+  if (closeBtn) closeBtn.addEventListener('click', () => closeProviderModal(false));
+  if (cancelBtn) cancelBtn.addEventListener('click', () => closeProviderModal(false));
   if (overlay) {
     overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) closeProviderModal();
+      if (e.target === overlay) closeProviderModal(false);
     });
   }
 
@@ -424,8 +424,8 @@ function initModalHandlers() {
       const arrow = document.getElementById('bo-multi-cats-arrow');
       if (!box) return;
       const isHidden = box.style.display === 'none';
-      box.style.display = isHidden ? 'flex' : 'none';
-      if (arrow) arrow.textContent = isHidden ? '▲ Hide' : '▼ Show';
+      box.style.display = isHidden ? 'grid' : 'none';
+      if (arrow) arrow.textContent = isHidden ? '▲ Close Dropdown' : '▼ Select Categories';
     });
   }
 
@@ -443,7 +443,14 @@ function initModalHandlers() {
   if (newCatToggleBtn) {
     newCatToggleBtn.addEventListener('click', () => {
       const box = document.getElementById('bo-new-cat-box');
-      if (box) box.style.display = box.style.display === 'none' ? 'flex' : 'none';
+      if (!box) return;
+      const isHidden = box.style.display === 'none';
+      box.style.display = isHidden ? 'flex' : 'none';
+      newCatToggleBtn.textContent = isHidden ? '✕ Cancel' : '+ New Category';
+      if (isHidden) {
+        const nameInput = document.getElementById('bo-new-cat-name');
+        if (nameInput) nameInput.focus();
+      }
     });
   }
 
@@ -466,9 +473,7 @@ function initModalHandlers() {
       }
       populateModalCategoryDropdown(newCat);
       renderMultiCategoryCheckboxes(newCat, getSelectedAdditionalCategories());
-      if (nameInput) nameInput.value = '';
-      const box = document.getElementById('bo-new-cat-box');
-      if (box) box.style.display = 'none';
+      resetNewCategoryBox();
     });
   }
 
@@ -492,6 +497,17 @@ function initModalHandlers() {
       handleSaveProviderForm(true);
     });
   }
+}
+
+function resetNewCategoryBox() {
+  const box = document.getElementById('bo-new-cat-box');
+  const toggleBtn = document.getElementById('bo-toggle-new-cat');
+  const nameInput = document.getElementById('bo-new-cat-name');
+  const colorInput = document.getElementById('bo-new-cat-color');
+  if (box) box.style.display = 'none';
+  if (toggleBtn) toggleBtn.textContent = '+ New Category';
+  if (nameInput) nameInput.value = '';
+  if (colorInput) colorInput.value = '#3B82F6';
 }
 
 function populateModalCategoryDropdown(selectedCat) {
@@ -555,6 +571,11 @@ function openProviderModal(providerId, prefillData) {
   if (!overlay) return;
   if (modalError) modalError.style.display = 'none';
 
+  // Snapshot categories before modal opens so Cancel restores any unsaved new category
+  boState._modalCategoriesBackup = [...boState.categories];
+  boState._modalCategoryColorsBackup = JSON.parse(JSON.stringify(boState.categoryColors));
+  resetNewCategoryBox();
+
   const existing = providerId ? boState.providers.find(p => p.id === providerId) : null;
   boState.editingProviderId = existing ? existing.id : null;
 
@@ -594,8 +615,8 @@ function openProviderModal(providerId, prefillData) {
   const multiCatWrap = document.getElementById('field-multi-categories');
   const multiCatArrow = document.getElementById('bo-multi-cats-arrow');
   const hasSecondaryCats = Array.isArray(data.categories) && data.categories.some(c => c !== primaryCat);
-  if (multiCatWrap) multiCatWrap.style.display = hasSecondaryCats ? 'flex' : 'none';
-  if (multiCatArrow) multiCatArrow.textContent = hasSecondaryCats ? '▲ Hide' : '▼ Show';
+  if (multiCatWrap) multiCatWrap.style.display = hasSecondaryCats ? 'grid' : 'none';
+  if (multiCatArrow) multiCatArrow.textContent = hasSecondaryCats ? '▲ Close Dropdown' : '▼ Select Categories';
 
   const extraLinksBox = document.getElementById('bo-extra-links-box');
   const extraLinksArrow = document.getElementById('bo-extra-links-arrow');
@@ -625,7 +646,12 @@ function openProviderModal(providerId, prefillData) {
 
 window.openProviderModal = openProviderModal;
 
-function closeProviderModal() {
+function closeProviderModal(keepCategoryChanges) {
+  resetNewCategoryBox();
+  if (keepCategoryChanges !== true && boState._modalCategoriesBackup) {
+    boState.categories = [...boState._modalCategoriesBackup];
+    boState.categoryColors = JSON.parse(JSON.stringify(boState._modalCategoryColorsBackup));
+  }
   const overlay = document.getElementById('bo-provider-modal');
   if (overlay) overlay.classList.remove('open');
 }
@@ -755,9 +781,9 @@ async function handleSaveProviderForm(publishImmediately) {
       }
 
       await publishProvidersToGitHub(reviewPayload);
-      closeProviderModal();
+      closeProviderModal(true);
     } else {
-      closeProviderModal();
+      closeProviderModal(true);
     }
   } catch (err) {
     if (modalError) {
