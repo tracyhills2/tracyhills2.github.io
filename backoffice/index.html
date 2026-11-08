@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backoffice Admin | Tracy Hills II Community Hub</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="backoffice.css?v=1.0">
+</head>
+<body class="bo-body">
+
+  <!-- 1. Login Gate View -->
+  <div id="bo-login-gate" class="bo-login-wrapper">
+    <div class="bo-login-card">
+      <div class="bo-login-logo">
+        <img src="../images/thp2-logo-v2.svg" alt="Tracy Hills II Logo">
+        <span class="bo-badge-lock">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Backoffice Portal</span>
+        </span>
+        <h1 style="font-size: 1.35rem; font-weight: 800; margin: 0 0 0.35rem 0;">Administrator Sign In</h1>
+        <p style="font-size: 0.85rem; color: var(--bo-text-muted); margin: 0;">
+          Enter your administrator password to manage community content.
+        </p>
+      </div>
+
+      <form id="bo-login-form" style="display: flex; flex-direction: column; gap: 1rem;">
+        <div>
+          <label for="bo-password-input" class="bo-label">Admin Password</label>
+          <input type="password" id="bo-password-input" class="bo-input" placeholder="Enter admin password..." required autocomplete="current-password">
+        </div>
+
+        <div id="bo-login-error" class="bo-alert bo-alert-error"></div>
+
+        <button type="submit" id="bo-login-btn" class="bo-btn bo-btn-primary" style="width: 100%; padding: 0.75rem;">
+          <span>Sign In to Backoffice →</span>
+        </button>
+
+        <div style="text-align: center; margin-top: 0.35rem;">
+          <a href="../index.html" style="font-size: 0.8rem; color: var(--bo-text-muted); text-decoration: none;">← Return to Public Website</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Authenticated Dashboard View -->
+  <div id="bo-app-content" style="display: none; flex-direction: column; min-height: 100vh;">
+    <header class="bo-header">
+      <div class="bo-header-inner">
+        <a href="index.html" class="bo-brand">
+          <img src="../images/thp2-logo-v2.svg" alt="Tracy Hills II Logo">
+          <span class="bo-brand-badge">Backoffice</span>
+        </a>
+
+        <nav class="bo-nav">
+          <a href="index.html" class="bo-nav-link active">Dashboard</a>
+          <a href="providers.html" class="bo-nav-link">Service Providers</a>
+          <a href="../providers.html" target="_blank" rel="noopener noreferrer" class="bo-nav-link">Live Directory ↗</a>
+          <button type="button" onclick="window.signOutBackoffice()" class="bo-btn bo-btn-outline bo-btn-sm">Sign Out</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="bo-container">
+      <div style="margin-bottom: 1.75rem;">
+        <h1 style="font-size: 1.5rem; font-weight: 800; margin: 0 0 0.35rem 0;">Backoffice Administration</h1>
+        <p style="font-size: 0.9rem; color: var(--bo-text-muted); margin: 0;">
+          Manage directory listings and publish updates directly to production without editing code.
+        </p>
+      </div>
+
+      <!-- Quick Stats Row -->
+      <div class="bo-stats-grid">
+        <div class="bo-stat-card">
+          <span class="bo-stat-label">Total Service Providers</span>
+          <span id="stat-total-providers" class="bo-stat-value">—</span>
+        </div>
+        <div class="bo-stat-card">
+          <span class="bo-stat-label">Service Categories</span>
+          <span id="stat-total-categories" class="bo-stat-value">—</span>
+        </div>
+        <div class="bo-stat-card">
+          <span class="bo-stat-label">🏡 Local Resident Vendors</span>
+          <span id="stat-resident-providers" class="bo-stat-value">—</span>
+        </div>
+        <div class="bo-stat-card">
+          <span class="bo-stat-label">⚡ 24/7 Emergency Vendors</span>
+          <span id="stat-247-providers" class="bo-stat-value">—</span>
+        </div>
+      </div>
+
+      <!-- Modules Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem;">
+        <!-- Active Module: Service Providers -->
+        <div style="background: var(--bo-bg-card); border: 1px solid rgba(59, 130, 246, 0.4); border-radius: 0.85rem; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; gap: 1.25rem;">
+          <div>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+              <span class="bo-tag" style="background: rgba(16, 185, 129, 0.15); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.35);">Active Module</span>
+              <span style="font-size: 0.75rem; color: var(--bo-text-muted);">Syncs with <code>js/data.js</code></span>
+            </div>
+            <h2 style="font-size: 1.2rem; font-weight: 700; margin: 0 0 0.5rem 0;">Service Providers Directory</h2>
+            <p style="font-size: 0.875rem; color: var(--bo-text-secondary); line-height: 1.55; margin: 0;">
+              Add new providers, edit existing contractor details, toggle Local Resident & 24/7 badges, manage multi-category tags, and commit directly to GitHub.
+            </p>
+          </div>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="providers.html" class="bo-btn bo-btn-primary">Manage Service Providers →</a>
+          </div>
+        </div>
+
+        <!-- Future Ready Module: Announcements & Events -->
+        <div style="background: var(--bo-bg-card); border: 1px solid var(--bo-border); border-radius: 0.85rem; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; gap: 1.25rem; opacity: 0.75;">
+          <div>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+              <span class="bo-tag" style="background: rgba(148, 163, 184, 0.15); color: #94A3B8; border: 1px solid var(--bo-border);">Future Ready</span>
+            </div>
+            <h2 style="font-size: 1.2rem; font-weight: 700; margin: 0 0 0.5rem 0;">Announcements & Events</h2>
+            <p style="font-size: 0.875rem; color: var(--bo-text-secondary); line-height: 1.55; margin: 0;">
+              Ready architecture for managing homepage community notices, HOA board meeting dates, and neighborhood alerts.
+            </p>
+          </div>
+          <div>
+            <span style="font-size: 0.8rem; color: var(--bo-text-muted);">Available for future expansion</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/data.js?v=2.8"></script>
+  <script src="backoffice.js?v=1.0"></script>
+</body>
+</html>
 

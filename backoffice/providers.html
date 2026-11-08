@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Service Providers | Backoffice Admin | Tracy Hills II</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="backoffice.css?v=1.0">
+</head>
+<body class="bo-body">
+
+  <!-- 1. Login Gate View (shown if not signed in) -->
+  <div id="bo-login-gate" class="bo-login-wrapper">
+    <div class="bo-login-card">
+      <div class="bo-login-logo">
+        <img src="../images/thp2-logo-v2.svg" alt="Tracy Hills II Logo">
+        <span class="bo-badge-lock">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Backoffice Portal</span>
+        </span>
+        <h1 style="font-size: 1.35rem; font-weight: 800; margin: 0 0 0.35rem 0;">Administrator Sign In</h1>
+        <p style="font-size: 0.85rem; color: var(--bo-text-muted); margin: 0;">
+          Enter your administrator password to manage Service Providers.
+        </p>
+      </div>
+
+      <form id="bo-login-form" style="display: flex; flex-direction: column; gap: 1rem;">
+        <div>
+          <label for="bo-password-input" class="bo-label">Admin Password</label>
+          <input type="password" id="bo-password-input" class="bo-input" placeholder="Enter admin password..." required autocomplete="current-password">
+        </div>
+
+        <div id="bo-login-error" class="bo-alert bo-alert-error"></div>
+
+        <button type="submit" id="bo-login-btn" class="bo-btn bo-btn-primary" style="width: 100%; padding: 0.75rem;">
+          <span>Sign In to Backoffice →</span>
+        </button>
+
+        <div style="text-align: center; margin-top: 0.35rem;">
+          <a href="../index.html" style="font-size: 0.8rem; color: var(--bo-text-muted); text-decoration: none;">← Return to Public Website</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Authenticated Providers Manager View -->
+  <div id="bo-app-content" style="display: none; flex-direction: column; min-height: 100vh;">
+    <header class="bo-header">
+      <div class="bo-header-inner">
+        <a href="index.html" class="bo-brand">
+          <img src="../images/thp2-logo-v2.svg" alt="Tracy Hills II Logo">
+          <span class="bo-brand-badge">Backoffice</span>
+        </a>
+
+        <nav class="bo-nav">
+          <a href="index.html" class="bo-nav-link">Dashboard</a>
+          <a href="providers.html" class="bo-nav-link active">Service Providers</a>
+          <a href="../providers.html" target="_blank" rel="noopener noreferrer" class="bo-nav-link">Live Directory ↗</a>
+          <button type="button" onclick="window.signOutBackoffice()" class="bo-btn bo-btn-outline bo-btn-sm">Sign Out</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="bo-container">
+      <!-- Page Title & Add Button -->
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem;">
+        <div>
+          <h1 style="font-size: 1.5rem; font-weight: 800; margin: 0 0 0.25rem 0;">Service Providers Manager</h1>
+          <p style="font-size: 0.875rem; color: var(--bo-text-muted); margin: 0;">
+            Add, edit, or remove providers and commit directly to <code>js/data.js</code> on GitHub. Existing provider IDs remain locked for Google Sheet review compatibility.
+          </p>
+        </div>
+        <button type="button" id="bo-add-provider-btn" class="bo-btn bo-btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          <span>Add New Provider</span>
+        </button>
+      </div>
+
+      <!-- Global Status Alert -->
+      <div id="bo-global-status" class="bo-alert" style="margin-bottom: 1.25rem;"></div>
+
+      <!-- Sticky Unsaved Changes / Publish Bar -->
+      <div id="bo-publish-bar" class="bo-publish-bar">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span style="width: 10px; height: 10px; border-radius: 50%; background: #10B981; display: inline-block; box-shadow: 0 0 10px #10B981;"></span>
+          <div>
+            <div style="font-size: 0.875rem; font-weight: 700; color: #ECFDF5;">Unpublished Changes Staged</div>
+            <div id="bo-unsaved-summary" style="font-size: 0.78rem; color: #A7F3D0;">Ready to commit to GitHub.</div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.65rem;">
+          <button type="button" id="bo-discard-changes-btn" class="bo-btn bo-btn-outline bo-btn-sm">Discard</button>
+          <button type="button" id="bo-publish-changes-btn" class="bo-btn bo-btn-success bo-btn-sm">
+            <span>Publish Changes to Production →</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Stats Row -->
+      <div class="bo-stats-grid">
+        <div class="bo-stat-card">
+          <span class="bo-stat-label">Total Providers</span>
+          <span id="stat-total-providers" class="bo-stat-value">—</span>
+        </div>
+        <div class="bo-stat-card">
+          <span class="bo-stat-label">Categories</span>
+          <span id="stat-total-categories" class="bo-stat-value">—</span>
+        </div>
+        <div class="bo-stat-card">
+          <span class="bo-stat-label">🏡 Local Residents</span>
+          <span id="stat-resident-providers" class="bo-stat-value">—</span>
+        </div>
+        <div class="bo-stat-card">
+          <span class="bo-stat-label">⚡ 24/7 Emergency</span>
+          <span id="stat-247-providers" class="bo-stat-value">—</span>
+        </div>
+      </div>
+
+      <!-- Search & Filter Toolbar -->
+      <div class="bo-toolbar">
+        <div class="bo-toolbar-left">
+          <input type="search" id="bo-provider-search" class="bo-input bo-search-input" placeholder="Search by name, ID (sp-...), phone, category, or keyword...">
+          <select id="bo-provider-cat-filter" class="bo-select bo-filter-select">
+            <option value="All">All Categories</option>
+          </select>
+        </div>
+        <div id="bo-showing-count" style="font-size: 0.8rem; color: var(--bo-text-muted); font-weight: 500;">
+          Loading providers...
+        </div>
+      </div>
+
+      <!-- Providers Table -->
+      <div class="bo-table-card">
+        <div class="bo-table-scroll">
+          <table class="bo-table">
+            <thead>
+              <tr>
+                <th style="width: 90px;">ID</th>
+                <th>Business Name & Summary</th>
+                <th>Categories</th>
+                <th>Contact & Links</th>
+                <th>Badges & Listing Type</th>
+                <th style="text-align: right; width: 150px;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="bo-providers-table-body">
+              <tr>
+                <td colspan="6" style="text-align: center; padding: 2.5rem; color: var(--bo-text-muted);">
+                  Loading service providers...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- 3. Add / Edit Service Provider Modal -->
+  <div id="bo-provider-modal" class="bo-modal-overlay">
+    <div class="bo-modal">
+      <div class="bo-modal-header">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.25rem;">
+            <h2 id="bo-modal-title" style="font-size: 1.15rem; font-weight: 800; margin: 0;">Add New Service Provider</h2>
+            <span id="field-id-display" class="bo-id-pill">sp-new</span>
+          </div>
+          <p style="font-size: 0.78rem; color: var(--bo-text-muted); margin: 0;">
+            Configure provider details, multi-category tags, and special community badges.
+          </p>
+        </div>
+        <button type="button" id="bo-modal-close" class="bo-btn bo-btn-outline bo-btn-sm" aria-label="Close modal">✕</button>
+      </div>
+
+      <form id="bo-provider-form">
+        <div class="bo-modal-body">
+          <div id="bo-modal-error" class="bo-alert bo-alert-error" style="margin-bottom: 1rem;"></div>
+
+          <!-- Section 1: Core Identity & Categories -->
+          <div class="bo-form-section-title">1. Business Identity & Category</div>
+          <div class="bo-form-grid">
+            <div class="bo-form-group">
+              <label for="field-businessName" class="bo-label">Business / Provider Name *</label>
+              <input type="text" id="field-businessName" class="bo-input" placeholder="e.g., Golden State Garage Doors" required>
+            </div>
+
+            <div class="bo-form-group">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <label for="field-category" class="bo-label">Primary Category *</label>
+                <button type="button" id="bo-toggle-new-cat" style="background: none; border: none; color: #60A5FA; font-size: 0.75rem; font-weight: 600; cursor: pointer; padding: 0;">+ New Category</button>
+              </div>
+              <select id="field-category" class="bo-select" required></select>
+
+              <!-- Inline Add New Category Mini-Form -->
+              <div id="bo-new-cat-box" style="display: none; gap: 0.45rem; align-items: center; margin-top: 0.45rem; background: rgba(15,23,42,0.75); padding: 0.5rem; border-radius: 0.5rem; border: 1px solid var(--bo-border);">
+                <input type="text" id="bo-new-cat-name" class="bo-input" placeholder="Category name..." style="padding: 0.35rem 0.6rem; font-size: 0.8rem;">
+                <input type="color" id="bo-new-cat-color" value="#3B82F6" title="Category Badge Color" style="width: 34px; height: 30px; border: none; background: transparent; cursor: pointer;">
+                <button type="button" id="bo-add-new-cat-confirm" class="bo-btn bo-btn-primary bo-btn-sm">Add</button>
+              </div>
+            </div>
+
+            <div class="bo-form-group full">
+              <label class="bo-label">Multi-Category Tags <span class="bo-label-sub">(Select additional categories if this provider appears under multiple filters)</span></label>
+              <div id="field-multi-categories" class="bo-multi-cat-grid"></div>
+            </div>
+          </div>
+
+          <!-- Section 2: Special Community Ribbons & Listing Status -->
+          <div class="bo-form-section-title">2. Special Badges & Listing Type</div>
+          <div class="bo-toggle-grid">
+            <label class="bo-toggle-card">
+              <input type="checkbox" id="field-communityRecommended" checked>
+              <div>
+                <div class="bo-toggle-title">⭐ Neighbor Recommended</div>
+                <div class="bo-toggle-desc">Checked = Recommended by Resident. Unchecked = Self-Submitted Directory Listing (<code>communityRecommended: false</code>).</div>
+              </div>
+            </label>
+
+            <label class="bo-toggle-card">
+              <input type="checkbox" id="field-isLocalResident">
+              <div>
+                <div class="bo-toggle-title">🏡 Local Resident Business</div>
+                <div class="bo-toggle-desc">Displays the green <strong>🏡 Resident</strong> top-left ribbon and adds to the Resident filter chip.</div>
+              </div>
+            </label>
+
+            <label class="bo-toggle-card">
+              <input type="checkbox" id="field-is247Service">
+              <div>
+                <div class="bo-toggle-title">⚡ 24/7 Emergency Service</div>
+                <div class="bo-toggle-desc">Displays the red <strong>⚡ 24/7</strong> top-right ribbon and adds to the 24/7 Service filter chip.</div>
+              </div>
+            </label>
+          </div>
+
+          <!-- Section 3: Contact Details & External Links -->
+          <div class="bo-form-section-title">3. Contact Information & Links</div>
+          <div class="bo-form-grid">
+            <div class="bo-form-group">
+              <label for="field-contactPerson" class="bo-label">Contact Person <span class="bo-label-sub">(Optional)</span></label>
+              <input type="text" id="field-contactPerson" class="bo-input" placeholder="e.g., Brandon">
+            </div>
+
+            <div class="bo-form-group">
+              <label for="field-phone" class="bo-label">Phone Number <span class="bo-label-sub">(Auto-formats US)</span></label>
+              <input type="text" id="field-phone" class="bo-input" placeholder="(209) 555-0199">
+            </div>
+
+            <div class="bo-form-group">
+              <label for="field-email" class="bo-label">Email Address <span class="bo-label-sub">(Optional)</span></label>
+              <input type="email" id="field-email" class="bo-input" placeholder="contact@example.com">
+            </div>
+
+            <div class="bo-form-group">
+              <label for="field-website" class="bo-label">Website URL <span class="bo-label-sub">(Optional)</span></label>
+              <input type="url" id="field-website" class="bo-input" placeholder="https://www.example.com">
+            </div>
+
+            <div class="bo-form-group">
+              <label for="field-instagram" class="bo-label">Instagram URL <span class="bo-label-sub">(Optional)</span></label>
+              <input type="url" id="field-instagram" class="bo-input" placeholder="https://www.instagram.com/handle/">
+            </div>
+
+            <div class="bo-form-group">
+              <label for="field-whatsAppGroup" class="bo-label">WhatsApp Group Invite Link <span class="bo-label-sub">(Protected by Gate)</span></label>
+              <input type="url" id="field-whatsAppGroup" class="bo-input" placeholder="https://chat.whatsapp.com/...">
+            </div>
+
+            <div class="bo-form-group full">
+              <label for="field-googleReviewUrl" class="bo-label">External Review Link <span class="bo-label-sub">(Yelp / Google Maps / Nextdoor URL)</span></label>
+              <input type="url" id="field-googleReviewUrl" class="bo-input" placeholder="https://www.yelp.com/biz/...">
+            </div>
+          </div>
+
+          <!-- Section 4: Descriptions, Notes & Search Keywords -->
+          <div class="bo-form-section-title">4. Description, Community Notes & Keywords</div>
+          <div class="bo-form-grid">
+            <div class="bo-form-group full">
+              <label for="field-description" class="bo-label">Service Description *</label>
+              <textarea id="field-description" class="bo-textarea" rows="2" placeholder="Describe the services offered by this provider..." required></textarea>
+            </div>
+
+            <div class="bo-form-group full">
+              <label for="field-communityNotes" class="bo-label">Community Notes / Highlight Quote <span class="bo-label-sub">(Shown in callout box on card)</span></label>
+              <textarea id="field-communityNotes" class="bo-textarea" rows="2" placeholder="e.g., Recommended by multiple residents for fast response and fair pricing."></textarea>
+            </div>
+
+            <div class="bo-form-group full">
+              <label for="field-keywords" class="bo-label">Search Keywords <span class="bo-label-sub">(Comma-separated lowercase tags)</span></label>
+              <input type="text" id="field-keywords" class="bo-input" placeholder="e.g., plumber, water heater, leak repair, drain">
+            </div>
+          </div>
+
+          <!-- Section 5: Optional Initial Resident Review Forwarding (Shown on New Provider only) -->
+          <div id="bo-initial-review-section" style="display: none;">
+            <div class="bo-form-section-title">5. Initial Resident Star Rating & Review (Google Sheet Sync)</div>
+            <div class="bo-review-sync-box">
+              <label style="display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-size: 0.875rem; font-weight: 700; color: #FBBF24;">
+                <input type="checkbox" id="field-sync-review" style="accent-color: #F59E0B; width: 1rem; height: 1rem;">
+                <span>Also record an initial resident star rating in the Google Sheet Reviews database</span>
+              </label>
+
+              <div id="bo-initial-review-fields" style="display: none; margin-top: 0.85rem;">
+                <div class="bo-form-grid">
+                  <div class="bo-form-group">
+                    <label for="field-rev-rating" class="bo-label">Star Rating</label>
+                    <select id="field-rev-rating" class="bo-select">
+                      <option value="5">⭐⭐⭐⭐⭐ (5 Stars)</option>
+                      <option value="4">⭐⭐⭐⭐ (4 Stars)</option>
+                      <option value="3">⭐⭐⭐ (3 Stars)</option>
+                      <option value="2">⭐⭐ (2 Stars)</option>
+                      <option value="1">⭐ (1 Star)</option>
+                    </select>
+                  </div>
+
+                  <div class="bo-form-group">
+                    <label for="field-rev-name" class="bo-label">Reviewer Display Name</label>
+                    <input type="text" id="field-rev-name" class="bo-input" value="Verified Tracy Hills II Resident">
+                  </div>
+
+                  <div class="bo-form-group full">
+                    <label for="field-rev-text" class="bo-label">Resident Review Comment</label>
+                    <textarea id="field-rev-text" class="bo-textarea" rows="2" placeholder="Optional resident review quote..."></textarea>
+                  </div>
+
+                  <input type="hidden" id="field-rev-address" value="Tracy Hills II">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bo-modal-footer">
+          <button type="button" id="bo-modal-cancel" class="bo-btn bo-btn-outline">Cancel</button>
+          <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
+            <button type="button" id="bo-save-draft-btn" class="bo-btn bo-btn-outline" title="Stage change locally so you can batch multiple edits before pushing to GitHub">
+              Stage Change (Batch)
+            </button>
+            <button type="submit" id="bo-save-publish-btn" class="bo-btn bo-btn-success">
+              <span>Save & Publish to Production →</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/data.js?v=2.8"></script>
+  <script src="backoffice.js?v=1.0"></script>
+</body>
+</html>
+

@@ -1,0 +1,566 @@
+/* ==========================================================================
+   Tracy Hills II - Backoffice Administration Stylesheet
+   ========================================================================== */
+
+:root {
+  --bo-bg-main: #0B1120;
+  --bo-bg-card: #1E293B;
+  --bo-bg-elevated: #0F172A;
+  --bo-border: rgba(148, 163, 184, 0.18);
+  --bo-text-primary: #F8FAFC;
+  --bo-text-secondary: #CBD5E1;
+  --bo-text-muted: #94A3B8;
+  --bo-accent-blue: #3B82F6;
+  --bo-accent-green: #10B981;
+  --bo-accent-amber: #F59E0B;
+  --bo-accent-red: #EF4444;
+}
+
+body.bo-body {
+  background-color: var(--bo-bg-main);
+  color: var(--bo-text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------------------------------------------------------------------------
+   Login Gate Screen
+   -------------------------------------------------------------------------- */
+.bo-login-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.bo-login-card {
+  width: 100%;
+  max-width: 430px;
+  background: var(--bo-bg-card);
+  border: 1px solid var(--bo-border);
+  border-radius: 1rem;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+.bo-login-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.bo-login-logo img {
+  height: 54px;
+  width: auto;
+  margin-bottom: 0.85rem;
+}
+
+.bo-badge-lock {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(59, 130, 246, 0.15);
+  color: #60A5FA;
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 0.65rem;
+}
+
+/* --------------------------------------------------------------------------
+   Backoffice Header & Navigation
+   -------------------------------------------------------------------------- */
+.bo-header {
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--bo-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.bo-header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.bo-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--bo-text-primary);
+}
+
+.bo-brand img {
+  height: 36px;
+  width: auto;
+}
+
+.bo-brand-badge {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34D399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+}
+
+.bo-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.bo-nav-link {
+  color: var(--bo-text-secondary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.45rem 0.85rem;
+  border-radius: 0.5rem;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.bo-nav-link:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--bo-text-primary);
+}
+
+.bo-nav-link.active {
+  background: rgba(59, 130, 246, 0.18);
+  color: #60A5FA;
+  border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   Main Container & Stats Grid
+   -------------------------------------------------------------------------- */
+.bo-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.75rem 1.25rem 4rem 1.25rem;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.bo-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.bo-stat-card {
+  background: var(--bo-bg-card);
+  border: 1px solid var(--bo-border);
+  border-radius: 0.75rem;
+  padding: 1.15rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.bo-stat-label {
+  font-size: 0.775rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--bo-text-muted);
+}
+
+.bo-stat-value {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--bo-text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Unpublished Changes Floating / Sticky Banner
+   -------------------------------------------------------------------------- */
+.bo-publish-bar {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(15, 23, 42, 0.96) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.5);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.bo-publish-bar.visible {
+  display: flex;
+}
+
+/* --------------------------------------------------------------------------
+   Toolbar & Provider Table
+   -------------------------------------------------------------------------- */
+.bo-toolbar {
+  background: var(--bo-bg-card);
+  border: 1px solid var(--bo-border);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.bo-search-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 240px;
+}
+
+.bo-input,
+.bo-select,
+.bo-textarea {
+  width: 100%;
+  background: var(--bo-bg-elevated);
+  border: 1px solid var(--bo-border);
+  border-radius: 0.5rem;
+  padding: 0.625rem 0.85rem;
+  color: var(--bo-text-primary);
+  font-size: 0.875rem;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease;
+}
+
+.bo-input:focus,
+.bo-select:focus,
+.bo-textarea:focus {
+  outline: none;
+  border-color: var(--bo-accent-blue);
+}
+
+.bo-table-card {
+  background: var(--bo-bg-card);
+  border: 1px solid var(--bo-border);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.bo-table-scroll {
+  overflow-x: auto;
+}
+
+.bo-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.bo-table th {
+  background: var(--bo-bg-elevated);
+  color: var(--bo-text-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.725rem;
+  letter-spacing: 0.05em;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--bo-border);
+  white-space: nowrap;
+}
+
+.bo-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  vertical-align: middle;
+}
+
+.bo-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.bo-id-pill {
+  font-family: monospace;
+  font-size: 0.75rem;
+  background: var(--bo-bg-elevated);
+  color: #94A3B8;
+  padding: 0.2rem 0.45rem;
+  border-radius: 4px;
+  border: 1px solid var(--bo-border);
+}
+
+.bo-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.725rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+.bo-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.bo-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.bo-btn-primary {
+  background: var(--bo-accent-blue);
+  color: #FFFFFF;
+}
+
+.bo-btn-primary:hover:not(:disabled) {
+  background: #2563EB;
+}
+
+.bo-btn-success {
+  background: #059669;
+  color: #FFFFFF;
+  border-color: #10B981;
+}
+
+.bo-btn-success:hover:not(:disabled) {
+  background: #047857;
+}
+
+.bo-btn-outline {
+  background: transparent;
+  color: var(--bo-text-secondary);
+  border-color: var(--bo-border);
+}
+
+.bo-btn-outline:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--bo-text-primary);
+}
+
+.bo-btn-danger {
+  background: rgba(239, 68, 68, 0.12);
+  color: #FCA5A5;
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.bo-btn-danger:hover:not(:disabled) {
+  background: rgba(239, 68, 68, 0.22);
+}
+
+.bo-btn-sm {
+  font-size: 0.775rem;
+  padding: 0.35rem 0.65rem;
+}
+
+/* --------------------------------------------------------------------------
+   Provider Editor Modal
+   -------------------------------------------------------------------------- */
+.bo-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 7, 18, 0.82);
+  backdrop-filter: blur(6px);
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.bo-modal-overlay.open {
+  display: flex;
+}
+
+.bo-modal {
+  background: var(--bo-bg-card);
+  border: 1px solid var(--bo-border);
+  border-radius: 0.85rem;
+  width: 100%;
+  max-width: 780px;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75);
+}
+
+.bo-modal-header {
+  padding: 1.15rem 1.5rem;
+  border-bottom: 1px solid var(--bo-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.bo-modal-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.bo-modal-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--bo-border);
+  background: var(--bo-bg-elevated);
+  border-bottom-left-radius: 0.85rem;
+  border-bottom-right-radius: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.bo-form-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.bo-form-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.85rem;
+}
+
+.bo-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--bo-text-secondary);
+  margin-bottom: 0.35rem;
+}
+
+.bo-hint {
+  font-size: 0.74rem;
+  color: var(--bo-text-muted);
+  margin-top: 0.25rem;
+}
+
+.bo-checkbox-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  background: var(--bo-bg-elevated);
+  border: 1px solid var(--bo-border);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.bo-checkbox-card input[type="checkbox"] {
+  margin-top: 0.15rem;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--bo-accent-blue);
+}
+
+.bo-multi-cats-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  background: var(--bo-bg-elevated);
+  border: 1px solid var(--bo-border);
+  border-radius: 0.5rem;
+  padding: 0.65rem;
+  max-height: 125px;
+  overflow-y: auto;
+}
+
+.bo-cat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 6px;
+  background: var(--bo-bg-card);
+  border: 1px solid var(--bo-border);
+  cursor: pointer;
+  user-select: none;
+}
+
+.bo-cat-chip input {
+  margin: 0;
+  accent-color: var(--bo-accent-blue);
+}
+
+.bo-alert {
+  padding: 0.85rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  display: none;
+}
+
+.bo-alert-error {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #FCA5A5;
+}
+
+.bo-alert-success {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #6EE7B7;
+}
+
+.bo-spinner {
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #FFFFFF;
+  border-radius: 50%;
+  animation: bo-spin 0.8s linear infinite;
+}
+
+@keyframes bo-spin {
+  to { transform: rotate(360deg); }
+}
+
