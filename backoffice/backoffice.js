@@ -118,6 +118,7 @@ function loadSessionCache() {
 function signOutBackoffice() {
   sessionStorage.removeItem(SESSION_PASS_KEY);
   sessionStorage.removeItem(SESSION_DATA_KEY);
+  document.documentElement.classList.remove('bo-is-authed');
   window.location.href = 'index.html';
 }
 
@@ -162,6 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const loginError = document.getElementById('bo-login-error');
 
   function renderAuthenticatedView() {
+    document.documentElement.classList.add('bo-is-authed');
     if (loginGate) loginGate.style.display = 'none';
     if (appContent) appContent.style.display = 'flex';
 
@@ -198,6 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (err) {
       sessionStorage.removeItem(SESSION_PASS_KEY);
       sessionStorage.removeItem(SESSION_DATA_KEY);
+      document.documentElement.classList.remove('bo-is-authed');
       if (loginGate) loginGate.style.display = 'flex';
       if (appContent) appContent.style.display = 'none';
       if (loginError) {

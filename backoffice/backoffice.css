@@ -30,6 +30,14 @@ body.bo-body {
 /* --------------------------------------------------------------------------
    Login Gate Screen
    -------------------------------------------------------------------------- */
+html.bo-is-authed #bo-login-gate {
+  display: none !important;
+}
+
+html.bo-is-authed #bo-app-content {
+  display: flex !important;
+}
+
 .bo-login-wrapper {
   flex: 1;
   display: flex;
