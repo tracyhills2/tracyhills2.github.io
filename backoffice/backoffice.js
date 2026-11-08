@@ -6,6 +6,7 @@
 const WORKER_API_URL = 'https://tracy-hills-api.tracyhillsphase2.workers.dev/';
 const REVIEWS_API_URL = 'https://script.google.com/macros/s/AKfycby96aZEpZlcszbfba5DloErXEX_rJQFSggTZ0Dhk0jazYGiZiAdOgxgeTGAT0lYx-QmiQ/exec';
 const SESSION_PASS_KEY = 'thp2_bo_admin_pass';
+const SESSION_DATA_KEY = 'thp2_bo_session_data';
 
 let boState = {
   providers: [],
@@ -82,8 +83,41 @@ function setAdminPass(pass) {
   sessionStorage.setItem(SESSION_PASS_KEY, pass);
 }
 
+function saveSessionCache() {
+  try {
+    sessionStorage.setItem(SESSION_DATA_KEY, JSON.stringify({
+      providers: boState.providers,
+      categories: boState.categories,
+      categoryColors: boState.categoryColors
+    }));
+  } catch (e) {
+    console.warn('Could not cache session data:', e);
+  }
+}
+
+function loadSessionCache() {
+  try {
+    const raw = sessionStorage.getItem(SESSION_DATA_KEY);
+    if (!raw) return false;
+    const parsed = JSON.parse(raw);
+    if (parsed && Array.isArray(parsed.providers) && parsed.providers.length > 0) {
+      boState.providers = parsed.providers;
+    }
+    if (parsed && Array.isArray(parsed.categories) && parsed.categories.length > 0) {
+      boState.categories = parsed.categories;
+    }
+    if (parsed && parsed.categoryColors && typeof parsed.categoryColors === 'object') {
+      boState.categoryColors = parsed.categoryColors;
+    }
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
 function signOutBackoffice() {
   sessionStorage.removeItem(SESSION_PASS_KEY);
+  sessionStorage.removeItem(SESSION_DATA_KEY);
   window.location.href = 'index.html';
 }
 
@@ -127,9 +161,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const loginBtn = document.getElementById('bo-login-btn');
   const loginError = document.getElementById('bo-login-error');
 
-  async function unlockBackoffice(passToVerify, isSilentCheck) {
+  function renderAuthenticatedView() {
+    if (loginGate) loginGate.style.display = 'none';
+    if (appContent) appContent.style.display = 'flex';
+
+    initDashboardStats();
+    if (document.getElementById('bo-providers-table-body')) {
+      initProvidersManager();
+    }
+  }
+
+  async function unlockBackoffice(passToVerify) {
     try {
-      if (loginBtn && !isSilentCheck) {
+      if (loginBtn) {
         loginBtn.disabled = true;
         loginBtn.innerHTML = `<span class="bo-spinner"></span> <span>Verifying...</span>`;
       }
@@ -149,18 +193,14 @@ document.addEventListener('DOMContentLoaded', () => {
         boState.categoryColors = verifyData.categoryColors;
       }
 
-      if (loginGate) loginGate.style.display = 'none';
-      if (appContent) appContent.style.display = 'flex';
-
-      initDashboardStats();
-      if (document.getElementById('bo-providers-table-body')) {
-        initProvidersManager();
-      }
+      saveSessionCache();
+      renderAuthenticatedView();
     } catch (err) {
       sessionStorage.removeItem(SESSION_PASS_KEY);
+      sessionStorage.removeItem(SESSION_DATA_KEY);
       if (loginGate) loginGate.style.display = 'flex';
       if (appContent) appContent.style.display = 'none';
-      if (!isSilentCheck && loginError) {
+      if (loginError) {
         loginError.textContent = err.message || 'Authentication failed. Please check your password.';
         loginError.style.display = 'block';
       }
@@ -174,7 +214,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const savedPass = getAdminPass();
   if (savedPass) {
-    unlockBackoffice(savedPass, true);
+    // Already authenticated in this browser tab: restore cached session data in 0ms with 0 API calls
+    loadSessionCache();
+    renderAuthenticatedView();
   } else {
     if (loginGate) loginGate.style.display = 'flex';
     if (appContent) appContent.style.display = 'none';
@@ -185,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const val = passInput ? passInput.value.trim() : '';
       if (!val) return;
-      unlockBackoffice(val, false);
+      unlockBackoffice(val);
     });
   }
 });
@@ -868,6 +910,7 @@ async function publishProvidersToGitHub(optionalInitialReviewPayload) {
 
     boState.hasUnsavedChanges = false;
     boState.pendingCommitMessages = [];
+    saveSessionCache();
     updatePublishBar();
 
     if (statusBanner) {
