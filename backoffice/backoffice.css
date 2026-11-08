@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Tracy Hills II - Backoffice Administration Stylesheet
+   Tracy Hills II - Backoffice Administration Stylesheet (v1.1)
    ========================================================================== */
 
 :root {
@@ -7,6 +7,7 @@
   --bo-bg-card: #1E293B;
   --bo-bg-elevated: #0F172A;
   --bo-border: rgba(148, 163, 184, 0.18);
+  --bo-border-strong: rgba(148, 163, 184, 0.28);
   --bo-text-primary: #F8FAFC;
   --bo-text-secondary: #CBD5E1;
   --bo-text-muted: #94A3B8;
@@ -172,21 +173,21 @@ body.bo-body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .bo-stat-card {
   background: var(--bo-bg-card);
   border: 1px solid var(--bo-border);
   border-radius: 0.75rem;
-  padding: 1.15rem 1.25rem;
+  padding: 1rem 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
 .bo-stat-label {
-  font-size: 0.775rem;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -194,7 +195,7 @@ body.bo-body {
 }
 
 .bo-stat-value {
-  font-size: 1.65rem;
+  font-size: 1.55rem;
   font-weight: 800;
   color: var(--bo-text-primary);
 }
@@ -227,7 +228,7 @@ body.bo-body {
   background: var(--bo-bg-card);
   border: 1px solid var(--bo-border);
   border-radius: 0.75rem;
-  padding: 1rem 1.25rem;
+  padding: 0.85rem 1.15rem;
   margin-bottom: 1.25rem;
   display: flex;
   align-items: center;
@@ -236,10 +237,23 @@ body.bo-body {
   flex-wrap: wrap;
 }
 
-.bo-search-wrap {
-  position: relative;
+.bo-toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  min-width: 280px;
+  flex-wrap: wrap;
+}
+
+.bo-search-input {
   flex: 1;
   min-width: 240px;
+}
+
+.bo-filter-select {
+  width: auto;
+  min-width: 210px;
 }
 
 .bo-input,
@@ -247,14 +261,19 @@ body.bo-body {
 .bo-textarea {
   width: 100%;
   background: var(--bo-bg-elevated);
-  border: 1px solid var(--bo-border);
+  border: 1px solid var(--bo-border-strong);
   border-radius: 0.5rem;
-  padding: 0.625rem 0.85rem;
+  padding: 0.55rem 0.8rem;
   color: var(--bo-text-primary);
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   font-family: inherit;
   box-sizing: border-box;
-  transition: border-color 0.15s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.bo-input::placeholder,
+.bo-textarea::placeholder {
+  color: rgba(148, 163, 184, 0.55);
 }
 
 .bo-input:focus,
@@ -262,6 +281,7 @@ body.bo-body {
 .bo-textarea:focus {
   outline: none;
   border-color: var(--bo-accent-blue);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
 .bo-table-card {
@@ -306,12 +326,13 @@ body.bo-body {
 
 .bo-id-pill {
   font-family: monospace;
-  font-size: 0.75rem;
-  background: var(--bo-bg-elevated);
-  color: #94A3B8;
-  padding: 0.2rem 0.45rem;
-  border-radius: 4px;
-  border: 1px solid var(--bo-border);
+  font-size: 0.74rem;
+  background: rgba(59, 130, 246, 0.12);
+  color: #93C5FD;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  font-weight: 600;
 }
 
 .bo-tag {
@@ -334,9 +355,9 @@ body.bo-body {
   justify-content: center;
   gap: 0.45rem;
   font-family: inherit;
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   font-weight: 600;
-  padding: 0.6rem 1.1rem;
+  padding: 0.55rem 1.05rem;
   border-radius: 0.5rem;
   border: 1px solid transparent;
   cursor: pointer;
@@ -370,13 +391,13 @@ body.bo-body {
 }
 
 .bo-btn-outline {
-  background: transparent;
+  background: rgba(15, 23, 42, 0.5);
   color: var(--bo-text-secondary);
-  border-color: var(--bo-border);
+  border-color: var(--bo-border-strong);
 }
 
 .bo-btn-outline:hover:not(:disabled) {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--bo-text-primary);
 }
 
@@ -391,12 +412,12 @@ body.bo-body {
 }
 
 .bo-btn-sm {
-  font-size: 0.775rem;
-  padding: 0.35rem 0.65rem;
+  font-size: 0.76rem;
+  padding: 0.35rem 0.7rem;
 }
 
 /* --------------------------------------------------------------------------
-   Provider Editor Modal
+   Provider Editor Modal (Clean, Structured Card Layout)
    -------------------------------------------------------------------------- */
 .bo-modal-overlay {
   position: fixed;
@@ -415,93 +436,202 @@ body.bo-body {
 }
 
 .bo-modal {
-  background: var(--bo-bg-card);
-  border: 1px solid var(--bo-border);
-  border-radius: 0.85rem;
+  background: #131C2E;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 0.9rem;
   width: 100%;
-  max-width: 780px;
-  max-height: 92vh;
+  max-width: 760px;
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+  box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.85);
+}
+
+#bo-provider-form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  margin: 0;
 }
 
 .bo-modal-header {
-  padding: 1.15rem 1.5rem;
+  padding: 1rem 1.4rem;
+  background: #0F172A;
   border-bottom: 1px solid var(--bo-border);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  flex-shrink: 0;
 }
 
 .bo-modal-body {
-  padding: 1.5rem;
+  padding: 1.25rem 1.4rem;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem;
+  flex: 1;
 }
 
 .bo-modal-footer {
-  padding: 1rem 1.5rem;
+  padding: 0.9rem 1.4rem;
   border-top: 1px solid var(--bo-border);
-  background: var(--bo-bg-elevated);
-  border-bottom-left-radius: 0.85rem;
-  border-bottom-right-radius: 0.85rem;
+  background: #0F172A;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
   flex-wrap: wrap;
+  flex-shrink: 0;
 }
 
-.bo-form-grid-2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
+/* Modal Section Cards */
+.bo-section-card {
+  background: rgba(30, 41, 59, 0.55);
+  border: 1px solid var(--bo-border);
+  border-radius: 0.7rem;
+  padding: 1rem 1.15rem;
 }
 
-.bo-form-grid-3 {
+.bo-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.bo-form-section-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #60A5FA;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.bo-form-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 0.85rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem 1rem;
+}
+
+.bo-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.bo-form-group.full {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 640px) {
+  .bo-form-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .bo-label {
-  display: block;
-  font-size: 0.8rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem;
+  font-size: 0.79rem;
   font-weight: 600;
   color: var(--bo-text-secondary);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.32rem;
 }
 
-.bo-hint {
-  font-size: 0.74rem;
+.bo-label-sub {
+  font-size: 0.71rem;
+  font-weight: 400;
   color: var(--bo-text-muted);
-  margin-top: 0.25rem;
 }
 
-.bo-checkbox-card {
+/* 3-Column Horizontal Toggle Cards for Special Badges */
+.bo-toggle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+@media (max-width: 680px) {
+  .bo-toggle-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bo-toggle-card {
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
   background: var(--bo-bg-elevated);
-  border: 1px solid var(--bo-border);
-  border-radius: 0.5rem;
-  padding: 0.75rem;
+  border: 1px solid var(--bo-border-strong);
+  border-radius: 0.55rem;
+  padding: 0.7rem 0.8rem;
   cursor: pointer;
   user-select: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
 }
 
-.bo-checkbox-card input[type="checkbox"] {
-  margin-top: 0.15rem;
+.bo-toggle-card:hover {
+  border-color: rgba(96, 165, 250, 0.45);
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.bo-toggle-card input[type="checkbox"] {
+  margin-top: 0.18rem;
   width: 16px;
   height: 16px;
   accent-color: var(--bo-accent-blue);
+  flex-shrink: 0;
+  cursor: pointer;
 }
 
-.bo-multi-cats-box {
+.bo-toggle-title {
+  font-size: 0.81rem;
+  font-weight: 700;
+  color: var(--bo-text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.bo-toggle-desc {
+  font-size: 0.71rem;
+  color: var(--bo-text-muted);
+  line-height: 1.35;
+}
+
+/* Collapsible Multi-Category Drawer & Chips */
+.bo-collapsible-trigger {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px dashed var(--bo-border-strong);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  color: var(--bo-text-secondary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.15s ease;
+}
+
+.bo-collapsible-trigger:hover {
+  border-color: #60A5FA;
+  color: var(--bo-text-primary);
+}
+
+.bo-multi-cat-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
@@ -509,7 +639,8 @@ body.bo-body {
   border: 1px solid var(--bo-border);
   border-radius: 0.5rem;
   padding: 0.65rem;
-  max-height: 125px;
+  margin-top: 0.5rem;
+  max-height: 135px;
   overflow-y: auto;
 }
 
@@ -517,13 +648,21 @@ body.bo-body {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  font-size: 0.75rem;
+  font-size: 0.74rem;
+  font-weight: 500;
   padding: 0.25rem 0.55rem;
   border-radius: 6px;
-  background: var(--bo-bg-card);
+  background: rgba(30, 41, 59, 0.9);
   border: 1px solid var(--bo-border);
+  color: var(--bo-text-secondary);
   cursor: pointer;
   user-select: none;
+  transition: all 0.12s ease;
+}
+
+.bo-cat-chip:hover {
+  border-color: rgba(96, 165, 250, 0.4);
+  color: var(--bo-text-primary);
 }
 
 .bo-cat-chip input {
@@ -531,10 +670,18 @@ body.bo-body {
   accent-color: var(--bo-accent-blue);
 }
 
-.bo-alert {
+/* Review Sync Callout Box */
+.bo-review-sync-box {
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 0.6rem;
   padding: 0.85rem 1rem;
+}
+
+.bo-alert {
+  padding: 0.8rem 1rem;
   border-radius: 0.5rem;
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   line-height: 1.5;
   display: none;
 }
@@ -563,4 +710,3 @@ body.bo-body {
 @keyframes bo-spin {
   to { transform: rotate(360deg); }
 }
-

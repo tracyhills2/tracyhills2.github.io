@@ -393,6 +393,8 @@ function initModalHandlers() {
   const primaryCatSelect = document.getElementById('field-category');
   const newCatToggleBtn = document.getElementById('bo-toggle-new-cat');
   const addNewCatBtn = document.getElementById('bo-add-new-cat-confirm');
+  const toggleMultiCatsBtn = document.getElementById('bo-toggle-multi-cats');
+  const toggleExtraLinksBtn = document.getElementById('bo-toggle-extra-links');
   const syncReviewCheckbox = document.getElementById('field-sync-review');
   const syncReviewFields = document.getElementById('bo-initial-review-fields');
 
@@ -413,6 +415,28 @@ function initModalHandlers() {
   if (primaryCatSelect) {
     primaryCatSelect.addEventListener('change', () => {
       renderMultiCategoryCheckboxes(primaryCatSelect.value, getSelectedAdditionalCategories());
+    });
+  }
+
+  if (toggleMultiCatsBtn) {
+    toggleMultiCatsBtn.addEventListener('click', () => {
+      const box = document.getElementById('field-multi-categories');
+      const arrow = document.getElementById('bo-multi-cats-arrow');
+      if (!box) return;
+      const isHidden = box.style.display === 'none';
+      box.style.display = isHidden ? 'flex' : 'none';
+      if (arrow) arrow.textContent = isHidden ? '▲ Hide' : '▼ Show';
+    });
+  }
+
+  if (toggleExtraLinksBtn) {
+    toggleExtraLinksBtn.addEventListener('click', () => {
+      const box = document.getElementById('bo-extra-links-box');
+      const arrow = document.getElementById('bo-extra-links-arrow');
+      if (!box) return;
+      const isHidden = box.style.display === 'none';
+      box.style.display = isHidden ? 'block' : 'none';
+      if (arrow) arrow.textContent = isHidden ? '▲ Hide' : '▼ Show';
     });
   }
 
@@ -494,6 +518,22 @@ function renderMultiCategoryCheckboxes(primaryCat, selectedList) {
       </label>
     `;
   }).join('');
+
+  wrap.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+    cb.addEventListener('change', () => updateMultiCatsSummaryText(primaryCat));
+  });
+  updateMultiCatsSummaryText(primaryCat);
+}
+
+function updateMultiCatsSummaryText(primaryCat) {
+  const summaryEl = document.getElementById('bo-multi-cats-summary');
+  if (!summaryEl) return;
+  const extras = getSelectedAdditionalCategories().filter(c => c !== primaryCat);
+  if (extras.length > 0) {
+    summaryEl.innerHTML = `🏷️ Additional Categories Selected: <strong style="color: #60A5FA;">${extras.map(escapeHtml).join(', ')}</strong>`;
+  } else {
+    summaryEl.textContent = '➕ Assign Additional Categories (Optional — if provider offers multiple services)';
+  }
 }
 
 function getSelectedAdditionalCategories() {
@@ -549,6 +589,19 @@ function openProviderModal(providerId, prefillData) {
   document.getElementById('field-communityRecommended').checked = data.communityRecommended !== false;
   document.getElementById('field-isLocalResident').checked = data.isLocalResident === true;
   document.getElementById('field-is247Service').checked = data.is247Service === true;
+
+  // Auto-collapse or expand optional Multi-Categories & Extra Links sections based on data
+  const multiCatWrap = document.getElementById('field-multi-categories');
+  const multiCatArrow = document.getElementById('bo-multi-cats-arrow');
+  const hasSecondaryCats = Array.isArray(data.categories) && data.categories.some(c => c !== primaryCat);
+  if (multiCatWrap) multiCatWrap.style.display = hasSecondaryCats ? 'flex' : 'none';
+  if (multiCatArrow) multiCatArrow.textContent = hasSecondaryCats ? '▲ Hide' : '▼ Show';
+
+  const extraLinksBox = document.getElementById('bo-extra-links-box');
+  const extraLinksArrow = document.getElementById('bo-extra-links-arrow');
+  const hasExtraLinks = Boolean(data.googleReviewUrl || data.reviewUrl || data.instagram || data.whatsAppGroup);
+  if (extraLinksBox) extraLinksBox.style.display = hasExtraLinks ? 'block' : 'none';
+  if (extraLinksArrow) extraLinksArrow.textContent = hasExtraLinks ? '▲ Hide' : '▼ Show';
 
   // Initial review sync section (only shown when adding a new provider)
   if (reviewBoxWrap) {

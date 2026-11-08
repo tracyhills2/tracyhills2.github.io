@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="backoffice.css?v=1.0">
+  <link rel="stylesheet" href="backoffice.css?v=1.1">
 </head>
 <body class="bo-body">
 
@@ -165,12 +165,12 @@
     <div class="bo-modal">
       <div class="bo-modal-header">
         <div>
-          <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.25rem;">
-            <h2 id="bo-modal-title" style="font-size: 1.15rem; font-weight: 800; margin: 0;">Add New Service Provider</h2>
+          <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.2rem;">
+            <h2 id="bo-modal-title" style="font-size: 1.1rem; font-weight: 800; margin: 0;">Add New Service Provider</h2>
             <span id="field-id-display" class="bo-id-pill">sp-new</span>
           </div>
-          <p style="font-size: 0.78rem; color: var(--bo-text-muted); margin: 0;">
-            Configure provider details, multi-category tags, and special community badges.
+          <p style="font-size: 0.76rem; color: var(--bo-text-muted); margin: 0;">
+            Enter provider details below. Fields marked with * are required.
           </p>
         </div>
         <button type="button" id="bo-modal-close" class="bo-btn bo-btn-outline bo-btn-sm" aria-label="Close modal">✕</button>
@@ -178,130 +178,152 @@
 
       <form id="bo-provider-form">
         <div class="bo-modal-body">
-          <div id="bo-modal-error" class="bo-alert bo-alert-error" style="margin-bottom: 1rem;"></div>
+          <div id="bo-modal-error" class="bo-alert bo-alert-error"></div>
 
-          <!-- Section 1: Core Identity & Categories -->
-          <div class="bo-form-section-title">1. Business Identity & Category</div>
-          <div class="bo-form-grid">
-            <div class="bo-form-group">
-              <label for="field-businessName" class="bo-label">Business / Provider Name *</label>
-              <input type="text" id="field-businessName" class="bo-input" placeholder="e.g., Golden State Garage Doors" required>
+          <!-- CARD 1: Identity, Category & Special Badges -->
+          <div class="bo-section-card">
+            <div class="bo-section-header">
+              <div class="bo-form-section-title">1. Business Identity & Category</div>
             </div>
 
-            <div class="bo-form-group">
-              <div style="display: flex; align-items: center; justify-content: space-between;">
-                <label for="field-category" class="bo-label">Primary Category *</label>
-                <button type="button" id="bo-toggle-new-cat" style="background: none; border: none; color: #60A5FA; font-size: 0.75rem; font-weight: 600; cursor: pointer; padding: 0;">+ New Category</button>
+            <div class="bo-form-grid">
+              <div class="bo-form-group">
+                <label for="field-businessName" class="bo-label">Business / Provider Name *</label>
+                <input type="text" id="field-businessName" class="bo-input" placeholder="e.g., Golden State Garage Doors" required>
               </div>
-              <select id="field-category" class="bo-select" required></select>
 
-              <!-- Inline Add New Category Mini-Form -->
-              <div id="bo-new-cat-box" style="display: none; gap: 0.45rem; align-items: center; margin-top: 0.45rem; background: rgba(15,23,42,0.75); padding: 0.5rem; border-radius: 0.5rem; border: 1px solid var(--bo-border);">
-                <input type="text" id="bo-new-cat-name" class="bo-input" placeholder="Category name..." style="padding: 0.35rem 0.6rem; font-size: 0.8rem;">
-                <input type="color" id="bo-new-cat-color" value="#3B82F6" title="Category Badge Color" style="width: 34px; height: 30px; border: none; background: transparent; cursor: pointer;">
-                <button type="button" id="bo-add-new-cat-confirm" class="bo-btn bo-btn-primary bo-btn-sm">Add</button>
+              <div class="bo-form-group">
+                <div class="bo-label">
+                  <span>Primary Category *</span>
+                  <button type="button" id="bo-toggle-new-cat" style="background: none; border: none; color: #60A5FA; font-size: 0.74rem; font-weight: 600; cursor: pointer; padding: 0;">+ New Category</button>
+                </div>
+                <select id="field-category" class="bo-select" required></select>
+
+                <!-- Inline Add New Category Mini-Form -->
+                <div id="bo-new-cat-box" style="display: none; gap: 0.45rem; align-items: center; margin-top: 0.45rem; background: rgba(15,23,42,0.85); padding: 0.45rem; border-radius: 0.5rem; border: 1px solid var(--bo-border-strong);">
+                  <input type="text" id="bo-new-cat-name" class="bo-input" placeholder="Category name..." style="padding: 0.35rem 0.6rem; font-size: 0.78rem;">
+                  <input type="color" id="bo-new-cat-color" value="#3B82F6" title="Category Badge Color" style="width: 32px; height: 28px; border: none; background: transparent; cursor: pointer; flex-shrink: 0;">
+                  <button type="button" id="bo-add-new-cat-confirm" class="bo-btn bo-btn-primary bo-btn-sm">Add</button>
+                </div>
+              </div>
+
+              <!-- Collapsible Additional Categories -->
+              <div class="bo-form-group full">
+                <button type="button" id="bo-toggle-multi-cats" class="bo-collapsible-trigger">
+                  <span id="bo-multi-cats-summary">➕ Assign Additional Categories (Optional — if provider offers multiple services)</span>
+                  <span id="bo-multi-cats-arrow" style="font-size: 0.7rem; color: var(--bo-text-muted);">▼ Show</span>
+                </button>
+                <div id="field-multi-categories" class="bo-multi-cat-grid" style="display: none;"></div>
               </div>
             </div>
 
-            <div class="bo-form-group full">
-              <label class="bo-label">Multi-Category Tags <span class="bo-label-sub">(Select additional categories if this provider appears under multiple filters)</span></label>
-              <div id="field-multi-categories" class="bo-multi-cat-grid"></div>
+            <!-- 3-Column Horizontal Badges Row -->
+            <div style="margin-top: 0.9rem; padding-top: 0.85rem; border-top: 1px solid rgba(148, 163, 184, 0.12);">
+              <div class="bo-toggle-grid">
+                <label class="bo-toggle-card">
+                  <input type="checkbox" id="field-communityRecommended" checked>
+                  <div>
+                    <div class="bo-toggle-title">⭐ Neighbor Recommended</div>
+                    <div class="bo-toggle-desc">Uncheck if this is a vendor self-listing.</div>
+                  </div>
+                </label>
+
+                <label class="bo-toggle-card">
+                  <input type="checkbox" id="field-isLocalResident">
+                  <div>
+                    <div class="bo-toggle-title">🏡 Local Resident</div>
+                    <div class="bo-toggle-desc">Adds the green <strong>🏡 Resident</strong> ribbon.</div>
+                  </div>
+                </label>
+
+                <label class="bo-toggle-card">
+                  <input type="checkbox" id="field-is247Service">
+                  <div>
+                    <div class="bo-toggle-title">⚡ 24/7 Emergency</div>
+                    <div class="bo-toggle-desc">Adds the red <strong>⚡ 24/7</strong> ribbon.</div>
+                  </div>
+                </label>
+              </div>
             </div>
           </div>
 
-          <!-- Section 2: Special Community Ribbons & Listing Status -->
-          <div class="bo-form-section-title">2. Special Badges & Listing Type</div>
-          <div class="bo-toggle-grid">
-            <label class="bo-toggle-card">
-              <input type="checkbox" id="field-communityRecommended" checked>
-              <div>
-                <div class="bo-toggle-title">⭐ Neighbor Recommended</div>
-                <div class="bo-toggle-desc">Checked = Recommended by Resident. Unchecked = Self-Submitted Directory Listing (<code>communityRecommended: false</code>).</div>
+          <!-- CARD 2: Contact Info & Service Description -->
+          <div class="bo-section-card">
+            <div class="bo-section-header">
+              <div class="bo-form-section-title">2. Contact Details & Description</div>
+            </div>
+
+            <div class="bo-form-grid">
+              <div class="bo-form-group">
+                <label for="field-phone" class="bo-label">Phone Number <span class="bo-label-sub">(Auto-formats US)</span></label>
+                <input type="text" id="field-phone" class="bo-input" placeholder="(209) 555-0199">
               </div>
-            </label>
 
-            <label class="bo-toggle-card">
-              <input type="checkbox" id="field-isLocalResident">
-              <div>
-                <div class="bo-toggle-title">🏡 Local Resident Business</div>
-                <div class="bo-toggle-desc">Displays the green <strong>🏡 Resident</strong> top-left ribbon and adds to the Resident filter chip.</div>
+              <div class="bo-form-group">
+                <label for="field-contactPerson" class="bo-label">Contact Person <span class="bo-label-sub">(Optional)</span></label>
+                <input type="text" id="field-contactPerson" class="bo-input" placeholder="e.g., Brandon">
               </div>
-            </label>
 
-            <label class="bo-toggle-card">
-              <input type="checkbox" id="field-is247Service">
-              <div>
-                <div class="bo-toggle-title">⚡ 24/7 Emergency Service</div>
-                <div class="bo-toggle-desc">Displays the red <strong>⚡ 24/7</strong> top-right ribbon and adds to the 24/7 Service filter chip.</div>
+              <div class="bo-form-group">
+                <label for="field-website" class="bo-label">Website URL <span class="bo-label-sub">(Optional)</span></label>
+                <input type="url" id="field-website" class="bo-input" placeholder="https://www.example.com">
               </div>
-            </label>
-          </div>
 
-          <!-- Section 3: Contact Details & External Links -->
-          <div class="bo-form-section-title">3. Contact Information & Links</div>
-          <div class="bo-form-grid">
-            <div class="bo-form-group">
-              <label for="field-contactPerson" class="bo-label">Contact Person <span class="bo-label-sub">(Optional)</span></label>
-              <input type="text" id="field-contactPerson" class="bo-input" placeholder="e.g., Brandon">
-            </div>
+              <div class="bo-form-group">
+                <label for="field-email" class="bo-label">Email Address <span class="bo-label-sub">(Optional)</span></label>
+                <input type="email" id="field-email" class="bo-input" placeholder="contact@example.com">
+              </div>
 
-            <div class="bo-form-group">
-              <label for="field-phone" class="bo-label">Phone Number <span class="bo-label-sub">(Auto-formats US)</span></label>
-              <input type="text" id="field-phone" class="bo-input" placeholder="(209) 555-0199">
-            </div>
+              <div class="bo-form-group full">
+                <label for="field-description" class="bo-label">Service Description *</label>
+                <textarea id="field-description" class="bo-textarea" rows="2" placeholder="Describe the services offered by this provider..." required></textarea>
+              </div>
 
-            <div class="bo-form-group">
-              <label for="field-email" class="bo-label">Email Address <span class="bo-label-sub">(Optional)</span></label>
-              <input type="email" id="field-email" class="bo-input" placeholder="contact@example.com">
-            </div>
+              <div class="bo-form-group full">
+                <label for="field-communityNotes" class="bo-label">Community Notes / Neighbor Highlight <span class="bo-label-sub">(Optional quote shown on card)</span></label>
+                <textarea id="field-communityNotes" class="bo-textarea" rows="2" placeholder="e.g., Recommended by multiple residents for fast response and fair pricing."></textarea>
+              </div>
 
-            <div class="bo-form-group">
-              <label for="field-website" class="bo-label">Website URL <span class="bo-label-sub">(Optional)</span></label>
-              <input type="url" id="field-website" class="bo-input" placeholder="https://www.example.com">
-            </div>
+              <!-- Collapsible Extra Links & Keywords -->
+              <div class="bo-form-group full">
+                <button type="button" id="bo-toggle-extra-links" class="bo-collapsible-trigger">
+                  <span>🔗 Extra Links (WhatsApp Group, Instagram, Yelp/Google) & Search Keywords (Optional)</span>
+                  <span id="bo-extra-links-arrow" style="font-size: 0.7rem; color: var(--bo-text-muted);">▼ Show</span>
+                </button>
 
-            <div class="bo-form-group">
-              <label for="field-instagram" class="bo-label">Instagram URL <span class="bo-label-sub">(Optional)</span></label>
-              <input type="url" id="field-instagram" class="bo-input" placeholder="https://www.instagram.com/handle/">
-            </div>
+                <div id="bo-extra-links-box" style="display: none; margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px dashed var(--bo-border);">
+                  <div class="bo-form-grid">
+                    <div class="bo-form-group">
+                      <label for="field-googleReviewUrl" class="bo-label">Yelp / Google Review URL</label>
+                      <input type="url" id="field-googleReviewUrl" class="bo-input" placeholder="https://www.yelp.com/biz/...">
+                    </div>
 
-            <div class="bo-form-group">
-              <label for="field-whatsAppGroup" class="bo-label">WhatsApp Group Invite Link <span class="bo-label-sub">(Protected by Gate)</span></label>
-              <input type="url" id="field-whatsAppGroup" class="bo-input" placeholder="https://chat.whatsapp.com/...">
-            </div>
+                    <div class="bo-form-group">
+                      <label for="field-instagram" class="bo-label">Instagram URL</label>
+                      <input type="url" id="field-instagram" class="bo-input" placeholder="https://www.instagram.com/handle/">
+                    </div>
 
-            <div class="bo-form-group full">
-              <label for="field-googleReviewUrl" class="bo-label">External Review Link <span class="bo-label-sub">(Yelp / Google Maps / Nextdoor URL)</span></label>
-              <input type="url" id="field-googleReviewUrl" class="bo-input" placeholder="https://www.yelp.com/biz/...">
-            </div>
-          </div>
+                    <div class="bo-form-group">
+                      <label for="field-whatsAppGroup" class="bo-label">WhatsApp Group Invite Link</label>
+                      <input type="url" id="field-whatsAppGroup" class="bo-input" placeholder="https://chat.whatsapp.com/...">
+                    </div>
 
-          <!-- Section 4: Descriptions, Notes & Search Keywords -->
-          <div class="bo-form-section-title">4. Description, Community Notes & Keywords</div>
-          <div class="bo-form-grid">
-            <div class="bo-form-group full">
-              <label for="field-description" class="bo-label">Service Description *</label>
-              <textarea id="field-description" class="bo-textarea" rows="2" placeholder="Describe the services offered by this provider..." required></textarea>
-            </div>
-
-            <div class="bo-form-group full">
-              <label for="field-communityNotes" class="bo-label">Community Notes / Highlight Quote <span class="bo-label-sub">(Shown in callout box on card)</span></label>
-              <textarea id="field-communityNotes" class="bo-textarea" rows="2" placeholder="e.g., Recommended by multiple residents for fast response and fair pricing."></textarea>
-            </div>
-
-            <div class="bo-form-group full">
-              <label for="field-keywords" class="bo-label">Search Keywords <span class="bo-label-sub">(Comma-separated lowercase tags)</span></label>
-              <input type="text" id="field-keywords" class="bo-input" placeholder="e.g., plumber, water heater, leak repair, drain">
+                    <div class="bo-form-group">
+                      <label for="field-keywords" class="bo-label">Search Keywords <span class="bo-label-sub">(Comma-separated)</span></label>
+                      <input type="text" id="field-keywords" class="bo-input" placeholder="plumber, water heater, leak">
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Section 5: Optional Initial Resident Review Forwarding (Shown on New Provider only) -->
+          <!-- CARD 3: Optional Initial Resident Review Forwarding (Shown on New Provider only) -->
           <div id="bo-initial-review-section" style="display: none;">
-            <div class="bo-form-section-title">5. Initial Resident Star Rating & Review (Google Sheet Sync)</div>
             <div class="bo-review-sync-box">
-              <label style="display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-size: 0.875rem; font-weight: 700; color: #FBBF24;">
+              <label style="display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-size: 0.82rem; font-weight: 700; color: #FBBF24;">
                 <input type="checkbox" id="field-sync-review" style="accent-color: #F59E0B; width: 1rem; height: 1rem;">
-                <span>Also record an initial resident star rating in the Google Sheet Reviews database</span>
+                <span>⭐ Also record an initial resident star rating in the Google Sheet Reviews database</span>
               </label>
 
               <div id="bo-initial-review-fields" style="display: none; margin-top: 0.85rem;">
@@ -350,7 +372,6 @@
   </div>
 
   <script src="../js/data.js?v=2.8"></script>
-  <script src="backoffice.js?v=1.0"></script>
+  <script src="backoffice.js?v=1.1"></script>
 </body>
 </html>
-
