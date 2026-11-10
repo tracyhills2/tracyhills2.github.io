@@ -187,7 +187,7 @@ const FAQ_DATA = [
   </div>
 
   <p>
-    Prior to commencing any exterior addition, modification, construction, hardscape, or landscaping work on your lot, you must obtain written approval from the Architectural Review Committee (ARC).
+    Prior to commencing any exterior addition, modification, construction, hardscape, or landscaping work on your lot, you must obtain written approval from the Architectural Review Committee (ARC) — unless the improvement is specifically Exempt (§II.A) or qualifies as Pre-Approved (§II.B, which does not require prior written ARC approval but still requires filing an application notifying the Association before work begins).
   </p>
 
   <!-- Review Requirement Levels -->
@@ -302,21 +302,21 @@ const FAQ_DATA = [
       <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
         <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">1</span>
         <div>
-          <strong style="color: var(--text-primary);">Complete Official Forms B, C &amp; G:</strong> Fill out and sign <strong>Form B</strong> (Checklist), <strong>Form C</strong> (Review Request), and <strong>Form G</strong> (Water Quality BMP Agreement) in the Editable Word Package. <em>(Note: Form D Neighbor Notification was removed from the latest HOA Form B Checklist and 10-page Forms PDF).</em>
+          <strong style="color: var(--text-primary);">Complete Official Forms B, C &amp; G (Plus Neighbor Notification Check):</strong> Fill out and sign <strong>Form B</strong> (Checklist), <strong>Form C</strong> (Review Request), and <strong>Form G</strong> (complete 2-page Water Quality BMP Agreement) in the Editable Word Package. <em>(Note: The revised 10-page Association Forms packet omits Form D, though adopted V12 §III.D.12.C still references neighbor notification for Adjacent, Facing, and Impacted Neighbors — confirm with Management or include the archived Form D courtesy sheet unless confirmed otherwise in writing.)</em>
         </div>
       </div>
 
       <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
         <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">2</span>
         <div>
-          <strong style="color: var(--text-primary);">Prepare Your 2D Plot Plan Drawing:</strong> Include a dimensioned plot/landscape plan showing property lines, house footprint, proposed patio/pergola/walls, tree locations with setbacks, and surface drainage arrows (1% hardscape / 2% landscape slope).
+          <strong style="color: var(--text-primary);">Prepare 2D Plot Plan &amp; Sign Plan Preparer Acknowledgment:</strong> Include a dimensioned plot/landscape plan (min. 1/8" = 1'-0" scale) showing property lines, house footprint, proposed patio/pergola/walls, tree locations with setbacks, and surface drainage arrows (1% hardscape / 2% landscape slope), and complete the <strong>Plan Preparer Acknowledgment &amp; Signature</strong> block (§III.D.12.G / §III.E.1.C; homeowners who prepare their own plans may sign as the plan preparer).
         </div>
       </div>
 
       <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
         <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">3</span>
         <div>
-          <strong style="color: var(--text-primary);">Attach Site Color Photos &amp; Finish/Materials Schedule:</strong> Include color photos of your Front Yard (showing entire house &amp; yard per Form A), Rear Yard, and both Side Yards, plus manufacturer cut sheets for pergolas, pavers, stone, or turf.
+          <strong style="color: var(--text-primary);">Attach Site Color Photos (Min. 4" × 6") &amp; Finish/Materials Schedule:</strong> Per §III.G.5 and §III.H.1, include color photos at least 4" × 6" showing the Front Elevation of the residence &amp; lot, Rear Elevation / Rear Yard, each Side Yard, and surrounding conditions adjacent to the proposed improvement (including neighboring lots and Association Property), plus manufacturer cut sheets for pergolas, pavers, stone, or turf.
         </div>
       </div>
 
