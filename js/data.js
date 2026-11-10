@@ -48,6 +48,8 @@ const CONTACTS_DATA = {
       },
       {
         "name": "Belinda Prunty",
+        "role": "ARC Submittals & Administration",
+        "phone": "(925) 217-8695",
         "email": "Belinda.Prunty@seabreezemgmt.com"
       },
       {
@@ -168,14 +170,14 @@ const FAQ_DATA = [
   <div style="background: rgba(37, 99, 235, 0.15); border: 1px solid var(--accent-primary); border-radius: var(--radius-md); padding: 1.1rem; margin-bottom: 1.25rem;">
     <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.85rem; margin-bottom: 0.5rem;">
       <div>
-        <span style="background: var(--accent-primary); color: #FFF; font-size: 0.725rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; text-transform: uppercase;">Universal Master Template</span>
-        <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin: 0.35rem 0 0.15rem 0;">Download Universal ARC Submittal Master Template (.docx)</h4>
-        <p style="font-size: 0.825rem; color: var(--text-secondary); margin: 0;">Consolidates Forms B, C, D, G, Phase 2 Fire Protection Plan specifications, and visual placeholders.</p>
+        <span style="background: var(--accent-primary); color: #FFF; font-size: 0.725rem; font-weight: 800; padding: 0.15rem 0.55rem; border-radius: 4px; text-transform: uppercase;">Editable Word Package</span>
+        <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin: 0.35rem 0 0.15rem 0;">Download Editable ARC Application Forms &amp; Submittal Package (.docx)</h4>
+        <p style="font-size: 0.825rem; color: var(--text-secondary); margin: 0;">Includes exact official HOA Forms A, B, C, G, E &amp; F plus guided project scope, drainage, pre-approved turf, and photo schedules.</p>
       </div>
       <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-        <a href="assets/Tracy_Hills_II_HOA_Universal_Submittal_Master_Template_2026.docx" download class="btn btn-primary btn-sm" style="gap: 0.4rem;">
+        <a href="assets/20261109/Tracy_Hills_II_ARC_Application_Forms_and_Submittal_Package.docx" download class="btn btn-primary btn-sm" style="gap: 0.4rem;">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-          <span>Download .docx Template</span>
+          <span>Download .docx Package</span>
         </a>
         <a href="arc-application.html" class="btn btn-outline btn-sm" style="gap: 0.4rem;">
           <span>Full ARC Submittal Guide ↗</span>
@@ -201,10 +203,10 @@ const FAQ_DATA = [
       <div style="background: #0F172A; border: 1px solid rgba(239, 68, 68, 0.3); border-radius: var(--radius-md); padding: 1rem;">
         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
           <span style="font-weight: 700; font-size: 0.875rem; color: #FCA5A5;">Full Review Required</span>
-          <span style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px;">$200 Fee</span>
+          <span style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px;">$200 Fee + $250 Deposit</span>
         </div>
         <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-          All new backyard/side yard landscaping, concrete patios, pavers, retaining walls, aluminum pergolas/patio covers, outdoor kitchens, water features, swimming pools, and solar panels.
+          All new backyard/side yard landscaping, concrete patios, pavers, retaining walls, pergolas/patio covers, outdoor kitchens, water features, swimming pools, and solar panels.
         </p>
       </div>
 
@@ -215,18 +217,18 @@ const FAQ_DATA = [
           <span style="background: rgba(234, 179, 8, 0.15); color: #FEF08A; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px;">$175 Fee</span>
         </div>
         <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-          Exterior house repainting (different color), storage sheds extending above fence line, and post-mounted exterior lighting.
+          Exterior house repainting (different approved color), rear-yard storage sheds extending above the fence line (§II.C.2), and post-mounted exterior lighting.
         </p>
       </div>
 
-      <!-- Exempt Card -->
+      <!-- Exempt / Pre-Approved Card -->
       <div style="background: #0F172A; border: 1px solid rgba(34, 197, 94, 0.3); border-radius: var(--radius-md); padding: 1rem;">
         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
-          <span style="font-weight: 700; font-size: 0.875rem; color: #86EFAC;">Exempt / No Review</span>
+          <span style="font-weight: 700; font-size: 0.875rem; color: #86EFAC;">Exempt / Pre-Approved</span>
           <span style="background: rgba(34, 197, 94, 0.15); color: #86EFAC; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px;">$0 Fee</span>
         </div>
         <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-          Minor seasonal flower plantings, matching original exterior paint, potted plants (up to 2 visible from common areas), and matching replacement side gates.
+          Minor seasonal flower plantings, matching original paint, potted plants, rear-yard play equipment or storage sheds that do <strong>not</strong> extend above the fence line (§II.B.2), and matching replacement side gates.
         </p>
       </div>
 
@@ -240,24 +242,24 @@ const FAQ_DATA = [
     <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.1rem;">
       <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--accent-link); margin-bottom: 0.65rem; display: flex; align-items: center; gap: 0.4rem;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-        <span>Timelines & Review Deadlines</span>
+        <span>Timelines &amp; Review Deadlines</span>
       </h4>
       <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.825rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.5rem;">
         <li style="display: flex; align-items: flex-start; gap: 0.4rem;">
           <span style="color: var(--accent-link); font-weight: 700;">•</span>
-          <span><strong>Initial Landscape Submittal Deadline:</strong> Initial landscape improvement plans must be submitted to the ARC within <strong>90 days</strong> of close of escrow.</span>
+          <span><strong>Initial Landscape Submittal:</strong> Form A states <strong>6 months (180 days)</strong> from close of escrow (Guidelines §III.D text also references <strong>90 days</strong>).</span>
         </li>
         <li style="display: flex; align-items: flex-start; gap: 0.4rem;">
           <span style="color: var(--accent-link); font-weight: 700;">•</span>
-          <span><strong>New Homeowner Completion:</strong> Landscape work must be completed within <strong>9 months (180 days)</strong> of close of escrow.</span>
+          <span><strong>Initial Landscape Completion:</strong> Form A &amp; Form B Part III state <strong>9 months (270 days)</strong> from close of escrow (Guidelines §III.D text references <strong>180 days</strong>).</span>
         </li>
         <li style="display: flex; align-items: flex-start; gap: 0.4rem;">
           <span style="color: var(--accent-link); font-weight: 700;">•</span>
-          <span><strong>ARC Review Turnaround:</strong> ARC has up to <strong>45 calendar days</strong> from receipt of a <em>complete</em> application to approve or deny.</span>
+          <span><strong>ARC Review Turnaround:</strong> Form B notes about <strong>30 days</strong> typical processing; ARC has up to <strong>45 calendar days</strong> from receipt of a complete package.</span>
         </li>
         <li style="display: flex; align-items: flex-start; gap: 0.4rem;">
           <span style="color: var(--accent-link); font-weight: 700;">•</span>
-          <span><strong>Construction Window:</strong> Work must commence within <strong>12 months</strong> of approval and be completed within <strong>6 months</strong> of commencement.</span>
+          <span><strong>Construction Window:</strong> Per Form B Part III, other approved improvements must be completed within <strong>6 months</strong> of approval.</span>
         </li>
       </ul>
     </div>
@@ -266,7 +268,7 @@ const FAQ_DATA = [
     <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.1rem;">
       <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--accent-link); margin-bottom: 0.65rem; display: flex; align-items: center; gap: 0.4rem;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-        <span>Costs & Security Deposit</span>
+        <span>Costs &amp; Security Deposit</span>
       </h4>
       <div style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.825rem;">
         <div style="background: #0F172A; border-radius: var(--radius-sm); padding: 0.65rem 0.85rem;">
@@ -278,10 +280,10 @@ const FAQ_DATA = [
         </div>
         <div style="background: #0F172A; border-radius: var(--radius-sm); padding: 0.65rem 0.85rem;">
           <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.35rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
-            <span>Security Deposit (100% Refundable):</span>
+            <span>Security Deposit (Refundable):</span>
             <span style="color: #86EFAC; white-space: nowrap;">$250</span>
           </div>
-          <span style="color: var(--text-muted); font-size: 0.775rem;">Payable to <em>Tracy Hills II Community Association</em>. Refunded in full after Form E (Notice of Completion) & photos verify zero common area damage.</span>
+          <span style="color: var(--text-muted); font-size: 0.775rem;">Payable to <em>Tracy Hills II Community Association</em> (submit with Contractor Certificate of Insurance per §V.O.1). Refunded after Form E (Notice of Completion) &amp; photos are approved.</span>
         </div>
       </div>
     </div>
@@ -300,35 +302,28 @@ const FAQ_DATA = [
       <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
         <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">1</span>
         <div>
-          <strong style="color: var(--text-primary);">Prepare Your 2D Plan Drawing (Sheet L-1):</strong> Create a dimensioned layout showing property lines, house foundation, proposed patio/pergola/walls, tree locations with setbacks, and surface drainage arrows. Include your <strong>Name, Address, Lot #, Tract #, and a North Arrow</strong>.
+          <strong style="color: var(--text-primary);">Complete Official Forms B, C &amp; G:</strong> Fill out and sign <strong>Form B</strong> (Checklist), <strong>Form C</strong> (Review Request), and <strong>Form G</strong> (Water Quality BMP Agreement) in the Editable Word Package. <em>(Note: Form D Neighbor Notification was removed from the latest HOA Form B Checklist and 10-page Forms PDF).</em>
         </div>
       </div>
 
       <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
         <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">2</span>
         <div>
-          <strong style="color: var(--text-primary);">Collect Neighbor Signatures (Form D):</strong> Show your plan drawing to left/right adjacent neighbors, rear neighbors, and 3 facing neighbors across the street to sign Form D (neighbor signatures verify notification only, not approval; write <em>"Builder/Vacant"</em> if lot is unoccupied).
+          <strong style="color: var(--text-primary);">Prepare Your 2D Plot Plan Drawing:</strong> Include a dimensioned plot/landscape plan showing property lines, house footprint, proposed patio/pergola/walls, tree locations with setbacks, and surface drainage arrows (1% hardscape / 2% landscape slope).
         </div>
       </div>
 
       <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
         <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">3</span>
         <div>
-          <strong style="color: var(--text-primary);">Complete Association Forms:</strong> Fill out and sign <strong>Form B</strong> (Checklist), <strong>Form C</strong> (Review Request), and <strong>Form G</strong> (Water Quality BMP Agreement).
+          <strong style="color: var(--text-primary);">Attach Site Color Photos &amp; Finish/Materials Schedule:</strong> Include color photos of your Front Yard (showing entire house &amp; yard per Form A), Rear Yard, and both Side Yards, plus manufacturer cut sheets for pergolas, pavers, stone, or turf.
         </div>
       </div>
 
       <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
         <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">4</span>
         <div>
-          <strong style="color: var(--text-primary);">Attach Product Cut Sheets & Site Photos:</strong> Include photos of existing yard (front, back, left, right) plus manufacturer specification sheets for items like your pergola, artificial turf, and stone veneers.
-        </div>
-      </div>
-
-      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem;">
-        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">5</span>
-        <div>
-          <strong style="color: var(--text-primary);">Convert to PDF & Send to Seabreeze:</strong> Convert your completed Word document to a single, consolidated PDF file and email to <a href="mailto:csteam@seabreezemgmt.com" style="color: var(--accent-link); font-weight: 600;">csteam@seabreezemgmt.com</a> (or mail to Seabreeze Management Company, 4305 Hacienda Dr., Suite 350, Pleasanton, CA 94588) with the two checks.
+          <strong style="color: var(--text-primary);">Save as PDF &amp; Submit to Seabreeze:</strong> Save your completed package as a single PDF and submit per Form C to <strong>Belinda Prunty</strong> at <a href="mailto:TracyHills2@seabreezemgmt.com" style="color: var(--accent-link); font-weight: 600;">TracyHills2@seabreezemgmt.com</a> (Phone: <a href="tel:9252178695" style="color: var(--accent-link);">(925) 217-8695</a>; Mailing Address: Seabreeze Management Company, Attn: Belinda Prunty, 4305 Hacienda Dr., Suite 350, Pleasanton, CA 94588) along with the fee/deposit checks.
         </div>
       </div>
 
@@ -346,50 +341,50 @@ const FAQ_DATA = [
       
       <!-- Rule 1 -->
       <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem 1rem; font-size: 0.825rem;">
-        <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">1. Pergolas / Patio Covers</strong>
-        Must be constructed of <strong>non-combustible heavy-gauge aluminum</strong> (e.g., powder-coated extruded aluminum). Traditional wood pergolas are strictly prohibited under the Phase 2 Fire Protection Plan. Minimum setbacks: <strong>5′-0″ from rear fence</strong> and <strong>3′-0″ from side fence</strong>.
+        <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">1. Pergolas / Patio Covers (§IV.A.19)</strong>
+        Max height: <strong>10 ft flat / 12 ft pitched</strong>; max <strong>60% of rear yard</strong>. Minimum setbacks: <strong>5′-0″ rear</strong> (7′-0″ if street-adjacent) and <strong>3′-0″ side</strong>. Must comply with the Fire Protection Plan (§II.E / CBC Ch. 7A) and §IV.A.19 material/color rules.
       </div>
 
       <!-- Rule 2 -->
       <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem 1rem; font-size: 0.825rem;">
-        <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">2. Retaining Walls</strong>
-        Must <strong>never exceed 24 inches in height</strong> from finished grade, must be sealed with Thoroseal waterproofing, and must include an integrated sub-drain pipe.
+        <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">2. Retaining Walls (§IV.A.18.I–J)</strong>
+        Must <strong>not exceed 24 inches in height</strong> from finished grade without engineering, must not be adjacent to the residence, and require waterproofing and sub-drain connection.
       </div>
 
       <!-- Rule 3 -->
       <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem 1rem; font-size: 0.825rem;">
-        <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">3. Tree Setbacks & Root Barriers</strong>
-        All trees must maintain a minimum <strong>5′-0″ setback from all property lines and fences</strong> and must use root barrier collars.
+        <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">3. Tree Setbacks &amp; Root Barriers (§IV.A.17 &amp; §IV.A.27)</strong>
+        Trees must be planted at least <strong>5′-0″ from property lines/fences</strong> and incorporate root barriers when within 5′-0″ of walls or adjoining residences.
       </div>
 
       <!-- Rule 4 -->
       <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem 1rem; font-size: 0.825rem;">
-        <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">4. Prohibited Flammable Plants</strong>
+        <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">4. Prohibited Flammable Plants (§II.E)</strong>
         Never submit pyrophytic species prohibited by the Fire Protection Plan (zero cypress, pines, junipers, bamboo, eucalyptus, or palm trees).
       </div>
 
       <!-- Rule 5 -->
       <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem 1rem; font-size: 0.825rem;">
-        <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">5. Drainage & Runoff Slopes</strong>
-        Hardscape must have a minimum <strong>1.0% slope away from house</strong>; landscape beds must have <strong>2.0% slope to drains</strong> connecting to builder storm PVC pipe. Zero sheet-flow runoff permitted onto neighboring lots.
+        <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">5. Drainage &amp; Runoff Slopes (§IV.A.17.2–3)</strong>
+        Hardscape requires min <strong>1.0% slope away from house</strong>; landscape beds require min <strong>2.0% slope to drains</strong> tied into the Declarant storm drain system. Zero sheet-flow onto neighboring lots.
       </div>
 
       <!-- Rule 6 -->
       <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem 1rem; font-size: 0.825rem;">
-        <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">6. Synthetic Turf Standards</strong>
-        Must specify a <strong>Class A fire-resistance rating</strong> (ASTM E84 / SFM standard) and a minimum <strong>10-year manufacturer warranty</strong> installed over aggregate base.
+        <strong style="color: var(--accent-link); display: block; margin-bottom: 0.25rem;">6. Pre-Approved Synthetic Turf (§IV.A.28)</strong>
+        4 pre-approved brands waive the 12"×12" physical sample requirement: <strong>Imperial Synthetic Turf</strong> (California Royal 89), <strong>Boone Action Turf</strong>, <strong>Pro Green Synthetic Grass</strong>, and <strong>Tiger Turf</strong>.
       </div>
 
     </div>
   </div>
 
-  <!-- Summer 2026 Note -->
+  <!-- Updated Note -->
   <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle);">
-    ℹ️ <em>Note: The facts and guidelines provided above are as of Summer 2026.</em>
+    ℹ️ <em>Note: Reflects the Board-adopted Architectural Guidelines (9/16/2025) and latest HOA Application Forms packet.</em>
   </div>
 
 </div>`,
-    "keywords": ["arc", "architectural", "approval", "landscaping", "patio", "pergola", "retaining wall", "turf", "drainage", "fees", "deposit", "deadlines", "seabreeze", "rules", "form d", "form b", "fire protection", "trees", "submittal"]
+    "keywords": ["arc", "architectural", "approval", "landscaping", "patio", "pergola", "retaining wall", "turf", "drainage", "fees", "deposit", "deadlines", "seabreeze", "rules", "form d", "form b", "fire protection", "trees", "submittal", "belinda prunty"]
   },
   {
     "id": "faq-002",
