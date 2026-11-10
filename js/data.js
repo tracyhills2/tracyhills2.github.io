@@ -228,7 +228,7 @@ const FAQ_DATA = [
           <span style="background: rgba(34, 197, 94, 0.15); color: #86EFAC; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px;">$0 Fee</span>
         </div>
         <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-          Minor seasonal flower plantings, matching original paint, potted plants, rear-yard play equipment or storage sheds that do <strong>not</strong> extend above the fence line (§II.B.2), and matching replacement side gates.
+          <strong>Exempt (§II.A):</strong> Minor seasonal flower plantings, matching original paint, potted plants. <strong>Pre-Approved (§II.B):</strong> Rear-yard play equipment/sheds below the fence line and matching replacement doors/gates do not require prior written ARC approval, though an application notifying the Association must be filed before work begins.
         </p>
       </div>
 
@@ -247,11 +247,11 @@ const FAQ_DATA = [
       <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.825rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.5rem;">
         <li style="display: flex; align-items: flex-start; gap: 0.4rem;">
           <span style="color: var(--accent-link); font-weight: 700;">•</span>
-          <span><strong>Initial Landscape Submittal:</strong> Form A states <strong>6 months (180 days)</strong> from close of escrow (Guidelines §III.D text also references <strong>90 days</strong>).</span>
+          <span><strong>Initial Landscape Submittal:</strong> Form A states <strong>6 months (180 days)</strong> from close of escrow, while Guidelines §III.D states <strong>90 days</strong> (submitting within 90 days is recommended).</span>
         </li>
         <li style="display: flex; align-items: flex-start; gap: 0.4rem;">
           <span style="color: var(--accent-link); font-weight: 700;">•</span>
-          <span><strong>Initial Landscape Completion:</strong> Form A &amp; Form B Part III state <strong>9 months (270 days)</strong> from close of escrow (Guidelines §III.D text references <strong>180 days</strong>).</span>
+          <span><strong>Initial Landscape Completion:</strong> Form A &amp; Form B Part III state <strong>9 months (270 days)</strong> from close of escrow, while Guidelines §III.D states <strong>180 days</strong> (completing within 180 days is the conservative approach).</span>
         </li>
         <li style="display: flex; align-items: flex-start; gap: 0.4rem;">
           <span style="color: var(--accent-link); font-weight: 700;">•</span>
@@ -283,7 +283,7 @@ const FAQ_DATA = [
             <span>Security Deposit (Refundable):</span>
             <span style="color: #86EFAC; white-space: nowrap;">$250</span>
           </div>
-          <span style="color: var(--text-muted); font-size: 0.775rem;">Payable to <em>Tracy Hills II Community Association</em> (submit with Contractor Certificate of Insurance per §V.O.1). Refunded after Form E (Notice of Completion) &amp; photos are approved.</span>
+          <span style="color: var(--text-muted); font-size: 0.775rem;">Payable to <em>Tracy Hills II Community Association</em> (submit with Contractor Certificate of Insurance per §V.O.1). Refunded after Form E (Notice of Completion) &amp; photos are approved, subject only to the 3 permitted offsets in §III.D.4 (damage to Association Property/Maintenance Area, Declaration violation fines, or related legal fees).</span>
         </div>
       </div>
     </div>
