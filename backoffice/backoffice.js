@@ -144,7 +144,7 @@ async function verifyAdminPassword(password) {
    Initialize Backoffice Page
    -------------------------------------------------------------------------- */
 document.addEventListener('DOMContentLoaded', () => {
-  // Load initial local data from ../js/data.js
+  // Load initial local data from ../js/providers-data.js
   if (typeof PROVIDERS_DATA !== 'undefined') {
     boState.providers = JSON.parse(JSON.stringify(PROVIDERS_DATA));
   }
@@ -735,7 +735,7 @@ function buildProviderObjectFromModal() {
     throw new Error('Business Name and Description are required.');
   }
 
-  // Construct clean object matching data.js conventions
+  // Construct clean object matching providers-data.js conventions
   const obj = {
     id: id,
     businessName: businessName,
@@ -869,7 +869,7 @@ async function publishProvidersToGitHub(optionalInitialReviewPayload) {
 
   const commitSummary = boState.pendingCommitMessages.length > 0
     ? `[Backoffice] ${boState.pendingCommitMessages.join('; ')}`
-    : `[Backoffice] Update Service Providers in data.js`;
+    : `[Backoffice] Update Service Providers in providers-data.js`;
 
   try {
     if (publishBtn) {
@@ -918,7 +918,7 @@ async function publishProvidersToGitHub(optionalInitialReviewPayload) {
 
     if (statusBanner) {
       statusBanner.className = 'bo-alert bo-alert-success';
-      statusBanner.innerHTML = `<strong>✅ Published Successfully!</strong> Committed to GitHub (<code>js/data.js</code>). GitHub Pages will finish deploying in ~45 seconds.${reviewSyncedMsg}`;
+      statusBanner.innerHTML = `<strong>✅ Published Successfully!</strong> Committed to GitHub (<code>js/providers-data.js</code>). GitHub Pages will finish deploying in ~45 seconds.${reviewSyncedMsg}`;
       statusBanner.style.display = 'block';
     }
 
