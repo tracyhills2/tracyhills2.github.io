@@ -73,9 +73,12 @@ website/
 ├── css/
 │   └── styles.css          # Core Slate Dark Design System & Responsive Rules
 └── js/
-    ├── data.js             # Static dataset for Service Providers & FAQ items
-    ├── app.js              # Core UI interactivity (search, drawers, accordions)
-    └── whatsapp-modal.js   # Interceptor modal for WhatsApp access & Advocacy opt-in
+    ├── announcements-data.js # Homepage community announcements & events dataset
+    ├── contacts-data.js      # Official HOA, City, Builder & community contact dataset
+    ├── faq-data.js           # Frequently Asked Questions dataset
+    ├── providers-data.js     # Service Providers directory & category color dataset
+    ├── app.js                # Core UI interactivity (search, drawers, accordions)
+    └── whatsapp-modal.js     # Interceptor modal for WhatsApp access & Advocacy opt-in
 ```
 
 ---
