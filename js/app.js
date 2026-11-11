@@ -336,6 +336,7 @@ function initScrollToTop() {
    -------------------------------------------------------------------------- */
 function initFaqPage() {
   const container = document.getElementById('faq-list-container');
+  if (!container || typeof FAQ_DATA === 'undefined') return;
   const searchInput = document.getElementById('faq-search-input');
   const categoryPillsContainer = document.getElementById('faq-categories-container');
   const noResultsContainer = document.getElementById('faq-no-results');
@@ -549,6 +550,7 @@ function initFaqPage() {
    -------------------------------------------------------------------------- */
 function initProvidersPage() {
   const container = document.getElementById('providers-grid-container');
+  if (!container || typeof PROVIDERS_DATA === 'undefined') return;
   const searchInput = document.getElementById('provider-search-input');
   const categoryPillsContainer = document.getElementById('provider-categories-container');
   const noResultsContainer = document.getElementById('provider-no-results');
