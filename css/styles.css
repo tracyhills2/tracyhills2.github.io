@@ -784,6 +784,7 @@ img, svg {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   gap: 0.5rem;
   padding: 0.55rem 1.15rem;
   border-radius: var(--radius-sm);
@@ -1014,6 +1015,7 @@ img, svg {
   overflow: hidden;
   transition: border-color var(--transition-fast);
   width: 100%;
+  scroll-margin-top: 84px;
 }
 
 .accordion-item:hover {
@@ -1388,8 +1390,23 @@ img, svg {
 }
 
 .accordion-content a {
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.accordion-content code {
+  font-size: 0.84em;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  padding: 0.08rem 0.32rem;
+  border-radius: 4px;
+  overflow-wrap: break-word;
   word-break: break-word;
+}
+
+.accordion-content h4 svg,
+.accordion-content h5 svg {
+  flex-shrink: 0;
 }
 
 @media (max-width: 640px) {
@@ -1428,13 +1445,34 @@ img, svg {
     gap: 0.4rem !important;
   }
 
-  /* Ensure badge pills inside card headers wrap and align cleanly */
+  /* Ensure badge pills inside card headers wrap safely without overflowing card bounds on mobile */
   .accordion-content span[style*="border-radius: 4px"],
   .accordion-content span[style*="border-radius:var(--radius-sm)"],
   .accordion-content span[style*="border-radius: var(--radius-sm)"] {
-    white-space: nowrap;
-    flex-shrink: 0;
+    display: inline-block;
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.35;
     align-self: flex-start;
+  }
+
+  /* Tighten nested box padding inside rich property-tax FAQs so narrow mobile screens keep generous text width */
+  .faq-prop8-details > div[style*="padding: 1.1rem"],
+  .faq-prop8-details > div[style*="padding: 1.15rem"],
+  .faq-boe266-details > div[style*="padding: 1.1rem"],
+  .faq-boe266-details > div[style*="padding: 1.15rem"],
+  .faq-boe266-details > div[style*="padding: 1rem"] {
+    padding: 0.85rem !important;
+  }
+
+  .faq-prop8-details h4,
+  .faq-boe266-details h4 {
+    align-items: flex-start !important;
+  }
+
+  .faq-prop8-details h4 svg,
+  .faq-boe266-details h4 svg {
+    margin-top: 0.16rem;
   }
 
   /* Compact floating back-to-top button on mobile screens so it does not obscure card text */
