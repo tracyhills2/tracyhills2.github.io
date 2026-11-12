@@ -514,7 +514,7 @@ function initFaqPage() {
 
         if (isTarget) {
           setTimeout(() => {
-            accordion.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            accordion.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }, 100);
         }
       });
