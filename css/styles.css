@@ -1475,6 +1475,14 @@ img, svg {
     margin-top: 0.16rem;
   }
 
+  .faq-drawer > summary {
+    padding: 0.85rem;
+  }
+
+  .faq-drawer-body {
+    padding: 0.85rem;
+  }
+
   /* Compact floating back-to-top button on mobile screens so it does not obscure card text */
   .floating-top-btn {
     bottom: 16px;
@@ -1496,6 +1504,90 @@ img, svg {
   .accordion-content td {
     min-width: 110px;
     word-break: normal !important;
+  }
+}
+
+/* Collapsible Step Drawers & Responsive Cheat Sheet inside Rich FAQs (iOS Safari / Chrome Safe) */
+.faq-drawer {
+  background: #0F172A;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.faq-drawer[open] {
+  border-color: rgba(96, 165, 250, 0.55);
+}
+
+.faq-drawer > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  min-height: 46px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.faq-drawer > summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-drawer > summary:hover {
+  background: rgba(30, 41, 59, 0.55);
+}
+
+.faq-drawer-chevron {
+  flex-shrink: 0;
+  color: var(--text-muted);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.faq-drawer[open] .faq-drawer-chevron {
+  transform: rotate(180deg);
+  color: var(--accent-link);
+}
+
+.faq-drawer-body {
+  padding: 0.95rem 1rem 1.05rem 1rem;
+  border-top: 1px solid rgba(51, 65, 85, 0.75);
+}
+
+.faq-cheatsheet {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  overflow: hidden;
+}
+
+.faq-cheatsheet-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.25rem;
+  padding: 0.7rem 0.85rem;
+  font-size: 0.825rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.faq-cheatsheet-row + .faq-cheatsheet-row {
+  border-top: 1px solid rgba(51, 65, 85, 0.75);
+}
+
+@media (min-width: 640px) {
+  .faq-cheatsheet-row {
+    grid-template-columns: 160px 1fr;
+    gap: 0.85rem;
+    align-items: baseline;
   }
 }
 
