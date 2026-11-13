@@ -285,28 +285,59 @@ const FAQ_DATA = [
     "category": "Community Resources",
     "question": "How can I lower my San Joaquin County property tax bill if neighborhood home values have dropped (Proposition 8 Decline-in-Value Review & Appeal)?",
     "answer": `<div class="faq-prop8-details">
-  <!-- 1. Top Action / Resource Banner: Official San Joaquin County Portals & Forms -->
-  <div style="background: rgba(37, 99, 235, 0.12); border: 1px solid rgba(96, 165, 250, 0.4); border-radius: var(--radius-md); padding: 1.1rem; margin-bottom: 1.25rem;">
-    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.85rem;">
-      <div>
-        <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: var(--accent-primary); color: #FFF; font-size: 0.725rem; font-weight: 800; padding: 0.18rem 0.55rem; border-radius: 4px; text-transform: uppercase;">Official SJC Portals &amp; Forms</span>
-        <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin: 0.35rem 0 0 0;">Quick Access: Forms, Informal Review &amp; Tax Bill Lookup</h4>
+  <!-- 1. Start Here: 15-Second Plain-English Summary & Path Selector -->
+  <div style="background: #0F172A; border: 1px solid rgba(96, 165, 250, 0.4); border-radius: var(--radius-md); padding: 1.05rem; margin-bottom: 1.15rem;">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 0.55rem;">
+      <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: var(--accent-primary); color: #FFF; font-size: 0.725rem; font-weight: 800; padding: 0.18rem 0.55rem; border-radius: 4px; text-transform: uppercase;">Start Here • Plain-English Guide</span>
+      <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: rgba(34, 197, 94, 0.15); color: #86EFAC; font-size: 0.725rem; font-weight: 700; padding: 0.18rem 0.5rem; border-radius: 4px;">Saves ~$525–$530/yr per $50k drop</span>
+    </div>
+    <p style="font-size: 0.85rem; color: var(--text-primary); line-height: 1.55; margin-bottom: 0.75rem;">
+      <strong>In plain English:</strong> If similar Tracy Hills Phase 2 homes sold for <strong>less</strong> than the home value printed on your property tax bill (because of market dips or builder incentives), California <strong>Proposition 8</strong> (<em>Revenue &amp; Taxation Code § 51</em>) lets you ask San Joaquin County to temporarily lower your taxable value for the year—without affecting your long-term Prop 13 cap.
+    </p>
+
+    <!-- Which Filing Window Fits Today? -->
+    <div style="border-top: 1px solid var(--border-subtle); padding-top: 0.7rem;">
+      <strong style="display: block; font-size: 0.8rem; color: #93C5FD; margin-bottom: 0.5rem;">Which filing option should you use?</strong>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.65rem;">
+        <!-- Option A -->
+        <div style="background: var(--bg-surface); border: 1px solid rgba(34, 197, 94, 0.35); border-radius: var(--radius-sm); padding: 0.75rem;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.3rem; flex-wrap: wrap;">
+            <strong style="font-size: 0.825rem; color: #86EFAC;">Path A: Informal Review</strong>
+            <span style="display: inline-block; max-width: 100%; line-height: 1.35; font-size: 0.7rem; font-weight: 700; background: rgba(34, 197, 94, 0.15); color: #86EFAC; padding: 0.12rem 0.45rem; border-radius: 4px;">Jul 1 – Sept 15 • $0 Free</span>
+          </div>
+          <div style="font-size: 0.775rem; color: var(--text-secondary); line-height: 1.45;">
+            Fast summer review with the <strong>Assessor's Office</strong> (online or mail) before October tax bills go out. Enter up to 3 neighbor comps right on the form. <em>(County closes the online form Sept 16 until next July.)</em>
+          </div>
+        </div>
+
+        <!-- Option B -->
+        <div style="background: var(--bg-surface); border: 1px solid rgba(96, 165, 250, 0.4); border-radius: var(--radius-sm); padding: 0.75rem;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.3rem; flex-wrap: wrap;">
+            <strong style="font-size: 0.825rem; color: #93C5FD;">Path B: Formal Appeal (BOE-305-AH)</strong>
+            <span style="display: inline-block; max-width: 100%; line-height: 1.35; font-size: 0.7rem; font-weight: 700; background: rgba(59, 130, 246, 0.18); color: #93C5FD; padding: 0.12rem 0.45rem; border-radius: 4px;">Jul 2 – Nov 30 • $30 Fee</span>
+          </div>
+          <div style="font-size: 0.775rem; color: var(--text-secondary); line-height: 1.45;">
+            Paper form mailed to the <strong>Clerk of the Board</strong> by <strong>5:00 PM Nov 30</strong>. Use this <strong>Sept 16 – Nov 30</strong> after October tax bills arrive, or if Path A is still pending/denied. <em>Do NOT attach comps upfront.</em>
+          </div>
+        </div>
       </div>
+
+      <!-- 1st-Year Buyer Supplemental Check -->
+      <div style="background: rgba(59, 130, 246, 0.1); border-left: 3px solid #3B82F6; border-radius: 4px; padding: 0.65rem 0.8rem; margin-top: 0.65rem; font-size: 0.785rem; color: var(--text-secondary); line-height: 1.45;">
+        <strong style="color: #93C5FD;">Just bought your home this year? (1st-Year Supplemental Check):</strong> Regular Prop 8 applies once your full purchase price is on your annual Secured Tax Bill as of <strong>January 1</strong> (typically your 2nd calendar year). If your October bill still shows the builder's partial pre-sale value and you just received a <strong>Supplemental Assessment Notice</strong>, you only have <strong>60 days</strong> from that notice's mail date to appeal it (check <code>Supplemental Assessment</code> on Form BOE-305-AH and attach the notice).
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Official San Joaquin County Portals & Forms -->
+  <div style="background: rgba(37, 99, 235, 0.12); border: 1px solid rgba(96, 165, 250, 0.4); border-radius: var(--radius-md); padding: 1.05rem; margin-bottom: 1.15rem;">
+    <div style="margin-bottom: 0.75rem;">
+      <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: var(--accent-primary); color: #FFF; font-size: 0.725rem; font-weight: 800; padding: 0.18rem 0.55rem; border-radius: 4px; text-transform: uppercase;">Official SJC Portals &amp; Forms</span>
+      <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin: 0.35rem 0 0 0;">Quick Access: Forms, Informal Review &amp; Tax Bill Lookup</h4>
     </div>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.75rem;">
-      <!-- Card 1: Formal Appeal Form (BOE-305-AH) -->
-      <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.65rem;">
-        <div>
-          <div style="font-weight: 700; font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.2rem;">Formal Appeal Form (BOE-305-AH)</div>
-          <div style="font-size: 0.775rem; color: var(--text-muted); line-height: 1.4;">Official SJC Clerk of the Board fill-in PDF application (Open Jul 2 – Nov 30).</div>
-        </div>
-        <a href="https://www.sjgov.org/docs/default-source/clerk-of-the-board-documents/assessment-appeals/forms/assessment-appeal-application.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width: 100%; justify-content: center; font-size: 0.775rem; padding: 0.45rem 0.65rem;">
-          <span>Download BOE-305-AH&nbsp;↗</span>
-        </a>
-      </div>
-
-      <!-- Card 2: Assessor Informal Review Info -->
+      <!-- Card 1: Assessor Informal Review Info (Path A) -->
       <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.65rem;">
         <div>
           <div style="font-weight: 700; font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.2rem;">Assessor Informal Review Info</div>
@@ -314,6 +345,17 @@ const FAQ_DATA = [
         </div>
         <a href="https://www.sjgov.org/department/assessor/property-information/homeowners/decline-in-value---homeowners" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center; font-size: 0.775rem; padding: 0.45rem 0.65rem;">
           <span>Assessor Informal Review&nbsp;↗</span>
+        </a>
+      </div>
+
+      <!-- Card 2: Formal Appeal Form (BOE-305-AH) (Path B) -->
+      <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.65rem;">
+        <div>
+          <div style="font-weight: 700; font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.2rem;">Formal Appeal Form (BOE-305-AH)</div>
+          <div style="font-size: 0.775rem; color: var(--text-muted); line-height: 1.4;">Official SJC Clerk of the Board fill-in PDF application (Open Jul 2 – Nov 30).</div>
+        </div>
+        <a href="https://www.sjgov.org/docs/default-source/clerk-of-the-board-documents/assessment-appeals/forms/assessment-appeal-application.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width: 100%; justify-content: center; font-size: 0.775rem; padding: 0.45rem 0.65rem;">
+          <span>Download BOE-305-AH&nbsp;↗</span>
         </a>
       </div>
 
@@ -330,396 +372,286 @@ const FAQ_DATA = [
     </div>
   </div>
 
-  <!-- 2. Overview Section + 3 Compact Highlight Callouts -->
-  <div style="margin-bottom: 1.25rem;">
-    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 0.45rem;">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2" style="flex-shrink: 0; margin-top: 0.15rem;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-      <span>Overview: What Is a Proposition 8 "Decline in Value" Reduction?</span>
+  <!-- 3. Simple Real-Dollar Worked Example + What Changes / Stays Fixed -->
+  <div style="background: #0F172A; border: 1px solid rgba(34, 197, 94, 0.3); border-radius: var(--radius-md); padding: 1.05rem; margin-bottom: 1.15rem;">
+    <h4 style="font-size: 0.925rem; font-weight: 700; color: #86EFAC; margin: 0 0 0.45rem 0; display: flex; align-items: flex-start; gap: 0.45rem;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2" style="flex-shrink: 0; margin-top: 0.12rem;"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+      <span>Simple Example: How the Numbers &amp; Savings Work</span>
     </h4>
-    <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 0.65rem;">
-      Under California <strong>Proposition 13</strong>, the County Assessor sets your home's "base year" assessed value at your purchase price and automatically increases it by up to 2% every January 1—even when local real estate prices or builder incentives push current home values downward.
+    <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45; margin-bottom: 0.65rem;">
+      Suppose your October tax bill values your home at <strong>$800,000</strong> (<code>$200k Land + $600k Home</code>), while 3 similar Tracy Hills Phase 2 homes closed on or before <strong>March 31</strong> for around <strong>$700,000</strong>:
     </p>
-    <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 0.9rem;">
-      Under <strong>Proposition 8 (Revenue &amp; Taxation Code § 51)</strong>, if the fair market value of your home on the <strong>January 1 lien date</strong> falls below your Prop 13 factored roll value, you have the legal right to request a temporary assessment reduction.
-    </p>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.85rem;">
-      <!-- Highlight Callout 1: Reduced by Appeal -->
-      <div style="background: #0F172A; border: 1px solid rgba(34, 197, 94, 0.35); border-radius: var(--radius-md); padding: 0.95rem;">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.45rem; flex-wrap: wrap;">
-          <span style="font-weight: 700; font-size: 0.825rem; color: #86EFAC;">What Gets Reduced</span>
-          <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: rgba(34, 197, 94, 0.15); color: #86EFAC; font-size: 0.7rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 4px;">Reduced (~1.05% Tax Rate)</span>
-        </div>
-        <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">
-          Lowering your Net Taxable Value reduces both your <strong>1.00% Prop 13 base tax</strong> and voter-approved school/college bonds (<strong>~1.05% total</strong>, or <code>1.0531%</code> for 2026–27 in Tax Rate Area <code>004-088</code>), saving roughly <strong>$525 to $530 per year</strong> for every $50,000 reduction in assessed value.
-        </p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 0.65rem; margin-bottom: 0.8rem;">
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.75rem;">
+        <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">1. Your Tax Bill (Column A)</div>
+        <div style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin: 0.15rem 0;">$800,000 Total</div>
+        <div style="font-size: 0.75rem; color: var(--text-secondary);">$200,000 Land + $600,000 Home</div>
       </div>
-
-      <!-- Highlight Callout 2: Unchanged by Appeal -->
-      <div style="background: #0F172A; border: 1px solid rgba(234, 179, 8, 0.35); border-radius: var(--radius-md); padding: 0.95rem;">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.45rem; flex-wrap: wrap;">
-          <span style="font-weight: 700; font-size: 0.825rem; color: #FEF08A;">What Does NOT Change</span>
-          <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: rgba(234, 179, 8, 0.15); color: #FEF08A; font-size: 0.7rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 4px;">Unchanged by Appeal</span>
-        </div>
-        <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">
-          Fixed parcel charges—including <strong>Tracy CFD IA3 (Mello-Roos)</strong>, <strong>Tracy CFD 2021-2 Maintenance</strong>, and Rural Fire/Mosquito assessments—are based on square-footage tiers rather than home value and remain unchanged.
-        </p>
+      <div style="background: var(--bg-surface); border: 1px solid rgba(96, 165, 250, 0.35); border-radius: var(--radius-sm); padding: 0.75rem;">
+        <div style="font-size: 0.75rem; color: #93C5FD; font-weight: 600;">2. Your Request (Column B)</div>
+        <div style="font-size: 0.95rem; font-weight: 800; color: var(--accent-link); margin: 0.15rem 0;">$700,000 Total</div>
+        <div style="font-size: 0.75rem; color: var(--text-secondary);">$200,000 Land + $500,000 Home</div>
       </div>
-
-      <!-- Highlight Callout 3: Prop 13 Base Protected -->
-      <div style="background: #0F172A; border: 1px solid rgba(96, 165, 250, 0.35); border-radius: var(--radius-md); padding: 0.95rem;">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.45rem; flex-wrap: wrap;">
-          <span style="font-weight: 700; font-size: 0.825rem; color: #93C5FD;">Protects Your Prop 13 Cap</span>
-          <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: rgba(59, 130, 246, 0.15); color: #93C5FD; font-size: 0.7rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 4px;">Prop 13 Base Protected</span>
-        </div>
-        <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">
-          A Prop 8 reduction is temporary and reviewed annually. Even when the housing market eventually recovers, your assessed value can <strong>never rise above</strong> your original purchase price compounded by the standard 2% annual Prop 13 cap.
-        </p>
+      <div style="background: var(--bg-surface); border: 1px solid rgba(34, 197, 94, 0.4); border-radius: var(--radius-sm); padding: 0.75rem;">
+        <div style="font-size: 0.75rem; color: #86EFAC; font-weight: 600;">3. Estimated Tax Savings</div>
+        <div style="font-size: 0.95rem; font-weight: 800; color: #4ADE80; margin: 0.15rem 0;">~$1,053 / year</div>
+        <div style="font-size: 0.75rem; color: var(--text-secondary);">~$525–$530/yr per $50k drop</div>
       </div>
     </div>
 
-    <!-- Compact New Move-In / Supplemental Bill Check Callout -->
-    <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(96, 165, 250, 0.35); border-left: 4px solid #3B82F6; border-radius: var(--radius-sm); padding: 0.85rem 1rem; margin-top: 0.9rem; font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5;">
-      <strong style="color: #93C5FD;">New Move-In / Supplemental Bill Check (1st-Year Buyers vs. 2nd+ Year Owners):</strong> Prop 8 Regular Decline-in-Value reviews apply once your full purchase value is enrolled on your annual Secured Tax Bill as of January 1 (typically starting your 2nd calendar year of ownership). If your October regular bill still shows the builder's partial pre-sale value and you just received a <strong>Supplemental Assessment Notice</strong>, you can only appeal a Supplemental valuation within <strong>60 days</strong> of the notice mail date (checking <code>Supplemental Assessment</code> on Form BOE-305-AH and attaching the notice).
-    </div>
-  </div>
-
-  <!-- 3. 2-Column Comparison Grid: Path A: Informal Review vs. Path B: Formal Appeal -->
-  <div style="margin-bottom: 1.25rem;">
-    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.45rem; display: flex; align-items: flex-start; gap: 0.45rem;">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2" style="flex-shrink: 0; margin-top: 0.15rem;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-      <span>Path A: Informal Review vs. Path B: Formal Appeal (Two Filing Windows)</span>
-    </h4>
-    <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.75rem; line-height: 1.5;">
-      San Joaquin County provides two distinct annual pathways to request a lower valuation for the current secured tax roll:
-    </p>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.9rem;">
-      <!-- Left Card: Path A Informal Review -->
-      <div style="background: #0F172A; border: 1px solid rgba(34, 197, 94, 0.35); border-radius: var(--radius-md); padding: 1.05rem;">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.65rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.55rem; flex-wrap: wrap;">
-          <h5 style="font-size: 0.9rem; font-weight: 700; color: #86EFAC; margin: 0;">Path A: Informal Assessment Review</h5>
-          <span style="display: inline-block; max-width: 100%; line-height: 1.35; font-size: 0.725rem; color: #86EFAC; background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.3); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 700;">$0 Free</span>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 0.55rem; font-size: 0.825rem; color: var(--text-secondary);">
-          <div>
-            <strong style="color: var(--text-primary); display: block; font-size: 0.775rem;">Filing Window:</strong>
-            <strong>July 1 – September 15</strong> each year <em>(Note: County hides/closes the online form on Sept 16 until the following July).</em>
-          </div>
-          <div>
-            <strong style="color: var(--text-primary); display: block; font-size: 0.775rem;">Handled By:</strong>
-            SJC Assessor's Office (Suite 230) • Main: <a href="tel:2094682630" style="color: var(--accent-link); font-weight: 600; white-space: nowrap;">(209) 468-2630</a> | Prop 8 Desk: <a href="tel:2094682658" style="color: var(--accent-link); font-weight: 600; white-space: nowrap;">(209) 468-2658</a> (44 N. San Joaquin St., Stockton, CA 95202).
-          </div>
-          <div>
-            <strong style="color: var(--text-primary); display: block; font-size: 0.775rem;">Comps Required Upfront?</strong>
-            <span style="color: #86EFAC; font-weight: 600;">Yes</span> — Enter up to 3 comparable sales directly on the form.
-          </div>
-          <div>
-            <strong style="color: var(--text-primary); display: block; font-size: 0.775rem;">Best For:</strong>
-            Fast, free summer review (online or mail) before October tax bills issue.
-          </div>
-        </div>
+    <!-- 3 Key Rules Strip -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.65rem; font-size: 0.785rem;">
+      <div style="background: rgba(34, 197, 94, 0.08); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: var(--radius-sm); padding: 0.7rem 0.8rem;">
+        <strong style="color: #86EFAC; display: block; margin-bottom: 0.2rem;">✓ What Gets Reduced (~1.05%)</strong>
+        <span style="color: var(--text-secondary); line-height: 1.45;">Lowers your <strong>1.00% Prop 13 base tax</strong> + school/college bonds (<code>1.0531%</code> for 2026–27 in <code>TRA 004-088</code>).</span>
       </div>
-
-      <!-- Right Card: Path B Formal Appeal -->
-      <div style="background: #0F172A; border: 1px solid rgba(96, 165, 250, 0.35); border-radius: var(--radius-md); padding: 1.05rem;">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.65rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.55rem; flex-wrap: wrap;">
-          <h5 style="font-size: 0.9rem; font-weight: 700; color: var(--accent-link); margin: 0;">Path B: Formal Appeal — Form BOE-305-AH</h5>
-          <span style="display: inline-block; max-width: 100%; line-height: 1.35; font-size: 0.725rem; color: #93C5FD; background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 700;">$30 Fee</span>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 0.55rem; font-size: 0.825rem; color: var(--text-secondary);">
-          <div>
-            <strong style="color: var(--text-primary); display: block; font-size: 0.775rem;">Filing Window:</strong>
-            <strong>July 2 – November 30 (by 5:00 PM)</strong> each year <em>(must be submitted/postmarked no earlier than July 2 and no later than Nov 30; premature July 1 mailings or fax/email filings are not accepted).</em>
-          </div>
-          <div>
-            <strong style="color: var(--text-primary); display: block; font-size: 0.775rem;">Handled By:</strong>
-            Clerk of the Board (Suite 627) • <a href="tel:2094682350" style="color: var(--accent-link); font-weight: 600; white-space: nowrap;">(209) 468-2350</a> (44 N. San Joaquin St., Stockton, CA 95202).
-          </div>
-          <div>
-            <strong style="color: var(--text-primary); display: block; font-size: 0.775rem;">Comps Required Upfront?</strong>
-            <span style="color: #FCA5A5; font-weight: 600;">No</span> — Do NOT attach comps at filing; save them for appraiser review/hearing.
-          </div>
-          <div>
-            <strong style="color: var(--text-primary); display: block; font-size: 0.775rem;">Best For:</strong>
-            Filing Sept 16 – Nov 30 after October tax bills arrive, or preserving legal rights if an Informal Review is still pending/denied.
-          </div>
-        </div>
+      <div style="background: rgba(234, 179, 8, 0.08); border: 1px solid rgba(234, 179, 8, 0.3); border-radius: var(--radius-sm); padding: 0.7rem 0.8rem;">
+        <strong style="color: #FEF08A; display: block; margin-bottom: 0.2rem;">✕ What Stays Fixed</strong>
+        <span style="color: var(--text-secondary); line-height: 1.45;">Fixed parcel fees—<strong>Tracy CFD IA3 (Mello-Roos)</strong>, <strong>CFD 2021-2 Maintenance</strong>, &amp; Rural Fire/Mosquito—are tiered by sq. ft. and stay unchanged.</span>
+      </div>
+      <div style="background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(96, 165, 250, 0.3); border-radius: var(--radius-sm); padding: 0.7rem 0.8rem;">
+        <strong style="color: #93C5FD; display: block; margin-bottom: 0.2rem;">🛡 Protects Prop 13 Cap</strong>
+        <span style="color: var(--text-secondary); line-height: 1.45;">Under Prop 13, your value starts at your purchase price (+up to 2%/yr). Prop 8 cuts are temporary, and when values recover, your value can <strong>never exceed</strong> that original 2% Prop 13 cap.</span>
       </div>
     </div>
   </div>
 
-  <!-- 4. Warning Callout Box: Pay Current Property Tax Installments on Time! -->
-  <div style="background: rgba(234, 179, 8, 0.12); border: 1px solid rgba(234, 179, 8, 0.35); border-left: 4px solid #EAB308; border-radius: var(--radius-sm); padding: 0.9rem 1rem; margin-bottom: 1.25rem; font-size: 0.875rem;">
-    <div style="display: flex; align-items: flex-start; gap: 0.5rem; color: #FEF08A; font-weight: 700; margin-bottom: 0.35rem;">
+  <!-- 4. Critical Warning Callout: Always Pay Property Taxes On Time! -->
+  <div style="background: rgba(234, 179, 8, 0.12); border: 1px solid rgba(234, 179, 8, 0.35); border-left: 4px solid #EAB308; border-radius: var(--radius-sm); padding: 0.9rem 1rem; margin-bottom: 1.15rem; font-size: 0.875rem;">
+    <div style="display: flex; align-items: flex-start; gap: 0.5rem; color: #FEF08A; font-weight: 700; margin-bottom: 0.3rem;">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink: 0; margin-top: 0.12rem;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-      <span>Pay Current Property Tax Installments on Time!</span>
+      <span>Important: Still Pay Current Property Tax Bills On Time!</span>
     </div>
     <div style="color: var(--text-secondary); font-size: 0.825rem; line-height: 1.5;">
-      Filing an informal review or formal appeal does <strong>NOT</strong> pause or extend property tax payment deadlines. You must still pay your <strong>1st Installment</strong> (due Nov 1 / delinquent after Dec 10), <strong>2nd Installment</strong> (due Feb 1 / delinquent after Apr 10), and any <strong>Supplemental Tax Bills</strong> on time to avoid automatic 10% late penalties. Once your assessment is lowered, San Joaquin County mails you a direct property tax refund check for the overpaid difference.
+      Filing an informal review or formal appeal does <strong>NOT</strong> pause tax payment due dates. You must still pay your <strong>1st Installment</strong> (due Nov 1 / delinquent after <strong>Dec 10</strong>), <strong>2nd Installment</strong> (due Feb 1 / delinquent after <strong>Apr 10</strong>), and any <strong>Supplemental Tax Bills</strong> on time to avoid automatic <strong>10% late penalties</strong>. Once approved, San Joaquin County mails you a direct refund check for the difference.
     </div>
   </div>
 
-  <!-- 5. Good Comps Section: How to Find Strong Comps & The 90-Day Rule -->
-  <div style="margin-bottom: 1.25rem;">
-    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem; display: flex; align-items: flex-start; gap: 0.45rem;">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2" style="flex-shrink: 0; margin-top: 0.15rem;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-      <span>How to Find Strong Comparable Homes ("Comps") &amp; The 90-Day Rule</span>
-    </h4>
-    <p style="font-size: 0.825rem; color: var(--text-secondary); margin-bottom: 0.75rem; line-height: 1.5;">
-      To prove your home was worth less on <strong>January 1</strong> (the legal valuation "lien date"), you need recent closed sales of similar homes in Tracy Hills Phase 2:
-    </p>
-
-    <!-- 90-Day Rule Box -->
-    <div style="background: #0F172A; border: 1px solid rgba(96, 165, 250, 0.35); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 0.85rem;">
-      <strong style="color: var(--accent-link); font-size: 0.875rem; display: block; margin-bottom: 0.45rem;">Follow the Strict "90-Day Rule" (CA Rev. &amp; Tax Code § 402.1):</strong>
-      <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.825rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.45rem;">
-        <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
-          <span style="color: var(--accent-link); font-weight: 700;">•</span>
-          <span>An Assessment Appeals Board can <strong>legally consider comparable sales</strong> that closed any time <strong>before January 1</strong> (e.g., August–December of the prior year) up to <strong>90 days AFTER January 1 (no later than March 31)</strong>.</span>
-        </li>
-        <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
-          <span style="color: #F59E0B; font-weight: 700;">•</span>
-          <span>Sales closing <strong>after March 31</strong> (e.g., May or June closings) cannot be used as primary valuation evidence at a formal hearing, though appraisers may still consider them as market context during informal settlement discussions.</span>
-        </li>
-      </ul>
+  <!-- 5. Tappable Step-by-Step Drawers (100% of Full Details Inside Clean Sections) -->
+  <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+    <div style="font-size: 0.775rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted);">
+      Tap any step below for full instructions &amp; County addresses
     </div>
 
-    <!-- What Makes an Ideal Comp Box -->
-    <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 0.85rem;">
-      <strong style="color: var(--text-primary); font-size: 0.875rem; display: block; margin-bottom: 0.55rem;">What Makes an Ideal Comp:</strong>
-      <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.825rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.5rem;">
-        <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
-          <span style="width: 1.15rem; height: 1.15rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </span>
-          <span><strong>Same Neighborhood &amp; Tax Rate Area:</strong> Homes inside Tracy Hills Phase 2 (<code>TRA 004-088</code>)—ideally the same builder collection (e.g., Boulder, Crestwick, Fairgrove, Cairnway, Slateshire, etc.).</span>
-        </li>
-        <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
-          <span style="width: 1.15rem; height: 1.15rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </span>
-          <span><strong>Same or Larger Square Footage:</strong> A comparable home with the same floor plan or larger living area (sq. ft.) that sold for less than your assessed value is the strongest possible evidence.</span>
-        </li>
-        <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
-          <span style="width: 1.15rem; height: 1.15rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </span>
-          <span><strong>Arm's-Length Market Closings:</strong> Closed MLS/builder sales (visible on Redfin, Zillow, or Realtor.com under <em>Sale &amp; Tax History</em>) rather than active listings or foreclosures.</span>
-        </li>
-        <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
-          <span style="width: 1.15rem; height: 1.15rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </span>
-          <span><strong>Cross-Check Neighboring Tax Bills (Optional Bonus Check):</strong> On the <a href="https://common3.mptsweb.com/MBC/sanjoaquin/tax/search" target="_blank" rel="noopener noreferrer" style="color: var(--accent-link); font-weight: 600;">SJC Property Tax Search Portal&nbsp;↗</a> (or via <code>sjcttc.org</code>), you can look up public property tax bills by street address. Checking neighboring regular bills (and negative supplemental bills showing downward reassessments upon sale) helps confirm enrolled land/improvement splits in <code>TRA 004-088</code>.</span>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Quick 3-Step Recipe Sub-Box -->
-    <div style="background: #0F172A; border: 1px solid rgba(59, 130, 246, 0.35); border-radius: var(--radius-md); padding: 1rem;">
-      <strong style="color: #93C5FD; font-size: 0.875rem; display: block; margin-bottom: 0.6rem;">Quick 3-Step Recipe: How to Pull Comps &amp; Split Land vs. Improvements</strong>
-      <div style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5;">
+    <!-- Drawer 1: How to Find 3 Good Comps & Split Land vs Home -->
+    <details class="faq-drawer">
+      <summary>
+        <span>1. How to Find 3 Neighbor Sales ("Comps") &amp; Split Land vs. Home</span>
+        <svg class="faq-drawer-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </summary>
+      <div class="faq-drawer-body" style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5;">
         <div>
-          <strong style="color: var(--text-primary);">Step 1 — Filter Sold Homes on Redfin / Zillow:</strong> Search <code>95377</code>, zoom into Tracy Hills Phase 2, switch filter to <strong>Sold</strong> (Single-Family), and click neighboring homes with the <strong>same floor plan or larger sq. ft.</strong> Open <em>Sale &amp; Tax History</em> to verify the exact closing date is <strong>on or before March 31</strong> of the tax year being appealed (ignore active listings, pending sales, or foreclosures). Note lot differences (e.g., view/open-space lots vs. backing to arterial roads).
+          To prove your home was worth less on <strong>January 1</strong> (the legal valuation "lien date"), gather recent closed sales of similar homes in Tracy Hills Phase 2:
         </div>
-        <div>
-          <strong style="color: var(--text-primary);">Step 2 — Look Up Neighbor Tax Bills Online:</strong> Open the <a href="https://common3.mptsweb.com/MBC/sanjoaquin/tax/search" target="_blank" rel="noopener noreferrer" style="color: var(--accent-link); font-weight: 600;">SJC Tax Bill Search Portal&nbsp;↗</a> (or via <code>sjcttc.org</code>) and search by Street Address. <strong style="color: #86EFAC;">Pro Tip:</strong> The search box requires at least 6 characters—omit suffixes like <code>St</code>, <code>Ln</code>, or <code>Ave</code> (e.g., type <code>123 MAIN</code> instead of <code>123 Main St</code>) so the County database matches cleanly.
-        </div>
-        <div>
-          <strong style="color: var(--text-primary);">Step 3 — How to Split "Land" vs. "Improvements" on Form BOE-305-AH (Section 4, Column B):</strong> Form BOE-305-AH requires separate numbers for <code>Land</code>, <code>Improvements/Structures</code>, and <code>Total</code> (leaving Opinion of Value blank causes rejection). Simply look at a comparable neighbor's tax bill on the <a href="https://common3.mptsweb.com/MBC/sanjoaquin/tax/search" target="_blank" rel="noopener noreferrer" style="color: var(--accent-link); font-weight: 600;">SJC Tax Bill Search Portal&nbsp;↗</a> (or via <code>sjcttc.org</code>) to see the Assessor's typical Phase 2 <strong>Land</strong> allocation (commonly <code>$188,000–$215,000</code>), enter a similar Land figure in Column B, and put the remaining balance in <strong>Improvements/Structures</strong> so the two lines add up to your target <strong>Total</strong>.
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- 6A. Numbered Step-by-Step Guide: How to File Path A: Informal Assessment Review -->
-  <div style="background: #0F172A; border: 1px solid rgba(34, 197, 94, 0.35); border-radius: var(--radius-md); padding: 1.15rem; margin-bottom: 1.15rem;">
-    <h4 style="font-size: 0.95rem; font-weight: 700; color: #86EFAC; margin-bottom: 0.85rem; display: flex; align-items: flex-start; gap: 0.45rem;">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2" style="flex-shrink: 0; margin-top: 0.15rem;"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-      <span>How to File Path A: Informal Assessment Review (July 1 – Sept 15 | $0 Fee)</span>
-    </h4>
+        <!-- Strict 90-Day Rule -->
+        <div style="background: var(--bg-surface); border: 1px solid rgba(96, 165, 250, 0.35); border-radius: var(--radius-sm); padding: 0.85rem;">
+          <strong style="color: var(--accent-link); display: block; margin-bottom: 0.4rem;">Strict "90-Day Rule" (CA Rev. &amp; Tax Code § 402.1):</strong>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.35rem;">
+            <li>• An Assessment Appeals Board can <strong>legally consider comparable sales</strong> that closed any time <strong>before January 1</strong> (e.g., Aug–Dec of the prior year) up to <strong>90 days AFTER January 1 (no later than March 31)</strong>.</li>
+            <li>• Sales closing <strong>after March 31</strong> (e.g., May or June closings) cannot be used as primary valuation evidence at a formal hearing, though appraisers may still consider them as market context during informal settlement discussions.</li>
+          </ul>
+        </div>
 
-    <div style="display: flex; flex-direction: column; gap: 0.85rem;">
-      <!-- Step 1 -->
-      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem; color: var(--text-secondary);">
-        <span style="background: #16A34A; color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">1</span>
-        <div>
-          <strong style="color: var(--text-primary);">Open the Assessor's Portal:</strong> Visit the <a href="https://www.sjgov.org/department/assessor/property-information/homeowners/decline-in-value---homeowners" target="_blank" rel="noopener noreferrer" style="color: var(--accent-link); font-weight: 600;">Assessor's Decline in Value page&nbsp;↗</a> between July 1 and Sept 15 and select <strong>Submit Online</strong> or download the <strong>Print/Mail PDF</strong> (<em>Informal Request for Decline in Market Value Review</em>).
+        <!-- What Makes an Ideal Comp -->
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem;">
+          <strong style="color: var(--text-primary); display: block; margin-bottom: 0.45rem;">What Makes an Ideal Comp:</strong>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.45rem;">
+            <li style="display: flex; align-items: flex-start; gap: 0.45rem;">
+              <span style="color: #4ADE80; font-weight: 700; flex-shrink: 0;">✓</span>
+              <span><strong>Same Neighborhood &amp; Tax Rate Area:</strong> Homes inside Tracy Hills Phase 2 (<code>TRA 004-088</code>)—ideally the same builder collection (e.g., Boulder, Crestwick, Fairgrove, Cairnway, Slateshire, etc.).</span>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 0.45rem;">
+              <span style="color: #4ADE80; font-weight: 700; flex-shrink: 0;">✓</span>
+              <span><strong>Same or Larger Square Footage:</strong> A comparable home with the same floor plan or larger living area (sq. ft.) that sold for less than your assessed value is the strongest possible evidence.</span>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 0.45rem;">
+              <span style="color: #4ADE80; font-weight: 700; flex-shrink: 0;">✓</span>
+              <span><strong>Normal Closed Sales ("Arm's-Length"):</strong> Closed MLS/builder sales (visible on Redfin, Zillow, or Realtor.com under <em>Sale &amp; Tax History</em>) rather than active listings, pending sales, or foreclosures.</span>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 0.45rem;">
+              <span style="color: #60A5FA; font-weight: 700; flex-shrink: 0;">✓</span>
+              <span><strong>Cross-Check Neighboring Tax Bills (Optional Bonus Check):</strong> On the <a href="https://common3.mptsweb.com/MBC/sanjoaquin/tax/search" target="_blank" rel="noopener noreferrer" style="color: var(--accent-link); font-weight: 600;">SJC Property Tax Search Portal&nbsp;↗</a> (or via <code>sjcttc.org</code>), you can view public property tax bills by address—including regular bills and negative supplemental bills (downward reassessments on resale)—to confirm typical land/improvement splits in <code>TRA 004-088</code>.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Quick 3-Step Lookup Recipe -->
+        <div style="background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: var(--radius-sm); padding: 0.85rem; display: flex; flex-direction: column; gap: 0.55rem;">
+          <strong style="color: #93C5FD;">Quick 3-Step Recipe: Pull Comps &amp; Split Land vs. Improvements</strong>
+          <div>
+            <strong style="color: var(--text-primary);">Step 1 — Filter Sold Homes on Redfin / Zillow:</strong> Search <code>95377</code>, zoom into Tracy Hills Phase 2, switch filter to <strong>Sold</strong> (Single-Family), and click neighboring homes with the <strong>same floor plan or larger sq. ft.</strong> Open <em>Sale &amp; Tax History</em> to verify the exact closing date is <strong>on or before March 31</strong> of the appealed tax year. Note lot differences (e.g., view/open-space lots vs. backing to arterial roads).
+          </div>
+          <div>
+            <strong style="color: var(--text-primary);">Step 2 — Look Up Neighbor Tax Bills Online:</strong> Open the <a href="https://common3.mptsweb.com/MBC/sanjoaquin/tax/search" target="_blank" rel="noopener noreferrer" style="color: var(--accent-link); font-weight: 600;">SJC Tax Bill Search Portal&nbsp;↗</a> (or via <code>sjcttc.org</code>) and search by Street Address. <strong style="color: #86EFAC;">Pro Tip:</strong> The search box requires at least 6 characters—omit suffixes like <code>St</code>, <code>Ln</code>, or <code>Ave</code> (e.g., type <code>123 MAIN</code> instead of <code>123 Main St</code>) so the County database matches cleanly.
+          </div>
+          <div>
+            <strong style="color: var(--text-primary);">Step 3 — Split "Land" vs. "Improvements" on Form BOE-305-AH (Section 4, Column B):</strong> Form BOE-305-AH requires separate numbers for <code>Land</code>, <code>Improvements/Structures</code>, and <code>Total</code> (leaving Opinion of Value blank causes rejection). Look at a comparable neighbor's bill on the <a href="https://common3.mptsweb.com/MBC/sanjoaquin/tax/search" target="_blank" rel="noopener noreferrer" style="color: var(--accent-link); font-weight: 600;">SJC Tax Bill Search Portal&nbsp;↗</a> (or via <code>sjcttc.org</code>) to see the Assessor's typical Phase 2 <strong>Land</strong> allocation (commonly <code>$188,000–$215,000</code>), enter a similar Land figure in Column B, and put the remaining balance in <strong>Improvements/Structures</strong> so both lines add up to your target <strong>Total</strong>.
+          </div>
         </div>
       </div>
+    </details>
 
-      <!-- Step 2 -->
-      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem; color: var(--text-secondary);">
-        <span style="background: #16A34A; color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">2</span>
-        <div>
-          <strong style="color: var(--text-primary);">Enter Owner &amp; Property Details (Section 1):</strong> Enter your 12-digit APN (<code>251-XXX-XXX-000</code>), building square footage, purchase date &amp; price, current assessed value, your opinion of market value as of January 1, and general property condition.
+    <!-- Drawer 2: Path A Free Informal Review Steps -->
+    <details class="faq-drawer">
+      <summary>
+        <span>2. Path A: How to File the Free Informal Review (Jul 1 – Sept 15 | $0)</span>
+        <svg class="faq-drawer-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </summary>
+      <div class="faq-drawer-body" style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.825rem; color: var(--text-secondary);">
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.775rem;">
+          <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: rgba(34, 197, 94, 0.15); color: #86EFAC; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px;">Window: Jul 1 – Sept 15</span>
+          <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: rgba(34, 197, 94, 0.15); color: #86EFAC; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px;">Comps Upfront? YES (Up to 3)</span>
         </div>
-      </div>
 
-      <!-- Step 3 -->
-      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem; color: var(--text-secondary);">
-        <span style="background: #16A34A; color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">3</span>
-        <div>
-          <strong style="color: var(--text-primary);">List Up to 3 Comparable Sales Directly on the Form (Section 2):</strong> Unlike the formal appeal, enter up to <strong>3 Tracy Hills Phase 2 closed sales</strong> right into rows <strong>a, b, and c</strong> (must have closed <strong>on or before March 31</strong> per the 90-Day Rule), including address/APN, sale date, sale price, sq. ft., and bed/bath count.
+        <div style="display: flex; align-items: flex-start; gap: 0.7rem;">
+          <span style="background: #16A34A; color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">1</span>
+          <div><strong style="color: var(--text-primary);">Open the Assessor's Portal:</strong> Visit the <a href="https://www.sjgov.org/department/assessor/property-information/homeowners/decline-in-value---homeowners" target="_blank" rel="noopener noreferrer" style="color: var(--accent-link); font-weight: 600;">Assessor's Decline in Value page&nbsp;↗</a> between July 1 and Sept 15 <em>(the County hides/closes the online form on Sept 16 until the following July)</em> and choose <strong>Submit Online</strong> or download the <strong>Print/Mail PDF</strong> (<em>Informal Request for Decline in Market Value Review</em>).</div>
         </div>
-      </div>
 
-      <!-- Step 4 -->
-      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem; color: var(--text-secondary);">
-        <span style="background: #16A34A; color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">4</span>
-        <div>
-          <strong style="color: var(--text-primary);">Submit Online, Mail, or Fax by Sept 15 (Section 3):</strong> Submit electronically online, or sign and mail/fax/deliver to: <strong>San Joaquin County Assessor, 44 N. San Joaquin St., Suite 230, Stockton, CA 95202</strong> (Fax: <code>209-468-0422</code>) on or before <strong>September 15</strong>.
+        <div style="display: flex; align-items: flex-start; gap: 0.7rem;">
+          <span style="background: #16A34A; color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">2</span>
+          <div><strong style="color: var(--text-primary);">Enter Owner &amp; Property Details (Section 1):</strong> Enter your 12-digit APN (<code>251-XXX-XXX-000</code>), building sq. ft., purchase date &amp; price, current assessed value, your opinion of market value as of January 1, and general property condition.</div>
         </div>
-      </div>
 
-      <!-- Step 5 -->
-      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem; color: var(--text-secondary);">
-        <span style="background: #16A34A; color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">5</span>
-        <div>
+        <div style="display: flex; align-items: flex-start; gap: 0.7rem;">
+          <span style="background: #16A34A; color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">3</span>
+          <div><strong style="color: var(--text-primary);">List Up to 3 Comps Directly on the Form (Section 2):</strong> Enter up to <strong>3 Tracy Hills Phase 2 closed sales</strong> right into rows <strong>a, b, and c</strong> (must have closed <strong>on or before March 31</strong> per the 90-Day Rule), including address/APN, sale date, sale price, sq. ft., and bed/bath count.</div>
+        </div>
+
+        <div style="display: flex; align-items: flex-start; gap: 0.7rem;">
+          <span style="background: #16A34A; color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">4</span>
+          <div><strong style="color: var(--text-primary);">Submit Online, Mail, or Fax by Sept 15 (Section 3):</strong> Submit electronically online, or sign and mail/fax/deliver to: <strong>SJC Assessor's Office, 44 N. San Joaquin St., Suite 230, Stockton, CA 95202</strong> • Main: <a href="tel:2094682630" style="color: var(--accent-link); font-weight: 600; white-space: nowrap;">(209) 468-2630</a> | Prop 8 Desk: <a href="tel:2094682658" style="color: var(--accent-link); font-weight: 600; white-space: nowrap;">(209) 468-2658</a> | Fax: <code>209-468-0422</code> on or before <strong>September 15</strong>.</div>
+        </div>
+
+        <div style="background: rgba(234, 179, 8, 0.1); border-left: 3px solid #EAB308; padding: 0.65rem 0.8rem; border-radius: 4px; color: var(--text-secondary);">
           <strong style="color: #FEF08A;">Crucial Nov 30 Safeguard:</strong> Filing an Informal Review <strong>does NOT extend</strong> the November 30 formal appeal deadline. If you have not received the Assessor's decision by mid-November—or disagree with their valuation—you <strong>must</strong> still file Formal Appeal <code>Form BOE-305-AH</code> before <strong>November 30</strong> to preserve your legal appeal rights.
         </div>
       </div>
-    </div>
+    </details>
+
+    <!-- Drawer 3: Path B Formal Appeal Cheat Sheet -->
+    <details class="faq-drawer">
+      <summary>
+        <span>3. Path B: Form BOE-305-AH Copy-This Cheat Sheet (Jul 2 – Nov 30 | $30)</span>
+        <svg class="faq-drawer-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </summary>
+      <div class="faq-drawer-body" style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.825rem; color: var(--text-secondary);">
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.775rem;">
+          <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: rgba(59, 130, 246, 0.15); color: #93C5FD; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px;">Window: Jul 2 – Nov 30 (5 PM)</span>
+          <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: rgba(239, 68, 68, 0.15); color: #FCA5A5; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px;">Comps Upfront? NO</span>
+        </div>
+
+        <div class="faq-cheatsheet">
+          <div class="faq-cheatsheet-row">
+            <strong style="color: var(--text-primary);">Sec 1 &amp; 2<br><span style="font-weight: 500; font-size: 0.75rem; color: var(--text-muted);">Applicant Info</span></strong>
+            <div>Enter owner name(s) and mailing address <em>exactly</em> as printed on your Secured Property Tax Bill. Leave Section 2 blank if filing for yourself without a paid agent/attorney.</div>
+          </div>
+
+          <div class="faq-cheatsheet-row">
+            <strong style="color: var(--text-primary);">Sec 3<br><span style="font-weight: 500; font-size: 0.75rem; color: var(--text-muted);">Property ID</span></strong>
+            <div>Check <strong>Yes</strong> for principal residence (if owner-occupied), enter your 12-digit APN / Assessment Number / Fee Number (e.g., <code>251-XXX-XXX-000</code>) from Boxes 1 &amp; 2 of your tax bill, and check <strong>Single-Family</strong>.</div>
+          </div>
+
+          <div class="faq-cheatsheet-row">
+            <strong style="color: var(--text-primary);">Sec 4<br><span style="font-weight: 500; font-size: 0.75rem; color: var(--text-muted);">Value (Col A vs B)</span></strong>
+            <div>
+              <strong>• Column A (Value on Roll):</strong> Copy exact Land, Structural Improvements, and Net Taxable Value (Total) from <strong>Box 10</strong> of your current Secured Tax Bill.<br>
+              <strong>• Column B (Your Opinion):</strong> Enter separate figures for <code>Land</code> (commonly <code>$188,000–$215,000</code> in Phase 2), <code>Improvements/Structures</code> (balance), and <code>Total</code> fair market value as of January 1—<strong>do not leave Column B blank</strong>. <em>(Tip: Anchor realistically to your lowest valid comps—the Board cannot lower your value below the number you write in Column B.)</em>
+            </div>
+          </div>
+
+          <div class="faq-cheatsheet-row">
+            <strong style="color: var(--text-primary);">Sec 5 &amp; 6<br><span style="font-weight: 500; font-size: 0.75rem; color: var(--text-muted);">Reason &amp; Evidence</span></strong>
+            <div>
+              <strong>• Section 5:</strong> Check <strong>ONLY</strong> <code>REGULAR ASSESSMENT – VALUE AS OF JANUARY 1 OF THE CURRENT YEAR</code> <em>(unless filing a 60-day Supplemental Assessment appeal)</em>.<br>
+              <strong>• Section 6:</strong> Check <strong>Box 6A (<code>DECLINE IN VALUE</code>)</strong>. Optionally check <strong>6I</strong> for a 2–3 sentence summary referencing pre-lien-date sales adjusted for living area, lot size, and features.<br>
+              <span style="color: #FCA5A5;"><strong>• Important:</strong> Do <strong>NOT</strong> attach comp printouts or evidence packets at filing—the form states <em>"Do not attach hearing evidence to this application"</em>. Keep comps in a folder for appraiser review.</span>
+            </div>
+          </div>
+
+          <div class="faq-cheatsheet-row">
+            <strong style="color: var(--text-primary);">Sec 7 &amp; 8<br><span style="font-weight: 500; font-size: 0.75rem; color: var(--text-muted);">Fees &amp; Refund</span></strong>
+            <div>
+              <strong>• Section 7 (Written Findings):</strong> Check <strong>Are not requested</strong> (avoids extra legal/hourly board fees).<br>
+              <strong>• Section 8 (Claim for Refund):</strong> Check <strong style="color: #86EFAC;">Yes — Critical!</strong> Authorizes the County to automatically mail your tax refund check without needing a separate refund claim form.
+            </div>
+          </div>
+
+          <div class="faq-cheatsheet-row">
+            <strong style="color: var(--text-primary);">Sign (Blue Ink)<br><span style="font-weight: 500; font-size: 0.75rem; color: var(--text-muted);">Certification</span></strong>
+            <div>Print Pages 1 &amp; 2 (one separate application per parcel/roll year) and sign the bottom of Page 2 in <strong>original blue ink</strong> (wet signature required on paper filings).</div>
+          </div>
+
+          <div class="faq-cheatsheet-row">
+            <strong style="color: var(--text-primary);">Enclose &amp; Mail<br><span style="font-weight: 500; font-size: 0.75rem; color: var(--text-muted);">Jul 2 – Nov 30 (5 PM)</span></strong>
+            <div>
+              <strong>Enclose:</strong> (1) Signed Pages 1 &amp; 2 of Form BOE-305-AH, (2) Photocopy of Page 1 of your current Secured Tax Bill, (3) <strong>$30.00 check or money order</strong> payable to <em>County of San Joaquin</em> (write APN on memo line).<br>
+              <strong>Strict Window &amp; Address:</strong> Submitted or USPS-postmarked <strong>no earlier than July 2 and no later than 5:00 PM on November 30</strong> (premature July 1 mailings or fax/email filings are not accepted). Mail or hand-deliver to: <strong>Clerk of the Board, San Joaquin County, 44 N. San Joaquin St., Suite 627, Stockton, CA 95202</strong> • <a href="tel:2094682350" style="color: var(--accent-link); font-weight: 600; white-space: nowrap;">(209) 468-2350</a>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <!-- Drawer 4: What Happens After You Submit? (Resolution Roadmap) -->
+    <details class="faq-drawer">
+      <summary>
+        <span>4. What Happens After You Submit? (Appraiser Call, Hearing &amp; Refund)</span>
+        <svg class="faq-drawer-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </summary>
+      <div class="faq-drawer-body" style="display: flex; flex-direction: column; gap: 0.75rem;">
+        <div style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.35); border-left: 4px solid #22C55E; border-radius: var(--radius-sm); padding: 0.75rem 0.9rem; font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5;">
+          <strong style="color: #86EFAC;">Informal Review Outcome (Path A):</strong> An Assessor's appraiser reviews the 3 comps on your form. If approved before the roll closes, your October tax bill (or a corrected bill) reflects the lower value automatically; if processed after payment, the County mails a refund check.
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0.75rem;">
+          <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem; font-size: 0.825rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.35rem; flex-wrap: wrap;">
+              <strong style="color: var(--accent-link);">Stage 1: Clerk Acceptance</strong>
+              <span style="display: inline-block; max-width: 100%; line-height: 1.35; font-size: 0.7rem; color: #93C5FD; background: rgba(59, 130, 246, 0.15); padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 600;">2–6 Weeks</span>
+            </div>
+            <p style="color: var(--text-secondary); margin: 0; line-height: 1.45;">
+              The Clerk of the Board processes your $30 fee, assigns an official <strong>Application Number</strong>, and forwards your file to the Assessor's Office.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-surface); border: 1px solid rgba(34, 197, 94, 0.35); border-radius: var(--radius-sm); padding: 0.85rem; font-size: 0.825rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.35rem; flex-wrap: wrap;">
+              <strong style="color: #86EFAC;">Stage 2: Appraiser Review &amp; Stipulation</strong>
+              <span style="display: inline-block; max-width: 100%; line-height: 1.35; font-size: 0.7rem; color: #86EFAC; background: rgba(34, 197, 94, 0.15); padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 600;">Most Common</span>
+            </div>
+            <p style="color: var(--text-secondary); margin: 0; line-height: 1.45;">
+              Most residential appeals never require a hearing. Months ahead, an Assessor's appraiser contacts you by phone or mail. You share your 1-page Comparable Sales Summary, and if you agree on a value, you sign a <strong>Value Stipulation Agreement</strong>—settling without appearing before the Board.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem; font-size: 0.825rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.35rem; flex-wrap: wrap;">
+              <strong style="color: var(--accent-link);">Stage 3: Appeals Board Hearing</strong>
+              <span style="display: inline-block; max-width: 100%; line-height: 1.35; font-size: 0.7rem; color: var(--text-muted); background: #0F172A; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 600;">6–18 Months (If Needed)</span>
+            </div>
+            <p style="color: var(--text-secondary); margin: 0; line-height: 1.45;">
+              If you and the appraiser cannot agree, the Clerk mails a formal Notice of Hearing at least <strong>45 days in advance</strong>—typically scheduled within <strong>6 to 18 months</strong> (up to the 2-year legal limit). <em>Only if</em> going to an in-person hearing instead of Stipulating, bring <strong>6 paper copies</strong> of your comparable sales summary.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-surface); border: 1px solid rgba(96, 165, 250, 0.35); border-radius: var(--radius-sm); padding: 0.85rem; font-size: 0.825rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.35rem; flex-wrap: wrap;">
+              <strong style="color: #93C5FD;">Stage 4: Refund &amp; Escrow Update</strong>
+              <span style="display: inline-block; max-width: 100%; line-height: 1.35; font-size: 0.7rem; color: #93C5FD; background: rgba(59, 130, 246, 0.15); padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 600;">4–8 Weeks</span>
+            </div>
+            <p style="color: var(--text-secondary); margin: 0; line-height: 1.45;">
+              Once the reduced value is enrolled, the County Auditor mails a <strong>property tax refund check</strong> within 4–8 weeks. If you pay via a monthly mortgage escrow/impound account, send the revised assessment notice to your lender and request an <strong>off-cycle escrow analysis</strong> to lower your monthly payment right away.
+            </p>
+          </div>
+        </div>
+      </div>
+    </details>
   </div>
 
-  <!-- 6B. Numbered Step-by-Step Guide: How to File Path B: Formal Assessment Appeal — Form BOE-305-AH -->
-  <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.15rem; margin-bottom: 1.25rem;">
-    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.85rem; display: flex; align-items: flex-start; gap: 0.45rem;">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2" style="flex-shrink: 0; margin-top: 0.15rem;"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-      <span>How to File Path B: Formal Assessment Appeal — Form BOE-305-AH (July 2 – Nov 30 | $30 Fee)</span>
-    </h4>
-
-    <div style="display: flex; flex-direction: column; gap: 0.85rem;">
-      <!-- Step 1 -->
-      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem; color: var(--text-secondary);">
-        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">1</span>
-        <div>
-          <strong style="color: var(--text-primary);">Section 1 &amp; 2 (Applicant Info):</strong> Enter owner name(s) and mailing address <em>exactly</em> as printed on your Secured Property Tax Bill. Leave Section 2 blank if filing for yourself without a paid agent/attorney.
-        </div>
-      </div>
-
-      <!-- Step 2 -->
-      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem; color: var(--text-secondary);">
-        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">2</span>
-        <div>
-          <strong style="color: var(--text-primary);">Section 3 (Property Identification):</strong> Check <strong>Yes</strong> for principal residence (if owner-occupied), enter your 12-digit APN / Assessment Number / Fee Number (e.g., <code>251-XXX-XXX-000</code>) from Boxes 1 &amp; 2 of your tax bill, and check <strong>Single-Family</strong>.
-        </div>
-      </div>
-
-      <!-- Step 3 -->
-      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem; color: var(--text-secondary);">
-        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">3</span>
-        <div>
-          <strong style="color: var(--text-primary);">Section 4 (Value — Column A vs. Column B):</strong>
-          <ul style="list-style: none; padding: 0; margin: 0.35rem 0 0 0; display: flex; flex-direction: column; gap: 0.3rem;">
-            <li>• <strong>Column A (Value on Roll):</strong> Copy exact Land, Structural Improvements, and Net Taxable Value (Total) from Box 10 of your current Secured Tax Bill.</li>
-            <li>• <strong>Column B (Applicant's Opinion of Value):</strong> Enter separate figures for <code>Land</code> (commonly <code>$188,000–$215,000</code> in Phase 2), <code>Improvements/Structures</code> (the remaining balance), and <code>Total</code> fair market value as of January 1—do not leave Column B blank. <em>(Tip: Pick a realistic, well-supported figure anchored to your lowest valid comps—the Board cannot lower your value below the number you write in Column B.)</em></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Step 4 -->
-      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem; color: var(--text-secondary);">
-        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">4</span>
-        <div>
-          <strong style="color: var(--text-primary);">Section 5 &amp; 6 (Appeal Type &amp; Reason):</strong>
-          <ul style="list-style: none; padding: 0; margin: 0.35rem 0 0 0; display: flex; flex-direction: column; gap: 0.3rem;">
-            <li>• <strong>Section 5:</strong> Check <strong>ONLY</strong> <code>REGULAR ASSESSMENT – VALUE AS OF JANUARY 1 OF THE CURRENT YEAR</code>.</li>
-            <li>• <strong>Section 6:</strong> Check <strong>Box 6A (<code>DECLINE IN VALUE</code>)</strong>. Optionally check <strong>6I</strong> to add a 2–3 sentence summary referencing pre-lien-date neighborhood sales adjusted for living area, lot size, and features.</li>
-            <li style="color: #FCA5A5;">• <strong>Important:</strong> Do <strong>NOT</strong> attach comp printouts or evidence packets when submitting the form—the form explicitly states <em>"Do not attach hearing evidence to this application"</em>. Keep your comps in a folder for the appraiser review.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Step 5 -->
-      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem; color: var(--text-secondary);">
-        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">5</span>
-        <div>
-          <strong style="color: var(--text-primary);">Section 7, Section 8 &amp; Blue-Ink Signature:</strong>
-          <ul style="list-style: none; padding: 0; margin: 0.35rem 0 0 0; display: flex; flex-direction: column; gap: 0.3rem;">
-            <li>• <strong>Section 7 (Written Findings):</strong> Check <strong>Are not requested</strong> (avoids extra legal/hourly board fees).</li>
-            <li>• <strong>Section 8 (Claim for Refund):</strong> Check <strong style="color: #86EFAC;">Yes — Critical!</strong> Checking "Yes" authorizes the County to automatically mail your tax refund check once reduced without requiring a separate refund claim form.</li>
-            <li>• <strong>Certification:</strong> Print Pages 1 &amp; 2 and sign at the bottom of Page 2 in <strong>original blue ink</strong> (wet signature required on paper filings).</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Step 6 -->
-      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem; color: var(--text-secondary);">
-        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">6</span>
-        <div>
-          <strong style="color: var(--text-primary);">Mail or Hand-Deliver Between July 2 and November 30 (by 5:00 PM):</strong>
-          <ul style="list-style: none; padding: 0; margin: 0.35rem 0 0 0; display: flex; flex-direction: column; gap: 0.3rem;">
-            <li>• <strong>Enclose:</strong> (1) Signed Pages 1 &amp; 2 of Form BOE-305-AH (one separate application per parcel/roll year), (2) A photocopy of Page 1 of your current Secured Tax Bill, and (3) A <strong>$30.00 check or money order</strong> payable to <em>County of San Joaquin</em> (write your APN on the memo line).</li>
-            <li>• <strong>Strict Filing Window:</strong> Applications must be submitted or USPS-postmarked <strong>no earlier than July 2 and no later than 5:00 PM on November 30</strong> (mailing prematurely on July 1 can be rejected; fax/email filings are not accepted). Mail or deliver in person to: <strong>Clerk of the Board, San Joaquin County, 44 N. San Joaquin St., Suite 627, Stockton, CA 95202</strong>.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 7. Process Timeline: What Happens After You Submit? -->
-  <div style="margin-bottom: 1rem;">
-    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: flex-start; gap: 0.45rem;">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2" style="flex-shrink: 0; margin-top: 0.15rem;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-      <span>What Happens After You Submit? (The Resolution Roadmap)</span>
-    </h4>
-
-    <!-- Informal Review Outcome Callout -->
-    <div style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.35); border-left: 4px solid #22C55E; border-radius: var(--radius-sm); padding: 0.85rem 1rem; margin-bottom: 0.85rem; font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5;">
-      <strong style="color: #86EFAC;">Informal Review Outcome (Path A):</strong> An Assessor's appraiser reviews the 3 comps submitted on your form. If approved before the roll closes, your October tax bill (or a corrected bill) reflects the lower value automatically; if processed after payment, the County mails a refund check.
-    </div>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0.85rem;">
-      <!-- Stage 1 -->
-      <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.95rem; font-size: 0.825rem;">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.4rem; flex-wrap: wrap;">
-          <strong style="color: var(--accent-link);">Stage 1: Clerk Acceptance</strong>
-          <span style="display: inline-block; max-width: 100%; line-height: 1.35; font-size: 0.7rem; color: #93C5FD; background: rgba(59, 130, 246, 0.15); padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 600;">2–6 Weeks</span>
-        </div>
-        <p style="color: var(--text-secondary); margin: 0; line-height: 1.45;">
-          The Clerk of the Board processes your $30 fee, assigns an official <strong>Application Number</strong>, and forwards your file to the Assessor's Office.
-        </p>
-      </div>
-
-      <!-- Stage 2 -->
-      <div style="background: var(--bg-surface); border: 1px solid rgba(34, 197, 94, 0.35); border-radius: var(--radius-md); padding: 0.95rem; font-size: 0.825rem;">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.4rem; flex-wrap: wrap;">
-          <strong style="color: #86EFAC;">Stage 2: Appraiser Review &amp; Stipulation</strong>
-          <span style="display: inline-block; max-width: 100%; line-height: 1.35; font-size: 0.7rem; color: #86EFAC; background: rgba(34, 197, 94, 0.15); padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 600;">Most Common</span>
-        </div>
-        <p style="color: var(--text-secondary); margin: 0; line-height: 1.45;">
-          Most residential appeals never require a hearing. Months before any hearing date, an Assessor's appraiser contacts you by phone or mail. You share your 1-page Comparable Sales Summary, and if you agree on a reduced valuation, you sign a <strong>Value Stipulation Agreement</strong>—resolving your appeal without appearing before the Board.
-        </p>
-      </div>
-
-      <!-- Stage 3 -->
-      <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.95rem; font-size: 0.825rem;">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.4rem; flex-wrap: wrap;">
-          <strong style="color: var(--accent-link);">Stage 3: Appeals Board Hearing</strong>
-          <span style="display: inline-block; max-width: 100%; line-height: 1.35; font-size: 0.7rem; color: var(--text-muted); background: #0F172A; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 600;">6–18 Months (If Needed)</span>
-        </div>
-        <p style="color: var(--text-secondary); margin: 0; line-height: 1.45;">
-          If you and the appraiser cannot agree on a value, the Clerk mails a formal Notice of Hearing at least <strong>45 days in advance</strong>—typically scheduled within <strong>6 to 18 months</strong> (up to the 2-year legal limit). <em>Only if</em> your case goes to an in-person Board hearing instead of settling via Stipulation, bring <strong>6 paper copies</strong> of your comparable sales summary.
-        </p>
-      </div>
-
-      <!-- Stage 4 -->
-      <div style="background: var(--bg-surface); border: 1px solid rgba(96, 165, 250, 0.35); border-radius: var(--radius-md); padding: 0.95rem; font-size: 0.825rem;">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.4rem; flex-wrap: wrap;">
-          <strong style="color: #93C5FD;">Stage 4: Refund &amp; Escrow Update</strong>
-          <span style="display: inline-block; max-width: 100%; line-height: 1.35; font-size: 0.7rem; color: #93C5FD; background: rgba(59, 130, 246, 0.15); padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 600;">4–8 Weeks</span>
-        </div>
-        <p style="color: var(--text-secondary); margin: 0; line-height: 1.45;">
-          Once the reduced value is enrolled, the County Auditor mails a <strong>property tax refund check</strong> directly to you within 4–8 weeks. If you pay taxes via a monthly mortgage escrow/impound account, send the revised assessment notice to your lender and request an <strong>off-cycle escrow analysis</strong> to lower your monthly payment right away.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- 8. Standard Muted Footer Note -->
-  <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
+  <!-- 6. Standard Muted Footer Note -->
+  <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 1rem;">
     ℹ️ <em>Note: San Joaquin County assessment appeal procedures, Tax Rate Area (004-088) bond rates, and filing deadlines are current as of November 2026. Community informational guide only; does not constitute legal or tax advice.</em>
   </div>
 </div>`,
