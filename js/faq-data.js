@@ -662,219 +662,218 @@ const FAQ_DATA = [
     "category": "Community Resources",
     "question": "How do I claim the free $7,000 California Homeowners' Property Tax Exemption (Form BOE-266) on my primary residence?",
     "answer": `<div class="faq-boe266-details">
-  <!-- 1. Top Action / Quick Links Card Grid (3 compact link cards) -->
-  <div style="background: rgba(37, 99, 235, 0.12); border: 1px solid rgba(96, 165, 250, 0.4); border-radius: var(--radius-md); padding: 1.1rem; margin-bottom: 1.25rem;">
-    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.85rem;">
-      <div>
-        <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: var(--accent-primary); color: #FFF; font-size: 0.725rem; font-weight: 800; padding: 0.18rem 0.55rem; border-radius: 4px; text-transform: uppercase;">Official SJC Portals &amp; Forms</span>
-        <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin: 0.35rem 0 0 0;">Quick Access: Form BOE-266, Eligibility Rules &amp; Tax Bill Search</h4>
+  <!-- 1. Start Here: Plain-English Guide + Check Box 10 First -->
+  <div style="background: #0F172A; border: 1px solid rgba(96, 165, 250, 0.35); border-radius: var(--radius-md); padding: 1.05rem; margin-bottom: 1.15rem;">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 0.55rem;">
+      <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: var(--accent-primary); color: #FFF; font-size: 0.725rem; font-weight: 800; padding: 0.18rem 0.55rem; border-radius: 4px; text-transform: uppercase;">Start Here • Plain-English Guide</span>
+      <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: rgba(34, 197, 94, 0.15); color: #86EFAC; font-size: 0.725rem; font-weight: 700; padding: 0.18rem 0.5rem; border-radius: 4px;">Saves ~$74/yr Forever ($0 Fee)</span>
+    </div>
+    <p style="font-size: 0.85rem; color: var(--text-primary); line-height: 1.55; margin-bottom: 0.75rem;">
+      <strong>In plain English:</strong> Because you own and live in your Tracy Hills home as your <strong>principal place of residence</strong>, California law (<em>California Constitution, Article XIII, Section 3(k)</em>) gives you a free <strong>$7,000 deduction from your property's taxable assessed value</strong>—which lowers your annual property tax bill by roughly <strong>$74 every year</strong> <em>(note: this is a $7,000 value deduction, not a $7,000 dollar-for-dollar tax credit)</em>.
+    </p>
+
+    <!-- Check First Box -->
+    <div style="background: var(--bg-surface); border: 1px solid rgba(96, 165, 250, 0.35); border-radius: var(--radius-sm); padding: 0.85rem; font-size: 0.815rem; color: var(--text-secondary); line-height: 1.5;">
+      <strong style="color: #93C5FD; display: block; margin-bottom: 0.35rem;">First, Check Your Tax Bill: Are You Already Receiving It?</strong>
+      <div style="display: flex; flex-direction: column; gap: 0.45rem;">
+        <div>
+          Look at <strong>Box 10 (<code>ASSESSED VALUES AND EXEMPTIONS</code>)</strong> on your mailed Secured Property Tax Bill—or check online via the <a href="https://common3.mptsweb.com/MBC/sanjoaquin/tax/search" target="_blank" rel="noopener noreferrer" style="color: var(--accent-link); font-weight: 600;">Direct Tax Bill Search Portal&nbsp;↗</a> (or via <code>sjcttc.org</code>)—for a line reading <code>HOMEOWNERS EXEMPTION: -7,000</code>. If it is already <code>-7,000</code>, you're all set! If that line is blank or <code>0</code>, file <code>Form BOE-266</code> once below.
+        </div>
+        <div>
+          <strong style="color: #86EFAC;">Pro Tip:</strong> The search box requires at least 6 characters—omit suffixes like <code>St</code>, <code>Ln</code>, or <code>Ave</code> (e.g., type <code>123 MAIN</code> instead of <code>123 Main St</code>) so the County database matches cleanly.
+        </div>
+        <div style="background: rgba(59, 130, 246, 0.1); border-left: 3px solid #3B82F6; padding: 0.5rem 0.7rem; border-radius: 4px;">
+          <strong style="color: #93C5FD;">Resale Home Buyers:</strong> A previous seller's <code>-7,000</code> exemption does <strong>NOT</strong> carry over permanently—new owners must still file their own <code>Form BOE-266</code> once after closing.
+        </div>
       </div>
+    </div>
+  </div>
+
+  <!-- 2. 3 Compact Key Highlights -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.75rem; margin-bottom: 1.15rem;">
+    <div style="background: #0F172A; border: 1px solid rgba(34, 197, 94, 0.35); border-radius: var(--radius-md); padding: 0.85rem;">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.35rem; flex-wrap: wrap;">
+        <span style="font-weight: 700; font-size: 0.8rem; color: #86EFAC;">Annual Tax Savings</span>
+        <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: rgba(34, 197, 94, 0.15); color: #86EFAC; font-size: 0.7rem; font-weight: 700; padding: 0.12rem 0.45rem; border-radius: 4px;">~$74 / Year Saved</span>
+      </div>
+      <p style="font-size: 0.79rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">
+        Saves <strong>~$73.72/yr</strong> at our <strong>~1.05%</strong> ad valorem tax rate (<code>1.0531%</code> in Tax Rate Area <code>004-088</code> for 2026–27) by subtracting $7,000 from your gross assessed value before tax calculation.
+      </p>
+    </div>
+
+    <div style="background: #0F172A; border: 1px solid rgba(96, 165, 250, 0.35); border-radius: var(--radius-md); padding: 0.85rem;">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.35rem; flex-wrap: wrap;">
+        <span style="font-weight: 700; font-size: 0.8rem; color: #93C5FD;">One-Time Filing</span>
+        <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: rgba(59, 130, 246, 0.15); color: #93C5FD; font-size: 0.7rem; font-weight: 700; padding: 0.12rem 0.45rem; border-radius: 4px;">$0 Free &amp; Auto-Renews</span>
+      </div>
+      <p style="font-size: 0.79rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">
+        File once with the County Assessor for <strong>$0</strong>; the exemption <strong>renews automatically every year</strong> you continue to own and occupy the home (including after mortgage refinancing).
+      </p>
+    </div>
+
+    <div style="background: #0F172A; border: 1px solid rgba(234, 179, 8, 0.35); border-radius: var(--radius-md); padding: 0.85rem;">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.35rem; flex-wrap: wrap;">
+        <span style="font-weight: 700; font-size: 0.8rem; color: #FEF08A;">Combines With Appeals</span>
+        <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: rgba(234, 179, 8, 0.15); color: #FEF08A; font-size: 0.7rem; font-weight: 700; padding: 0.12rem 0.45rem; border-radius: 4px;">Stacks With Prop 8</span>
+      </div>
+      <p style="font-size: 0.79rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">
+        Subtracted right on top of any <strong>Proposition 8</strong> assessment reduction. <em>(Note: Qualifying Disabled Veterans should file <code>Form BOE-261-G</code> instead, as only one exemption applies per parcel.)</em>
+      </p>
+    </div>
+  </div>
+
+  <!-- 3. Warning Callout Box: Ignore $45-$95 Scam Mailers -->
+  <div style="background: rgba(234, 179, 8, 0.12); border: 1px solid rgba(234, 179, 8, 0.35); border-left: 4px solid #EAB308; border-radius: var(--radius-sm); padding: 0.85rem 0.95rem; margin-bottom: 1.15rem; font-size: 0.85rem;">
+    <div style="display: flex; align-items: flex-start; gap: 0.5rem; color: #FEF08A; font-weight: 700; margin-bottom: 0.3rem;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink: 0; margin-top: 0.12rem;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+      <span>Ignore $45–$95 Scam Mailers — Filing Form BOE-266 Is 100% Free!</span>
+    </div>
+    <div style="color: var(--text-secondary); font-size: 0.815rem; line-height: 1.5;">
+      New homebuyers regularly receive official-looking letters from private third-party mailers charging <strong>$45–$95</strong> to file a "Homeowners' Exemption" or "Homestead Designation." Discard them—filing directly with the San Joaquin County Assessor costs <strong>$0</strong> and takes less than 3 minutes.
+    </div>
+  </div>
+
+  <!-- 4. Official SJC Portals & Forms (Check First -> Download -> Info) -->
+  <div style="background: rgba(37, 99, 235, 0.12); border: 1px solid rgba(96, 165, 250, 0.4); border-radius: var(--radius-md); padding: 1.05rem; margin-bottom: 1.15rem;">
+    <div style="margin-bottom: 0.75rem;">
+      <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: var(--accent-primary); color: #FFF; font-size: 0.725rem; font-weight: 800; padding: 0.18rem 0.55rem; border-radius: 4px; text-transform: uppercase;">Official SJC Portals &amp; Forms</span>
+      <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin: 0.35rem 0 0 0;">Quick Access: Check Your Bill First, Then File Form BOE-266</h4>
     </div>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.75rem;">
-      <!-- Card 1: Download Form BOE-266 -->
+      <!-- Card 1: Direct Tax Bill Search -->
       <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.65rem;">
         <div>
-          <div style="font-weight: 700; font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.2rem;">Download Form BOE-266</div>
-          <div style="font-size: 0.775rem; color: var(--text-muted); line-height: 1.4;">Official 1-page claim form from SJC Assessor.</div>
+          <div style="font-weight: 700; font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.2rem;">1. Direct Tax Bill Search</div>
+          <div style="font-size: 0.775rem; color: var(--text-muted); line-height: 1.4;">Check if <code>-7,000</code> is active on your bill—search directly by address or APN (or via <code>sjcttc.org</code>).</div>
+        </div>
+        <a href="https://common3.mptsweb.com/MBC/sanjoaquin/tax/search" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center; font-size: 0.775rem; padding: 0.45rem 0.65rem;">
+          <span>Direct Tax Bill Search&nbsp;↗</span>
+        </a>
+      </div>
+
+      <!-- Card 2: Download Form BOE-266 -->
+      <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.65rem;">
+        <div>
+          <div style="font-weight: 700; font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.2rem;">2. Download Form BOE-266</div>
+          <div style="font-size: 0.775rem; color: var(--text-muted); line-height: 1.4;">Official 1-page claim form from SJC Assessor (if <code>-7,000</code> is missing).</div>
         </div>
         <a href="https://www.sjgov.org/department/assessor/forms-library/form-detail-page/claim-for-homeowners-property-tax-exemption" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width: 100%; justify-content: center; font-size: 0.775rem; padding: 0.45rem 0.65rem;">
           <span>Download Form BOE-266&nbsp;↗</span>
         </a>
       </div>
 
-      <!-- Card 2: Assessor Exemption Info -->
+      <!-- Card 3: Assessor Exemption Info -->
       <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.65rem;">
         <div>
-          <div style="font-weight: 700; font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.2rem;">Assessor Exemption Info</div>
-          <div style="font-size: 0.775rem; color: var(--text-muted); line-height: 1.4;">Eligibility rules &amp; deadlines.</div>
+          <div style="font-weight: 700; font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.2rem;">3. Assessor Exemption Info</div>
+          <div style="font-size: 0.775rem; color: var(--text-muted); line-height: 1.4;">Official eligibility rules &amp; filing deadlines guide.</div>
         </div>
         <a href="https://www.sjgov.org/department/assessor/tax-savings-exemptions/homeowners" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center; font-size: 0.775rem; padding: 0.45rem 0.65rem;">
           <span>Assessor Exemption Guide&nbsp;↗</span>
         </a>
       </div>
-
-      <!-- Card 3: Direct Tax Bill Search -->
-      <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.65rem;">
-        <div>
-          <div style="font-weight: 700; font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.2rem;">Direct Tax Bill Search</div>
-          <div style="font-size: 0.775rem; color: var(--text-muted); line-height: 1.4;">Check if <code>-7,000</code> is active on your bill—search bills directly by address or APN (if link ever changes, access via <code>sjcttc.org</code>).</div>
-        </div>
-        <a href="https://common3.mptsweb.com/MBC/sanjoaquin/tax/search" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center; font-size: 0.775rem; padding: 0.45rem 0.65rem;">
-          <span>Direct Tax Bill Search&nbsp;↗</span>
-        </a>
-      </div>
     </div>
   </div>
 
-  <!-- 2. Overview Section + 3 Compact Highlight Callouts -->
-  <div style="margin-bottom: 1.25rem;">
-    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.6rem; display: flex; align-items: flex-start; gap: 0.45rem;">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2" style="flex-shrink: 0; margin-top: 0.15rem;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-      <span>Overview: What Is the $7,000 California Homeowners' Exemption?</span>
-    </h4>
-    <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 0.9rem;">
-      Under the California Constitution (Article XIII, Section 3(k)), any homeowner who owns and occupies a dwelling as their <strong>principal place of residence</strong> is eligible for a <strong>$7,000 deduction from the property's assessed value</strong> (note: this is a $7,000 reduction in taxable assessed value—not a $7,000 dollar-for-dollar tax credit—which reduces your annual property tax bill by roughly $74 every year).
-    </p>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.85rem;">
-      <!-- Highlight Callout 1: ~$74 / Year Saved -->
-      <div style="background: #0F172A; border: 1px solid rgba(34, 197, 94, 0.35); border-radius: var(--radius-md); padding: 0.95rem;">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.45rem; flex-wrap: wrap;">
-          <span style="font-weight: 700; font-size: 0.825rem; color: #86EFAC;">Annual Tax Savings</span>
-          <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: rgba(34, 197, 94, 0.15); color: #86EFAC; font-size: 0.7rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 4px;">~$74 / Year Saved</span>
-        </div>
-        <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">
-          Saves <strong>~$73.72/yr</strong> at our <strong>~1.05%</strong> ad valorem tax rate (<code>1.0531%</code> in Tax Rate Area <code>004-088</code> for 2026–27) by subtracting $7,000 from your gross assessed value before tax calculation.
-        </p>
-      </div>
-
-      <!-- Highlight Callout 2: $0 Free & Auto-Renews -->
-      <div style="background: #0F172A; border: 1px solid rgba(96, 165, 250, 0.35); border-radius: var(--radius-md); padding: 0.95rem;">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.45rem; flex-wrap: wrap;">
-          <span style="font-weight: 700; font-size: 0.825rem; color: #93C5FD;">One-Time Filing</span>
-          <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: rgba(59, 130, 246, 0.15); color: #93C5FD; font-size: 0.7rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 4px;">$0 Free &amp; Auto-Renews</span>
-        </div>
-        <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">
-          File once with the County Assessor for <strong>$0</strong>; the exemption <strong>renews automatically every year</strong> you continue to own and occupy the home (including after mortgage refinancing).
-        </p>
-      </div>
-
-      <!-- Highlight Callout 3: Stacks With Prop 8 -->
-      <div style="background: #0F172A; border: 1px solid rgba(234, 179, 8, 0.35); border-radius: var(--radius-md); padding: 0.95rem;">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.45rem; flex-wrap: wrap;">
-          <span style="font-weight: 700; font-size: 0.825rem; color: #FEF08A;">Combines With Appeals</span>
-          <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: rgba(234, 179, 8, 0.15); color: #FEF08A; font-size: 0.7rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 4px;">Stacks With Prop 8</span>
-        </div>
-        <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">
-          Subtracted right on top of any <strong>Proposition 8</strong> assessment reduction. <em>(Note: Qualifying Disabled Veterans should file <code>Form BOE-261-G</code> instead, as only one exemption applies per parcel.)</em>
-        </p>
-      </div>
+  <!-- 5. Tappable Step-by-Step & Deadlines Drawers -->
+  <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+    <div style="font-size: 0.775rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted);">
+      Tap below for 3-minute filing steps, Assessor address &amp; deadlines
     </div>
-  </div>
 
-  <!-- 3. Quick Check on Your Tax Bill Box -->
-  <div style="background: var(--bg-surface); border: 1px solid rgba(96, 165, 250, 0.35); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1.25rem; font-size: 0.825rem; color: var(--text-secondary); line-height: 1.55;">
-    <strong style="color: var(--accent-link); font-size: 0.875rem; display: block; margin-bottom: 0.45rem;">Quick Check on Your Tax Bill: Are You Already Receiving It?</strong>
-    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-      <div>
-        Check <strong>Box 10 (<code>ASSESSED VALUES AND EXEMPTIONS</code>)</strong> on your mailed Secured Property Tax Bill—or look up your bill online via the <a href="https://common3.mptsweb.com/MBC/sanjoaquin/tax/search" target="_blank" rel="noopener noreferrer" style="color: var(--accent-link); font-weight: 600;">Direct Tax Bill Search Portal&nbsp;↗</a> (or via <code>sjcttc.org</code>)—for a line reading <code>HOMEOWNERS EXEMPTION: -7,000</code>. If that line is blank or <code>0</code>, you should file <code>Form BOE-266</code>.
-      </div>
-      <div>
-        <strong style="color: #86EFAC;">Pro Tip:</strong> The search box requires at least 6 characters—omit suffixes like <code>St</code>, <code>Ln</code>, or <code>Ave</code> (e.g., type <code>123 MAIN</code> instead of <code>123 Main St</code>) so the County database matches cleanly.
-      </div>
-      <div style="background: rgba(59, 130, 246, 0.1); border-left: 3px solid #3B82F6; padding: 0.55rem 0.75rem; border-radius: 4px; margin-top: 0.15rem;">
-        <strong style="color: #93C5FD;">Resale Home Buyers:</strong> A previous seller's <code>-7,000</code> exemption does <strong>NOT</strong> carry over permanently—new owners must still file their own <code>Form BOE-266</code> once after closing.
-      </div>
-    </div>
-  </div>
-
-  <!-- 4. Warning Callout Box: Ignore $45-$95 Scam Mailers -->
-  <div style="background: rgba(234, 179, 8, 0.12); border: 1px solid rgba(234, 179, 8, 0.35); border-left: 4px solid #EAB308; border-radius: var(--radius-sm); padding: 0.9rem 1rem; margin-bottom: 1.25rem; font-size: 0.875rem;">
-    <div style="display: flex; align-items: flex-start; gap: 0.5rem; color: #FEF08A; font-weight: 700; margin-bottom: 0.35rem;">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink: 0; margin-top: 0.12rem;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-      <span>Ignore $45–$95 Scam Mailers — Filing Form BOE-266 Is 100% Free!</span>
-    </div>
-    <div style="color: var(--text-secondary); font-size: 0.825rem; line-height: 1.5;">
-      New homebuyers regularly receive official-looking letters from private third-party mailers charging <strong>$45–$95</strong> to file a "Homeowners' Exemption" or "Homestead Designation." Discard them—filing directly with the San Joaquin County Assessor costs <strong>$0</strong> and takes less than 3 minutes.
-    </div>
-  </div>
-
-  <!-- 5. 2-Column Deadlines Grid -->
-  <div style="margin-bottom: 1.25rem;">
-    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.55rem; display: flex; align-items: flex-start; gap: 0.45rem;">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2" style="flex-shrink: 0; margin-top: 0.15rem;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-      <span>Filing Deadlines: Annual Secured Roll vs. New Buyer Supplemental Window</span>
-    </h4>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.9rem;">
-      <!-- Left Card: 1. Annual Secured Roll (Jan 1 Lien Date) -->
-      <div style="background: #0F172A; border: 1px solid rgba(34, 197, 94, 0.35); border-radius: var(--radius-md); padding: 1.05rem;">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.65rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.55rem; flex-wrap: wrap;">
-          <h5 style="font-size: 0.9rem; font-weight: 700; color: #86EFAC; margin: 0;">1. Existing Homeowners (Occupied as of Jan 1)</h5>
-          <span style="display: inline-block; max-width: 100%; line-height: 1.35; font-size: 0.725rem; color: #86EFAC; background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.3); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 700;">Annual Secured Roll</span>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5;">
+    <!-- Drawer 1: How to Complete & Submit Form BOE-266 in 3 Minutes -->
+    <details class="faq-drawer">
+      <summary>
+        <span>1. How to Fill &amp; Submit Form BOE-266 in 3 Minutes (Suite 230 Address)</span>
+        <svg class="faq-drawer-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </summary>
+      <div class="faq-drawer-body" style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.825rem; color: var(--text-secondary);">
+        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+          <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">1</span>
           <div>
-            <strong style="color: #86EFAC; display: block; font-size: 0.775rem;">100% Full Exemption ($7,000 Off / ~$73.72):</strong>
-            File on or before <strong>5:00 PM on February 15</strong> following the January 1 lien date.
+            <strong style="color: var(--text-primary);">Download Form BOE-266:</strong> Open the <a href="https://www.sjgov.org/department/assessor/forms-library/form-detail-page/claim-for-homeowners-property-tax-exemption" target="_blank" rel="noopener noreferrer" style="color: var(--accent-link); font-weight: 600;">County Assessor's form page&nbsp;↗</a> and click <strong>Form No. BOE-266</strong> to download the 1-page PDF (the Assessor also mails a copy a few months after closing, though you do not need to wait for it).
           </div>
+        </div>
+
+        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+          <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">2</span>
           <div>
-            <strong style="color: #FEF08A; display: block; font-size: 0.775rem;">80% Late-Filing Credit ($5,600 Off / ~$58.97):</strong>
-            If late-filed between <strong>February 16 and 5:00 PM on December 10</strong>, you still receive 80% of the exemption for that current roll year, and it automatically steps up to the full <strong>100% ($7,000)</strong> in all future years.
+            <strong style="color: var(--text-primary);">Enter Property &amp; Move-In Dates:</strong> Fill in your 12-digit APN (<code>251-XXX-XXX-000</code>), property street address, escrow acquisition (recording) date, and the date you occupied the property as your principal residence.
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+          <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">3</span>
+          <div>
+            <strong style="color: var(--text-primary);">Complete Confidential SSN / ID Section:</strong> Enter the Social Security Number(s) (or CA Driver's License/ID if applicable) for the claimant and spouse/co-owner. By state law (CA Rev. &amp; Tax Code § 277), this form is <strong>strictly confidential and NOT open to public inspection</strong>; the Franchise Tax Board uses it solely to verify that a household isn't claiming multiple primary residences in California.
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+          <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">4</span>
+          <div>
+            <strong style="color: var(--text-primary);">Sign &amp; Mail or Drop Off ($0 Fee — Suite 230):</strong> Sign and mail or deliver to <strong>San Joaquin County Assessor, 44 N. San Joaquin St., Second Floor, Suite 230, Stockton, CA 95202</strong> (<a href="tel:2094682630" style="color: var(--accent-link); font-weight: 600; white-space: nowrap;">(209) 468-2630</a>, Mon–Fri 8:30 AM – 4:30 PM) — note that the Assessor is in <strong>Suite 230</strong> on the 2nd floor (different from the Clerk of the Board in Suite 627).
           </div>
         </div>
       </div>
+    </details>
 
-      <!-- Right Card: 2. New Buyers (Supplemental Assessment) -->
-      <div style="background: #0F172A; border: 1px solid rgba(96, 165, 250, 0.35); border-radius: var(--radius-md); padding: 1.05rem;">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.65rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.55rem; flex-wrap: wrap;">
-          <h5 style="font-size: 0.9rem; font-weight: 700; color: var(--accent-link); margin: 0;">2. New Move-In Buyers (Supplemental Window)</h5>
-          <span style="display: inline-block; max-width: 100%; line-height: 1.35; font-size: 0.725rem; color: #93C5FD; background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 700;">Supplemental Roll</span>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5;">
-          <div>
-            <strong style="color: var(--text-primary); display: block; font-size: 0.775rem;">90-Day Move-In Eligibility:</strong>
-            Applies if you occupy your home within <strong>90 days</strong> of closing escrow (or completion of new construction) and the parcel was not already receiving the exemption on that year's roll.
+    <!-- Drawer 2: Deadlines (Feb 15 vs New Buyers) & Moving/Renting Rules -->
+    <details class="faq-drawer">
+      <summary>
+        <span>2. Filing Deadlines (Feb 15 vs. New Buyers) &amp; Moving/Renting Rules</span>
+        <svg class="faq-drawer-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </summary>
+      <div class="faq-drawer-body" style="display: flex; flex-direction: column; gap: 0.85rem;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.85rem;">
+          <!-- Left Card: 1. Existing Homeowners (Annual Secured Roll) -->
+          <div style="background: var(--bg-surface); border: 1px solid rgba(34, 197, 94, 0.35); border-radius: var(--radius-sm); padding: 0.9rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.45rem; margin-bottom: 0.55rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.45rem; flex-wrap: wrap;">
+              <h5 style="font-size: 0.85rem; font-weight: 700; color: #86EFAC; margin: 0;">1. Existing Homeowners (Jan 1)</h5>
+              <span style="display: inline-block; max-width: 100%; line-height: 1.35; font-size: 0.7rem; color: #86EFAC; background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.3); padding: 0.12rem 0.45rem; border-radius: 4px; font-weight: 700;">Annual Secured Roll</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.55rem; font-size: 0.815rem; color: var(--text-secondary); line-height: 1.5;">
+              <div>
+                <strong style="color: #86EFAC; display: block; font-size: 0.775rem;">100% Full Exemption ($7,000 Off / ~$73.72):</strong>
+                File on or before <strong>5:00 PM on February 15</strong> following the January 1 lien date.
+              </div>
+              <div>
+                <strong style="color: #FEF08A; display: block; font-size: 0.775rem;">80% Late-Filing Credit ($5,600 Off / ~$58.97):</strong>
+                If late-filed between <strong>February 16 and 5:00 PM on December 10</strong>, you still receive 80% of the exemption for that current roll year, and it automatically steps up to the full <strong>100% ($7,000)</strong> in all future years.
+              </div>
+            </div>
           </div>
-          <div>
-            <strong style="color: #93C5FD; display: block; font-size: 0.775rem;">30-Day Supplemental Deadline:</strong>
-            File <strong>on or before the 30th day</strong> following the mail date printed on your <strong>Supplemental Assessment Notice</strong> for <strong>100% supplemental credit</strong> (or receive an <code>80%</code> credit if filed late on or before the <strong>1st installment delinquency date</strong> of your supplemental tax bill).
+
+          <!-- Right Card: 2. New Move-In Buyers (Supplemental Window) -->
+          <div style="background: var(--bg-surface); border: 1px solid rgba(96, 165, 250, 0.35); border-radius: var(--radius-sm); padding: 0.9rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.45rem; margin-bottom: 0.55rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.45rem; flex-wrap: wrap;">
+              <h5 style="font-size: 0.85rem; font-weight: 700; color: var(--accent-link); margin: 0;">2. New Move-In Buyers</h5>
+              <span style="display: inline-block; max-width: 100%; line-height: 1.35; font-size: 0.7rem; color: #93C5FD; background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); padding: 0.12rem 0.45rem; border-radius: 4px; font-weight: 700;">Supplemental Roll</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.55rem; font-size: 0.815rem; color: var(--text-secondary); line-height: 1.5;">
+              <div>
+                <strong style="color: var(--text-primary); display: block; font-size: 0.775rem;">90-Day Move-In Eligibility:</strong>
+                Applies if you occupy your home within <strong>90 days</strong> of closing escrow (or completion of new construction) and the parcel was not already receiving the exemption on that year's roll.
+              </div>
+              <div>
+                <strong style="color: #93C5FD; display: block; font-size: 0.775rem;">30-Day Supplemental Deadline:</strong>
+                File <strong>on or before the 30th day</strong> following the mail date printed on your <strong>Supplemental Assessment Notice</strong> for <strong>100% supplemental credit</strong> (or receive an <code>80%</code> credit if filed late on or before the <strong>1st installment delinquency date</strong> of your supplemental tax bill).
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Legal Reminder Callout -->
+        <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(96, 165, 250, 0.35); border-left: 4px solid #3B82F6; border-radius: var(--radius-sm); padding: 0.8rem 0.9rem; font-size: 0.815rem; color: var(--text-secondary); line-height: 1.5;">
+          <strong style="color: #93C5FD;">Moving Out or Renting Your Home Later?</strong> If you move out or convert the home into a rental prior to January 1, California law requires notifying the Assessor <strong>in writing on or before December 10</strong> of that year to terminate the exemption—otherwise, the County will back-bill the exempted taxes plus statutory penalties and interest. <em>(Note: Refinancing keeps your exemption active automatically, and transferring title into a revocable living trust while living there remains eligible—just double-check Box 10 on your next annual bill.)</em>
+        </div>
       </div>
-    </div>
+    </details>
   </div>
 
-  <!-- 6. Numbered Step-by-Step Guide: How to Complete & Submit Form BOE-266 in 3 Minutes -->
-  <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.15rem; margin-bottom: 1.25rem;">
-    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.85rem; display: flex; align-items: flex-start; gap: 0.45rem;">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-link)" stroke-width="2" style="flex-shrink: 0; margin-top: 0.15rem;"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-      <span>How to Complete &amp; Submit Form BOE-266 in 3 Minutes</span>
-    </h4>
-
-    <div style="display: flex; flex-direction: column; gap: 0.85rem;">
-      <!-- Step 1 -->
-      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem; color: var(--text-secondary);">
-        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">1</span>
-        <div>
-          <strong style="color: var(--text-primary);">Download Form BOE-266:</strong> Open the <a href="https://www.sjgov.org/department/assessor/forms-library/form-detail-page/claim-for-homeowners-property-tax-exemption" target="_blank" rel="noopener noreferrer" style="color: var(--accent-link); font-weight: 600;">County Assessor's form page&nbsp;↗</a> and click <strong>Form No. BOE-266</strong> to download the 1-page PDF (the Assessor also mails a copy a few months after closing, though you do not need to wait for it).
-        </div>
-      </div>
-
-      <!-- Step 2 -->
-      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem; color: var(--text-secondary);">
-        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">2</span>
-        <div>
-          <strong style="color: var(--text-primary);">Enter Property &amp; Move-In Dates:</strong> Fill in your 12-digit APN (<code>251-XXX-XXX-000</code>), property street address, escrow acquisition (recording) date, and the date you occupied the property as your principal residence.
-        </div>
-      </div>
-
-      <!-- Step 3 -->
-      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem; color: var(--text-secondary);">
-        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">3</span>
-        <div>
-          <strong style="color: var(--text-primary);">Complete Confidential SSN / ID Section:</strong> Enter the Social Security Number(s) (or CA Driver's License/ID if applicable) for the claimant and spouse/co-owner. By state law (CA Rev. &amp; Tax Code § 277), this form is <strong>strictly confidential and NOT open to public inspection</strong>; the Franchise Tax Board uses it solely to verify that a household isn't claiming multiple primary residences in California.
-        </div>
-      </div>
-
-      <!-- Step 4 -->
-      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.825rem; color: var(--text-secondary);">
-        <span style="background: var(--accent-primary); color: #FFF; font-weight: 800; font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem;">4</span>
-        <div>
-          <strong style="color: var(--text-primary);">Sign &amp; Mail or Drop Off ($0 Fee — Suite 230):</strong> Sign and mail or deliver to <strong>San Joaquin County Assessor, 44 N. San Joaquin St., Second Floor, Suite 230, Stockton, CA 95202</strong> (<a href="tel:2094682630" style="color: var(--accent-link); font-weight: 600; white-space: nowrap;">(209) 468-2630</a>, Mon–Fri 8:30 AM – 4:30 PM) — note that the Assessor is in <strong>Suite 230</strong> on the 2nd floor (different from the Clerk of the Board in Suite 627).
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 7. Compact Legal Reminder Callout: Moving Out or Renting Your Home Later? -->
-  <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(96, 165, 250, 0.35); border-left: 4px solid #3B82F6; border-radius: var(--radius-sm); padding: 0.85rem 1rem; margin-bottom: 1rem; font-size: 0.825rem; color: var(--text-secondary); line-height: 1.5;">
-    <strong style="color: #93C5FD;">Moving Out or Renting Your Home Later?</strong> If you move out or convert the home into a rental prior to January 1, California law requires notifying the Assessor <strong>in writing on or before December 10</strong> of that year to terminate the exemption—otherwise, the County will back-bill the exempted taxes plus statutory penalties and interest. <em>(Note: Refinancing keeps your exemption active automatically, and transferring title into a revocable living trust while living there remains eligible—just double-check Box 10 on your next annual bill.)</em>
-  </div>
-
-  <!-- 8. Standard Muted Footer Note -->
-  <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 0.85rem;">
+  <!-- 6. Standard Muted Footer Note -->
+  <div style="font-size: 0.775rem; color: var(--text-muted); padding-top: 0.5rem; border-top: 1px dashed var(--border-subtle); margin-top: 1rem;">
     ℹ️ <em>Note: San Joaquin County Homeowners' Exemption (Form BOE-266) filing deadlines and Assessor contact details are current as of November 2026. Community informational guide only; does not constitute legal or tax advice.</em>
   </div>
 </div>`,
