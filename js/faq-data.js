@@ -336,37 +336,48 @@ const FAQ_DATA = [
       <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin: 0.35rem 0 0 0;">Quick Access: Forms, Informal Review &amp; Tax Bill Lookup</h4>
     </div>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.75rem;">
-      <!-- Card 1: Assessor Informal Review Info (Path A) -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.75rem;">
+      <!-- Card 1: Assessor Roll Value Lookup (Check July 1+) -->
       <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.65rem;">
         <div>
-          <div style="font-weight: 700; font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.2rem;">Assessor Informal Review Info</div>
-          <div style="font-size: 0.775rem; color: var(--text-muted); line-height: 1.4;">SJC Assessor Decline-in-Value portal &amp; PDF form (Open Jul 1 – Sept 15).</div>
+          <div style="font-weight: 700; font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.25rem;">1. Assessor Roll Value Lookup</div>
+          <div style="font-size: 0.775rem; color: var(--text-muted); line-height: 1.45;">Check your <strong>new July 1 assessed value</strong> before October tax bills print (omit <code>St</code>/<code>Ln</code>).</div>
         </div>
-        <a href="https://www.sjgov.org/department/assessor/property-information/homeowners/decline-in-value---homeowners" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center; font-size: 0.775rem; padding: 0.45rem 0.65rem;">
-          <span>Assessor Informal Review&nbsp;↗</span>
+        <a href="https://common1.mptsweb.com/mbap/sanjoaquin/asr" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center; font-size: 0.775rem; padding: 0.48rem 0.65rem;">
+          <span>Check Assessor Value&nbsp;↗</span>
         </a>
       </div>
 
-      <!-- Card 2: Formal Appeal Form (BOE-305-AH) (Path B) -->
+      <!-- Card 2: SJC Tax Bill Lookup Portal -->
       <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.65rem;">
         <div>
-          <div style="font-weight: 700; font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.2rem;">Formal Appeal Form (BOE-305-AH)</div>
-          <div style="font-size: 0.775rem; color: var(--text-muted); line-height: 1.4;">Official SJC Clerk of the Board fill-in PDF application (Open Jul 2 – Nov 30).</div>
+          <div style="font-weight: 700; font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.25rem;">2. SJC Tax Bill Lookup Portal</div>
+          <div style="font-size: 0.775rem; color: var(--text-muted); line-height: 1.45;">View billed taxes &amp; neighbor land splits by address or APN (or via <code>sjcttc.org</code>).</div>
         </div>
-        <a href="https://www.sjgov.org/docs/default-source/clerk-of-the-board-documents/assessment-appeals/forms/assessment-appeal-application.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width: 100%; justify-content: center; font-size: 0.775rem; padding: 0.45rem 0.65rem;">
-          <span>Download BOE-305-AH&nbsp;↗</span>
-        </a>
-      </div>
-
-      <!-- Card 3: SJC Tax Bill Lookup Portal -->
-      <div style="background: #0F172A; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.85rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.65rem;">
-        <div>
-          <div style="font-weight: 700; font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.2rem;">SJC Tax Bill Lookup Portal</div>
-          <div style="font-size: 0.775rem; color: var(--text-muted); line-height: 1.4;">Search bills directly by address or APN (if link ever changes, access via <code>sjcttc.org</code>).</div>
-        </div>
-        <a href="https://common3.mptsweb.com/MBC/sanjoaquin/tax/search" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center; font-size: 0.775rem; padding: 0.45rem 0.65rem;">
+        <a href="https://common3.mptsweb.com/MBC/sanjoaquin/tax/search" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center; font-size: 0.775rem; padding: 0.48rem 0.65rem;">
           <span>SJC Tax Bill Search&nbsp;↗</span>
+        </a>
+      </div>
+
+      <!-- Card 3: Path A Informal Review Info -->
+      <div style="background: #0F172A; border: 1px solid rgba(34, 197, 94, 0.35); border-radius: var(--radius-sm); padding: 0.85rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.65rem;">
+        <div>
+          <div style="font-weight: 700; font-size: 0.85rem; color: #86EFAC; margin-bottom: 0.25rem;">3. Path A: Informal Review ($0)</div>
+          <div style="font-size: 0.775rem; color: var(--text-muted); line-height: 1.45;">SJC Assessor Decline-in-Value online portal &amp; PDF form (Open <strong>Jul 1 – Sept 15</strong>).</div>
+        </div>
+        <a href="https://www.sjgov.org/department/assessor/property-information/homeowners/decline-in-value---homeowners" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center; font-size: 0.775rem; padding: 0.48rem 0.65rem;">
+          <span>Informal Review Info&nbsp;↗</span>
+        </a>
+      </div>
+
+      <!-- Card 4: Path B Formal Appeal Form (BOE-305-AH) -->
+      <div style="background: #0F172A; border: 1px solid rgba(96, 165, 250, 0.4); border-radius: var(--radius-sm); padding: 0.85rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.65rem;">
+        <div>
+          <div style="font-weight: 700; font-size: 0.85rem; color: #93C5FD; margin-bottom: 0.25rem;">4. Path B: Form BOE-305-AH ($30)</div>
+          <div style="font-size: 0.775rem; color: var(--text-muted); line-height: 1.45;">Official SJC Clerk of the Board fill-in PDF application (Open <strong>Jul 2 – Nov 30</strong>).</div>
+        </div>
+        <a href="https://www.sjgov.org/docs/default-source/clerk-of-the-board-documents/assessment-appeals/forms/assessment-appeal-application.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width: 100%; justify-content: center; font-size: 0.775rem; padding: 0.48rem 0.65rem;">
+          <span>Download BOE-305-AH&nbsp;↗</span>
         </a>
       </div>
     </div>
@@ -502,6 +513,15 @@ const FAQ_DATA = [
         <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.775rem;">
           <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: rgba(34, 197, 94, 0.15); color: #86EFAC; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px;">Window: Jul 1 – Sept 15</span>
           <span style="display: inline-block; max-width: 100%; line-height: 1.35; background: rgba(34, 197, 94, 0.15); color: #86EFAC; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px;">Comps Upfront? YES (Up to 3)</span>
+        </div>
+
+        <div style="background: rgba(59, 130, 246, 0.1); border-left: 3px solid #3B82F6; border-radius: 4px; padding: 0.7rem 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+          <strong style="color: #93C5FD; display: block; margin-bottom: 0.25rem;">Pro Tip — Check Your New Value in July (Before October Bills Arrive!):</strong>
+          San Joaquin County delivers the annual assessment roll by <strong>June 30</strong>. Starting in <strong>July</strong>, use the <a href="https://common1.mptsweb.com/mbap/sanjoaquin/asr" target="_blank" rel="noopener noreferrer" style="color: var(--accent-link); font-weight: 600;">SJC Assessor Property Search&nbsp;↗</a> (search by APN or street address without <code>St</code>/<code>Ln</code>) to see your upcoming taxable value <strong>3 months before October tax bills print</strong>:
+          <ul style="list-style: none; padding: 0; margin: 0.35rem 0 0 0; display: flex; flex-direction: column; gap: 0.25rem;">
+            <li>• <strong>Recent Buyers (Current / 2nd-Year Roll):</strong> Verify your purchase price or January 1 market value was enrolled accurately—if it is too high, file this free Informal Review before <strong>September 15</strong>.</li>
+            <li>• <strong>Prior-Year Prop 8 Winners:</strong> Under <em>Rev. &amp; Tax Code § 51</em>, the Assessor re-evaluates Prop 8 homes every January 1 and can raise your Prop 8 value by <strong>more than 2% in one year</strong> (up to your Prop 13 base cap) if they believe values rebounded. Check in July so you can catch any jump and re-file before <strong>September 15</strong>!</li>
+          </ul>
         </div>
 
         <div style="display: flex; align-items: flex-start; gap: 0.7rem;">
